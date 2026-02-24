@@ -4,11 +4,11 @@ import { Linkedin } from "lucide-react";
 
 import { footerContent } from "@/content/masterfile.fr";
 
-function FooterList({ title, links }: { title: string; links: { label: string; href: string }[] }) {
+function FooterList({ title, links, columns = 1 }: { title: string; links: { label: string; href: string }[]; columns?: 1 | 2 }) {
   return (
     <div>
       <p className="text-sm font-semibold uppercase tracking-[0.08em] text-white">{title}</p>
-      <ul className="mt-4 space-y-2.5">
+      <ul className={["mt-4", columns === 2 ? "grid grid-cols-2 gap-x-4 gap-y-2.5" : "space-y-2.5"].join(" ")}>
         {links.map((link) => (
           <li key={`${title}-${link.href}`}>
             <Link href={link.href} className="text-sm text-neutral-300 transition hover:text-white">
@@ -24,7 +24,7 @@ function FooterList({ title, links }: { title: string; links: { label: string; h
 export function SiteFooter() {
   return (
     <footer className="relative bg-devlo-900 pb-20 pt-16 text-white md:pt-20">
-      <div className="mx-auto grid w-full max-w-[1200px] gap-12 px-6 md:grid-cols-2 md:px-12 lg:grid-cols-4">
+      <div className="mx-auto grid w-full max-w-[1200px] gap-12 px-6 md:grid-cols-2 md:px-12 lg:grid-cols-[1fr_1fr_2fr_1fr]">
         <div>
           <Image
             src="/images/devlo_Logo_Name.webp"
@@ -73,7 +73,7 @@ export function SiteFooter() {
         </div>
 
         <FooterList title="Navigation" links={footerContent.navigation} />
-        <FooterList title="Études de cas" links={footerContent.caseLinks} />
+        <FooterList title="Études de cas" links={footerContent.caseLinks} columns={2} />
 
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.08em] text-white">Contact</p>

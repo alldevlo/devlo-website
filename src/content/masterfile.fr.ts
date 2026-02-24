@@ -339,11 +339,6 @@ export const homeContent = {
         "devlo travaille exclusivement avec des entreprises B2B, c'est-à-dire des organisations qui vendent des produits ou services à d'autres entreprises. Les clients incluent des éditeurs de logiciels et SaaS, des entreprises de cybersécurité, des sociétés industrielles et immobilières, des prestataires de services professionnels, des organisations de formation et des associations à but non lucratif. La plupart des clients veulent accélérer leur acquisition de clients B2B, générer plus de leads qualifiés et améliorer leur performance outbound en Europe et dans d'autres régions.",
     },
     {
-      question: "Que garantissez-vous ?",
-      answer:
-        "Nous garantissons une exécution professionnelle, des leads à forte intention et des rendez-vous planifiés directement dans votre calendrier. Nos campagnes génèrent un taux d'intérêt positif moyen de 7%, délivrant des métriques d'engagement bien au-dessus des benchmarks du secteur.",
-    },
-    {
       question: "L'investissement en vaut-il la peine ?",
       answer:
         "Absolument. Le Coût d'Acquisition Client (CAC) de la prospection externalisée est significativement inférieur au développement d'une équipe SDR interne (salaires, charges, stack technologique, formation). De plus, vous obtenez des résultats rapides et basés sur les données, avec un ROI prouvable dès les premières semaines.",

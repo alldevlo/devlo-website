@@ -156,7 +156,7 @@ export function HomePage() {
 
       <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
-          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.rendezVousTitle}</h2>
+          <h2 className="mx-auto max-w-[490px] text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.rendezVousTitle}</h2>
         </FadeInOnScroll>
         <FadeInOnScroll delay={0.1} className="mt-10">
           <InfiniteLogoRail logos={homeContent.rendezVousLogos} />

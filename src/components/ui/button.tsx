@@ -14,7 +14,7 @@ function getVariantClasses(variant: ButtonVariant) {
   }
 
   if (variant === "outline") {
-    return "border border-accent-red bg-transparent text-accent-red hover:bg-accent-red/10";
+    return "bg-devlo-600 text-white border border-devlo-600 hover:bg-devlo-700 hover:border-devlo-700 shadow-soft hover:shadow-panel";
   }
 
   return "bg-devlo-800 text-white hover:bg-devlo-900 shadow-soft hover:shadow-panel";
