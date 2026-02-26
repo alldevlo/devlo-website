@@ -47,7 +47,24 @@ const methodIconMap = {
   CalendarCheck,
 } as const;
 
-function InfiniteLogoRail({ logos, pauseOnHover = false, reverse = false, duration = "normal" }: { logos: { src: string; alt: string }[]; pauseOnHover?: boolean; reverse?: boolean; duration?: "normal" | "slow" }) {
+const logoScaleClassByAlt: Record<string, string> = {
+  Apple: "scale-[0.82]",
+  BCF: "scale-[0.82]",
+  BHP: "scale-[0.82]",
+  ADM: "scale-[1.12]",
+};
+
+function InfiniteLogoRail({
+  logos,
+  pauseOnHover = false,
+  reverse = false,
+  duration = "normal",
+}: {
+  logos: { src: string; alt: string }[];
+  pauseOnHover?: boolean;
+  reverse?: boolean;
+  duration?: "normal" | "slow";
+}) {
   const doubled = [...logos, ...logos];
   const animClass = duration === "slow"
     ? (reverse ? "animate-logo-scroll-slow-reverse" : "animate-logo-scroll-slow")
@@ -57,7 +74,7 @@ function InfiniteLogoRail({ logos, pauseOnHover = false, reverse = false, durati
     <div className="group py-1">
       <div
         className={[
-          "flex min-w-max items-center gap-10 will-change-transform",
+          "flex min-w-max items-center will-change-transform",
           animClass,
           pauseOnHover ? "group-hover:[animation-play-state:paused]" : "",
         ]
@@ -65,26 +82,33 @@ function InfiniteLogoRail({ logos, pauseOnHover = false, reverse = false, durati
           .join(" ")}
       >
         {doubled.map((logo, index) => (
-          <Image
+          <div
             key={`${logo.alt}-${index}`}
-            src={logo.src}
-            alt={logo.alt}
-            width={200}
-            height={60}
-            className="h-10 w-auto shrink-0 object-contain opacity-70 grayscale transition duration-200 hover:opacity-100 hover:grayscale-0"
-            loading="lazy"
-            sizes="200px"
-            quality={72}
-          />
+            className="flex h-11 w-[170px] shrink-0 items-center justify-center px-5"
+          >
+            <div
+              className={["relative h-10 w-full overflow-hidden", logoScaleClassByAlt[logo.alt] ?? ""].join(" ").trim()}
+            >
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                fill
+                className="object-contain opacity-70 grayscale transition duration-200 hover:opacity-100 hover:grayscale-0"
+                loading="lazy"
+                sizes="170px"
+                quality={72}
+              />
+            </div>
+          </div>
         ))}
       </div>
     </div>
   );
 }
 
-function ClientsRail({ names, reverse = false }: { names: string[]; reverse?: boolean }) {
+function ClientsRailRow({ names, reverse = false }: { names: string[]; reverse?: boolean }) {
   const logos = names.map((name) => ({ src: `/images/${name}`, alt: name.replace(/\.[a-z0-9]+$/i, "") }));
-  return <InfiniteLogoRail logos={logos} pauseOnHover reverse={reverse} />;
+  return <InfiniteLogoRail logos={logos} pauseOnHover reverse={reverse} duration="slow" />;
 }
 
 export function HomePage() {
@@ -229,7 +253,9 @@ export function HomePage() {
         <div className="relative mt-10 -mx-6 space-y-4 overflow-hidden md:-mx-12 lg:-mx-16">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[8vw] bg-gradient-to-r from-white to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-[8vw] bg-gradient-to-l from-white to-transparent" />
-          <ClientsRail names={homeContent.clientsLogos} />
+          <ClientsRailRow names={homeContent.clientsLogos.slice(0, 8)} />
+          <ClientsRailRow names={homeContent.clientsLogos.slice(8, 15)} reverse />
+          <ClientsRailRow names={homeContent.clientsLogos.slice(15)} />
         </div>
       </SectionWrapper>
 
@@ -350,8 +376,13 @@ export function HomePage() {
         <FadeInOnScroll>
           <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.faqTitle}</h2>
         </FadeInOnScroll>
+        <FadeInOnScroll delay={0.15}>
+          <p className="mx-auto mt-4 max-w-[820px] text-center text-base leading-7 text-neutral-600 md:text-lg">
+            {homeContent.faqCtaText}
+          </p>
+        </FadeInOnScroll>
         <div className="mx-auto mt-10 max-w-[980px]">
-          <AccordionSingle items={homeContent.faqs} />
+          <AccordionSingle items={homeContent.faqs} defaultOpenIndex={-1} />
         </div>
       </SectionWrapper>
     </>

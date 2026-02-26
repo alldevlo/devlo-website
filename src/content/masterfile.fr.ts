@@ -74,14 +74,14 @@ export const homeContent = {
     ctaPrimary: { label: "Planifier votre consultation gratuite →", href: "/consultation" },
     ctaSecondary: { label: "Voir nos résultats →", href: "/etudes-de-cas" },
     wistiaMediaId: "cr7dgltkvu",
-    posterSrc: "/images/Cegos_banner.webp",
-    posterAlt: "Aperçu de la vidéo de présentation de devlo",
+    posterSrc: "/images/video-thumb-abacus.webp",
+    posterAlt: "Aperçu de la vidéo témoignage Abacus",
     videoTestimonial: {
-      client: "Etienne Auvillain",
-      role: "Directeur Général",
-      company: "Cegos",
-      line: "45% de taux de réponse grâce à notre approche multicanal personnalisée →",
-      href: "/etudes-de-cas/formation-14-rendez-vous",
+      client: "Stephan Nuzzolo",
+      role: "Directeur",
+      company: "Abacus",
+      line: "Plus de 30 prospects intéressés générés pour leur solution →",
+      href: "/etudes-de-cas/immobilier-30-prospects",
     },
     microProof: "⭐ 4.9/5 satisfaction client · 7% taux d'intérêt moyen · +1'000 campagnes",
   },
@@ -103,9 +103,9 @@ export const homeContent = {
     // Row 2
     { src: "/images/DENTSPLY_SIRONA.webp", alt: "DENTSPLY SIRONA" },
     { src: "/images/Academic_Work.webp", alt: "Academic Work" },
-    { src: "/images/Accor.webp", alt: "Accor" },
+    { src: "/images/Accor_logo.webp", alt: "Accor" },
     { src: "/images/Accuray.webp", alt: "Accuray" },
-    { src: "/images/ADM.webp", alt: "ADM" },
+    { src: "/images/ADM_logo.webp", alt: "ADM" },
     { src: "/images/Albinati_Aeronautics.webp", alt: "Albinati Aeronautics" },
     { src: "/images/Assura.webp", alt: "Assura" },
     { src: "/images/Banque_Heritage.webp", alt: "Banque Heritage" },
@@ -163,7 +163,7 @@ export const homeContent = {
       {
         title: "Témoignage vidéo — Cegos",
         wistiaMediaId: "knadmb8za5",
-        posterSrc: "/images/Cegos_banner.webp",
+        posterSrc: "/images/video-thumb-cegos.webp",
         posterAlt: "Bannière de l'étude de cas Cegos en prospection B2B",
         client: "Etienne Auvillain",
         role: "Directeur Général",
@@ -175,7 +175,7 @@ export const homeContent = {
       {
         title: "Témoignage vidéo — Abacus",
         wistiaMediaId: "cr7dgltkvu",
-        posterSrc: "/images/Abacus_banner.webp",
+        posterSrc: "/images/video-thumb-abacus.webp",
         posterAlt: "Bannière de l'étude de cas Abacus en génération de leads immobiliers",
         client: "Stephan Nuzzolo",
         role: "Directeur",
@@ -187,7 +187,7 @@ export const homeContent = {
       {
         title: "Témoignage vidéo — Apidae",
         wistiaMediaId: "w9ews1v05q",
-        posterSrc: "/images/APIDAE_banner.webp",
+        posterSrc: "/images/video-thumb-apidae.webp",
         posterAlt: "Bannière de l'étude de cas APIDAE sur la biodiversité",
         client: "Tanguy Coustaline",
         role: "Président",
@@ -220,9 +220,8 @@ export const homeContent = {
     "Many_ways_logo.webp",
     "Undu_du_logo.webp",
     "IDDI_logo.webp",
-    "Horus.webp",
+    "Horus_logo.webp",
     "Apidae_log.webp",
-    // TODO: SquareCo_logo.webp missing — add when file is available
   ],
   noRecruitTitle: "Développez votre chiffre d'affaires sans recruter",
   noRecruitCards: [
@@ -375,6 +374,7 @@ export const homeContent = {
     cta: { label: "Planifier ma consultation gratuite →", href: "/consultation" },
   },
   faqTitle: "Questions fréquentes",
+  faqCtaText: "Planifions une consultation pour discuter de vos stratégies de prospection commerciale.",
   faqs: [
     {
       question: "Qu'est-ce que devlo et que fait cette agence de prospection commerciale B2B ?",
@@ -441,10 +441,6 @@ export const homeContent = {
       answer:
         "Oui. En plus de piloter des campagnes externalisées, devlo peut former les commerciaux B2B, SDR et BDR aux techniques de prospection modernes. Cette formation couvre des sujets comme la rédaction de cold emails, la téléprospection, la prospection LinkedIn, la prospection multicanal, la qualification des leads et la gestion du pipeline. L'objectif est d'aider les équipes commerciales internes à adopter une méthodologie de développement commercial B2B reproductible et à améliorer leurs résultats.",
     },
-    {
-      question: "Comment contacter devlo ?",
-      answer: "Planifions une consultation pour discuter de vos stratégies de prospection commerciale.",
-    },
   ] as FaqItem[],
 };
 
@@ -471,7 +467,7 @@ export const caseStudiesCards: CaseStudyCard[] = [
   {
     slug: "cortexia-71-rendez-vous-decideurs-urbains",
     client: "Client confidentiel",
-    banner: "/images/case-studies/heroes/proprete-urbaine-71-rendez-vous-hero.webp",
+    banner: "/images/Cortexia_banner.webp",
     logo: "",
     title:
       "Comment une entreprise de gestion de la propreté par IA a obtenu 71 rendez-vous avec les décideurs des grandes villes",

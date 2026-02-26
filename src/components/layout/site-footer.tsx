@@ -24,7 +24,7 @@ function FooterList({ title, links, columns = 1 }: { title: string; links: { lab
 export function SiteFooter() {
   return (
     <footer className="relative bg-devlo-900 pb-20 pt-16 text-white md:pt-20">
-      <div className="mx-auto grid w-full max-w-[1400px] gap-12 px-6 md:grid-cols-2 md:px-8 lg:grid-cols-[1fr_1fr_2fr_1fr]">
+      <div className="mx-auto grid w-full max-w-[1400px] gap-10 px-6 md:grid-cols-2 md:px-8 lg:grid-cols-[1.25fr_1fr_2fr]">
         <div>
           <Image
             src="/images/devlo-logo.webp"
@@ -37,7 +37,7 @@ export function SiteFooter() {
 
           <p className="mt-4 text-sm leading-7 text-neutral-300">{footerContent.mission}</p>
 
-          <div className="mt-6 space-y-4 text-sm text-neutral-300">
+          <div className="mt-6 grid gap-5 text-sm text-neutral-300 md:grid-cols-2 md:gap-8">
             <div>
               <p className="font-semibold text-white">Bureau Suisse:</p>
               {footerContent.swissOffice.map((line) => (
@@ -66,7 +66,7 @@ export function SiteFooter() {
               alt="Badge Lemlist 2025"
               width={211}
               height={91}
-              className="h-auto w-[130px]"
+              className="h-9 w-auto bg-transparent object-contain md:h-10"
               loading="lazy"
             />
             <Image
@@ -74,7 +74,7 @@ export function SiteFooter() {
               alt="Badge Lemlist 2026"
               width={211}
               height={91}
-              className="h-auto w-[130px]"
+              className="h-9 w-auto bg-transparent object-contain md:h-10"
               loading="lazy"
             />
           </div>
@@ -86,30 +86,6 @@ export function SiteFooter() {
 
         <div className="lg:border-l lg:border-devlo-800 lg:pl-10">
           <FooterList title="Études de cas" links={footerContent.caseLinks} columns={2} />
-        </div>
-
-        <div className="lg:border-l lg:border-devlo-800 lg:pl-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.08em] text-white">Contact</p>
-          <div className="mt-4 space-y-4 text-sm text-neutral-300">
-            <div>
-              <p className="font-semibold text-white">EMEA</p>
-              <Link href="mailto:emea@devlo.ch" className="block transition hover:text-white">
-                emea@devlo.ch
-              </Link>
-              <Link href="tel:+41797586403" className="block transition hover:text-white">
-                +41 79 758 64 03
-              </Link>
-            </div>
-            <div>
-              <p className="font-semibold text-white">Americas</p>
-              <Link href="mailto:americas@devlo.ch" className="block transition hover:text-white">
-                americas@devlo.ch
-              </Link>
-              <Link href="tel:+12342018019" className="block transition hover:text-white">
-                +1 (234) 201-8019
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
 

@@ -3,15 +3,18 @@ type WaveDividerProps = {
   variant?: "simple" | "layered-top" | "layered-bottom";
 };
 
+const WAVE_DARK = "#0F2B3C";
+const WAVE_MEDIUM = "#4F809E";
+const WAVE_LIGHT = "#AFC8D7";
+
 export function WaveDivider({ tone = "light", variant = "simple" }: WaveDividerProps) {
   if (variant === "layered-top") {
     return (
-      <div className="pointer-events-none -mb-1 h-16 w-full overflow-hidden sm:h-20">
+      <div className="pointer-events-none -mb-1 h-16 w-full overflow-hidden bg-devlo-50 sm:h-20">
         <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className="block h-full w-full" aria-hidden>
-          <path d="M0,50 C480,80 960,10 1440,50 L1440,80 L0,80 Z" fill="#1e6b9e" />
-          <path d="M0,58 C360,20 1080,70 1440,40 L1440,80 L0,80 Z" fill="#1a5f8a" opacity="0.85" />
-          <path d="M0,65 C400,35 1100,75 1440,55 L1440,80 L0,80 Z" fill="#154f74" opacity="0.7" />
-          <path d="M0,72 C320,50 1120,80 1440,65 L1440,80 L0,80 Z" fill="#0f3d5c" opacity="0.6" />
+          <path d="M0,44 C170,38 330,46 480,58 C650,72 820,78 980,70 C1160,60 1310,40 1440,44 L1440,80 L0,80 Z" fill={WAVE_LIGHT} />
+          <path d="M0,52 C170,46 330,54 480,64 C650,76 820,80 980,74 C1160,66 1310,48 1440,52 L1440,80 L0,80 Z" fill={WAVE_MEDIUM} />
+          <path d="M0,60 C170,54 330,62 480,70 C650,80 820,84 980,78 C1160,72 1310,56 1440,60 L1440,80 L0,80 Z" fill={WAVE_DARK} />
         </svg>
       </div>
     );
@@ -19,12 +22,13 @@ export function WaveDivider({ tone = "light", variant = "simple" }: WaveDividerP
 
   if (variant === "layered-bottom") {
     return (
-      <div className="pointer-events-none -mt-1 h-16 w-full overflow-hidden sm:h-20">
+      <div className="pointer-events-none -mt-1 h-16 w-full overflow-hidden bg-white sm:h-20">
         <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className="block h-full w-full" aria-hidden>
-          <path d="M0,0 L1440,0 L1440,35 C960,70 480,10 0,40 Z" fill="#0f3d5c" opacity="0.6" />
-          <path d="M0,0 L1440,0 L1440,25 C1100,55 400,5 0,45 Z" fill="#154f74" opacity="0.7" />
-          <path d="M0,0 L1440,0 L1440,15 C1080,55 360,20 0,55 Z" fill="#1a5f8a" opacity="0.85" />
-          <path d="M0,0 L1440,0 L1440,10 C960,45 480,5 0,60 Z" fill="white" />
+          <g transform="translate(0,80) scale(1,-1)">
+            <path d="M0,44 C170,38 330,46 480,58 C650,72 820,78 980,70 C1160,60 1310,40 1440,44 L1440,80 L0,80 Z" fill={WAVE_LIGHT} />
+            <path d="M0,52 C170,46 330,54 480,64 C650,76 820,80 980,74 C1160,66 1310,48 1440,52 L1440,80 L0,80 Z" fill={WAVE_MEDIUM} />
+            <path d="M0,60 C170,54 330,62 480,70 C650,80 820,84 980,78 C1160,72 1310,56 1440,60 L1440,80 L0,80 Z" fill={WAVE_DARK} />
+          </g>
         </svg>
       </div>
     );
