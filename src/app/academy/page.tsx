@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 
+import { JsonLd } from "@/components/seo/json-ld";
 import { AcademyMasterPage } from "@/components/pages/academy-master-page";
-import { academySeo } from "@/content/masterfile.fr";
+import { academyContent, academySeo } from "@/content/masterfile.fr";
+import { buildBreadcrumbSchema, buildFaqPageSchema } from "@/lib/seo/schema-builders";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: academySeo.title,
@@ -14,10 +17,23 @@ export const metadata: Metadata = {
     description: academySeo.description,
     type: "website",
     locale: "fr_CH",
-    url: "https://devlo.ch/academy",
+    url: `${siteConfig.url}/academy`,
   },
 };
 
 export default function Page() {
-  return <AcademyMasterPage />;
+  return (
+    <>
+      <JsonLd
+        schema={[
+          buildBreadcrumbSchema([
+            { name: "Accueil", path: "/" },
+            { name: "Outbound Academy", path: "/academy" },
+          ]),
+          buildFaqPageSchema(academyContent.faqs),
+        ]}
+      />
+      <AcademyMasterPage />
+    </>
+  );
 }

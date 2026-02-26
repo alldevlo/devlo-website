@@ -34,16 +34,16 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/devlo_Logo_Name.webp",
+        url: "/images/devlo-logo.webp",
         width: 1200,
-        height: 630,
+        height: 670,
         alt: "devlo — Agence B2B de Prospection Commerciale",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/images/devlo_Logo_Name.webp"],
+    images: ["/images/devlo-logo.webp"],
   },
 };
 
@@ -52,8 +52,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "devlo",
-  url: "https://devlo.ch",
-  logo: "https://devlo.ch/images/devlo_Logo_Name.webp",
+  url: siteConfig.url,
+  logo: `${siteConfig.url}/images/devlo-logo.webp`,
   description:
     "Agence suisse spécialisée en prospection B2B, génération de leads et prise de rendez-vous qualifiés. Plus de 1000 campagnes depuis 2020.",
   foundingDate: "2020",
@@ -88,6 +88,52 @@ const organizationSchema = {
   ],
 };
 
+const swissLocalBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "devlo",
+  url: siteConfig.url,
+  image: `${siteConfig.url}/images/devlo-logo.webp`,
+  telephone: "+41-79-758-64-03",
+  email: "emea@devlo.ch",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Ruelle des Dolles 1",
+    addressLocality: "Rivaz",
+    postalCode: "1071",
+    addressRegion: "Vaud",
+    addressCountry: "CH",
+  },
+  areaServed: ["CH", "BE", "FR", "DE", "LU"],
+  sameAs: [
+    "https://www.linkedin.com/company/devlo-connects-you-with-more-prospects/",
+  ],
+};
+
+const usLocalBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "devlo LLC",
+  url: siteConfig.url,
+  image: `${siteConfig.url}/images/devlo-logo.webp`,
+  telephone: "+1-234-201-8019",
+  email: "americas@devlo.ch",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "500 4TH ST NW SUITE 102 #1591",
+    addressLocality: "Albuquerque",
+    addressRegion: "NM",
+    postalCode: "87102",
+    addressCountry: "US",
+  },
+  areaServed: ["US", "CA"],
+  parentOrganization: {
+    "@type": "Organization",
+    name: "devlo",
+    url: siteConfig.url,
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -96,7 +142,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${plusJakartaSans.variable} min-h-screen bg-canvas font-sans text-ink antialiased`}>
-        <JsonLd schema={organizationSchema} />
+        <JsonLd schema={[organizationSchema, swissLocalBusinessSchema, usLocalBusinessSchema]} />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-soft focus:bg-paper focus:px-4 focus:py-2 focus:text-sm"

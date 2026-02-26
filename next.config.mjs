@@ -109,6 +109,16 @@ const nextConfig = {
     // Specific WP long-slug overrides are handled above (wpResultatRedirects).
     const resultatRedirects = [
       {
+        source: "/resultats-cas-etudes/page/:num",
+        destination: "/etudes-de-cas",
+        permanent: true,
+      },
+      {
+        source: "/resultats-cas-etudes/page/:num/",
+        destination: "/etudes-de-cas",
+        permanent: true,
+      },
+      {
         source: "/resultats/:slug*",
         destination: "/etudes-de-cas/:slug*",
         permanent: true,
@@ -125,6 +135,37 @@ const nextConfig = {
       },
     ];
 
+    // ─── App Router alias pages (redirect-only) → explicit HTTP redirects ────
+    // Some App Router `permanentRedirect()` pages may render a 308 payload without a
+    // Location header in certain crawlers/clients. Keep critical aliases here so
+    // crawlers get a standard redirect response.
+    const appAliasRedirects = [
+      { source: "/contact", destination: "/consultation", permanent: true },
+      { source: "/contact/", destination: "/consultation", permanent: true },
+      { source: "/formation-prospection-b2b", destination: "/academy", permanent: true },
+      { source: "/formation-prospection-b2b/", destination: "/academy", permanent: true },
+      { source: "/academy-notre-appel", destination: "/consultation", permanent: true },
+      { source: "/academy-notre-appel/", destination: "/consultation", permanent: true },
+      { source: "/telephone", destination: "/consultation", permanent: true },
+      { source: "/telephone/", destination: "/consultation", permanent: true },
+      { source: "/notrerendez-vous", destination: "/consultation", permanent: true },
+      { source: "/notrerendez-vous/", destination: "/consultation", permanent: true },
+      { source: "/merci", destination: "/consultation", permanent: true },
+      { source: "/merci/", destination: "/consultation", permanent: true },
+      { source: "/merci-prise-de-contact", destination: "/consultation", permanent: true },
+      { source: "/merci-prise-de-contact/", destination: "/consultation", permanent: true },
+      { source: "/modele", destination: "/", permanent: true },
+      { source: "/modele/", destination: "/", permanent: true },
+      { source: "/blog-list", destination: "/", permanent: true },
+      { source: "/blog-list/", destination: "/", permanent: true },
+      { source: "/conditions-utilisation-academie", destination: "/conditions", permanent: true },
+      { source: "/conditions-utilisation-academie/", destination: "/conditions", permanent: true },
+      { source: "/politique-confidentialite", destination: "/conditions", permanent: true },
+      { source: "/politique-confidentialite/", destination: "/conditions", permanent: true },
+      { source: "/terms", destination: "/conditions", permanent: true },
+      { source: "/terms/", destination: "/conditions", permanent: true },
+    ];
+
     // ─── WordPress legacy URL patterns ────────────────────────────────────────
     // These cover common WP URL structures that may be indexed on devlo.ch.
     // TODO: Crawl the live devlo.ch (WordPress) site and verify/extend this list.
@@ -135,6 +176,7 @@ const nextConfig = {
       { source: "/wp-login.php", destination: "/", permanent: true },
       { source: "/wp-content/:path*", destination: "/", permanent: true },
       { source: "/wp-includes/:path*", destination: "/", permanent: true },
+      { source: "/et_body_layout/:path*", destination: "/", permanent: true },
       // WP taxonomy / archive patterns
       { source: "/category/:slug*", destination: "/", permanent: true },
       { source: "/tag/:slug*", destination: "/", permanent: true },
@@ -509,6 +551,86 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/courriel-quelquun-vendre-quelque-chose",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/courriel-quelquun-vendre-quelque-chose/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/developpement-ventes-peche-au-harpon",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/developpement-ventes-peche-au-harpon/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/lancement-devlo-partenaire-de-confiance-generation-de-prospects",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/lancement-devlo-partenaire-de-confiance-generation-de-prospects/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/oui-a-reduction-friction-commerciale",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/oui-a-reduction-friction-commerciale/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/personnalisation-digitalisation-sont-si-importantes",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/personnalisation-digitalisation-sont-si-importantes/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/indicateurs-de-performance-elimines-2020",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/indicateurs-de-performance-elimines-2020/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/2020-leaders-equipes-vente-b2b",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/2020-leaders-equipes-vente-b2b/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/mark-roberge-predictions-prescriptions-2021",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/mark-roberge-predictions-prescriptions-2021/",
+        destination: "/",
+        permanent: true,
+      },
+      {
         source: "/developpement-ventes-b2b",
         destination: "/",
         permanent: true,
@@ -563,6 +685,7 @@ const nextConfig = {
       ...caseStudyRedirects,
       ...wpResultatRedirects, // specific WP long slugs — must be before wildcard
       ...resultatRedirects,
+      ...appAliasRedirects,
       ...enRedirects,
       ...deRedirects,
       ...frBlogRedirects,

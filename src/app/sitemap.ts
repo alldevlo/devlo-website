@@ -12,8 +12,6 @@ const staticRoutes: Array<{
   { path: "/etudes-de-cas", changeFrequency: "monthly", priority: 0.9 },
   { path: "/consultation", changeFrequency: "monthly", priority: 0.9 },
   { path: "/academy", changeFrequency: "monthly", priority: 0.8 },
-  { path: "/formation-prospection-b2b", changeFrequency: "monthly", priority: 0.8 },
-  { path: "/contact", changeFrequency: "monthly", priority: 0.7 },
   { path: "/conditions", changeFrequency: "yearly", priority: 0.3 },
 ];
 

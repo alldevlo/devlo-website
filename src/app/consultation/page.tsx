@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 
+import { JsonLd } from "@/components/seo/json-ld";
 import { ConsultationMasterPage } from "@/components/pages/consultation-master-page";
 import { consultationSeo } from "@/content/masterfile.fr";
+import { buildBreadcrumbSchema } from "@/lib/seo/schema-builders";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: consultationSeo.title,
@@ -14,10 +17,20 @@ export const metadata: Metadata = {
     description: consultationSeo.description,
     type: "website",
     locale: "fr_CH",
-    url: "https://devlo.ch/consultation",
+    url: `${siteConfig.url}/consultation`,
   },
 };
 
 export default function Page() {
-  return <ConsultationMasterPage />;
+  return (
+    <>
+      <JsonLd
+        schema={buildBreadcrumbSchema([
+          { name: "Accueil", path: "/" },
+          { name: "Consultation gratuite", path: "/consultation" },
+        ])}
+      />
+      <ConsultationMasterPage />
+    </>
+  );
 }

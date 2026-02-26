@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "devlo",
   description:
     "Agence suisse spécialisée en prospection B2B, génération de leads et prise de rendez-vous qualifiés.",
-  url: "https://devlo.ch",
+  url: "https://devlo-agency.ch",
   locale: "fr-CH",
   nav: [
     { label: "Accueil", href: "/" },

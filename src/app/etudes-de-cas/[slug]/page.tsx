@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 
+import { JsonLd } from "@/components/seo/json-ld";
 import { CaseStudyMasterPage } from "@/components/pages/case-study-master-page";
 import { caseStudiesCards, caseStudiesSeo } from "@/content/masterfile.fr";
 import { resolveCaseStudyCanonicalSlug } from "@/lib/case-study-slug-redirects";
 import { caseStudies } from "@/lib/case-studies";
+import { buildBreadcrumbSchema } from "@/lib/seo/schema-builders";
+import { siteConfig } from "@/lib/site";
 
 type Params = {
   params: { slug: string };
@@ -41,16 +44,35 @@ export function generateMetadata({ params }: Params): Metadata {
   return {
     title: study.title,
     description: study.metrics.join(" · "),
+    alternates: {
+      canonical: `/etudes-de-cas/${canonicalSlug}`,
+    },
     openGraph: {
       title: study.title,
       description: study.metrics.join(" · "),
       type: "article",
       locale: "fr_CH",
-      url: `https://devlo.ch/etudes-de-cas/${canonicalSlug}`,
+      url: `${siteConfig.url}/etudes-de-cas/${canonicalSlug}`,
     },
   };
 }
 
 export default function Page({ params }: Params) {
-  return <CaseStudyMasterPage slug={params.slug} />;
+  const canonicalSlug = resolveCaseStudyCanonicalSlug(params.slug);
+  const cardStudy = caseStudiesCards.find((item) => item.slug === params.slug) ?? caseStudiesCards.find((item) => item.slug === canonicalSlug);
+  const detailedStudy = caseStudies.find((item) => item.slug === params.slug) ?? caseStudies.find((item) => item.slug === canonicalSlug);
+  const breadcrumbLabel = cardStudy?.title ?? detailedStudy?.title ?? "Étude de cas";
+
+  return (
+    <>
+      <JsonLd
+        schema={buildBreadcrumbSchema([
+          { name: "Accueil", path: "/" },
+          { name: "Études de cas", path: "/etudes-de-cas" },
+          { name: breadcrumbLabel, path: `/etudes-de-cas/${canonicalSlug}` },
+        ])}
+      />
+      <CaseStudyMasterPage slug={params.slug} />
+    </>
+  );
 }
