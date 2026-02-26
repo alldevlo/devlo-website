@@ -157,15 +157,6 @@ export function AcademyMasterPage() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
-        <FadeInOnScroll>
-          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{academyContent.faqTitle}</h2>
-        </FadeInOnScroll>
-        <div className="mx-auto mt-10 max-w-[980px]">
-          <AccordionSingle items={academyContent.faqs} />
-        </div>
-      </SectionWrapper>
-
       <SectionWrapper background="dark" className="py-[80px] text-white md:py-[120px]">
         <FadeInOnScroll>
           <h2 className="text-center text-3xl font-bold leading-[1.2] md:text-4xl">{academyContent.finalCta.h2}</h2>
@@ -182,6 +173,15 @@ export function AcademyMasterPage() {
             </Link>
           </div>
         </FadeInOnScroll>
+      </SectionWrapper>
+
+      <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
+        <FadeInOnScroll>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{academyContent.faqTitle}</h2>
+        </FadeInOnScroll>
+        <div className="mx-auto mt-10 max-w-[980px]">
+          <AccordionSingle items={academyContent.faqs} />
+        </div>
       </SectionWrapper>
     </>
   );

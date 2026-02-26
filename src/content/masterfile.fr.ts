@@ -556,7 +556,7 @@ export const caseStudiesCards: CaseStudyCard[] = [
   {
     slug: "iddi-generation-leads-biotech-pharma",
     client: "IDDI",
-    banner: "/images/IDDI_banner.jpg",
+    banner: "/images/IDDI_banner.webp",
     title: "IDDI — Services de génération de leads en biotech/pharma pour un CRO international",
     metrics: ["20 MQL et 10 SQL (rendez-vous qualifiés)"],
     sector: "Pharma / Biotech",
@@ -618,7 +618,7 @@ export const academyContent = {
     label: "Accédez gratuitement à la plateforme →",
     href: "https://academy.devlo.ch/invitation?code=GE7JA6",
   },
-  logosTitle: "Nos clients ont rencontré ces entreprises",
+  logosTitle: "Ces entreprises nous font confiance",
   testimonialsTitle: "Section témoignages Academy",
   testimonials: [
     {
@@ -684,7 +684,7 @@ export const academyContent = {
       text: "Participez aux webinaires hebdomadaires où les membres de la communauté partagent leurs études de cas pour affiner leur génération de leads, leurs séquences de cold outreach et leurs campagnes d'acquisition outbound.",
     },
   ] as HomeCard[],
-  faqTitle: "Section FAQ Academy",
+  faqTitle: "FAQ Academy",
   faqs: [
     {
       question: "Quels outils sont présentés et quels sont leurs coûts ?",
@@ -723,7 +723,7 @@ export const academyContent = {
     },
   ] as FaqItem[],
   finalCta: {
-    h2: "Découvrez étape par étape notre méthodologie ultra-complète qui a fait ses preuves",
+    h2: "Découvrez étape par étape notre méthodologie ultra complète",
     h3: "Si vous êtes SDR, BDR, business developer, directeur d'agence ou entrepreneur, et que vous voulez accélérer votre développement commercial et rencontrer plus de prospects B2B qualifiés, profitez de notre offre spéciale : Adhésion à vie",
     cta: {
       label: "Profiter de l'offre spéciale →",
