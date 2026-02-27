@@ -12,9 +12,6 @@ export function LovalingoNextProvider({ children }: { children: ReactNode }) {
       defaultLocale="fr"
       locales={["fr", "en", "de", "nl"]}
       routing="path"
-      switcherPosition="bottom-right"
-      switcherOffsetY={20}
-      switcherTheme="dark"
       overlayBgColor="#ffffff"
     >
       {children}

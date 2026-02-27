@@ -39,6 +39,11 @@ body {
   font-family: var(--font-plus-jakarta), "Avenir Next", "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
 }
 
+/* Hide Lovalingo's built-in floating switcher; we render a custom header switcher. */
+div[data-lovalingo-exclude="true"] {
+  display: none !important;
+}
+
 a {
   color: inherit;
 }

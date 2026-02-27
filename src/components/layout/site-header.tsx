@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
+import { HeaderLangSwitcher } from "@/components/layout/header-lang-switcher";
 import { buttonClassName } from "@/components/ui/button";
 import { mainNav } from "@/content/masterfile.fr";
 
@@ -71,9 +72,12 @@ export function SiteHeader() {
               );
             })}
 
-            <Link href={mainNav.cta.href} className={buttonClassName("outline", "px-5 py-2.5 text-sm")}>
-              {mainNav.cta.label}
-            </Link>
+            <div className="flex items-center gap-3">
+              <Link href={mainNav.cta.href} className={buttonClassName("outline", "px-5 py-2.5 text-sm")}>
+                {mainNav.cta.label}
+              </Link>
+              <HeaderLangSwitcher transparent={transparentMode} />
+            </div>
           </nav>
 
           <button
@@ -126,6 +130,7 @@ export function SiteHeader() {
             <Link href={mainNav.cta.href} className={buttonClassName("primary", "mt-8 w-full py-4 text-base")}>
               {mainNav.cta.label}
             </Link>
+            <HeaderLangSwitcher mobile className="mt-3" />
           </motion.aside>
         ) : null}
       </AnimatePresence>
