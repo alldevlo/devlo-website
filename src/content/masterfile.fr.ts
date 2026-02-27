@@ -319,6 +319,14 @@ export const homeContent = {
     },
     {
       quote:
+        "Investir dans l'Academy pour la génération de leads B2B et la prise de rendez-vous qualifiés a été l'une des meilleures décisions que j'ai prises en tant que leader commercial. Les résultats parlent d'eux-mêmes – j'ai pu réserver 10 fois plus de rendez-vous qualifiés avec des clients potentiels depuis la mise en œuvre des stratégies apprises dans l'Academy. L'investissement a été rentable en termes de revenus accrus et m'a donné un avantage concurrentiel sur le marché.",
+      author: "Jurica Karlo Welina",
+      role: "Business Development Manager",
+      company: "InsiderCX",
+      photo: "/images/jurica-karlo.webp",
+    },
+    {
+      quote:
         "Je suis convaincu que devlo est un partenaire idéal pour les start-ups qui cherchent à valider leur product-market fit et à obtenir un maximum de rendez-vous qualifiés avec très peu de temps et de ressources. Le professionnalisme de son fondateur Charles a rendu tout le processus, de la génération de leads à la structuration de campagne et l'obtention de rendez-vous, une collaboration très agréable et efficace. Pour donner une perspective, notre première campagne avec devlo : 81% de taux d'ouverture, 54% de taux de réponse et 16% des organisations intéressées par un rendez-vous avec Saporo. C'est remarquablement efficace, surtout dans un secteur aussi complexe que la cybersécurité.",
       author: "Olivier Eyries",
       role: "CEO",
@@ -351,6 +359,14 @@ export const homeContent = {
     },
     {
       quote:
+        "J'ai récemment suivi un cours en ligne sur la génération de leads B2B et la prise de rendez-vous qualifiés avec des clients potentiels, et cela a été un véritable changement de jeu pour moi en tant que leader commercial. Le cours m'a fourni des techniques et des stratégies pratiques que j'ai pu immédiatement appliquer à mon processus de vente. Depuis, j'ai constaté une augmentation significative du nombre de rendez-vous qualifiés que j'ai pu réserver.",
+      author: "Maxime Dumont",
+      role: "Mind-shift activator",
+      company: "Mind-shifters",
+      photo: "/images/Maxime_Dumont.webp",
+    },
+    {
+      quote:
         "Charles est parmi les experts commerciaux les plus créatifs et enthousiastes que je connaisse. J'ai travaillé avec lui sur plusieurs campagnes. Il nous a aidés à mettre en place des campagnes de prospection hyper-personnalisées, à atteindre des centaines de prospects et finalement à obtenir des rendez-vous commerciaux qualifiés. De plus, il nous a aussi conseillés pour affiner notre processus de vente, ce qui a été très utile pour l'ensemble du département commercial. Je recommande vivement ses compétences et services à toutes les startups et PME qui veulent passer rapidement au niveau supérieur.",
       author: "Raphael Haut",
       role: "Head of Business Development & Marketing",
@@ -364,6 +380,14 @@ export const homeContent = {
       role: "Fondateur",
       company: "Many Ways SA",
       photo: "/images/Xavier_Leuthold_Many_Ways.webp",
+    },
+    {
+      quote:
+        "J'ai terminé avec succès la devlo Academy. Elle couvre tout ce qui est nécessaire pour mettre en œuvre des campagnes outbound entièrement automatisées pour promouvoir nos services. Époustouflé par les connaissances et les directives fournies, j'ai beaucoup appris des tutoriels approfondis et des études de cas. Notre équipe a pu économiser beaucoup de temps et d'argent en tirant parti des stratégies et outils présentés dans l'Academy. Je recommande vivement cette Academy.",
+      author: "Fabio Oliva",
+      role: "Founder",
+      company: "Workflowed",
+      photo: "/images/Fabio_Oliva.webp",
     },
   ] as WrittenTestimonial[],
   ctaMid: {

@@ -33,11 +33,26 @@ function TestimonialCard({ t }: { t: WrittenTestimonial }) {
 }
 
 export function WrittenTestimonialsCarousel({ testimonials }: { testimonials: WrittenTestimonial[] }) {
-  const half = Math.ceil(testimonials.length / 2);
-  const groupA = testimonials.slice(0, half);
-  const groupB = testimonials.slice(half);
-  const row1 = [...groupA, ...groupA];
-  const row2 = [...groupB, ...groupB];
+  const groupA = testimonials.filter((_, index) => index % 2 === 0);
+  const groupB = testimonials.filter((_, index) => index % 2 === 1);
+
+  const ensureMinItems = (items: WrittenTestimonial[], minItems = 6) => {
+    if (items.length === 0) return [];
+    const filled = [...items];
+    let cursor = 0;
+
+    while (filled.length < minItems) {
+      filled.push(items[cursor % items.length]);
+      cursor += 1;
+    }
+
+    return filled;
+  };
+
+  const baseRow1 = ensureMinItems(groupA);
+  const baseRow2 = ensureMinItems(groupB.length > 0 ? groupB : groupA);
+  const row1 = [...baseRow1, ...baseRow1];
+  const row2 = [...baseRow2, ...baseRow2];
 
   return (
     <div className="relative mt-10 -mx-6 overflow-hidden md:-mx-8 lg:-mx-8">
