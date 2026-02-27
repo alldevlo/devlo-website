@@ -1,0 +1,18 @@
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:25:35 GMT
+location: /etudes-de-cas/biocarburants-52-rendez-vous
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+refresh: 0;url=/etudes-de-cas/biocarburants-52-rendez-vous
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-robots-tag: noindex
+x-vercel-id: cpt1::nzlzk-1772187935148-d995d6fae89a
+
+Redirecting...

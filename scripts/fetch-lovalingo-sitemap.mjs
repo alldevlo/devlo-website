@@ -1,17 +1,8 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
-const LOVALINGO_SITEMAP_URL = "https://cdn.lovalingo.com/sitemap/aix_4lsv3rhzupizsd64v86j2p8w38aeli92.xml";
+const LOVALINGO_SITEMAP_URL = "https://cdn.lovalingo.com/sitemap/aix_qhj0o99zw8icbj8mg4e7x04rtp1wehsw.xml";
 const OUTPUT_PATH = join(process.cwd(), "public", "sitemap.xml");
-
-function isValidXmlSitemap(body) {
-  const trimmed = body.replace(/^\uFEFF/, "").trimStart();
-  return (
-    trimmed.startsWith("<?xml") ||
-    trimmed.startsWith("<urlset") ||
-    trimmed.startsWith("<sitemapindex")
-  );
-}
 
 async function main() {
   const response = await fetch(LOVALINGO_SITEMAP_URL, {
@@ -21,13 +12,18 @@ async function main() {
   });
 
   if (response.status !== 200) {
-    throw new Error(`Lovalingo sitemap fetch failed (${response.status}) for ${LOVALINGO_SITEMAP_URL}`);
+    throw new Error(`Lovalingo sitemap fetch failed (${response.status}) from ${LOVALINGO_SITEMAP_URL}`);
   }
 
   const body = await response.text();
+  const normalizedBody = body.trimStart();
+  const isValidXmlRoot =
+    normalizedBody.startsWith("<?xml") ||
+    normalizedBody.startsWith("<urlset") ||
+    normalizedBody.startsWith("<sitemapindex");
 
-  if (!isValidXmlSitemap(body)) {
-    throw new Error("Lovalingo sitemap payload is not valid XML sitemap (expected <?xml, <urlset or <sitemapindex>)");
+  if (!isValidXmlRoot) {
+    throw new Error("Lovalingo sitemap is not valid XML (expected <?xml, <urlset, or <sitemapindex>)");
   }
 
   await mkdir(join(process.cwd(), "public"), { recursive: true });

@@ -1,5 +1,6 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
+import { resolveCaseStudyCanonicalSlug } from "@/lib/case-study-slug-redirects";
 
 const SUPPORTED_LOCALES = new Set(["fr", "en", "de", "nl"]);
 
@@ -16,12 +17,39 @@ function isBypassedPath(pathname: string) {
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const normalizedPathname = pathname === "/" ? "/" : pathname.replace(/\/+$/, "") || "/";
 
-  if (pathname === "/" || isBypassedPath(pathname)) {
+  const redirectTo = (targetPathname: string) => {
+    const targetUrl = request.nextUrl.clone();
+    targetUrl.pathname = targetPathname;
+
+    return new NextResponse(null, {
+      status: 301,
+      headers: {
+        Location: targetUrl.toString(),
+      },
+    });
+  };
+
+  const resultatsSlugPrefix = "/resultats/";
+  const isResultatsRoot = normalizedPathname === "/resultats";
+  const isResultatsSlug = normalizedPathname.startsWith(resultatsSlugPrefix);
+  const resultatsSlug = isResultatsSlug ? normalizedPathname.slice(resultatsSlugPrefix.length) : "";
+  const canonicalResultatsPath = isResultatsRoot
+    ? "/etudes-de-cas"
+      : isResultatsSlug && resultatsSlug
+      ? `/etudes-de-cas/${resolveCaseStudyCanonicalSlug(resultatsSlug)}`
+      : null;
+
+  if (canonicalResultatsPath) {
+    return redirectTo(canonicalResultatsPath);
+  }
+
+  if (normalizedPathname === "/" || isBypassedPath(normalizedPathname)) {
     return NextResponse.next();
   }
 
-  const segments = pathname.split("/").filter(Boolean);
+  const segments = normalizedPathname.split("/").filter(Boolean);
   const maybeLocale = segments[0];
 
   if (!maybeLocale || !SUPPORTED_LOCALES.has(maybeLocale)) {

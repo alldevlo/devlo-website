@@ -1,0 +1,9 @@
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:24:05 GMT
+location: https://www.devlo.ch/sitemap.xml
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::hx9bh-1772187845874-378118614d17
+

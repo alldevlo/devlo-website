@@ -1,0 +1,4 @@
+Vercel CLI 50.23.2
+> Assigning alias www.devlo.ch to deployment devlo-next-5kslnrsba-charles-8969s-projects.vercel.app
+Fetching domain www.devlo.ch under charles-8969s-projects
+Error: You don't have access to the domain www.devlo.ch under charles-8969s-projects.

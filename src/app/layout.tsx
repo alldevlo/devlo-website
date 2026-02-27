@@ -18,7 +18,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-89LHRHHEM3";
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-9CKZL9V2VN";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     url: toAbsoluteUrl("/"),
     images: [
       {
-        url: defaultOgImagePath,
+        url: toAbsoluteUrl(defaultOgImagePath),
         width: 1200,
         height: 630,
         alt: "devlo — Agence B2B de Prospection Commerciale",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: "Agence de prospection commerciale B2B en Suisse",
     description:
       "Agence B2B en Suisse spécialisée en génération de leads et rendez-vous qualifiés. Campagnes cold email, LinkedIn et téléprospection orientées résultats.",
-    images: [defaultOgImagePath],
+    images: [toAbsoluteUrl(defaultOgImagePath)],
   },
   icons: {
     icon: [
@@ -187,9 +187,9 @@ export default function RootLayout({
       <body className={`${plusJakartaSans.variable} min-h-screen bg-canvas font-sans text-ink antialiased`}>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

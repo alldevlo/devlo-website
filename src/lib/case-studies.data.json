@@ -1496,11 +1496,11 @@
     "legacySlugs": [
       "monizze-120-rendez-vous-qualifies-belgique"
     ],
-    "title": "How devlo Booked 120 Qualified Meetings for Monizze by Targeting 7,000 HR, Finance, and Management Decision-Makers in Belgium",
-    "summary": "How devlo booked 120 qualified meetings for Monizze by targeting 7,000 HR, Finance, and Management decision-makers in Belgium.",
-    "heroSubtitle": "Monizze is a leading Belgian provider of digital employee benefits, including meal vouchers, eco vouchers, gift vouchers, and sports vouchers.",
+    "title": "Comment devlo a obtenu 120 rendez-vous qualifiés pour Monizze en ciblant 7’000 décideurs RH, Finance et Direction en Belgique",
+    "summary": "Comment devlo a obtenu 120 rendez-vous qualifiés pour Monizze en ciblant 7’000 décideurs RH, Finance et Direction en Belgique.",
+    "heroSubtitle": "Monizze est un acteur belge de référence des avantages extralégaux digitaux : chèques-repas, éco-chèques, chèques-cadeaux et chèques sport & culture.",
     "client": "Monizze",
-    "sector": "Employee benefits, meal vouchers",
+    "sector": "Avantages extralégaux, chèques-repas",
     "heroImageUrl": "/images/Monizze_banner.webp",
     "clientLogoUrl": "/images/Monizze_Logo.webp",
     "testimonialPhotoUrl": "/images/Anthony_CREMER.webp",
@@ -1515,103 +1515,249 @@
     "heroStats": [
       {
         "value": "120",
-        "label": "Meetings booked"
+        "label": "Rendez-vous bookés"
       },
       {
-        "value": "7,000",
-        "label": "Decision-makers targeted"
+        "value": "7’000",
+        "label": "Décideurs ciblés"
       },
       {
-        "value": "6,000+",
-        "label": "Leads contacted"
+        "value": "6’000+",
+        "label": "Leads contactés"
       }
     ],
     "campaignDetails": [
       {
-        "label": "Categories",
-        "value": "Lead generation, appointment setting, inbox management, multichannel outbound"
+        "label": "Catégories",
+        "value": "Génération de leads, prise de rendez-vous, gestion inbox, prospection multicanale"
       },
       {
-        "label": "Services",
-        "value": "Employee benefits, meal vouchers"
+        "label": "Offre / Services",
+        "value": "Avantages extralégaux, chèques-repas"
       },
       {
-        "label": "Ideal Customer Profiles",
-        "value": "HR Managers and HR Directors, CFOs and Finance Directors, CEOs and Owners of smaller SMEs in Belgium."
+        "label": "Profils clients idéaux (ICP)",
+        "value": "Responsables RH et Directeurs RH, CFO et Directeurs Finance, CEO et propriétaires de PME en Belgique."
       },
       {
-        "label": "Campaign language(s)",
-        "value": "French, Dutch"
+        "label": "Langue(s) de campagne",
+        "value": "Français, néerlandais"
       },
       {
-        "label": "Contact person",
+        "label": "Contact",
         "value": "Anthony Crémer, Revenue Ops Analyst"
       }
     ],
     "resultHighlights": [
-      "6,000+ leads contacted",
-      "120 meetings booked (1.6% meeting rate)",
-      "Near-zero no-show rate thanks to inbox follow-ups",
-      "152 people expressed clear interest",
-      "96-99% email deliverability",
-      "62.3% peaks of open rate on targeted batches"
+      "6’000+ leads contactés",
+      "120 rendez-vous bookés (taux de rendez-vous : 1,6%)",
+      "Taux de no-show quasi nul grâce aux relances inbox",
+      "152 personnes ont exprimé un intérêt clair",
+      "96–99% de délivrabilité email",
+      "Pics à 62,3% de taux d’ouverture sur des lots ciblés"
     ],
     "sections": [
       {
-        "heading": "About the Company",
+        "heading": "À propos de l’entreprise",
         "paragraphs": [
-          "Monizze is a leading Belgian provider of digital employee benefits, including meal vouchers, eco vouchers, gift vouchers, and sports vouchers."
+          "Monizze est un acteur belge de référence des avantages extralégaux digitaux : chèques-repas, éco-chèques, chèques-cadeaux et chèques sport & culture."
         ],
         "bullets": []
       },
       {
-        "heading": "The Challenge",
+        "heading": "Le défi",
         "paragraphs": [
-          "Monizze previously relied only on cold calling through an external partner and had no internal outbound capabilities. They lacked the resources to run a structured outbound campaign targeting their full TAM.",
-          "Their past partner delivered more meetings, but with lead quality issues and higher no-show rates."
+          "Monizze s’appuyait auparavant uniquement sur du cold call via un partenaire externe et ne disposait pas de capacités outbound en interne. L’entreprise n’avait pas les ressources pour mener une campagne outbound structurée couvrant l’ensemble de son TAM.",
+          "Le précédent partenaire générait davantage de rendez-vous, mais avec des problèmes de qualité des leads et un taux de no-show plus élevé."
         ],
         "bullets": []
       },
       {
-        "heading": "The Strategy",
+        "heading": "La stratégie",
         "paragraphs": [],
         "bullets": [
-          "Implemented a multichannel outbound approach using email + LinkedIn.",
-          "Focused targeting on companies that are members of certain associations in Belgium.",
-          "Prioritized Tier 1 decision makers: HR Managers, representing over 60% of all contacts reached.",
-          "End-to-end inbox management with proactive and reactive responses, nurturing, and pre-qualification."
+          "Mise en place d’une approche outbound multicanale (email + LinkedIn).",
+          "Ciblage prioritaire d’entreprises membres de certaines associations en Belgique.",
+          "Priorisation des décideurs “Tier 1” : Responsables RH, représentant plus de 60% des contacts atteints.",
+          "Gestion inbox end-to-end : réponses proactives et réactives, nurturing et pré-qualification."
         ]
       },
       {
-        "heading": "Results",
+        "heading": "Résultats",
         "paragraphs": [],
         "bullets": [
-          "6,000+ leads contacted",
-          "120 meetings booked (1.6% meeting rate)",
-          "Near-zero no-show rate thanks to inbox follow-ups",
-          "152 people expressed clear interest",
-          "96-99% email deliverability",
-          "62.3% peaks of open rate on targeted batches"
+          "6’000+ leads contactés",
+          "120 rendez-vous bookés (taux de rendez-vous : 1,6%)",
+          "Taux de no-show quasi nul grâce aux relances inbox",
+          "152 personnes ont exprimé un intérêt clair",
+          "96–99% de délivrabilité email",
+          "Pics à 62,3% de taux d’ouverture sur des lots ciblés"
         ]
       },
       {
-        "heading": "Client Testimonial",
+        "heading": "Témoignage client",
         "paragraphs": [
-          "\"Working with devlo has been a real pleasure. Communication was very smooth and the team was always responsive when needed. Their personalized approach allowed us to combine volume and quality, even though the target audience was difficult to reach. There were virtually no no-shows, and appointments were always qualified and effective. The lessons learned from the campaigns are also instructive and very valuable.\"",
-          "Anthony Crémer, Revenue Ops Analyst at Monizze"
+          "« Travailler avec devlo a été un vrai plaisir. La communication était très fluide et l’équipe toujours réactive quand nécessaire. Leur approche personnalisée nous a permis de combiner volume et qualité, même si l’audience était difficile à atteindre. Il n’y a quasiment pas eu de no-shows, et les rendez-vous étaient toujours qualifiés et efficaces. Les enseignements tirés des campagnes sont également très instructifs et précieux. »",
+          "Anthony Crémer, Revenue Ops Analyst chez Monizze"
         ],
         "bullets": []
       },
       {
-        "heading": "Key Takeaways",
+        "heading": "Enseignements clés",
         "paragraphs": [],
         "bullets": [
-          "Timing and targeting mattered far more than heavy personalization.",
-          "Choosing the right companies and decision makers drove most of the success.",
-          "Inbox management was a critical success factor, contributing to the ultra-low no-show rate.",
-          "Quality > Quantity: fewer meetings, but significantly more valuable outcomes."
+          "Le timing et le ciblage ont compté bien plus que l’hyper-personnalisation.",
+          "Le choix des bonnes entreprises et des bons décideurs a généré l’essentiel des résultats.",
+          "La gestion inbox a été un facteur clé, contribuant au taux de no-show ultra faible.",
+          "Qualité > Quantité : moins de rendez-vous, mais des résultats nettement plus précieux."
         ]
       }
+    ],
+    "objectives": [
+      "Obtenir des rendez-vous qualifiés auprès des décideurs RH, Finance et Direction en Belgique.",
+      "Cibler 7’000 décideurs avec une approche multicanale structurée.",
+      "Réduire les no-shows grâce à une gestion inbox rigoureuse."
+    ],
+    "outcomes": [
+      "6’000+ leads contactés",
+      "120 rendez-vous bookés (taux de rendez-vous : 1,6%)",
+      "152 personnes ont exprimé un intérêt clair",
+      "Taux de no-show quasi nul grâce aux relances inbox"
+    ]
+  },
+  {
+    "slug": "iddi-generation-leads-biotech-pharma",
+    "sourceUrl": "https://devlo.ch/etudes-de-cas/iddi-generation-leads-biotech-pharma/",
+    "sourceSlug": "iddi-generation-leads-biotech-pharma",
+    "title": "Cold outreach : voici comment notre agence a obtenu des rendez-vous qualifiés avec des entreprises biotechnologiques et pharmaceutiques",
+    "summary": "IDDI, CRO spécialisé en biostatistique et gestion des données cliniques, génère des rendez-vous qualifiés auprès de décideurs biotech et pharma.",
+    "heroSubtitle": "IDDI, CRO spécialisé en biostatistique et gestion des données cliniques, voulait accélérer l’obtention de rendez-vous qualifiés avec des décideurs biotech/pharma via une prospection multicanale.",
+    "client": "IDDI",
+    "sector": "Pharma / Biotech / CRO",
+    "heroImageUrl": "/images/IDDI_banner.webp",
+    "clientLogoUrl": "/images/IDDI_logo.webp",
+    "testimonialPhotoUrl": "/images/Serge_Bodart.webp",
+    "testimonialPhotoAlt": "Photo de Serge Bodart",
+    "migrationStatus": "premium",
+    "validationStatus": "unknown",
+    "assetAudit": {
+      "hero": "webp",
+      "logo": "webp",
+      "testimonialPhoto": "webp"
+    },
+    "heroStats": [
+      {
+        "value": "52,7%",
+        "label": "Taux d’ouverture"
+      },
+      {
+        "value": "12,9%",
+        "label": "Taux de réponse"
+      },
+      {
+        "value": "3 semaines",
+        "label": "Délai avant les premiers rendez-vous"
+      }
+    ],
+    "campaignDetails": [
+      {
+        "label": "Catégories",
+        "value": "Génération de prospects, prospection commerciale, qualification des besoins, prise de rendez-vous"
+      },
+      {
+        "label": "Services",
+        "value": "Gestion et restitution des données"
+      },
+      {
+        "label": "Profils clients idéaux (ICP)",
+        "value": "PDG, CMO, directeur médical et décideurs en charge des opérations cliniques, de l'externalisation, etc. dans la fabrication d'équipements médicaux et la recherche biotechnologique."
+      },
+      {
+        "label": "Langue(s) de campagne",
+        "value": "Français, Allemand, Anglais"
+      },
+      {
+        "label": "Contact",
+        "value": "Serge Bodart, Directeur commercial"
+      },
+      {
+        "label": "Résultats clés",
+        "value": "52,7% de taux d'ouverture · 12,9% de taux de réponse · Premiers rendez-vous en 3 semaines · Hausse significative des démos après l'ajout des appels à froid."
+      }
+    ],
+    "resultHighlights": [
+      "52,7% de taux d’ouverture",
+      "12,9% de taux de réponse",
+      "Premiers rendez-vous obtenus en 3 semaines",
+      "Hausse significative des démos après +1000 appels à froid"
+    ],
+    "sections": [
+      {
+        "heading": "À propos de l’entreprise",
+        "paragraphs": [
+          "Notre client est un CRO qui offre des services biométriques avancés aux sociétés biotechnologiques et pharmaceutiques.",
+          "IDDI est une organisation de recherche clinique trentenaire, spécialisée dans la biostatistique et la gestion des données pour les sociétés pharmaceutiques, biotechnologiques et d'appareils médicaux."
+        ],
+        "bullets": []
+      },
+      {
+        "heading": "Le défi",
+        "paragraphs": [],
+        "bullets": [
+          "Plusieurs décideurs dans une même entreprise : identifier l’ICP le plus qualifié et le plus engagé.",
+          "Secteur de niche : les prospects ont souvent déjà des partenaires en biostatistique/gestion des données, ce qui complique la différenciation.",
+          "Saturation de la prospection (email, LinkedIn, calls) : gagner la confiance et obtenir des rendez-vous qualifiés est plus difficile.",
+          "Email et LinkedIn seuls n’étaient pas toujours suffisants : il fallait ajouter des appels à froid pour obtenir plus de rendez-vous et améliorer les messages."
+        ]
+      },
+      {
+        "heading": "La stratégie",
+        "paragraphs": [],
+        "bullets": [
+          "Amélioration continue du ciblage : analyse des réponses LinkedIn/email dès la semaine 1, prise en compte des redirections internes, puis itérations rapides via Sales Navigator et +1500 leads avec des titres plus pertinents.",
+          "Vanilla offer : proposition de 5 heures de consultation gratuite pour gagner la confiance, discuter les projets futurs de développement clinique puis négocier un contrat.",
+          "Cold calls sur prospects engagés : filtrage CRM + Lemlist des contacts ayant ouvert plusieurs fois ou cliqué, puis appels pour maximiser les démos et collecter des insights actionnables."
+        ]
+      },
+      {
+        "heading": "Résultats",
+        "paragraphs": [],
+        "bullets": [
+          "LinkedIn : bons taux d’acceptation, conversations de qualité et nouvelles connexions ouvrant des opportunités contractuelles.",
+          "Réunions : la campagne stagnait, puis l’ajout de sessions d’appels à froid à grande échelle a relancé la dynamique.",
+          "Après +1000 appels, l’équipe a dépassé ses attentes avec une hausse significative des démos.",
+          "Dans un secteur spécialisé, faire plus que la concurrence (vanilla offer + calls) améliore le taux de réponse et la conversion en rendez-vous."
+        ]
+      },
+      {
+        "heading": "Enseignements clés",
+        "paragraphs": [],
+        "bullets": [
+          "Le ciblage ICP doit être revu chaque semaine à partir des signaux réels du terrain.",
+          "Une offre d’entrée claire (5h de consultation) accélère la confiance dans un marché saturé.",
+          "Les appels à froid restent décisifs quand email/LinkedIn plafonnent.",
+          "La combinaison signaux d’engagement + appels augmente les chances de démos qualifiées."
+        ]
+      },
+      {
+        "heading": "La séquence de prospection",
+        "paragraphs": [
+          "Séquence utilisée : devlo_outreach_sequence_C1_IDDI_EN"
+        ],
+        "bullets": []
+      }
+    ],
+    "objectives": [
+      "Obtenir des rendez-vous qualifiés avec des décideurs biotech/pharma et medtech.",
+      "Identifier les ICP les plus réactifs parmi plusieurs décideurs au sein d’un même compte.",
+      "Se différencier dans un secteur niche fortement sollicité.",
+      "Combiner email, LinkedIn et appels à froid pour améliorer la conversion."
+    ],
+    "outcomes": [
+      "52,7% de taux d’ouverture",
+      "12,9% de taux de réponse",
+      "Premiers rendez-vous en 3 semaines",
+      "Hausse significative des démos après +1000 appels à froid"
     ]
   }
 ]

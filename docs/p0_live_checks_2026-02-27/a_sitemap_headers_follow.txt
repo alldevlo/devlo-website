@@ -1,0 +1,32 @@
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:02:29 GMT
+location: https://www.devlo.ch/sitemap.xml
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::7f55r-1772186549778-35d630329e6e
+
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 0
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline; filename="sitemap.xml"
+content-type: application/xml
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:02:29 GMT
+etag: "d79c6279c3f9ad4d6f464dfe2010a22b"
+last-modified: Fri, 27 Feb 2026 10:02:30 GMT
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-matched-path: /sitemap.xml
+x-vercel-cache: HIT
+x-vercel-id: cpt1::xs5f8-1772186549824-f0798ed5d10c
+content-length: 1820
+

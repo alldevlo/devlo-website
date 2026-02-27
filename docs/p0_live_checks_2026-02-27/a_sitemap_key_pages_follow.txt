@@ -1,0 +1,17 @@
+    <loc>https://devlo.ch/academy</loc>
+    <loc>https://devlo.ch/consultation</loc>
+    <loc>https://devlo.ch/etudes-de-cas</loc>
+    <loc>https://devlo.ch/etudes-de-cas/audiovisuel-16-rendez-vous</loc>
+    <loc>https://devlo.ch/etudes-de-cas/biocarburants-52-rendez-vous</loc>
+    <loc>https://devlo.ch/etudes-de-cas/biodiversite-70-rendez-vous</loc>
+    <loc>https://devlo.ch/etudes-de-cas/cybersecurite-4500-entreprises</loc>
+    <loc>https://devlo.ch/etudes-de-cas/formation-14-rendez-vous</loc>
+    <loc>https://devlo.ch/etudes-de-cas/hr-54-rendez-vous-dach</loc>
+    <loc>https://devlo.ch/etudes-de-cas/iddi-generation-leads-biotech-pharma</loc>
+    <loc>https://devlo.ch/etudes-de-cas/immobilier-11-prospects</loc>
+    <loc>https://devlo.ch/etudes-de-cas/immobilier-30-prospects</loc>
+    <loc>https://devlo.ch/etudes-de-cas/logiciel-comptable-200k-ca</loc>
+    <loc>https://devlo.ch/etudes-de-cas/merchandising-23-prospects</loc>
+    <loc>https://devlo.ch/etudes-de-cas/mobilite-40-prospects</loc>
+    <loc>https://devlo.ch/etudes-de-cas/monizze-120-rendez-vous</loc>
+    <loc>https://devlo.ch/etudes-de-cas/proprete-urbaine-71-rendez-vous</loc>

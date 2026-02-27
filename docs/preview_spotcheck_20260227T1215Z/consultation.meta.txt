@@ -1,0 +1,12 @@
+Route: /consultation
+<title>Consultation gratuite | Stratégie de prospection B2B sur mesure | devlo</title>
+<meta name="description" content="Obtenez votre stratégie de prospection outbound gratuite et personnalisée. Partagez votre ICP et recevez un plan d&#x27;action complet sous 24h. Agence B2B suisse."/>
+<link rel="canonical" href="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/consultation"/>
+<meta property="og:title" content="Consultation gratuite | Stratégie de prospection B2B sur mesure"/>
+<meta property="og:description" content="Obtenez votre stratégie de prospection outbound gratuite et personnalisée. Partagez votre ICP et recevez un plan d&#x27;action complet sous 24h. Agence B2B suisse."/>
+<meta property="og:url" content="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/consultation"/>
+<meta property="og:image" content="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/images/devlo_OG_Banner.webp"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Consultation gratuite | Stratégie de prospection B2B sur mesure"/>
+<meta name="twitter:description" content="Obtenez votre stratégie de prospection outbound gratuite et personnalisée. Partagez votre ICP et recevez un plan d&#x27;action complet sous 24h. Agence B2B suisse."/>
+<meta name="twitter:image" content="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/images/devlo_OG_Banner.webp"/>

@@ -1,0 +1,33 @@
+Vercel CLI 50.23.2
+Fetching deployment "www.devlo.ch" in charles-8969s-projects
+> Fetched deployment "devlo-next-5kslnrsba-charles-8969s-projects.vercel.app" in charles-8969s-projects [775ms]
+
+  General
+
+    id		dpl_Rv9L4ki8Q4KJZooYxDdC6NjSnPCq
+    name	devlo-next
+    target	production
+    status	● Ready
+    url		https://devlo-next-5kslnrsba-charles-8969s-projects.vercel.app
+    created	Fri Feb 27 2026 12:11:18 GMT+0200 (South Africa Standard Time) [10m ago]
+
+
+  Aliases
+
+    ╶ https://www.devlo.ch
+    ╶ https://devlo-next-charles-8969s-projects.vercel.app
+    ╶ https://devlo-next-charles-8969-charles-8969s-projects.vercel.app
+    ╶ https://devlo.ch
+    
+
+  Builds
+
+    ┌ .        [0ms]
+    ├── λ _not-found (765.9KB) [iad1]
+    ├── λ _not-found.rsc (765.9KB) [iad1]
+    ├── λ .well-known/lovalingo.json.rsc (825.04KB) [iad1]
+    ├── λ favicon.ico.rsc (825.04KB) [iad1]
+    ├── λ robots.txt.rsc (825.04KB) [iad1]
+    └── 154 output items hidden
+    
+

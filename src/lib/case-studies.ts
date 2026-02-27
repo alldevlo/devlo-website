@@ -40,6 +40,8 @@ export type CaseStudy = {
   heroStats: CaseStudyStat[];
   campaignDetails: CaseStudyDetail[];
   resultHighlights: string[];
+  objectives?: string[];
+  outcomes?: string[];
   sections: CaseStudySection[];
 };
 

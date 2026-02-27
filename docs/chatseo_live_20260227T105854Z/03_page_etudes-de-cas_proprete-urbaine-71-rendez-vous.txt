@@ -1,0 +1,28 @@
+$ curl -I https://devlo.ch/etudes-de-cas/proprete-urbaine-71-rendez-vous
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 0
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+content-type: text/html; charset=utf-8
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:59:37 GMT
+etag: "dcb21ef6afe2b0e37cbe707d7870deb3"
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000
+vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-matched-path: /etudes-de-cas/proprete-urbaine-71-rendez-vous
+x-vercel-cache: PRERENDER
+x-vercel-id: cpt1::54zbh-1772189977140-e92545e60390
+content-length: 105101
+
+
+$ curl -sL https://devlo.ch/etudes-de-cas/proprete-urbaine-71-rendez-vous | rg -o '<link rel="canonical"[^>]*>|<meta property="og:url"[^>]*>' -m 2
+<link rel="canonical" href="https://devlo.ch/etudes-de-cas/proprete-urbaine-71-rendez-vous"/>
+<meta property="og:url" content="https://devlo.ch/etudes-de-cas/proprete-urbaine-71-rendez-vous"/>

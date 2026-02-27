@@ -8,9 +8,14 @@ type FadeInOnScrollProps = {
   delay?: number;
   direction?: "up" | "down" | "left" | "right";
   className?: string;
+  eager?: boolean;
 };
 
-export function FadeInOnScroll({ children, delay = 0, direction = "up", className }: FadeInOnScrollProps) {
+export function FadeInOnScroll({ children, delay = 0, direction = "up", className, eager = false }: FadeInOnScrollProps) {
+  if (eager) {
+    return <div className={className}>{children}</div>;
+  }
+
   const directionOffset = {
     up: { y: 24 },
     down: { y: -24 },

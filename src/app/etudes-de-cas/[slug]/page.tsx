@@ -12,6 +12,22 @@ type Params = {
   params: { slug: string };
 };
 
+function normalizeDescription(description: string, fallback: string): string {
+  const normalized = description.replace(/\s+/g, " ").trim();
+  if (normalized.length >= 120 && normalized.length <= 160) return normalized;
+  if (normalized.length > 160) return `${normalized.slice(0, 157).trimEnd()}...`;
+
+  const combined = `${normalized} ${fallback}`.replace(/\s+/g, " ").trim();
+  if (combined.length <= 160) return combined;
+  return `${combined.slice(0, 157).trimEnd()}...`;
+}
+
+function buildCaseStudySeoTitle(client: string): string {
+  const base = `Étude de cas ${client}: résultats prospection B2B`;
+  if (base.length <= 65) return base;
+  return `Étude de cas ${client}: résultats B2B`;
+}
+
 export function generateStaticParams() {
   const slugs = new Set<string>();
   for (const study of caseStudiesCards) slugs.add(study.slug);
@@ -24,13 +40,19 @@ export function generateMetadata({ params }: Params): Metadata {
   const cardStudy = caseStudiesCards.find((item) => item.slug === params.slug) ?? caseStudiesCards.find((item) => item.slug === canonicalSlug);
   const detailedStudy = caseStudies.find((item) => item.slug === params.slug) ?? caseStudies.find((item) => item.slug === canonicalSlug);
 
-  const title = cardStudy?.title ?? detailedStudy?.title ?? caseStudiesSeo.title.replace(/\s*\|\s*devlo$/i, "");
+  const title =
+    buildCaseStudySeoTitle(
+      cardStudy?.client ?? detailedStudy?.client ?? "devlo",
+    );
   const descriptionSource =
     detailedStudy?.summary ??
     (cardStudy
       ? `${cardStudy.client} — ${cardStudy.sector}. ${cardStudy.metrics.slice(0, 3).join(" · ")}.`
       : caseStudiesSeo.description);
-  const description = descriptionSource.length > 160 ? `${descriptionSource.slice(0, 157).trimEnd()}...` : descriptionSource;
+  const descriptionFallback = cardStudy
+    ? `Découvrez comment devlo a généré des rendez-vous qualifiés pour ${cardStudy.client}.`
+    : "Découvrez comment devlo génère des rendez-vous qualifiés en prospection B2B.";
+  const description = normalizeDescription(descriptionSource, descriptionFallback);
   const imagePath = resolveOgImagePath(cardStudy?.banner ?? detailedStudy?.heroImageUrl);
 
   return buildPageMetadata({

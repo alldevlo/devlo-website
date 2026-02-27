@@ -1,0 +1,12 @@
+Route: /
+<title>Agence de prospection B2B en Suisse | Génération de leads</title>
+<meta name="description" content="Agence suisse de prospection B2B: génération de leads et rendez-vous qualifiés via cold email, LinkedIn et téléprospection. Plus de 1&#x27;000 campagnes lancées."/>
+<link rel="canonical" href="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app"/>
+<meta property="og:title" content="Agence de prospection B2B en Suisse | Génération de leads"/>
+<meta property="og:description" content="Agence suisse de prospection B2B: génération de leads et rendez-vous qualifiés via cold email, LinkedIn et téléprospection. Plus de 1&#x27;000 campagnes lancées."/>
+<meta property="og:url" content="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app"/>
+<meta property="og:image" content="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/images/devlo_OG_Banner.webp"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Agence de prospection B2B en Suisse | Génération de leads"/>
+<meta name="twitter:description" content="Agence suisse de prospection B2B: génération de leads et rendez-vous qualifiés via cold email, LinkedIn et téléprospection. Plus de 1&#x27;000 campagnes lancées."/>
+<meta name="twitter:image" content="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/images/devlo_OG_Banner.webp"/>

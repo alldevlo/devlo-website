@@ -1,0 +1,161 @@
+$ curl -I https://devlo.ch/
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 0
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+content-type: text/html; charset=utf-8
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:59:07 GMT
+etag: "934d746c6dab5206f78348d5eb94140d"
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000
+vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-matched-path: /
+x-vercel-cache: PRERENDER
+x-vercel-id: cpt1::qbt2p-1772189946958-2b525e2277a1
+content-length: 828335
+
+
+$ curl -I https://www.devlo.ch/
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:59:08 GMT
+location: https://devlo.ch/
+refresh: 0;url=https://devlo.ch/
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::42fkr-1772189948442-0a4984d0e919
+
+
+$ curl -I https://devlo.ch/sitemap.xml
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 0
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline; filename="sitemap.xml"
+content-type: application/xml
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:59:08 GMT
+etag: "d79c6279c3f9ad4d6f464dfe2010a22b"
+last-modified: Fri, 27 Feb 2026 10:59:09 GMT
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-matched-path: /sitemap.xml
+x-vercel-cache: HIT
+x-vercel-id: cpt1::xs5f8-1772189948828-8e8ec2479461
+content-length: 1820
+
+
+$ curl -I https://devlo.ch/robots.txt
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 0
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+content-type: text/plain
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:59:09 GMT
+etag: "c9880d31f7678bdd35bb7e584152e15b"
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000
+vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-matched-path: /robots.txt
+x-vercel-cache: PRERENDER
+x-vercel-id: cpt1::gmd4d-1772189949353-a5c27ef9f172
+content-length: 77
+
+
+$ curl -I https://devlo.ch/consultation
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 0
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+content-type: text/html; charset=utf-8
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:59:10 GMT
+etag: "1c8f6ec82b3aecefe3ce663ef6090c0d"
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000
+vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-matched-path: /consultation
+x-vercel-cache: PRERENDER
+x-vercel-id: cpt1::dp4jw-1772189950130-ec2255bbdb11
+content-length: 59394
+
+
+$ curl -I https://devlo.ch/academy
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 0
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+content-type: text/html; charset=utf-8
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:59:11 GMT
+etag: "3a185a2f9c7b81c7ae0f5145a530d357"
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000
+vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-matched-path: /academy
+x-vercel-cache: PRERENDER
+x-vercel-id: cpt1::7f55r-1772189951355-1bfe55529672
+content-length: 219544
+
+
+$ curl -I https://devlo.ch/etudes-de-cas
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 0
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+content-type: text/html; charset=utf-8
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:59:12 GMT
+etag: "3e84b21935eef45ea30efd879003ecbe"
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000
+vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-matched-path: /etudes-de-cas
+x-vercel-cache: PRERENDER
+x-vercel-id: cpt1::qx2v4-1772189952583-43432cc52420
+content-length: 146693
+

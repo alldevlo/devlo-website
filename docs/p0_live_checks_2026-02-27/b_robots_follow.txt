@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: devlo.ch
+Sitemap: https://devlo.ch/sitemap.xml

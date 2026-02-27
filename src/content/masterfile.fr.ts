@@ -57,9 +57,9 @@ export const mainNav = {
 };
 
 export const homeSeo = {
-  title: "Agence de prospection commerciale B2B en Suisse | Génération de leads | devlo",
+  title: "Agence de prospection B2B en Suisse | Génération de leads",
   description:
-    "devlo est une agence suisse spécialisée en prospection B2B, génération de leads et prise de rendez-vous qualifiés. Cold email, LinkedIn, téléprospection. +1'000 campagnes réussies. Consultation gratuite.",
+    "Agence suisse de prospection B2B: génération de leads et rendez-vous qualifiés via cold email, LinkedIn et téléprospection. Plus de 1'000 campagnes lancées.",
   ogTitle: "Agence de prospection B2B Suisse | Génération de leads qualifiés | devlo",
   ogDescription:
     "devlo conçoit et pilote vos campagnes de prospection commerciale B2B multicanal pour générer des rendez-vous qualifiés avec vos prospects idéaux.",
@@ -472,7 +472,7 @@ export const homeContent = {
 export const caseStudiesSeo = {
   title: "Études de cas prospection B2B | Résultats clients | devlo",
   description:
-    "Découvrez comment devlo a aidé ses clients B2B à générer des centaines de rendez-vous qualifiés. Études de cas détaillées avec métriques réelles : taux d'ouverture, taux de réponse, rendez-vous obtenus.",
+    "Découvrez les résultats concrets de nos campagnes B2B: taux d'ouverture, taux de réponse et rendez-vous qualifiés obtenus sur des cas clients réels.",
   h1: "Nos résultats : études de cas en prospection B2B",
   subtitle:
     "Découvrez comment nous aidons nos clients à générer des rendez-vous qualifiés et à développer leur pipeline commercial.",
@@ -591,7 +591,7 @@ export const caseStudiesCards: CaseStudyCard[] = [
     logo: "/images/IDDI_logo.webp",
     largeLogo: true,
     title: "IDDI — Services de génération de leads en biotech/pharma pour un CRO international",
-    metrics: ["20 MQL et 10 SQL (rendez-vous qualifiés)"],
+    metrics: ["52,7% ouverture", "12,9% réponse", "3 semaines avant les premiers rendez-vous"],
     sector: "Pharma / Biotech",
   },
   {
@@ -630,9 +630,9 @@ export const caseStudiesCards: CaseStudyCard[] = [
 ];
 
 export const academySeo = {
-  title: "Outbound Academy | Formation prospection B2B pour SDR et BDR | devlo",
+  title: "Outbound Academy | Formation prospection B2B pour SDR et BDR",
   description:
-    "Formation ultra-complète en prospection commerciale B2B. 50 tutoriels vidéo pour maîtriser le cold email, LinkedIn, la téléprospection et la génération de leads. Accès à vie.",
+    "Formation prospection B2B avec 50 tutoriels vidéo: cold email, LinkedIn, téléprospection et génération de leads. Méthodologie complète, accès à vie.",
 };
 
 export const academyContent = {
@@ -769,7 +769,7 @@ export const academyContent = {
 };
 
 export const consultationSeo = {
-  title: "Consultation gratuite | Stratégie de prospection B2B sur mesure | devlo",
+  title: "Consultation gratuite | Stratégie de prospection B2B sur mesure",
   description:
     "Obtenez votre stratégie de prospection outbound gratuite et personnalisée. Partagez votre ICP et recevez un plan d'action complet sous 24h. Agence B2B suisse.",
 };
@@ -837,7 +837,7 @@ export const consultationContent = {
 export const conditionsSeo = {
   title: "Conditions générales d'utilisation | devlo",
   description:
-    "Conditions générales d'utilisation du site devlo.ch. Licence, limitations de responsabilité et droit applicable.",
+    "Consultez les conditions générales d'utilisation de devlo.ch: licence, responsabilité, propriété intellectuelle et droit applicable.",
 };
 
 export const conditionsContent = {

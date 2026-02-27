@@ -1,0 +1,12 @@
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:25:11 GMT
+location: /resultats
+refresh: 0;url=/resultats
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+x-robots-tag: noindex
+x-vercel-id: cpt1::fzmxw-1772187911018-8db1a2798bc0
+
+Redirecting...

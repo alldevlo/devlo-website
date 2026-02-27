@@ -1,0 +1,9 @@
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:19:09 GMT
+location: https://www.devlo.ch/consultation
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::nzlzk-1772187549952-3ece80e4f5cb
+

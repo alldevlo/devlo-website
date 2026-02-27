@@ -1,0 +1,24 @@
+PATH: /
+canonical:
+og:url:
+
+PATH: /consultation
+canonical:
+og:url:
+
+PATH: /etudes-de-cas
+canonical:
+og:url:
+
+PATH: /academy
+canonical:
+og:url:
+
+PATH: /etudes-de-cas/biocarburants-52-rendez-vous
+canonical:
+og:url:
+
+PATH: /etudes-de-cas/monizze-120-rendez-vous
+canonical:
+og:url:
+

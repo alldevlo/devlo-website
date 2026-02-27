@@ -1,0 +1,132 @@
+PATH: /
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:04:53 GMT
+location: https://www.devlo.ch/
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::m59rk-1772186693188-1ac17ddeb4c5
+
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 3782
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+content-type: text/html; charset=utf-8
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:04:53 GMT
+etag: "496cd2158ccc1d68308977bcfbe40c67"
+
+PATH: /consultation
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:04:53 GMT
+location: https://www.devlo.ch/consultation
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::78gzb-1772186693486-8d0cef533955
+
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 3458
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+content-type: text/html; charset=utf-8
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:04:53 GMT
+etag: "3cb59b2561e3ee0c07e7fb1a3be38d05"
+
+PATH: /etudes-de-cas
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:04:53 GMT
+location: https://www.devlo.ch/etudes-de-cas
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::7f55r-1772186693720-f8b2de325df7
+
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 3508
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+content-type: text/html; charset=utf-8
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:04:53 GMT
+etag: "1e2b8fc00c8c946d4366fb86a9edd8ad"
+
+PATH: /academy
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:04:53 GMT
+location: https://www.devlo.ch/academy
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::fqbb9-1772186693946-861429d48e3c
+
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 3649
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+content-type: text/html; charset=utf-8
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:04:54 GMT
+etag: "4eddc2fb1ac54a6bf9d3e6d32cf5d0a5"
+
+PATH: /etudes-de-cas/biocarburants-52-rendez-vous
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:04:54 GMT
+location: https://www.devlo.ch/etudes-de-cas/biocarburants-52-rendez-vous
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::mql5g-1772186694241-0e7a80be7e88
+
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 3631
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+content-type: text/html; charset=utf-8
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:04:54 GMT
+etag: "def96811928abb917958217dffcf12aa"
+
+PATH: /etudes-de-cas/monizze-120-rendez-vous
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:04:54 GMT
+location: https://www.devlo.ch/etudes-de-cas/monizze-120-rendez-vous
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::42vxg-1772186694492-d24b52cec02c
+
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 3648
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+content-type: text/html; charset=utf-8
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:04:54 GMT
+etag: "7f758aade4f6da420e546c0d28706145"
+

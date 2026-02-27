@@ -1,0 +1,12 @@
+Route: /etudes-de-cas/monizze-120-rendez-vous
+<title>Étude de cas Monizze: résultats prospection B2B | devlo</title>
+<meta name="description" content="Comment devlo a obtenu 120 rendez-vous qualifiés pour Monizze en ciblant 7’000 décideurs RH, Finance et Direction en Belgique."/>
+<link rel="canonical" href="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/etudes-de-cas/monizze-120-rendez-vous"/>
+<meta property="og:title" content="Étude de cas Monizze: résultats prospection B2B"/>
+<meta property="og:description" content="Comment devlo a obtenu 120 rendez-vous qualifiés pour Monizze en ciblant 7’000 décideurs RH, Finance et Direction en Belgique."/>
+<meta property="og:url" content="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/etudes-de-cas/monizze-120-rendez-vous"/>
+<meta property="og:image" content="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/images/Monizze_banner.webp"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Étude de cas Monizze: résultats prospection B2B"/>
+<meta name="twitter:description" content="Comment devlo a obtenu 120 rendez-vous qualifiés pour Monizze en ciblant 7’000 décideurs RH, Finance et Direction en Belgique."/>
+<meta name="twitter:image" content="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/images/Monizze_banner.webp"/>

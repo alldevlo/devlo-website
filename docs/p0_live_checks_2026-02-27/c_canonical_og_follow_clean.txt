@@ -1,0 +1,24 @@
+PATH: /
+<link rel="canonical" href="https://devlo.ch"
+<meta property="og:url" content="https://devlo.ch"
+
+PATH: /consultation
+<link rel="canonical" href="https://devlo.ch/consultation"
+<meta property="og:url" content="https://devlo.ch/consultation"
+
+PATH: /etudes-de-cas
+<link rel="canonical" href="https://devlo.ch/etudes-de-cas"
+<meta property="og:url" content="https://devlo.ch/etudes-de-cas"
+
+PATH: /academy
+<link rel="canonical" href="https://devlo.ch/academy"
+<meta property="og:url" content="https://devlo.ch/academy"
+
+PATH: /etudes-de-cas/biocarburants-52-rendez-vous
+<link rel="canonical" href="https://devlo.ch/etudes-de-cas/biocarburants-52-rendez-vous"
+<meta property="og:url" content="https://devlo.ch/etudes-de-cas/biocarburants-52-rendez-vous"
+
+PATH: /etudes-de-cas/monizze-120-rendez-vous
+<link rel="canonical" href="https://devlo.ch/etudes-de-cas/monizze-120-rendez-vous"
+<meta property="og:url" content="https://devlo.ch/etudes-de-cas/monizze-120-rendez-vous"
+

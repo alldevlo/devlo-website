@@ -1,0 +1,68 @@
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:19:10 GMT
+location: https://www.devlo.ch/resultats/
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::j8t8r-1772187550064-29d7a0fb1c73
+
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:19:10 GMT
+location: /resultats
+refresh: 0;url=/resultats
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::xcppp-1772187550096-73d70460c837
+
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:19:10 GMT
+location: /etudes-de-cas/
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+refresh: 0;url=/etudes-de-cas/
+server: Vercel
+strict-transport-security: max-age=63072000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-vercel-id: cpt1::xcppp-1772187550109-688d65059c0f
+
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:19:10 GMT
+location: /etudes-de-cas
+refresh: 0;url=/etudes-de-cas
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::xcppp-1772187550117-72e64524784d
+
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 232
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+content-type: text/html; charset=utf-8
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:19:10 GMT
+etag: "df413ea99fc61906c4b2fcd643a8de7e"
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000
+vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-matched-path: /etudes-de-cas
+x-vercel-cache: HIT
+x-vercel-id: cpt1::xcppp-1772187550124-d4f70549dba2
+content-length: 146693
+

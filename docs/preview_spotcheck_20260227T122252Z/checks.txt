@@ -1,0 +1,92 @@
+=== home ===
+<title>Agence de prospection B2B en Suisse | Génération de leads</title>
+<meta name="description" content="Agence suisse de prospection B2B: génération de leads et rendez-vous qualifiés via cold email, LinkedIn et téléprospection. Plus de 1&#x27;000 campagnes lancées."
+<link rel="canonical" href="https://devlo.ch"
+<meta property="og:title" content="Agence de prospection B2B en Suisse | Génération de leads"
+<meta property="og:description" content="Agence suisse de prospection B2B: génération de leads et rendez-vous qualifiés via cold email, LinkedIn et téléprospection. Plus de 1&#x27;000 campagnes lancées."
+<meta property="og:url" content="https://devlo.ch"
+<meta property="og:image" content="https://devlo.ch/images/devlo_OG_Banner.webp"
+<meta name="twitter:card" content="summary_large_image"
+<meta name="twitter:title" content="Agence de prospection B2B en Suisse | Génération de leads"
+<meta name="twitter:description" content="Agence suisse de prospection B2B: génération de leads et rendez-vous qualifiés via cold email, LinkedIn et téléprospection. Plus de 1&#x27;000 campagnes lancées."
+<meta name="twitter:image" content="https://devlo.ch/images/devlo_OG_Banner.webp"
+
+=== consultation ===
+<title>Consultation gratuite | Stratégie de prospection B2B sur mesure | devlo</title>
+<meta name="description" content="Obtenez votre stratégie de prospection outbound gratuite et personnalisée. Partagez votre ICP et recevez un plan d&#x27;action complet sous 24h. Agence B2B suisse."
+<link rel="canonical" href="https://devlo.ch/consultation"
+<meta property="og:title" content="Consultation gratuite | Stratégie de prospection B2B sur mesure"
+<meta property="og:description" content="Obtenez votre stratégie de prospection outbound gratuite et personnalisée. Partagez votre ICP et recevez un plan d&#x27;action complet sous 24h. Agence B2B suisse."
+<meta property="og:url" content="https://devlo.ch/consultation"
+<meta property="og:image" content="https://devlo.ch/images/devlo_OG_Banner.webp"
+<meta name="twitter:card" content="summary_large_image"
+<meta name="twitter:title" content="Consultation gratuite | Stratégie de prospection B2B sur mesure"
+<meta name="twitter:description" content="Obtenez votre stratégie de prospection outbound gratuite et personnalisée. Partagez votre ICP et recevez un plan d&#x27;action complet sous 24h. Agence B2B suisse."
+<meta name="twitter:image" content="https://devlo.ch/images/devlo_OG_Banner.webp"
+
+=== academy ===
+<title>Outbound Academy | Formation prospection B2B pour SDR et BDR | devlo</title>
+<meta name="description" content="Formation prospection B2B avec 50 tutoriels vidéo: cold email, LinkedIn, téléprospection et génération de leads. Méthodologie complète, accès à vie."
+<link rel="canonical" href="https://devlo.ch/academy"
+<meta property="og:title" content="Outbound Academy | Formation prospection B2B pour SDR et BDR"
+<meta property="og:description" content="Formation prospection B2B avec 50 tutoriels vidéo: cold email, LinkedIn, téléprospection et génération de leads. Méthodologie complète, accès à vie."
+<meta property="og:url" content="https://devlo.ch/academy"
+<meta property="og:image" content="https://devlo.ch/images/devlo_OG_Banner.webp"
+<meta name="twitter:card" content="summary_large_image"
+<meta name="twitter:title" content="Outbound Academy | Formation prospection B2B pour SDR et BDR"
+<meta name="twitter:description" content="Formation prospection B2B avec 50 tutoriels vidéo: cold email, LinkedIn, téléprospection et génération de leads. Méthodologie complète, accès à vie."
+<meta name="twitter:image" content="https://devlo.ch/images/devlo_OG_Banner.webp"
+
+=== etudes-de-cas ===
+<title>Études de cas prospection B2B | Résultats clients | devlo</title>
+<meta name="description" content="Découvrez les résultats concrets de nos campagnes B2B: taux d&#x27;ouverture, taux de réponse et rendez-vous qualifiés obtenus sur des cas clients réels."
+<link rel="canonical" href="https://devlo.ch/etudes-de-cas"
+<meta property="og:title" content="Études de cas prospection B2B | Résultats clients"
+<meta property="og:description" content="Découvrez les résultats concrets de nos campagnes B2B: taux d&#x27;ouverture, taux de réponse et rendez-vous qualifiés obtenus sur des cas clients réels."
+<meta property="og:url" content="https://devlo.ch/etudes-de-cas"
+<meta property="og:image" content="https://devlo.ch/images/devlo_OG_Banner.webp"
+<meta name="twitter:card" content="summary_large_image"
+<meta name="twitter:title" content="Études de cas prospection B2B | Résultats clients"
+<meta name="twitter:description" content="Découvrez les résultats concrets de nos campagnes B2B: taux d&#x27;ouverture, taux de réponse et rendez-vous qualifiés obtenus sur des cas clients réels."
+<meta name="twitter:image" content="https://devlo.ch/images/devlo_OG_Banner.webp"
+
+=== etudes-de-cas_monizze-120-rendez-vous ===
+<title>Étude de cas Monizze: résultats prospection B2B | devlo</title>
+<meta name="description" content="Comment devlo a obtenu 120 rendez-vous qualifiés pour Monizze en ciblant 7’000 décideurs RH, Finance et Direction en Belgique."
+<link rel="canonical" href="https://devlo.ch/etudes-de-cas/monizze-120-rendez-vous"
+<meta property="og:title" content="Étude de cas Monizze: résultats prospection B2B"
+<meta property="og:description" content="Comment devlo a obtenu 120 rendez-vous qualifiés pour Monizze en ciblant 7’000 décideurs RH, Finance et Direction en Belgique."
+<meta property="og:url" content="https://devlo.ch/etudes-de-cas/monizze-120-rendez-vous"
+<meta property="og:image" content="https://devlo.ch/images/Monizze_banner.webp"
+<meta name="twitter:card" content="summary_large_image"
+<meta name="twitter:title" content="Étude de cas Monizze: résultats prospection B2B"
+<meta name="twitter:description" content="Comment devlo a obtenu 120 rendez-vous qualifiés pour Monizze en ciblant 7’000 décideurs RH, Finance et Direction en Belgique."
+<meta name="twitter:image" content="https://devlo.ch/images/Monizze_banner.webp"
+
+=== etudes-de-cas_iddi-generation-leads-biotech-pharma ===
+<title>Étude de cas IDDI: résultats prospection B2B | devlo</title>
+<meta name="description" content="Notre client est un CRO qui offre des services biométriques avancés aux sociétés biotechnologiques et pharmaceutiques. Découvrez comment devlo a généré des r..."
+<link rel="canonical" href="https://devlo.ch/etudes-de-cas/iddi-generation-leads-biotech-pharma"
+<meta property="og:title" content="Étude de cas IDDI: résultats prospection B2B"
+<meta property="og:description" content="Notre client est un CRO qui offre des services biométriques avancés aux sociétés biotechnologiques et pharmaceutiques. Découvrez comment devlo a généré des r..."
+<meta property="og:url" content="https://devlo.ch/etudes-de-cas/iddi-generation-leads-biotech-pharma"
+<meta property="og:image" content="https://devlo.ch/images/IDDI_banner.webp"
+<meta name="twitter:card" content="summary_large_image"
+<meta name="twitter:title" content="Étude de cas IDDI: résultats prospection B2B"
+<meta name="twitter:description" content="Notre client est un CRO qui offre des services biométriques avancés aux sociétés biotechnologiques et pharmaceutiques. Découvrez comment devlo a généré des r..."
+<meta name="twitter:image" content="https://devlo.ch/images/IDDI_banner.webp"
+
+=== Monizze content checks ===
+English remnants: NOT FOUND
+Objectifs/Résultats block: PRESENT
+Training paragraph: NOT FOUND
+
+=== IDDI content checks ===
+À propos de l’entreprise: PRESENT
+Le défi: PRESENT
+La stratégie: PRESENT
+Résultats: PRESENT
+Enseignements clés: PRESENT
+Séquence utilisée : devlo_outreach_sequence_C1_IDDI_EN: PRESENT
+Objectifs/Résultats block: PRESENT
+Training paragraph: NOT FOUND

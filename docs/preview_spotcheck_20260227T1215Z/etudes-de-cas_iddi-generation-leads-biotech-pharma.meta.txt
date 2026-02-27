@@ -1,0 +1,12 @@
+Route: /etudes-de-cas/iddi-generation-leads-biotech-pharma
+<title>Étude de cas IDDI: résultats prospection B2B | devlo</title>
+<meta name="description" content="Notre client est un CRO qui offre des services biométriques avancés aux sociétés biotechnologiques et pharmaceutiques. Découvrez comment devlo a généré des r..."/>
+<link rel="canonical" href="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/etudes-de-cas/iddi-generation-leads-biotech-pharma"/>
+<meta property="og:title" content="Étude de cas IDDI: résultats prospection B2B"/>
+<meta property="og:description" content="Notre client est un CRO qui offre des services biométriques avancés aux sociétés biotechnologiques et pharmaceutiques. Découvrez comment devlo a généré des r..."/>
+<meta property="og:url" content="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/etudes-de-cas/iddi-generation-leads-biotech-pharma"/>
+<meta property="og:image" content="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/images/IDDI_banner.webp"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Étude de cas IDDI: résultats prospection B2B"/>
+<meta name="twitter:description" content="Notre client est un CRO qui offre des services biométriques avancés aux sociétés biotechnologiques et pharmaceutiques. Découvrez comment devlo a généré des r..."/>
+<meta name="twitter:image" content="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/images/IDDI_banner.webp"/>

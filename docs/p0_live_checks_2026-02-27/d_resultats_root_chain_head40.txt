@@ -1,0 +1,40 @@
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:04:38 GMT
+location: https://www.devlo.ch/resultats/
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::sw7mc-1772186678238-c280e3e624d8
+
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:04:38 GMT
+location: /resultats
+refresh: 0;url=/resultats
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::xcppp-1772186678359-ba15ee164ea7
+
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:04:38 GMT
+location: /etudes-de-cas/
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+refresh: 0;url=/etudes-de-cas/
+server: Vercel
+strict-transport-security: max-age=63072000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-vercel-id: cpt1::xcppp-1772186678403-8d69c6511757
+
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:04:38 GMT
+location: /etudes-de-cas

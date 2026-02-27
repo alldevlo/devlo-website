@@ -1,0 +1,12 @@
+Route: /academy
+<title>Outbound Academy | Formation prospection B2B pour SDR et BDR | devlo</title>
+<meta name="description" content="Formation prospection B2B avec 50 tutoriels vidéo: cold email, LinkedIn, téléprospection et génération de leads. Méthodologie complète, accès à vie."/>
+<link rel="canonical" href="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/academy"/>
+<meta property="og:title" content="Outbound Academy | Formation prospection B2B pour SDR et BDR"/>
+<meta property="og:description" content="Formation prospection B2B avec 50 tutoriels vidéo: cold email, LinkedIn, téléprospection et génération de leads. Méthodologie complète, accès à vie."/>
+<meta property="og:url" content="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/academy"/>
+<meta property="og:image" content="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/images/devlo_OG_Banner.webp"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Outbound Academy | Formation prospection B2B pour SDR et BDR"/>
+<meta name="twitter:description" content="Formation prospection B2B avec 50 tutoriels vidéo: cold email, LinkedIn, téléprospection et génération de leads. Méthodologie complète, accès à vie."/>
+<meta name="twitter:image" content="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/images/devlo_OG_Banner.webp"/>

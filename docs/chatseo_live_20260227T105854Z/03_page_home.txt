@@ -1,0 +1,28 @@
+$ curl -I https://devlo.ch/
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 25
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+content-type: text/html; charset=utf-8
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:59:33 GMT
+etag: "934d746c6dab5206f78348d5eb94140d"
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000
+vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-matched-path: /
+x-vercel-cache: HIT
+x-vercel-id: cpt1::m59rk-1772189973674-7af6efb9e187
+content-length: 828335
+
+
+$ curl -sL https://devlo.ch/ | rg -o '<link rel="canonical"[^>]*>|<meta property="og:url"[^>]*>' -m 2
+<link rel="canonical" href="https://devlo.ch"/>
+<meta property="og:url" content="https://devlo.ch"/>

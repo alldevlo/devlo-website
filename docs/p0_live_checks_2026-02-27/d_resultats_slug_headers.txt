@@ -1,0 +1,9 @@
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:03:23 GMT
+location: https://www.devlo.ch/resultats/biocarburants-52-rendez-vous/
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::lx9tv-1772186603817-05236eb12b6d
+

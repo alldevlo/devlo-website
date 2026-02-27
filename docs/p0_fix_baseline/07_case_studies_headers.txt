@@ -1,0 +1,9 @@
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:19:10 GMT
+location: https://www.devlo.ch/etudes-de-cas
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::54zbh-1772187550027-2b38d590617c
+

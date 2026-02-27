@@ -1,0 +1,12 @@
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:25:35 GMT
+location: /resultats/biocarburants-52-rendez-vous
+refresh: 0;url=/resultats/biocarburants-52-rendez-vous
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+x-robots-tag: noindex
+x-vercel-id: cpt1::lckdr-1772187935011-2390de139085
+
+Redirecting...

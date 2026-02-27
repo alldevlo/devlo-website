@@ -1,0 +1,40 @@
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:03:23 GMT
+location: https://www.devlo.ch/resultats/biocarburants-52-rendez-vous/
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::4lj82-1772186603819-d51c82781427
+
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:03:23 GMT
+location: /resultats/biocarburants-52-rendez-vous
+refresh: 0;url=/resultats/biocarburants-52-rendez-vous
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::lk8dt-1772186603845-8ba398a2d0ef
+
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:03:23 GMT
+location: /etudes-de-cas/biocarburants-52-rendez-vous
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+refresh: 0;url=/etudes-de-cas/biocarburants-52-rendez-vous
+server: Vercel
+strict-transport-security: max-age=63072000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-vercel-id: cpt1::lk8dt-1772186603854-35b9b9d711e4
+
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 3540
+cache-control: public, max-age=0, must-revalidate

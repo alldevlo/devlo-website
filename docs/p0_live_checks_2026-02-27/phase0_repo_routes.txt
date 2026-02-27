@@ -1,0 +1,18 @@
+Consultation canonical route: /consultation
+Academy canonical route: /academy
+Case studies listing route: /etudes-de-cas
+Canonical case-study slug count: 13
+Canonical case-study slugs (first 10 sorted):
+- audiovisuel-16-rendez-vous
+- biocarburants-52-rendez-vous
+- biodiversite-70-rendez-vous
+- cybersecurite-4500-entreprises
+- formation-14-rendez-vous
+- hr-54-rendez-vous-dach
+- immobilier-11-prospects
+- immobilier-30-prospects
+- logiciel-comptable-200k-ca
+- merchandising-23-prospects
+Two selected for live checks:
+- /etudes-de-cas/biocarburants-52-rendez-vous
+- /etudes-de-cas/monizze-120-rendez-vous

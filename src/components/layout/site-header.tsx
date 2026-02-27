@@ -52,7 +52,7 @@ export function SiteHeader() {
       >
         <div className="mx-auto flex h-16 w-full max-w-[1200px] items-center justify-between px-6 md:h-20 md:px-12">
           <Link href="/" className="inline-flex min-h-[44px] items-center" aria-label="Accueil devlo">
-            <Image src={mainNav.logo} alt="devlo logo" width={240} height={80} className="h-14 w-auto md:h-16" priority />
+            <Image src={mainNav.logo} alt="devlo logo" width={240} height={80} className="h-14 w-auto md:h-16" />
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex" aria-label="Navigation principale">

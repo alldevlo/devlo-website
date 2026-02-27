@@ -1,0 +1,12 @@
+Route: /etudes-de-cas
+<title>Études de cas prospection B2B | Résultats clients | devlo</title>
+<meta name="description" content="Découvrez les résultats concrets de nos campagnes B2B: taux d&#x27;ouverture, taux de réponse et rendez-vous qualifiés obtenus sur des cas clients réels."/>
+<link rel="canonical" href="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/etudes-de-cas"/>
+<meta property="og:title" content="Études de cas prospection B2B | Résultats clients"/>
+<meta property="og:description" content="Découvrez les résultats concrets de nos campagnes B2B: taux d&#x27;ouverture, taux de réponse et rendez-vous qualifiés obtenus sur des cas clients réels."/>
+<meta property="og:url" content="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/etudes-de-cas"/>
+<meta property="og:image" content="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/images/devlo_OG_Banner.webp"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Études de cas prospection B2B | Résultats clients"/>
+<meta name="twitter:description" content="Découvrez les résultats concrets de nos campagnes B2B: taux d&#x27;ouverture, taux de réponse et rendez-vous qualifiés obtenus sur des cas clients réels."/>
+<meta name="twitter:image" content="https://devlo-next-qcmbnawcf-charles-8969s-projects.vercel.app/images/devlo_OG_Banner.webp"/>

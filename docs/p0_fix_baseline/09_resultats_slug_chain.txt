@@ -1,0 +1,58 @@
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:19:10 GMT
+location: https://www.devlo.ch/resultats/biocarburants-52-rendez-vous/
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::m59rk-1772187550428-a5d4e9a0db57
+
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:19:10 GMT
+location: /resultats/biocarburants-52-rendez-vous
+refresh: 0;url=/resultats/biocarburants-52-rendez-vous
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::42vxg-1772187550473-e639d99396ef
+
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:19:10 GMT
+location: /etudes-de-cas/biocarburants-52-rendez-vous
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+refresh: 0;url=/etudes-de-cas/biocarburants-52-rendez-vous
+server: Vercel
+strict-transport-security: max-age=63072000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-vercel-id: cpt1::dp4jw-1772187550496-ca2b45fe4583
+
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 233
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+content-type: text/html; charset=utf-8
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:19:10 GMT
+etag: "4be6541eec0673ae410d0636ec4d479f"
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000
+vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-matched-path: /etudes-de-cas/biocarburants-52-rendez-vous
+x-vercel-cache: HIT
+x-vercel-id: cpt1::dp4jw-1772187550516-d064e46b7342
+content-length: 106230
+

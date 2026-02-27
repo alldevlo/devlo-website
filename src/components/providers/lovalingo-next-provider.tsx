@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 import { LovalingoProvider } from "@lovalingo/lovalingo";
 
-const LOVALINGO_PUBLIC_ANON_KEY = "aix_4lsv3rhzupizsd64v86j2p8w38aeli92";
+const LOVALINGO_PUBLIC_ANON_KEY = "aix_qhj0o99zw8icbj8mg4e7x04rtp1wehsw";
 
 export function LovalingoNextProvider({ children }: { children: ReactNode }) {
   return (

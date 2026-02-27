@@ -1,0 +1,19 @@
+/resultats/
+HTTP/2 307 
+location: https://www.devlo.ch/resultats/
+HTTP/2 308 
+location: /resultats
+HTTP/2 308 
+location: /etudes-de-cas/
+HTTP/2 308 
+location: /etudes-de-cas
+HTTP/2 200 
+
+/resultats/biocarburants-52-rendez-vous/
+HTTP/2 307 
+location: https://www.devlo.ch/resultats/biocarburants-52-rendez-vous/
+HTTP/2 308 
+location: /resultats/biocarburants-52-rendez-vous
+HTTP/2 308 
+location: /etudes-de-cas/biocarburants-52-rendez-vous
+HTTP/2 200 

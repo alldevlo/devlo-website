@@ -1,0 +1,53 @@
+$ curl -s https://devlo.ch/robots.txt
+User-Agent: *
+Allow: /
+
+Host: devlo.ch
+Sitemap: https://devlo.ch/sitemap.xml
+
+$ curl -s https://devlo.ch/sitemap.xml | head -40
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://devlo.ch/</loc>
+  </url>
+  <url>
+    <loc>https://devlo.ch/academy</loc>
+  </url>
+  <url>
+    <loc>https://devlo.ch/consultation</loc>
+  </url>
+  <url>
+    <loc>https://devlo.ch/conditions</loc>
+  </url>
+  <url>
+    <loc>https://devlo.ch/etudes-de-cas</loc>
+  </url>
+  <url>
+    <loc>https://devlo.ch/en</loc>
+  </url>
+  <url>
+    <loc>https://devlo.ch/de</loc>
+  </url>
+  <url>
+    <loc>https://devlo.ch/nl</loc>
+  </url>
+  <url>
+    <loc>https://devlo.ch/etudes-de-cas/audiovisuel-16-rendez-vous</loc>
+  </url>
+  <url>
+    <loc>https://devlo.ch/etudes-de-cas/biocarburants-52-rendez-vous</loc>
+  </url>
+  <url>
+    <loc>https://devlo.ch/etudes-de-cas/biodiversite-70-rendez-vous</loc>
+  </url>
+  <url>
+    <loc>https://devlo.ch/etudes-de-cas/cybersecurite-4500-entreprises</loc>
+  </url>
+  <url>
+    <loc>https://devlo.ch/etudes-de-cas/formation-14-rendez-vous</loc>
+
+$ curl -s https://devlo.ch/sitemap.xml | grep -o "<loc>" | wc -l
+      22
+
+$ curl -s https://devlo.ch/sitemap.xml | rg "devlo-agency\.ch|www\.devlo\.ch"

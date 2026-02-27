@@ -1,0 +1,28 @@
+$ curl -I https://devlo.ch/consultation
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 23
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+content-type: text/html; charset=utf-8
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-site
+date: Fri, 27 Feb 2026 10:59:34 GMT
+etag: "1c8f6ec82b3aecefe3ce663ef6090c0d"
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000
+vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-matched-path: /consultation
+x-vercel-cache: HIT
+x-vercel-id: cpt1::4lj82-1772189974466-2611532f3a5c
+content-length: 59394
+
+
+$ curl -sL https://devlo.ch/consultation | rg -o '<link rel="canonical"[^>]*>|<meta property="og:url"[^>]*>' -m 2
+<link rel="canonical" href="https://devlo.ch/consultation"/>
+<meta property="og:url" content="https://devlo.ch/consultation"/>

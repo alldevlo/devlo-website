@@ -1,0 +1,9 @@
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:19:09 GMT
+location: https://www.devlo.ch/academy
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::42fkr-1772187549994-1fff10f4f192
+

@@ -59,6 +59,7 @@ export function buildPageMetadata({
 }: BuildPageMetadataInput): Metadata {
   const canonicalPath = normalizePath(path);
   const ogImage = resolveOgImagePath(imagePath);
+  const ogImageAbsoluteUrl = toAbsoluteUrl(ogImage);
 
   return {
     title,
@@ -81,7 +82,7 @@ export function buildPageMetadata({
       url: toAbsoluteUrl(canonicalPath),
       images: [
         {
-          url: ogImage,
+          url: ogImageAbsoluteUrl,
           width: 1200,
           height: 630,
           alt: `${siteConfig.name} - aperçu`,
@@ -92,7 +93,7 @@ export function buildPageMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [ogImage],
+      images: [ogImageAbsoluteUrl],
     },
   };
 }

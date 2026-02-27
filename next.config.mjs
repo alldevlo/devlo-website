@@ -4,6 +4,7 @@ import { caseStudySlugRedirects } from "./src/lib/case-study-slug-redirects.shar
 const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
+  skipTrailingSlashRedirect: true,
   images: {
     formats: ["image/avif", "image/webp"],
     // Add finer-grained responsive widths so small logos don't jump to 256/384px.
@@ -118,11 +119,6 @@ const nextConfig = {
       {
         source: "/resultats-cas-etudes/page/:num/",
         destination: "/etudes-de-cas",
-        permanent: true,
-      },
-      {
-        source: "/resultats/:slug*",
-        destination: "/etudes-de-cas/:slug*",
         permanent: true,
       },
       {
@@ -374,12 +370,12 @@ const nextConfig = {
       },
       {
         source: "/en/contact",
-        destination: "/contact",
+        destination: "/consultation",
         permanent: true,
       },
       {
         source: "/en/contact/",
-        destination: "/contact",
+        destination: "/consultation",
         permanent: true,
       },
       // Lovalingo PATH mode uses /en/* localized URLs. Keep specific legacy /en/*
@@ -468,12 +464,12 @@ const nextConfig = {
       // DE key pages
       {
         source: "/de/ausbildung-prospektion-b2b",
-        destination: "/formation-prospection-b2b",
+        destination: "/academy",
         permanent: true,
       },
       {
         source: "/de/ausbildung-prospektion-b2b/",
-        destination: "/formation-prospection-b2b",
+        destination: "/academy",
         permanent: true,
       },
       {

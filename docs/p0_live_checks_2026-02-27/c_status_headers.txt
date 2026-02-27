@@ -1,0 +1,66 @@
+PATH: /
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:02:59 GMT
+location: https://www.devlo.ch/
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::j8t8r-1772186579235-df8586a69fae
+
+
+PATH: /consultation
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:02:59 GMT
+location: https://www.devlo.ch/consultation
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::mql5g-1772186579268-9ebbb16ff5a3
+
+
+PATH: /etudes-de-cas
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:02:59 GMT
+location: https://www.devlo.ch/etudes-de-cas
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::4h9zj-1772186579301-af7d82e0dc86
+
+
+PATH: /academy
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:02:59 GMT
+location: https://www.devlo.ch/academy
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::wz6tn-1772186579334-60d1d9be07ff
+
+
+PATH: /etudes-de-cas/biocarburants-52-rendez-vous
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:02:59 GMT
+location: https://www.devlo.ch/etudes-de-cas/biocarburants-52-rendez-vous
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::7f55r-1772186579369-11f40192f2a2
+
+
+PATH: /etudes-de-cas/monizze-120-rendez-vous
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 27 Feb 2026 10:02:59 GMT
+location: https://www.devlo.ch/etudes-de-cas/monizze-120-rendez-vous
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: cpt1::lckdr-1772186579451-58f1afd8c39f
+
+
