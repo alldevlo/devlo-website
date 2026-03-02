@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
@@ -186,7 +185,6 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
-        <link rel="preconnect" href="https://cdn.lovalingo.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
       </head>
@@ -221,7 +219,6 @@ export default function RootLayout({
             <SiteFooter />
           </div>
         </LovalingoNextProvider>
-        <SpeedInsights />
       </body>
     </html>
   );
