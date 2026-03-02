@@ -906,7 +906,7 @@ export const footerContent = {
     { label: "Étude de cas : IDDI (Pharma/Biotech)", href: "/etudes-de-cas/iddi-generation-leads-biotech-pharma" },
     { label: "Étude de cas : Horus (Logiciel comptable)", href: "/etudes-de-cas/logiciel-comptable-200k-ca" },
     { label: "Étude de cas : Abacus (Immobilier)", href: "/etudes-de-cas/immobilier-30-prospects" },
-    { label: "Étude de cas : Monizze (RH/Finance)", href: "/etudes-de-cas/monizze-120-rendez-vous-qualifies-belgique" },
+    { label: "Étude de cas : Monizze (RH/Finance)", href: "/etudes-de-cas/monizze-120-rendez-vous" },
   ] as NavLink[],
   mission:
     "Notre mission : permettre aux entreprises B2B de rencontrer leurs prospects grâce à des campagnes de prospection commerciale ultra-ciblées et personnalisées, et une téléprospection digitale innovante.",

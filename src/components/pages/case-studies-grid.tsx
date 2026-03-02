@@ -58,7 +58,7 @@ export function CaseStudiesGrid({ title, subtitle, compact = false }: CaseStudie
 
               <Link
                 prefetch={false}
-                href={`/resultats/${item.slug}`}
+                href={`/etudes-de-cas/${item.slug}`}
                 className="mt-5 inline-flex h-10 items-center rounded-md bg-[#0a608e] px-4 text-xs font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-[#084d70]"
               >
                 Voir etude de cas

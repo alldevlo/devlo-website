@@ -1,6 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import type { ReactNode } from "react";
+import { Component, useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { useLovalingo } from "@lovalingo/lovalingo";
 
 import { buttonClassName } from "@/components/ui/button";
@@ -27,18 +29,52 @@ type HeaderLangSwitcherProps = {
   className?: string;
 };
 
-export function HeaderLangSwitcher({
+function detectLocaleFromPath(pathname: string): (typeof SUPPORTED_LANGS)[number] {
+  if (pathname === "/en" || pathname.startsWith("/en/")) return "en";
+  if (pathname === "/de" || pathname.startsWith("/de/")) return "de";
+  if (pathname === "/nl" || pathname.startsWith("/nl/")) return "nl";
+  return "fr";
+}
+
+function stripLocalePrefix(pathname: string): string {
+  if (pathname === "/en" || pathname === "/de" || pathname === "/nl") return "/";
+  if (pathname.startsWith("/en/") || pathname.startsWith("/de/") || pathname.startsWith("/nl/")) {
+    return pathname.replace(/^\/(en|de|nl)/, "") || "/";
+  }
+  return pathname;
+}
+
+function withLocale(pathname: string, locale: (typeof SUPPORTED_LANGS)[number]): string {
+  const normalized = stripLocalePrefix(pathname);
+  if (locale === "fr") return normalized;
+  return normalized === "/" ? `/${locale}` : `/${locale}${normalized}`;
+}
+
+function navigateToLocale(
+  pathname: string,
+  locale: (typeof SUPPORTED_LANGS)[number],
+) {
+  const targetPath = withLocale(pathname, locale);
+  const query = typeof window !== "undefined" ? window.location.search : "";
+  const hash = typeof window !== "undefined" ? window.location.hash : "";
+  const targetUrl = query ? `${targetPath}${query}${hash}` : `${targetPath}${hash}`;
+  window.location.assign(targetUrl);
+}
+
+function HeaderLangSwitcherUi({
   transparent = false,
   mobile = false,
   className = "",
-}: HeaderLangSwitcherProps) {
-  const { locale, setLocale, isLoading } = useLovalingo();
+  currentLocale,
+  isLoading,
+  onChangeLocale,
+}: HeaderLangSwitcherProps & {
+  currentLocale: (typeof SUPPORTED_LANGS)[number];
+  isLoading: boolean;
+  onChangeLocale: (lang: (typeof SUPPORTED_LANGS)[number]) => void;
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
-
-  const currentLocale = SUPPORTED_LANGS.includes(locale as (typeof SUPPORTED_LANGS)[number])
-    ? (locale as (typeof SUPPORTED_LANGS)[number])
-    : "fr";
 
   useEffect(() => {
     const onPointerDown = (event: MouseEvent) => {
@@ -110,7 +146,7 @@ export function HeaderLangSwitcher({
                 aria-checked={selected}
                 onClick={() => {
                   setIsOpen(false);
-                  if (!selected) setLocale(lang);
+                  if (!selected) onChangeLocale(lang);
                 }}
                 className={[
                   "flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left text-sm transition-colors",
@@ -135,5 +171,77 @@ export function HeaderLangSwitcher({
         </div>
       ) : null}
     </div>
+  );
+}
+
+function HeaderLangSwitcherFallback(props: HeaderLangSwitcherProps) {
+  const pathname = usePathname() || "/";
+  const currentLocale = detectLocaleFromPath(pathname);
+
+  return (
+    <HeaderLangSwitcherUi
+      {...props}
+      currentLocale={currentLocale}
+      isLoading={false}
+      onChangeLocale={(lang) => navigateToLocale(pathname, lang)}
+    />
+  );
+}
+
+function HeaderLangSwitcherWithLovalingo(props: HeaderLangSwitcherProps) {
+  const { locale, setLocale, isLoading } = useLovalingo();
+  const pathname = usePathname() || "/";
+  const pathLocale = detectLocaleFromPath(pathname);
+  const currentLocale = SUPPORTED_LANGS.includes(locale as (typeof SUPPORTED_LANGS)[number])
+    ? (locale as (typeof SUPPORTED_LANGS)[number])
+    : pathLocale;
+
+  return (
+    <HeaderLangSwitcherUi
+      {...props}
+      currentLocale={currentLocale}
+      isLoading={isLoading}
+      onChangeLocale={(lang) => {
+        try {
+          setLocale(lang);
+        } catch {
+          navigateToLocale(pathname, lang);
+        }
+      }}
+    />
+  );
+}
+
+type ErrorBoundaryProps = {
+  children: ReactNode;
+  fallback: ReactNode;
+};
+
+type ErrorBoundaryState = {
+  hasError: boolean;
+};
+
+class SwitcherErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  override state: ErrorBoundaryState = {
+    hasError: false,
+  };
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  override render() {
+    if (this.state.hasError) {
+      return this.props.fallback;
+    }
+    return this.props.children;
+  }
+}
+
+export function HeaderLangSwitcher(props: HeaderLangSwitcherProps) {
+  return (
+    <SwitcherErrorBoundary fallback={<HeaderLangSwitcherFallback {...props} />}>
+      <HeaderLangSwitcherWithLovalingo {...props} />
+    </SwitcherErrorBoundary>
   );
 }

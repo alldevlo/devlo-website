@@ -151,11 +151,11 @@ export function CaseStudyPage({ slug }: { slug: string }) {
 
       <section className="mx-auto w-full max-w-screen-xl px-6 pb-14 lg:px-10">
         <div className="grid gap-4 md:grid-cols-2">
-          <Link prefetch={false} href={`/resultats/${prev.slug}`} className="rounded-xl border border-stroke bg-white p-5 shadow-soft">
+          <Link prefetch={false} href={`/etudes-de-cas/${prev.slug}`} className="rounded-xl border border-stroke bg-white p-5 shadow-soft">
             <p className="text-xs uppercase tracking-[0.12em] text-[#4d6678]">Cas precedent</p>
             <p className="mt-2 text-lg font-semibold text-[#173a54]">{prev.title}</p>
           </Link>
-          <Link prefetch={false} href={`/resultats/${next.slug}`} className="rounded-xl border border-stroke bg-white p-5 shadow-soft">
+          <Link prefetch={false} href={`/etudes-de-cas/${next.slug}`} className="rounded-xl border border-stroke bg-white p-5 shadow-soft">
             <p className="text-xs uppercase tracking-[0.12em] text-[#4d6678]">Cas suivant</p>
             <p className="mt-2 text-lg font-semibold text-[#173a54]">{next.title}</p>
           </Link>

@@ -1,5 +1,15 @@
 import { caseStudySlugRedirects } from "./src/lib/case-study-slug-redirects.shared.mjs";
 
+const RSC_QUERY_BYPASS = { type: "query", key: "_rsc" };
+const RSC_HEADER_BYPASS = { type: "header", key: "rsc" };
+
+function excludeRscRequests(redirects) {
+  return redirects.map((redirect) => ({
+    ...redirect,
+    missing: [...(redirect.missing ?? []), RSC_QUERY_BYPASS, RSC_HEADER_BYPASS],
+  }));
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   poweredByHeader: false,
@@ -674,7 +684,7 @@ const nextConfig = {
       { source: "/prospection-b2b", destination: "/", permanent: true },
     ];
 
-    return [
+    return excludeRscRequests([
       ...caseStudyRedirects,
       ...wpResultatRedirects, // specific WP long slugs — must be before wildcard
       ...resultatRedirects,
@@ -684,7 +694,7 @@ const nextConfig = {
       ...frBlogRedirects,
       ...wordpressRedirects,
       ...oldPageRedirects,
-    ];
+    ]);
   },
   async rewrites() {
     return {

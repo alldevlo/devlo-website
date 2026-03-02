@@ -15,17 +15,12 @@ export function FadeInOnScroll({ children, delay = 0, direction = "up", classNam
   if (eager) {
     return <div className={className}>{children}</div>;
   }
-
-  const directionOffset = {
-    up: { y: 24 },
-    down: { y: -24 },
-    left: { x: 24 },
-    right: { x: -24 },
-  }[direction];
+  void direction;
 
   return (
     <motion.div
-      initial={{ opacity: 0, ...directionOffset }}
+      // Keep content visible in SSR/bot rendering even if client JS fails.
+      initial={false}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6, delay, ease: "easeOut" }}
