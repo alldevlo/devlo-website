@@ -45,7 +45,7 @@ export function InfiniteLogoRail({
     : (reverse ? "animate-logo-scroll-reverse" : "animate-logo-scroll");
 
   return (
-    <div className="group py-1">
+    <div className="group bg-white py-1">
       <div
         className={[
           "flex min-w-max items-center will-change-transform",

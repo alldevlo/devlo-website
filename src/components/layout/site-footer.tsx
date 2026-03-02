@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Linkedin } from "lucide-react";
 
 import { footerContent } from "@/content/masterfile.fr";
+import { ALL_CASE_STUDIES, SERVICE_HUB_CARDS } from "@/content/services";
 import { WaveDivider } from "@/components/ui/wave-divider";
 
 function FooterList({
@@ -10,16 +11,24 @@ function FooterList({
   links,
   columns = 1,
   compactLinks = false,
+  scrollable = false,
 }: {
   title: string;
   links: { label: string; href: string }[];
   columns?: 1 | 2;
   compactLinks?: boolean;
+  scrollable?: boolean;
 }) {
   return (
     <div>
       <p className="text-sm font-semibold uppercase tracking-[0.08em] text-white">{title}</p>
-      <ul className={["mt-4", columns === 2 ? "grid grid-cols-2 gap-x-6 gap-y-2.5" : "space-y-2.5"].join(" ")}>
+      <ul
+        className={[
+          "mt-4",
+          columns === 2 ? "grid grid-cols-1 gap-y-2.5 sm:grid-cols-2 sm:gap-x-6" : "space-y-2.5",
+          scrollable ? "max-h-[360px] overflow-y-auto pr-2" : "",
+        ].join(" ")}
+      >
         {links.map((link) => (
           <li key={`${title}-${link.href}`}>
             <Link
@@ -40,6 +49,20 @@ function FooterList({
 }
 
 export function SiteFooter() {
+  const navigationLinks = [...footerContent.navigation, { label: "Services", href: "/services" }].filter(
+    (link, index, array) => array.findIndex((entry) => entry.href === link.href) === index,
+  );
+
+  const serviceLinks = [
+    { label: "Services", href: "/services" },
+    ...SERVICE_HUB_CARDS.map((service) => ({ label: service.title, href: service.href })),
+  ];
+
+  const caseStudyLinks = ALL_CASE_STUDIES.map((study) => ({
+    label: `${study.client} — ${study.headline}`,
+    href: study.href,
+  }));
+
   return (
     <>
       <WaveDivider variant="layered-top" />
@@ -61,7 +84,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mx-auto grid w-full max-w-[1320px] gap-10 px-6 md:grid-cols-2 md:px-8 lg:grid-cols-[1.35fr_0.5fr_2.15fr]">
+        <div className="mx-auto grid w-full max-w-[1320px] gap-10 px-6 md:grid-cols-2 md:px-8 lg:grid-cols-[1.2fr_0.52fr_0.72fr_1.56fr]">
           <div>
             <Image
               src="/images/devlo-logo.webp"
@@ -102,11 +125,15 @@ export function SiteFooter() {
           </div>
 
           <div className="lg:ml-4 lg:border-l lg:border-devlo-800 lg:pl-14">
-            <FooterList title="Navigation" links={footerContent.navigation} />
+            <FooterList title="Navigation" links={navigationLinks} />
           </div>
 
           <div className="lg:border-l lg:border-devlo-800 lg:pl-10">
-            <FooterList title="Études de cas" links={footerContent.caseLinks} columns={2} compactLinks />
+            <FooterList title="Services" links={serviceLinks} compactLinks />
+          </div>
+
+          <div className="lg:border-l lg:border-devlo-800 lg:pl-10">
+            <FooterList title="Études de cas" links={caseStudyLinks} compactLinks scrollable />
           </div>
         </div>
 
