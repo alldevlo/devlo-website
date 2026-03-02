@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 
+import { hadoseoMetadataByRoute } from "@/content/hadoseo-metadata";
 import { siteConfig } from "@/lib/site";
 
 export const defaultOgImagePath = "/images/devlo_OG_Banner.webp";
@@ -37,6 +38,11 @@ export function toAbsoluteUrl(path: string): string {
   return `${siteConfig.url}${normalizeRoute(path)}`;
 }
 
+export function getHadoSeoMetadataOverride(path: string) {
+  const canonicalRoute = normalizeRoute(path);
+  return hadoseoMetadataByRoute[canonicalRoute];
+}
+
 export function resolveOgImagePath(candidate?: string): string {
   if (!candidate) return defaultOgImagePath;
   if (!candidate.startsWith("/images/")) return defaultOgImagePath;
@@ -62,12 +68,15 @@ export function buildPageMetadata({
   imagePath,
 }: BuildPageMetadataInput): Metadata {
   const canonicalPath = normalizeRoute(path);
-  const ogImage = resolveOgImagePath(imagePath);
+  const override = getHadoSeoMetadataOverride(canonicalPath);
+  const resolvedTitle = override ? stripDevloSuffix(override.title) : title;
+  const resolvedDescription = override?.description ?? description;
+  const ogImage = resolveOgImagePath(override?.ogImage ?? imagePath);
   const ogImageAbsoluteUrl = toAbsoluteUrl(ogImage);
 
   return {
-    title,
-    description,
+    title: resolvedTitle,
+    description: resolvedDescription,
     robots: {
       index: true,
       follow: true,
@@ -78,8 +87,8 @@ export function buildPageMetadata({
       languages: buildLanguageAlternates(canonicalPath),
     },
     openGraph: {
-      title,
-      description,
+      title: resolvedTitle,
+      description: resolvedDescription,
       siteName: siteConfig.name,
       type,
       locale: "fr_CH",
@@ -95,8 +104,8 @@ export function buildPageMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
+      title: resolvedTitle,
+      description: resolvedDescription,
       images: [ogImageAbsoluteUrl],
     },
   };

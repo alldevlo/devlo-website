@@ -5,7 +5,12 @@ import { CaseStudyMasterPage } from "@/components/pages/case-study-master-page";
 import { caseStudiesCards, caseStudiesSeo } from "@/content/masterfile.fr";
 import { resolveCaseStudyCanonicalSlug } from "@/lib/case-study-slug-redirects";
 import { caseStudies } from "@/lib/case-studies";
-import { buildPageMetadata, resolveOgImagePath } from "@/lib/seo/metadata";
+import {
+  buildPageMetadata,
+  getHadoSeoMetadataOverride,
+  resolveOgImagePath,
+  stripDevloSuffix,
+} from "@/lib/seo/metadata";
 import { buildBreadcrumbSchema } from "@/lib/seo/schema-builders";
 
 type Params = {
@@ -37,8 +42,20 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: Params): Metadata {
   const canonicalSlug = resolveCaseStudyCanonicalSlug(params.slug);
+  const canonicalPath = `/etudes-de-cas/${canonicalSlug}`;
   const cardStudy = caseStudiesCards.find((item) => item.slug === params.slug) ?? caseStudiesCards.find((item) => item.slug === canonicalSlug);
   const detailedStudy = caseStudies.find((item) => item.slug === params.slug) ?? caseStudies.find((item) => item.slug === canonicalSlug);
+  const override = getHadoSeoMetadataOverride(canonicalPath);
+
+  if (override) {
+    return buildPageMetadata({
+      title: stripDevloSuffix(override.title),
+      description: override.description,
+      path: canonicalPath,
+      type: "article",
+      imagePath: override.ogImage,
+    });
+  }
 
   const title =
     buildCaseStudySeoTitle(
@@ -58,7 +75,7 @@ export function generateMetadata({ params }: Params): Metadata {
   return buildPageMetadata({
     title,
     description,
-    path: `/etudes-de-cas/${canonicalSlug}`,
+    path: canonicalPath,
     type: "article",
     imagePath,
   });
