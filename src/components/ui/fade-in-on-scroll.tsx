@@ -1,7 +1,4 @@
-"use client";
-
 import type { ReactNode } from "react";
-import { motion } from "framer-motion";
 
 type FadeInOnScrollProps = {
   children: ReactNode;
@@ -15,18 +12,22 @@ export function FadeInOnScroll({ children, delay = 0, direction = "up", classNam
   if (eager) {
     return <div className={className}>{children}</div>;
   }
-  void direction;
+
+  const directionClass =
+    direction === "down"
+      ? "motion-safe:animate-fade-in-down"
+      : direction === "left"
+        ? "motion-safe:animate-fade-in-left"
+        : direction === "right"
+          ? "motion-safe:animate-fade-in-right"
+          : "motion-safe:animate-fade-in-up";
 
   return (
-    <motion.div
-      // Keep content visible in SSR/bot rendering even if client JS fails.
-      initial={false}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.6, delay, ease: "easeOut" }}
-      className={className}
+    <div
+      className={[directionClass, "motion-reduce:animate-none", className].filter(Boolean).join(" ")}
+      style={{ animationDelay: `${delay}s` }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

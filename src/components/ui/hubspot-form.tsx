@@ -29,6 +29,8 @@ type HubspotFormProps = {
   onSubmitted?: () => void;
 };
 
+const RESERVED_FORM_HEIGHT_CLASS = "min-h-[560px] md:min-h-[640px]";
+
 let hubspotScriptPromise: Promise<void> | null = null;
 
 function loadHubspotScript(): Promise<void> {
@@ -224,7 +226,7 @@ export function HubspotForm({ portalId, formId, region, targetId, hiddenFields, 
   return (
     <div ref={containerRef} className="relative">
       {!loaded && !submitted && (
-        <div className="flex min-h-[320px] items-center justify-center rounded-xl bg-neutral-50">
+        <div className={`flex ${RESERVED_FORM_HEIGHT_CLASS} items-center justify-center rounded-xl bg-neutral-50`}>
           <div className="flex flex-col items-center gap-3 text-neutral-400">
             <div className="h-8 w-8 animate-spin rounded-full border-2 border-neutral-200 border-t-devlo-600" />
             <span className="text-sm">
@@ -233,12 +235,12 @@ export function HubspotForm({ portalId, formId, region, targetId, hiddenFields, 
           </div>
         </div>
       )}
-      <div id={targetId} className={loaded && !submitted ? "" : "hidden"} />
+      <div id={targetId} className={loaded && !submitted ? RESERVED_FORM_HEIGHT_CLASS : "hidden"} />
       {submissionError ? (
         <p className="mt-3 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">{submissionError}</p>
       ) : null}
       <div className={submitted ? "" : "hidden"}>
-        <div className="flex min-h-[320px] items-center rounded-xl border border-emerald-200 bg-emerald-50 p-6">
+        <div className={`flex ${RESERVED_FORM_HEIGHT_CLASS} items-center rounded-xl border border-emerald-200 bg-emerald-50 p-6`}>
           <p className="text-sm font-medium leading-6 text-emerald-900">
             Merci pour votre prise de contact. Nous reviendrons vers vous sous 24 heures.
           </p>

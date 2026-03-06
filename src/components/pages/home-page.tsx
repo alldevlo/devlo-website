@@ -1,4 +1,5 @@
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import {
   CalendarCheck,
@@ -17,11 +18,9 @@ import {
   Zap,
 } from "lucide-react";
 
-import { CaseStudiesCarousel } from "@/components/home/case-studies-carousel";
 import { WrittenTestimonialsCarousel } from "@/components/home/written-testimonials-carousel";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { InfiniteLogoRail, namesToLogoItems } from "@/components/shared/logo-rail";
-import { AccordionSingle } from "@/components/ui/accordion-single";
 import { buttonClassName } from "@/components/ui/button";
 import { FadeInOnScroll } from "@/components/ui/fade-in-on-scroll";
 import { WaveDivider } from "@/components/ui/wave-divider";
@@ -48,6 +47,28 @@ const methodIconMap = {
   Send,
   CalendarCheck,
 } as const;
+
+const DeferredCaseStudiesCarousel = dynamic(
+  () => import("@/components/home/case-studies-carousel").then((module) => module.CaseStudiesCarousel),
+  {
+    ssr: false,
+    loading: () => <div className="mt-10 h-[360px] rounded-2xl border border-neutral-200 bg-white/70" />,
+  },
+);
+
+const DeferredAccordionSingle = dynamic(
+  () => import("@/components/ui/accordion-single").then((module) => module.AccordionSingle),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="space-y-3">
+        <div className="h-16 rounded-xl border border-neutral-200 bg-white/80" />
+        <div className="h-16 rounded-xl border border-neutral-200 bg-white/80" />
+        <div className="h-16 rounded-xl border border-neutral-200 bg-white/80" />
+      </div>
+    ),
+  },
+);
  
 function ClientsRailRow({ names, reverse = false }: { names: string[]; reverse?: boolean }) {
   return <InfiniteLogoRail logos={namesToLogoItems(names)} pauseOnHover reverse={reverse} duration="slow" />;
@@ -252,7 +273,7 @@ export function HomePage({ content = homeContent, studies = caseStudiesCards, lo
         <FadeInOnScroll>
           <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{caseStudiesTitleByLocale[locale]}</h2>
         </FadeInOnScroll>
-        <CaseStudiesCarousel cards={studies} locale={locale} />
+        <DeferredCaseStudiesCarousel cards={studies} locale={locale} />
       </SectionWrapper>
 
       <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
@@ -350,7 +371,7 @@ export function HomePage({ content = homeContent, studies = caseStudiesCards, lo
           </p>
         </FadeInOnScroll>
         <div className="mx-auto mt-10 max-w-[980px]">
-          <AccordionSingle items={content.faqs} defaultOpenIndex={-1} />
+          <DeferredAccordionSingle items={content.faqs} defaultOpenIndex={-1} />
         </div>
       </SectionWrapper>
     </>

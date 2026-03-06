@@ -1,12 +1,26 @@
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 
 import { SectionWrapper } from "@/components/shared/section-wrapper";
-import { AccordionSingle } from "@/components/ui/accordion-single";
 import { buttonClassName } from "@/components/ui/button";
 import { FadeInOnScroll } from "@/components/ui/fade-in-on-scroll";
 import { WistiaPlayer } from "@/components/ui/wistia-player";
 import { academyContent, homeContent } from "@/content/masterfile.fr";
+
+const DeferredAccordionSingle = dynamic(
+  () => import("@/components/ui/accordion-single").then((module) => module.AccordionSingle),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="space-y-3">
+        <div className="h-16 rounded-xl border border-neutral-200 bg-white/80" />
+        <div className="h-16 rounded-xl border border-neutral-200 bg-white/80" />
+        <div className="h-16 rounded-xl border border-neutral-200 bg-white/80" />
+      </div>
+    ),
+  },
+);
 
 function LogosRail({ names }: { names: string[] }) {
   const doubled = [...names, ...names];
@@ -188,7 +202,7 @@ export function AcademyMasterPage({
           <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.faqTitle}</h2>
         </FadeInOnScroll>
         <div className="mx-auto mt-10 max-w-[980px]">
-          <AccordionSingle items={content.faqs} />
+          <DeferredAccordionSingle items={content.faqs} />
         </div>
       </SectionWrapper>
     </>

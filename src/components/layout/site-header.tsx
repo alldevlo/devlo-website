@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -125,15 +124,25 @@ export function SiteHeader() {
   const servicesMenuRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    let rafId = 0;
     const onScroll = () => {
-      const y = window.scrollY;
-      setIsScrolled(y > 50);
-      setShowMobileStickyCta(y > 300);
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(() => {
+        rafId = 0;
+        const y = window.scrollY;
+        const nextScrolled = y > 50;
+        const nextSticky = y > 300;
+        setIsScrolled((prev) => (prev === nextScrolled ? prev : nextScrolled));
+        setShowMobileStickyCta((prev) => (prev === nextSticky ? prev : nextSticky));
+      });
     };
 
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      if (rafId) window.cancelAnimationFrame(rafId);
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -230,43 +239,35 @@ export function SiteHeader() {
                       </button>
                     </div>
 
-                    <AnimatePresence>
-                      {isServicesMenuOpen ? (
-                        <motion.div
-                          initial={{ opacity: 0, y: 6 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: 6 }}
-                          transition={{ duration: 0.16, ease: "easeOut" }}
-                          className="absolute right-0 top-[calc(100%+8px)] z-[70] w-[760px] overflow-hidden rounded-2xl border border-devlo-700 bg-devlo-700 p-4 text-white shadow-panel"
-                        >
-                          <div>
-                            <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-white/80">
-                              {navCopy.allServices}
-                            </p>
-                            <div className="mt-3 grid gap-2 sm:grid-cols-2">
-                              {localizedServicesCards.map((service) => (
-                                <Link
-                                  key={`desktop-menu-${service.href}`}
-                                  href={service.href}
-                                  className="rounded-xl border border-white/20 bg-white/10 px-3 py-2 transition hover:border-white/40 hover:bg-white/15"
-                                >
-                                  <p className="text-sm font-semibold text-white">{service.title}</p>
-                                  <p className="mt-1 text-xs leading-5 text-white/75">{service.subtitle}</p>
-                                </Link>
-                              ))}
-                            </div>
-                            <div className="mt-4 border-t border-white/20 pt-3">
+                    {isServicesMenuOpen ? (
+                      <div className="absolute right-0 top-[calc(100%+8px)] z-[70] w-[760px] overflow-hidden rounded-2xl border border-devlo-700 bg-devlo-700 p-4 text-white shadow-panel motion-safe:animate-fade-in-up">
+                        <div>
+                          <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-white/80">
+                            {navCopy.allServices}
+                          </p>
+                          <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                            {localizedServicesCards.map((service) => (
                               <Link
-                                href={toCurrentLocalePath("/services")}
-                                className="inline-flex rounded-full border border-white/30 bg-white px-3 py-1.5 text-xs font-semibold text-devlo-700 transition hover:bg-devlo-50"
+                                key={`desktop-menu-${service.href}`}
+                                href={service.href}
+                                className="rounded-xl border border-white/20 bg-white/10 px-3 py-2 transition hover:border-white/40 hover:bg-white/15"
                               >
-                                {navCopy.seeAllServices}
+                                <p className="text-sm font-semibold text-white">{service.title}</p>
+                                <p className="mt-1 text-xs leading-5 text-white/75">{service.subtitle}</p>
                               </Link>
-                            </div>
+                            ))}
                           </div>
-                        </motion.div>
-                      ) : null}
-                    </AnimatePresence>
+                          <div className="mt-4 border-t border-white/20 pt-3">
+                            <Link
+                              href={toCurrentLocalePath("/services")}
+                              className="inline-flex rounded-full border border-white/30 bg-white px-3 py-1.5 text-xs font-semibold text-devlo-700 transition hover:bg-devlo-50"
+                            >
+                              {navCopy.seeAllServices}
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    ) : null}
                   </div>
                 );
               }
@@ -305,15 +306,8 @@ export function SiteHeader() {
         </div>
       </header>
 
-      <AnimatePresence>
-        {isMenuOpen ? (
-          <motion.aside
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ duration: 0.24, ease: "easeOut" }}
-            className="fixed inset-0 z-[60] overflow-y-auto bg-white p-6"
-          >
+      {isMenuOpen ? (
+        <aside className="fixed inset-0 z-[60] overflow-y-auto bg-white p-6 motion-safe:animate-fade-in-right">
             <div className="flex items-center justify-between">
               <Image src={mainNav.logo} alt="devlo logo" width={120} height={40} className="h-7 w-auto" />
               <button
@@ -352,37 +346,30 @@ export function SiteHeader() {
                         </button>
                       </div>
 
-                      <AnimatePresence>
-                        {isMobileServicesOpen ? (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            className="mt-2 overflow-hidden"
-                          >
-                            <div className="grid gap-1.5">
-                              {localizedServicesCards.map((service) => (
-                                <Link
-                                  key={`mobile-service-${service.href}`}
-                                  href={service.href}
-                                  className="rounded-lg border border-neutral-200 bg-neutral-50 px-3 py-2 transition hover:border-devlo-700/30"
-                                >
-                                  <p className="text-sm font-semibold text-devlo-900">{service.title}</p>
-                                  <p className="text-xs text-neutral-500">{service.subtitle}</p>
-                                </Link>
-                              ))}
-                            </div>
-                            <div className="mt-2 border-t border-neutral-200 pt-2">
+                      {isMobileServicesOpen ? (
+                        <div className="mt-2 overflow-hidden motion-safe:animate-fade-in-up">
+                          <div className="grid gap-1.5">
+                            {localizedServicesCards.map((service) => (
                               <Link
-                                href={toCurrentLocalePath("/services")}
-                                className="inline-flex min-h-[40px] items-center rounded-lg border border-neutral-200 bg-white px-3 text-sm font-semibold text-devlo-700"
+                                key={`mobile-service-${service.href}`}
+                                href={service.href}
+                                className="rounded-lg border border-neutral-200 bg-neutral-50 px-3 py-2 transition hover:border-devlo-700/30"
                               >
-                                {navCopy.seeAllServices}
+                                <p className="text-sm font-semibold text-devlo-900">{service.title}</p>
+                                <p className="text-xs text-neutral-500">{service.subtitle}</p>
                               </Link>
-                            </div>
-                          </motion.div>
-                        ) : null}
-                      </AnimatePresence>
+                            ))}
+                          </div>
+                          <div className="mt-2 border-t border-neutral-200 pt-2">
+                            <Link
+                              href={toCurrentLocalePath("/services")}
+                              className="inline-flex min-h-[40px] items-center rounded-lg border border-neutral-200 bg-white px-3 text-sm font-semibold text-devlo-700"
+                            >
+                              {navCopy.seeAllServices}
+                            </Link>
+                          </div>
+                        </div>
+                      ) : null}
                     </div>
                   );
                 }
@@ -405,25 +392,16 @@ export function SiteHeader() {
             <Link href={consultationHref} className={buttonClassName("primary", "mt-8 w-full py-4 text-base")}>
               {navCopy.cta}
             </Link>
-          </motion.aside>
-        ) : null}
-      </AnimatePresence>
+          </aside>
+      ) : null}
 
-      <AnimatePresence>
-        {showMobileStickyCta ? (
-          <motion.div
-            initial={{ y: 120 }}
-            animate={{ y: 0 }}
-            exit={{ y: 120 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
-            className="fixed bottom-0 left-0 right-0 z-40 border-t border-neutral-200 bg-white px-4 pt-4 pb-[max(1rem,env(safe-area-inset-bottom))] md:hidden"
-          >
+      {showMobileStickyCta ? (
+        <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-neutral-200 bg-white px-4 pt-4 pb-[max(1rem,env(safe-area-inset-bottom))] md:hidden motion-safe:animate-fade-in-up">
             <Link href={consultationHref} className={buttonClassName("primary", "w-full py-4 text-base")}>
               {navCopy.cta}
             </Link>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
+          </div>
+      ) : null}
     </>
   );
 }
