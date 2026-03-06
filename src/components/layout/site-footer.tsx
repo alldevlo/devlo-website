@@ -191,7 +191,7 @@ export function SiteFooter() {
             alt="devlo logo"
             width={200}
             height={66}
-            className="h-12 w-auto md:h-14"
+            className="h-[56px] w-[170px] object-contain"
             loading="lazy"
           />
 
