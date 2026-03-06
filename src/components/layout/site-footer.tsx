@@ -86,12 +86,14 @@ function FooterList({
   columns = 1,
   compactLinks = false,
   scrollable = false,
+  linkClassName,
 }: {
   title: string;
   links: { label: string; href: string }[];
   columns?: 1 | 2;
   compactLinks?: boolean;
   scrollable?: boolean;
+  linkClassName?: string;
 }) {
   return (
     <div>
@@ -107,10 +109,12 @@ function FooterList({
           <li key={`${title}-${link.href}`}>
             <Link
               href={link.href}
-            className={[
-                compactLinks
-                  ? "block whitespace-nowrap overflow-hidden text-ellipsis text-[13px] text-neutral-600 transition hover:text-devlo-900 lg:overflow-visible lg:text-clip xl:text-sm"
-                  : "text-sm text-neutral-600 transition hover:text-devlo-900",
+              className={[
+                linkClassName
+                  ? linkClassName
+                  : compactLinks
+                    ? "block whitespace-nowrap overflow-hidden text-ellipsis text-[13px] text-neutral-600 transition hover:text-devlo-900 lg:overflow-visible lg:text-clip xl:text-sm"
+                    : "text-sm text-neutral-600 transition hover:text-devlo-900",
               ].join(" ")}
             >
               {link.label}
@@ -121,6 +125,9 @@ function FooterList({
     </div>
   );
 }
+
+const caseStudiesLinkClassName =
+  "block whitespace-normal break-words text-sm leading-6 text-neutral-600 transition hover:text-devlo-900";
 
 export function SiteFooter() {
   const pathname = usePathname();
@@ -229,7 +236,12 @@ export function SiteFooter() {
         </div>
 
         <div className="lg:border-l lg:border-neutral-200 lg:pl-10">
-          <FooterList title={labels.caseStudies} links={caseStudyLinks} compactLinks columns={2} scrollable />
+          <FooterList
+            title={labels.caseStudies}
+            links={caseStudyLinks}
+            scrollable
+            linkClassName={caseStudiesLinkClassName}
+          />
         </div>
       </div>
 
