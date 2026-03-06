@@ -67,7 +67,15 @@ export function findEntryByLocalePath(locale: Exclude<SupportedLocale, "fr">, lo
 
 export function buildLanguageAlternatesForFrPath(frPath: string): Record<string, string> {
   const normalizedFrPath = normalizePath(frPath);
-  const entry = findEntryByFrPath(normalizedFrPath)?.entry;
+  const directMatch = findEntryByFrPath(normalizedFrPath);
+  const aliasFrPath =
+    normalizedFrPath === "/etudes-de-cas"
+      ? "/resultats-cas-etudes"
+      : normalizedFrPath.startsWith("/etudes-de-cas/")
+        ? `/resultats/${normalizedFrPath.slice("/etudes-de-cas/".length)}`
+        : normalizedFrPath;
+  const aliasMatch = aliasFrPath !== normalizedFrPath ? findEntryByFrPath(aliasFrPath) : null;
+  const entry = directMatch?.entry ?? aliasMatch?.entry;
 
   if (!entry) {
     return {
@@ -76,6 +84,16 @@ export function buildLanguageAlternatesForFrPath(frPath: string): Record<string,
       de: toLocalePath("de", normalizedFrPath),
       nl: toLocalePath("nl", normalizedFrPath),
       "x-default": toLocalePath("fr", normalizedFrPath),
+    };
+  }
+
+  if (!directMatch && aliasMatch) {
+    return {
+      fr: normalizedFrPath,
+      en: normalizePath(entry.en ?? toLocalePath("en", normalizedFrPath)),
+      de: normalizePath(entry.de ?? toLocalePath("de", normalizedFrPath)),
+      nl: normalizePath(entry.nl ?? toLocalePath("nl", normalizedFrPath)),
+      "x-default": normalizedFrPath,
     };
   }
 

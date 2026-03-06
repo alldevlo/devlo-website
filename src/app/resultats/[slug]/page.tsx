@@ -24,7 +24,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: Params): Metadata {
   const canonicalSlug = resolveCaseStudyCanonicalSlug(params.slug);
   const baseMetadata = generateEtudesCaseStudyMetadata({ params: { slug: canonicalSlug } });
-  const canonicalPath = `/resultats/${canonicalSlug}`;
+  const canonicalPath = `/etudes-de-cas/${canonicalSlug}`;
   const alternates = buildLanguageAlternates(canonicalPath);
 
   return {

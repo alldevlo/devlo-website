@@ -8,7 +8,7 @@ export function generateMetadata(): Metadata {
   return buildPageMetadata({
     title: caseStudiesSeo.title.replace(/\s*\|\s*devlo$/i, ""),
     description: caseStudiesSeo.description,
-    path: "/resultats-cas-etudes",
+    path: "/etudes-de-cas",
   });
 }
 
