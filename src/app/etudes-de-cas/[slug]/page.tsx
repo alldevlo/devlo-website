@@ -11,7 +11,7 @@ import {
   resolveOgImagePath,
   stripDevloSuffix,
 } from "@/lib/seo/metadata";
-import { buildBreadcrumbSchema } from "@/lib/seo/schema-builders";
+import { buildArticleSchema, buildBreadcrumbSchema } from "@/lib/seo/schema-builders";
 
 type Params = {
   params: { slug: string };
@@ -87,14 +87,27 @@ export default function Page({ params }: Params) {
   const detailedStudy = caseStudies.find((item) => item.slug === params.slug) ?? caseStudies.find((item) => item.slug === canonicalSlug);
   const breadcrumbLabel = cardStudy?.title ?? detailedStudy?.title ?? "Étude de cas";
 
+  const articleSchema = buildArticleSchema({
+    headline: breadcrumbLabel,
+    description:
+      detailedStudy?.summary ??
+      cardStudy?.title ??
+      "Étude de cas prospection B2B par devlo",
+    path: `/etudes-de-cas/${canonicalSlug}`,
+    imagePath: detailedStudy?.heroImageUrl ?? cardStudy?.banner,
+  });
+
   return (
     <>
       <JsonLd
-        schema={buildBreadcrumbSchema([
-          { name: "Accueil", path: "/" },
-          { name: "Études de cas", path: "/etudes-de-cas" },
-          { name: breadcrumbLabel, path: `/etudes-de-cas/${canonicalSlug}` },
-        ])}
+        schema={[
+          buildBreadcrumbSchema([
+            { name: "Accueil", path: "/" },
+            { name: "Études de cas", path: "/etudes-de-cas" },
+            { name: breadcrumbLabel, path: `/etudes-de-cas/${canonicalSlug}` },
+          ]),
+          articleSchema,
+        ]}
       />
       <CaseStudyMasterPage slug={params.slug} />
     </>

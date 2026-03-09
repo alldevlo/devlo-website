@@ -20,7 +20,7 @@ const plusJakartaSans = localFont({
 
 const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-9CKZL9V2VN";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -179,6 +179,30 @@ const serviceSchema = {
     "@type": "ServiceChannel",
     serviceUrl: `${siteConfig.url}/consultation`,
   },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    bestRating: "5",
+    worstRating: "1",
+    ratingCount: "14",
+    reviewCount: "14",
+  },
+  review: [
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Jérôme Tailleur" },
+      reviewBody:
+        "devlo a complètement révolutionné notre approche commerciale. 80 rendez-vous qualifiés et 200 000 € de contrats signés.",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Raphael Haut" },
+      reviewBody:
+        "Charles est l'un des experts en vente les plus créatifs que je connaisse. Il nous a aidés à obtenir des rendez-vous commerciaux qualifiés dans la région DACH.",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+    },
+  ],
 };
 
 export default function RootLayout({

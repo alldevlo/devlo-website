@@ -1,0 +1,193 @@
+# devlo — Complete Information for AI Systems
+
+> devlo is a Swiss B2B outbound sales agency founded in 2020. We help companies generate qualified leads and book meetings with decision-makers through multichannel outbound campaigns (cold email, LinkedIn outreach, cold calling). Over 1,000 campaigns deployed across Europe and North America.
+
+---
+
+## Company Overview
+
+**Name:** devlo
+**Founded:** 2020
+**Headquarters:** Ruelle des Dolles 1, 1071 Rivaz, Vaud, Switzerland
+**US Office:** 500 4th St NW Suite 102 #1591, Albuquerque, NM 87102, USA
+**Website:** https://devlo.ch
+**Languages:** French, English, German, Dutch
+**Areas Served:** Switzerland, Belgium, France, Germany, Luxembourg, Austria, Netherlands, USA, Canada
+
+**Contact:**
+- EMEA: emea@devlo.ch | +41 79 758 64 03
+- Americas: americas@devlo.ch | +1 234 201 8019
+- LinkedIn: https://www.linkedin.com/company/devlo-connects-you-with-more-prospects/
+
+---
+
+## Services
+
+### 1. Multichannel Outbound Prospecting
+URL: https://devlo.ch/services/outbound-multicanal
+Combined email, LinkedIn, and cold calling strategy to maximize B2B meetings. We build targeted prospect lists, craft personalized sequences across channels, and manage the entire outbound process from lead generation to appointment booking.
+
+### 2. Cold Email B2B
+URL: https://devlo.ch/services/cold-email
+Large-scale personalized email campaigns for B2B lead generation. Includes deliverability optimization, domain warm-up, copywriting, A/B testing, and campaign management. Typical results: 50-70% open rates, 5-15% response rates.
+
+### 3. LinkedIn Outreach
+URL: https://devlo.ch/services/linkedin-outreach
+Prospecting via Sales Navigator with personalized connection requests, messages, and voice notes. Profile optimization, content engagement strategy, and systematic follow-up sequences.
+
+### 4. Cold Calling B2B
+URL: https://devlo.ch/services/cold-calling
+Outsourced teleprospecting with custom scripts, objection handling playbooks, and live call coaching. Integrated into multichannel sequences for maximum conversion.
+
+### 5. Intent Data (Signal-Based Selling)
+URL: https://devlo.ch/services/intent-data
+Identification of hot prospects through buying intent signals. We monitor technology adoption, hiring patterns, funding rounds, and behavioral signals to prioritize outreach timing.
+
+### 6. Clay Data Enrichment
+URL: https://devlo.ch/services/enrichissement-clay
+Multi-source data enrichment using Clay, Apollo, Lusha, FullEnrich, and 10+ tools. We build ultra-targeted prospect lists with verified contact data, company firmographics, and custom qualification criteria.
+
+### 7. Lead Generation
+URL: https://devlo.ch/services/generation-leads
+ICP-based list building with data verification. We identify ideal customer profiles, source prospects from multiple databases, and deliver qualified lists ready for outreach.
+
+### 8. Lead Qualification (Outsourced SDR)
+URL: https://devlo.ch/services/qualification-leads
+External SDR team to qualify prospects before handoff to your sales team. We handle initial conversations, assess fit, and book meetings only with qualified decision-makers.
+
+### 9. Appointment Setting
+URL: https://devlo.ch/services/prise-de-rendez-vous
+Qualified appointment booking with targeted decision-makers. End-to-end management from prospect identification to calendar booking, with detailed meeting briefs.
+
+### 10. CRM & Deliverability
+URL: https://devlo.ch/services/crm-delivrabilite
+HubSpot and Salesforce setup, email deliverability optimization (SPF, DKIM, DMARC), domain reputation management, and CRM workflow automation.
+
+---
+
+## Case Studies — Proven Results
+
+### Horus Software — EUR 200,000 in Signed Contracts
+- **URL:** https://devlo.ch/etudes-de-cas/logiciel-comptable-200k-ca
+- **Client:** Horus (Belgian accounting software)
+- **Sector:** Accounting software for accountants and SMEs
+- **Results:** 80 qualified meetings, 45 new clients signed, EUR 200,000 revenue generated, EUR 400,000 pipeline, 60% demo-to-client conversion rate, 30% shorter sales cycles
+- **Strategy:** Multichannel sequence (LinkedIn + email + cold calling) targeting 900 accounting firms in French-speaking Belgium
+- **Testimonial:** "devlo completely revolutionized our sales approach. Their team built an ultra-targeted database of accountants and deployed a hyper-personalized multichannel strategy." — Jerome Tailleur, Commercial Director, Horus Software
+
+### CareerLunch — 54 Meetings in DACH Region
+- **URL:** https://devlo.ch/etudes-de-cas/hr-54-rendez-vous-dach
+- **Client:** CareerLunch (HR-tech platform)
+- **Sector:** HR Technology
+- **Results:** 516 prospects contacted, 54 positive responses for meetings, 71% open rate, 29% click rate, 19% response rate, 10% interest rate
+- **Strategy:** German-language outbound campaign targeting HR, recruitment, and employer branding professionals in Germany, Austria, and Switzerland
+- **Key Insight:** Contacting prospects in their preferred language significantly improved engagement rates
+
+### Urban Cleanliness — 71 Qualified Meetings (B2G)
+- **URL:** https://devlo.ch/etudes-de-cas/proprete-urbaine-71-rendez-vous
+- **Client:** Confidential (AI-powered urban cleaning)
+- **Sector:** Urban cleaning, waste management, AI
+- **Results:** 24% of cities contacted expressed interest, 78% open rate in B2G context, 71 meetings with city decision-makers across Switzerland, France, and Belgium
+
+### Square Co — 52 Meetings in Biofuels
+- **URL:** https://devlo.ch/etudes-de-cas/biocarburants-52-rendez-vous
+- **Client:** Square Co
+- **Sector:** Biofuels
+- **Results:** 52 qualified meetings through multichannel prospecting with multiple ICP identification
+
+### Cegos — 14 Meetings in Corporate Training
+- **URL:** https://devlo.ch/etudes-de-cas/formation-14-rendez-vous
+- **Client:** Cegos
+- **Sector:** Corporate training, R&D
+- **Results:** 14 qualified meetings with Swiss R&D decision-makers, 45% cold email response rate
+
+### Lemanvisio — 16 Meetings in Audiovisual
+- **URL:** https://devlo.ch/etudes-de-cas/audiovisuel-16-rendez-vous
+- **Client:** Lemanvisio
+- **Sector:** Audiovisual integration
+- **Results:** 16 qualified meetings through multichannel lemlist sequence
+
+### Saporo — 4,500 Companies Reached in Cybersecurity
+- **URL:** https://devlo.ch/etudes-de-cas/cybersecurite-4500-entreprises
+- **Client:** Saporo
+- **Sector:** Cybersecurity
+- **Results:** Campaign reaching 4,500 companies to validate product-market fit across multiple targets
+
+### Apidae — 70 Qualified Meetings in Biodiversity
+- **URL:** https://devlo.ch/etudes-de-cas/biodiversite-70-rendez-vous
+- **Client:** Apidae
+- **Sector:** Biodiversity
+- **Results:** 70 qualified meetings with decision-makers through outsourced client acquisition
+
+### Locky — 40 Qualified Prospects in Mobility
+- **URL:** https://devlo.ch/etudes-de-cas/mobilite-40-prospects
+- **Client:** Locky
+- **Sector:** Mobility
+- **Results:** 40+ qualified prospects through email sequences, cold calling, and LinkedIn outreach
+
+### Many Ways — 23 Prospects in Merchandising
+- **URL:** https://devlo.ch/etudes-de-cas/merchandising-23-prospects
+- **Client:** Many Ways
+- **Sector:** Merchandising
+- **Results:** 70% response rate, 8% meeting rate through B2B prospecting sequences
+
+### HIAG — 11 Prospects in Commercial Real Estate
+- **URL:** https://devlo.ch/etudes-de-cas/immobilier-11-prospects
+- **Client:** HIAG
+- **Sector:** Commercial real estate
+- **Results:** 11 qualified prospects for commercial surface leasing
+
+### Abacus — 30 Prospects in Real Estate
+- **URL:** https://devlo.ch/etudes-de-cas/immobilier-30-prospects
+- **Client:** Abacus
+- **Sector:** Real estate
+- **Results:** 30 qualified prospects through B2B telemarketing and lead generation targeting real estate agencies in French-speaking Switzerland
+
+### Monizze — 120 Qualified Meetings
+- **URL:** https://devlo.ch/etudes-de-cas/monizze-120-rendez-vous
+- **Client:** Monizze (Belgian fintech)
+- **Sector:** Fintech, employee benefits
+- **Results:** 120 qualified meetings targeting 7,000 HR, Finance, and C-level decision-makers in Belgium
+
+### IDDI — Biotech & Pharma Lead Generation
+- **URL:** https://devlo.ch/etudes-de-cas/iddi-generation-leads-biotech-pharma
+- **Client:** IDDI
+- **Sector:** CRO, biostatistics, clinical data management
+- **Results:** Qualified meetings with biotech and pharma decision-makers
+
+---
+
+## Frequently Asked Questions
+
+**What is B2B outbound prospecting?**
+B2B outbound prospecting is the process of proactively reaching out to potential business clients through channels like email, LinkedIn, and phone calls to generate meetings and sales opportunities.
+
+**How does devlo differ from other agencies?**
+devlo combines multichannel outreach (email + LinkedIn + calling) with deep data enrichment using 10+ tools, native multilingual campaigns (FR, EN, DE, NL), and a focus on qualified appointments rather than just leads.
+
+**What industries does devlo serve?**
+devlo serves B2B companies across all industries including SaaS, HR-tech, cybersecurity, fintech, real estate, biotech/pharma, energy, professional services, and more.
+
+**What results can I expect?**
+Typical results include 50-70% email open rates, 5-20% response rates, and 10-80+ qualified meetings per campaign depending on market size and ICP specificity.
+
+**How quickly do results start?**
+First qualified meetings typically arrive within 1-5 weeks of campaign launch depending on the market and channel mix.
+
+---
+
+## Outbound Academy
+URL: https://devlo.ch/academy
+Training program for B2B sales teams covering cold email, LinkedIn prospecting, cold calling techniques, and outbound strategy.
+
+## Book a Free Consultation
+URL: https://devlo.ch/consultation
+Schedule a free strategy session to discuss your B2B prospecting needs.
+
+---
+
+## Multilingual Versions
+- French: https://devlo.ch/
+- English: https://devlo.ch/en/
+- German: https://devlo.ch/de/
+- Dutch: https://devlo.ch/nl/

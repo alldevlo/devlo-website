@@ -15,6 +15,25 @@ type HowToStepLike = {
   description: string;
 };
 
+type ArticleSchemaInput = {
+  headline: string;
+  description: string;
+  path: string;
+  imagePath?: string;
+  datePublished?: string;
+  dateModified?: string;
+};
+
+type ReviewSchemaInput = {
+  author: string;
+  reviewBody: string;
+  ratingValue?: number;
+  itemReviewed: {
+    name: string;
+    description?: string;
+  };
+};
+
 export function buildBreadcrumbSchema(items: BreadcrumbItem[]) {
   return {
     "@context": "https://schema.org",
@@ -53,6 +72,78 @@ export function buildHowToSchema(name: string, steps: HowToStepLike[]) {
       position: index + 1,
       name: step.title,
       text: step.description,
+    })),
+  };
+}
+
+export function buildArticleSchema(input: ArticleSchemaInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: input.headline,
+    description: input.description,
+    url: `${siteConfig.url}${input.path}`,
+    ...(input.imagePath && {
+      image: input.imagePath.startsWith("http")
+        ? input.imagePath
+        : `${siteConfig.url}${input.imagePath}`,
+    }),
+    datePublished: input.datePublished ?? "2024-01-01",
+    dateModified: input.dateModified ?? new Date().toISOString().split("T")[0],
+    author: {
+      "@type": "Organization",
+      name: "devlo",
+      url: siteConfig.url,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "devlo",
+      url: siteConfig.url,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.url}/images/devlo-logo.webp`,
+      },
+    },
+  };
+}
+
+export function buildReviewSchema(reviews: ReviewSchemaInput[]) {
+  const ratingValues = reviews
+    .map((r) => r.ratingValue)
+    .filter((v): v is number => v !== undefined);
+  const avgRating =
+    ratingValues.length > 0
+      ? ratingValues.reduce((a, b) => a + b, 0) / ratingValues.length
+      : 5;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Prospection commerciale B2B externalisée",
+    provider: {
+      "@type": "Organization",
+      name: "devlo",
+      url: siteConfig.url,
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: avgRating.toFixed(1),
+      bestRating: "5",
+      worstRating: "1",
+      ratingCount: String(reviews.length),
+    },
+    review: reviews.map((r) => ({
+      "@type": "Review",
+      author: {
+        "@type": "Person",
+        name: r.author,
+      },
+      reviewBody: r.reviewBody,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: String(r.ratingValue ?? 5),
+        bestRating: "5",
+      },
     })),
   };
 }

@@ -1,0 +1,61 @@
+# devlo
+
+> Agence suisse de prospection commerciale B2B. Nous aidons les entreprises a generer des leads qualifies et des rendez-vous avec des decideurs via des campagnes outbound multicanales (cold email, LinkedIn, cold calling).
+
+## A propos
+
+- Fondee en 2020 a Rivaz, Suisse (Vaud)
+- Bureau US a Albuquerque, NM
+- Plus de 1000 campagnes deployees
+- Equipe multilangue : francais, anglais, allemand, neerlandais
+- Zones desservies : Suisse, Belgique, France, Allemagne, Luxembourg, USA, Canada
+
+## Services
+
+- [Prospection Outbound Multicanal](https://devlo.ch/services/outbound-multicanal): Strategie de prospection combinant email, LinkedIn et appels pour maximiser les rendez-vous B2B.
+- [Cold Email B2B](https://devlo.ch/services/cold-email): Campagnes d'emails personnalises a grande echelle pour generer des leads qualifies.
+- [LinkedIn Outreach](https://devlo.ch/services/linkedin-outreach): Prospection via Sales Navigator et messages personnalises sur LinkedIn.
+- [Cold Calling B2B](https://devlo.ch/services/cold-calling): Teleprospection externalisee avec gestion des objections et scripts personnalises.
+- [Intent Data](https://devlo.ch/services/intent-data): Identification des prospects chauds grace aux signaux d'intention d'achat.
+- [Enrichissement Clay](https://devlo.ch/services/enrichissement-clay): Enrichissement de donnees multi-sources pour des listes de prospection ultra-ciblees.
+- [Generation de Leads](https://devlo.ch/services/generation-leads): Construction de listes ICP qualifiees avec verification des donnees.
+- [Qualification de Leads](https://devlo.ch/services/qualification-leads): SDR externalise pour qualifier les prospects avant transfert aux equipes commerciales.
+- [Prise de Rendez-vous](https://devlo.ch/services/prise-de-rendez-vous): Booking de rendez-vous qualifies avec les decideurs cibles.
+- [CRM & Delivrabilite](https://devlo.ch/services/crm-delivrabilite): Configuration HubSpot, Salesforce et optimisation de la delivrabilite email.
+
+## Etudes de cas
+
+- [Horus Software — 200K EUR de contrats signes](https://devlo.ch/etudes-de-cas/logiciel-comptable-200k-ca): Logiciel comptable, 80 rendez-vous qualifies, 45 nouveaux clients en Belgique.
+- [HR Tech — 54 rendez-vous DACH](https://devlo.ch/etudes-de-cas/hr-54-rendez-vous-dach): Solution RH, 54 rendez-vous en region DACH.
+- [Proprete urbaine — 71 rendez-vous](https://devlo.ch/etudes-de-cas/proprete-urbaine-71-rendez-vous): Services de proprete, 71 rendez-vous generes.
+- [Biocarburants — 52 rendez-vous](https://devlo.ch/etudes-de-cas/biocarburants-52-rendez-vous): Secteur biocarburants, 52 rendez-vous qualifies.
+- [Formation — 14 rendez-vous](https://devlo.ch/etudes-de-cas/formation-14-rendez-vous): Organisme de formation, 14 rendez-vous B2B.
+- [Audiovisuel — 16 rendez-vous](https://devlo.ch/etudes-de-cas/audiovisuel-16-rendez-vous): Entreprise audiovisuelle, 16 rendez-vous.
+- [Cybersecurite — 4500 entreprises](https://devlo.ch/etudes-de-cas/cybersecurite-4500-entreprises): Solution cybersecurite, campagne a 4500 entreprises.
+- [Biodiversite — 70 rendez-vous](https://devlo.ch/etudes-de-cas/biodiversite-70-rendez-vous): Secteur biodiversite, 70 rendez-vous generes.
+- [Mobilite — 40 prospects](https://devlo.ch/etudes-de-cas/mobilite-40-prospects): Solution mobilite, 40 prospects qualifies.
+- [Merchandising — 23 prospects](https://devlo.ch/etudes-de-cas/merchandising-23-prospects): Merchandising, 23 prospects qualifies.
+- [Immobilier — 11 prospects](https://devlo.ch/etudes-de-cas/immobilier-11-prospects): Immobilier, 11 prospects generes.
+- [Immobilier — 30 prospects](https://devlo.ch/etudes-de-cas/immobilier-30-prospects): Immobilier, 30 prospects qualifies.
+- [Monizze — 120 rendez-vous](https://devlo.ch/etudes-de-cas/monizze-120-rendez-vous): Fintech belge, 120 rendez-vous qualifies.
+- [IDDI — Generation leads biotech pharma](https://devlo.ch/etudes-de-cas/iddi-generation-leads-biotech-pharma): CRO biotech/pharma, generation de leads qualifies.
+
+## Pages principales
+
+- [Accueil](https://devlo.ch/)
+- [Etudes de cas](https://devlo.ch/etudes-de-cas)
+- [Outbound Academy](https://devlo.ch/academy)
+- [Consultation gratuite](https://devlo.ch/consultation)
+
+## Contact
+
+- EMEA : emea@devlo.ch | +41 79 758 64 03
+- Americas : americas@devlo.ch | +1 234 201 8019
+- LinkedIn : https://www.linkedin.com/company/devlo-connects-you-with-more-prospects/
+
+## Langues disponibles
+
+- Francais : https://devlo.ch/
+- English : https://devlo.ch/en/
+- Deutsch : https://devlo.ch/de/
+- Nederlands : https://devlo.ch/nl/
