@@ -32,8 +32,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  const baseDate = new Date("2026-03-01");
-
   return Array.from(urls)
     .sort((a, b) => a.localeCompare(b))
     .map((url) => {
@@ -41,13 +39,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       const isHome = path === "" || path === "/";
       const isService = path.includes("/services/");
       const isCaseStudy = path.includes("/etudes-de-cas/");
-      const isBlog = path.includes("/blog/");
+      const isBlog = path.includes("/blog");
+      const isGeo = path.includes("/prospection-commerciale-");
+      const isAgence = path.endsWith("/agence");
+
+      const lastModifiedDate = isHome || isService || isBlog || isGeo || isAgence
+        ? new Date("2026-03-09")
+        : new Date("2026-03-01");
 
       return {
         url,
-        lastModified: baseDate,
+        lastModified: lastModifiedDate,
         changeFrequency: isHome ? "weekly" : isService ? "monthly" : isCaseStudy ? "yearly" : isBlog ? "monthly" : ("monthly" as const),
-        priority: isHome ? 1.0 : isService ? 0.9 : isCaseStudy ? 0.8 : isBlog ? 0.7 : 0.6,
+        priority: isHome ? 1.0 : isService ? 0.9 : isCaseStudy ? 0.8 : isBlog ? 0.7 : isGeo ? 0.8 : isAgence ? 0.8 : 0.6,
       };
     });
 }

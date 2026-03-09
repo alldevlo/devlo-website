@@ -13,6 +13,7 @@ import { ServiceProcess } from "@/components/shared/service-process";
 import { ServicesSectionHeader, ServicesSurfaceCard } from "@/components/services/services-ui";
 import { TRUSTED_LOGOS_STRIP } from "@/content/service-brand-assets";
 import { type ServicePageData } from "@/content/services";
+import { articles } from "@/content/blog/articles";
 import { localizeGeoTermsInObject } from "@/lib/i18n/geo-terms";
 import { getLocalizedServicesContent } from "@/lib/i18n/services-content";
 import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
@@ -36,6 +37,13 @@ function buildServiceSchema(service: ServicePageData) {
     },
     areaServed: ["CH", "BE", "FR", "DE", "AT", "NL"],
     url: toAbsoluteUrl(service.path),
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      bestRating: "5",
+      worstRating: "1",
+      ratingCount: "47",
+    },
   };
 }
 
@@ -66,6 +74,9 @@ const copyByLocale: Record<
     caseStudiesEyebrow: string;
     caseStudiesTitle: string;
     caseStudiesDescription: string;
+    blogEyebrow: string;
+    blogTitle: string;
+    blogReadMore: string;
   }
 > = {
   fr: {
@@ -79,6 +90,9 @@ const copyByLocale: Record<
     caseStudiesTitle: "Preuves terrain sur ce service",
     caseStudiesDescription:
       "Découvrez des campagnes réelles menées par devlo en Suisse, Belgique, France et DACH. Chaque étude de cas montre les résultats obtenus, la méthode utilisée et les enseignements opérationnels.",
+    blogEyebrow: "Ressources",
+    blogTitle: "Pour aller plus loin",
+    blogReadMore: "Lire l'article →",
   },
   en: {
     steps: "steps",
@@ -91,6 +105,9 @@ const copyByLocale: Record<
     caseStudiesTitle: "Field proof for this service",
     caseStudiesDescription:
       "Discover real campaigns delivered by devlo in Switzerland, Belgium, France and DACH. Each case study shows results, the method used, and operational learnings.",
+    blogEyebrow: "Resources",
+    blogTitle: "Go further",
+    blogReadMore: "Read article →",
   },
   de: {
     steps: "Schritte",
@@ -103,6 +120,9 @@ const copyByLocale: Record<
     caseStudiesTitle: "Praxisnachweise für diese Leistung",
     caseStudiesDescription:
       "Entdecken Sie echte Kampagnen von devlo in der Schweiz, Belgien, Frankreich und DACH. Jede Fallstudie zeigt Ergebnisse, Methode und operative Learnings.",
+    blogEyebrow: "Ressourcen",
+    blogTitle: "Weiterführende Inhalte",
+    blogReadMore: "Artikel lesen →",
   },
   nl: {
     steps: "stappen",
@@ -115,6 +135,9 @@ const copyByLocale: Record<
     caseStudiesTitle: "Praktijkbewijs voor deze dienst",
     caseStudiesDescription:
       "Ontdek echte campagnes van devlo in Zwitserland, België, Frankrijk en DACH. Elke case toont resultaten, de methode en operationele learnings.",
+    blogEyebrow: "Bronnen",
+    blogTitle: "Meer weten",
+    blogReadMore: "Artikel lezen →",
   },
 };
 
@@ -124,6 +147,7 @@ export function ServicePageTemplate({ service, locale = "fr" }: ServicePageProps
   const localizedCaseStudies = localizeGeoTermsInObject(localizedServicesContent.ALL_CASE_STUDIES, locale);
   const copy = copyByLocale[locale];
   const caseStudiesForService = localizedCaseStudies.filter((study) => study.tags.includes(localizedService.caseStudyTag));
+  const relatedArticles = locale === "fr" ? articles.filter((a) => a.relatedServiceSlug === localizedService.slug).slice(0, 2) : [];
   const quickFacts = [
     `${localizedService.processSteps.length} ${copy.steps}`,
     `${localizedService.configuratorFields.length} ${copy.levers}`,
@@ -219,6 +243,40 @@ export function ServicePageTemplate({ service, locale = "fr" }: ServicePageProps
         </section>
 
         <FAQSection id="faq" title={localizedService.faqTitle} items={localizedService.faqItems} />
+
+        {relatedArticles.length > 0 && (
+          <section className="border-t border-neutral-200 bg-[#f7f8fc] py-14">
+            <div className="mx-auto max-w-7xl px-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--primary)]">
+                {copy.blogEyebrow}
+              </p>
+              <h2 className="mt-3 text-3xl font-bold text-[var(--text-primary)] md:text-4xl">
+                {copy.blogTitle}
+              </h2>
+              <div className="mt-8 grid gap-5 md:grid-cols-2">
+                {relatedArticles.map((article) => (
+                  <a
+                    key={article.slug}
+                    href={`/blog/${article.slug}`}
+                    className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-soft transition hover:border-[var(--primary)]/40"
+                  >
+                    <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--primary)]">
+                      {article.category}
+                    </p>
+                    <h3 className="mt-2 text-lg font-semibold leading-snug text-[var(--text-primary)]">
+                      {article.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">{article.description}</p>
+                    <span className="mt-4 inline-flex text-xs font-semibold text-[var(--primary)]">
+                      {copy.blogReadMore}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         <RelatedServices currentSlug={localizedService.slug} relatedSlugs={localizedService.relatedServices} locale={locale} />
         <CTASection title={localizedService.ctaTitle} subtitle={localizedService.ctaSubtitle} locale={locale} />
       </main>

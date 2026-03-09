@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { RelatedCaseStudies } from "@/components/shared/related-case-studies";
 import { caseStudies, caseStudyBySlug } from "@/lib/case-studies";
+import { getLocalizedServicesContent } from "@/lib/i18n/services-content";
 
 export function CaseStudyPage({ slug }: { slug: string }) {
   const study = caseStudyBySlug[slug];
@@ -13,6 +14,11 @@ export function CaseStudyPage({ slug }: { slug: string }) {
   const currentIndex = caseStudies.findIndex((item) => item.slug === slug);
   const prev = caseStudies[(currentIndex - 1 + caseStudies.length) % caseStudies.length];
   const next = caseStudies[(currentIndex + 1) % caseStudies.length];
+
+  const servicesData = getLocalizedServicesContent("fr").SERVICE_PAGE_DATA;
+  const relatedServices = (study.serviceSlug ?? [])
+    .map((s) => servicesData[s as keyof typeof servicesData])
+    .filter(Boolean);
 
   return (
     <>
@@ -157,6 +163,34 @@ export function CaseStudyPage({ slug }: { slug: string }) {
           ))}
         </div>
       </section>
+
+      {relatedServices.length > 0 && (
+        <section className="border-t border-neutral-200 bg-white py-12">
+          <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--primary)]">
+              Services utilisés
+            </p>
+            <h2 className="mt-3 text-2xl font-bold text-[#153a54] md:text-3xl">
+              Comment nous avons obtenu ces résultats
+            </h2>
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              {relatedServices.map((service) => (
+                <Link
+                  key={service.path}
+                  href={service.path}
+                  className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-soft transition hover:border-[var(--primary)]/40"
+                >
+                  <h3 className="text-lg font-semibold text-[#153a54]">{service.navTitle}</h3>
+                  <p className="mt-2 text-sm leading-6 text-neutral-500">{service.pageSubtitle}</p>
+                  <span className="mt-4 inline-flex text-xs font-semibold text-[#074f74]">
+                    En savoir plus →
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <RelatedCaseStudies currentSlug={slug} />
 

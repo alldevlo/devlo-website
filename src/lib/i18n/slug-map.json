@@ -256,5 +256,29 @@
     "en": null,
     "de": null,
     "nl": null
+  },
+  "agence": {
+    "fr": "/agence",
+    "en": null,
+    "de": null,
+    "nl": null
+  },
+  "blog-article:prospection-b2b-suisse-guide-2026": {
+    "fr": "/blog/prospection-b2b-suisse-guide-2026",
+    "en": null,
+    "de": null,
+    "nl": null
+  },
+  "blog-article:linkedin-outreach-b2b-methode-resultats": {
+    "fr": "/blog/linkedin-outreach-b2b-methode-resultats",
+    "en": null,
+    "de": null,
+    "nl": null
+  },
+  "blog-article:cold-calling-b2b-2026-encore-efficace": {
+    "fr": "/blog/cold-calling-b2b-2026-encore-efficace",
+    "en": null,
+    "de": null,
+    "nl": null
   }
 }

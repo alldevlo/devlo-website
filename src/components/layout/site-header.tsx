@@ -33,6 +33,12 @@ const navCopyByLocale: Record<
     showServices: string;
     openMenu: string;
     closeMenu: string;
+    markets: string;
+    marketsCH: string;
+    marketsBE: string;
+    marketsFR: string;
+    openMarketsMenu: string;
+    showMarkets: string;
   }
 > = {
   fr: {
@@ -49,6 +55,12 @@ const navCopyByLocale: Record<
     showServices: "Afficher les services",
     openMenu: "Ouvrir le menu",
     closeMenu: "Fermer le menu",
+    markets: "Marchés",
+    marketsCH: "Suisse",
+    marketsBE: "Belgique",
+    marketsFR: "France",
+    openMarketsMenu: "Ouvrir le menu marchés",
+    showMarkets: "Afficher les marchés",
   },
   en: {
     navigationAria: "Main navigation",
@@ -64,6 +76,12 @@ const navCopyByLocale: Record<
     showServices: "Show services",
     openMenu: "Open menu",
     closeMenu: "Close menu",
+    markets: "Markets",
+    marketsCH: "Switzerland",
+    marketsBE: "Belgium",
+    marketsFR: "France",
+    openMarketsMenu: "Open markets menu",
+    showMarkets: "Show markets",
   },
   de: {
     navigationAria: "Hauptnavigation",
@@ -79,6 +97,12 @@ const navCopyByLocale: Record<
     showServices: "Leistungen anzeigen",
     openMenu: "Menü öffnen",
     closeMenu: "Menü schließen",
+    markets: "Märkte",
+    marketsCH: "Schweiz",
+    marketsBE: "Belgien",
+    marketsFR: "Frankreich",
+    openMarketsMenu: "Märkte-Menü öffnen",
+    showMarkets: "Märkte anzeigen",
   },
   nl: {
     navigationAria: "Hoofdnavigatie",
@@ -94,6 +118,12 @@ const navCopyByLocale: Record<
     showServices: "Diensten tonen",
     openMenu: "Menu openen",
     closeMenu: "Menu sluiten",
+    markets: "Markten",
+    marketsCH: "Zwitserland",
+    marketsBE: "België",
+    marketsFR: "Frankrijk",
+    openMarketsMenu: "Marktenmenu openen",
+    showMarkets: "Markten tonen",
   },
 };
 
@@ -105,11 +135,18 @@ export function SiteHeader() {
 
   const toCurrentLocalePath = (frPath: string) => resolvePathForLocale(frPath, currentLocale).path;
   const navItems = [
-    { key: "agency", href: toCurrentLocalePath("/") as string, label: navCopy.agency },
+    { key: "agency", href: toCurrentLocalePath("/agence") as string, label: navCopy.agency },
     { key: "caseStudies", href: toCurrentLocalePath("/etudes-de-cas") as string, label: navCopy.caseStudies },
     { key: "services", href: toCurrentLocalePath("/services") as string, label: navCopy.services },
+    { key: "markets", href: toCurrentLocalePath("/prospection-commerciale-suisse") as string, label: navCopy.markets },
     { key: "academy", href: toCurrentLocalePath("/academy") as string, label: navCopy.academy },
   ] as const;
+
+  const geoLinks = [
+    { href: "/prospection-commerciale-suisse", label: navCopy.marketsCH, flag: "🇨🇭" },
+    { href: "/prospection-commerciale-belgique", label: navCopy.marketsBE, flag: "🇧🇪" },
+    { href: "/prospection-commerciale-france", label: navCopy.marketsFR, flag: "🇫🇷" },
+  ];
   const consultationHref = toCurrentLocalePath("/consultation");
   const localizedServicesCards = getLocalizedServicesContent(currentLocale).SERVICE_HUB_CARDS.map((service) => ({
     ...service,
@@ -120,8 +157,11 @@ export function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showMobileStickyCta, setShowMobileStickyCta] = useState(false);
   const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
+  const [isMarketsMenuOpen, setIsMarketsMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isMobileMarketsOpen, setIsMobileMarketsOpen] = useState(false);
   const servicesMenuRef = useRef<HTMLDivElement | null>(null);
+  const marketsMenuRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     let rafId = 0;
@@ -148,7 +188,9 @@ export function SiteHeader() {
   useEffect(() => {
     setIsMenuOpen(false);
     setIsServicesMenuOpen(false);
+    setIsMarketsMenuOpen(false);
     setIsMobileServicesOpen(localePath.startsWith("/services"));
+    setIsMobileMarketsOpen(localePath.startsWith("/prospection-commerciale-"));
   }, [safePathname, localePath]);
 
   useEffect(() => {
@@ -171,6 +213,27 @@ export function SiteHeader() {
       document.removeEventListener("keydown", onEscape);
     };
   }, [isServicesMenuOpen]);
+
+  useEffect(() => {
+    if (!isMarketsMenuOpen) return;
+
+    const onPointerDown = (event: MouseEvent) => {
+      if (!marketsMenuRef.current?.contains(event.target as Node)) {
+        setIsMarketsMenuOpen(false);
+      }
+    };
+
+    const onEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsMarketsMenuOpen(false);
+    };
+
+    document.addEventListener("mousedown", onPointerDown);
+    document.addEventListener("keydown", onEscape);
+    return () => {
+      document.removeEventListener("mousedown", onPointerDown);
+      document.removeEventListener("keydown", onEscape);
+    };
+  }, [isMarketsMenuOpen]);
 
   const transparentMode = safePathname === "/" && !isScrolled;
   const servicesActive = localePath === "/services" || localePath.startsWith("/services/");
@@ -265,6 +328,74 @@ export function SiteHeader() {
                               {navCopy.seeAllServices}
                             </Link>
                           </div>
+                        </div>
+                      </div>
+                    ) : null}
+                  </div>
+                );
+              }
+
+              if (item.key === "markets") {
+                const marketsActive = localePath.startsWith("/prospection-commerciale-");
+                return (
+                  <div
+                    key={item.key}
+                    ref={marketsMenuRef}
+                    className="relative"
+                    onMouseEnter={() => setIsMarketsMenuOpen(true)}
+                    onMouseLeave={() => setIsMarketsMenuOpen(false)}
+                    onFocusCapture={() => setIsMarketsMenuOpen(true)}
+                  >
+                    <div
+                      className={[
+                        "group flex items-center gap-1 rounded-full border px-2 py-0.5 transition-colors",
+                        isMarketsMenuOpen
+                          ? "border-devlo-700 bg-devlo-700 text-white"
+                          : "border-transparent bg-transparent text-devlo-900 hover:border-devlo-700 hover:bg-devlo-700",
+                      ].join(" ")}
+                    >
+                      <Link
+                        href={item.href}
+                        className={[
+                          "inline-flex min-h-[44px] items-center rounded-full px-2 text-[14px] font-semibold uppercase tracking-[0.08em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-devlo-700 focus-visible:ring-offset-2",
+                          marketsActive
+                            ? (isMarketsMenuOpen ? "text-white" : "text-devlo-700")
+                            : isMarketsMenuOpen
+                              ? "text-white"
+                              : "text-devlo-900 hover:text-white group-hover:text-white",
+                        ].join(" ")}
+                      >
+                        {item.label}
+                      </Link>
+                      <button
+                        type="button"
+                        aria-label={navCopy.openMarketsMenu}
+                        aria-expanded={isMarketsMenuOpen}
+                        onClick={() => setIsMarketsMenuOpen((prev) => !prev)}
+                        className={[
+                          "inline-flex h-8 w-8 items-center justify-center rounded-full transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-devlo-700 focus-visible:ring-offset-2",
+                          isMarketsMenuOpen
+                            ? "text-white hover:bg-white/15"
+                            : "text-devlo-700 group-hover:text-white hover:bg-white/15",
+                        ].join(" ")}
+                      >
+                        <ChevronDown className={["h-4 w-4 transition-transform", isMarketsMenuOpen ? "rotate-180" : ""].join(" ")} />
+                      </button>
+                    </div>
+
+                    {isMarketsMenuOpen ? (
+                      <div className="absolute left-0 top-[calc(100%+8px)] z-[70] w-56 overflow-hidden rounded-2xl border border-devlo-700 bg-devlo-700 p-3 text-white shadow-panel motion-safe:animate-fade-in-up">
+                        <div className="flex flex-col gap-1">
+                          {geoLinks.map((geo) => (
+                            <Link
+                              key={geo.href}
+                              href={geo.href}
+                              className="flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-3 py-2.5 text-sm font-semibold transition hover:border-white/40 hover:bg-white/15"
+                            >
+                              <span>{geo.flag}</span>
+                              <span>{geo.label}</span>
+                            </Link>
+                          ))}
                         </div>
                       </div>
                     ) : null}
@@ -367,6 +498,50 @@ export function SiteHeader() {
                             >
                               {navCopy.seeAllServices}
                             </Link>
+                          </div>
+                        </div>
+                      ) : null}
+                    </div>
+                  );
+                }
+
+                if (item.key === "markets") {
+                  const marketsActive = localePath.startsWith("/prospection-commerciale-");
+                  return (
+                    <div key={`mobile-${item.key}`} className="rounded-xl border border-neutral-200 p-2">
+                      <div className="flex items-center justify-between gap-2">
+                        <Link
+                          href={item.href}
+                          className={[
+                            "flex min-h-[44px] flex-1 items-center rounded-lg px-3 py-2 text-xl font-semibold",
+                            marketsActive ? "bg-devlo-50 text-devlo-700" : "text-devlo-900",
+                          ].join(" ")}
+                        >
+                          {item.label}
+                        </Link>
+                        <button
+                          type="button"
+                          onClick={() => setIsMobileMarketsOpen((prev) => !prev)}
+                          className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-200 text-devlo-700"
+                          aria-label={navCopy.showMarkets}
+                        >
+                          <ChevronDown className={["h-4 w-4 transition-transform", isMobileMarketsOpen ? "rotate-180" : ""].join(" ")} />
+                        </button>
+                      </div>
+
+                      {isMobileMarketsOpen ? (
+                        <div className="mt-2 overflow-hidden motion-safe:animate-fade-in-up">
+                          <div className="grid gap-1.5">
+                            {geoLinks.map((geo) => (
+                              <Link
+                                key={`mobile-geo-${geo.href}`}
+                                href={geo.href}
+                                className="flex items-center gap-2 rounded-lg border border-neutral-200 bg-neutral-50 px-3 py-2 transition hover:border-devlo-700/30"
+                              >
+                                <span>{geo.flag}</span>
+                                <span className="text-sm font-semibold text-devlo-900">{geo.label}</span>
+                              </Link>
+                            ))}
                           </div>
                         </div>
                       ) : null}

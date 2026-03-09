@@ -107,6 +107,35 @@ export function buildArticleSchema(input: ArticleSchemaInput) {
   };
 }
 
+type VideoObjectInput = {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string;
+  embedUrl?: string;
+  duration?: string;
+};
+
+export function buildVideoObjectSchema(input: VideoObjectInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: input.name,
+    description: input.description,
+    thumbnailUrl: input.thumbnailUrl.startsWith("http")
+      ? input.thumbnailUrl
+      : `${siteConfig.url}${input.thumbnailUrl}`,
+    uploadDate: input.uploadDate,
+    ...(input.embedUrl && { embedUrl: input.embedUrl }),
+    ...(input.duration && { duration: input.duration }),
+    publisher: {
+      "@type": "Organization",
+      name: "devlo",
+      url: siteConfig.url,
+    },
+  };
+}
+
 export function buildReviewSchema(reviews: ReviewSchemaInput[]) {
   const ratingValues = reviews
     .map((r) => r.ratingValue)
