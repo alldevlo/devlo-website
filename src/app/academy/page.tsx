@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { AcademyMasterPage } from "@/components/pages/academy-master-page";
 import { academyContent, academySeo } from "@/content/masterfile.fr";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { buildBreadcrumbSchema, buildCourseSchema, buildFaqPageSchema, buildVideoObjectSchema } from "@/lib/seo/schema-builders";
+import { buildArticleSchema, buildBreadcrumbSchema, buildCourseSchema, buildFaqPageSchema, buildVideoObjectSchema } from "@/lib/seo/schema-builders";
 
 const academyTitle = academySeo.title.replace(/\s*\|\s*devlo$/i, "");
 
@@ -28,6 +28,15 @@ export default function Page() {
           buildBreadcrumbSchema(breadcrumbItems),
           buildCourseSchema(),
           buildFaqPageSchema(academyContent.faqs),
+          buildArticleSchema({
+            headline: academySeo.title.replace(/\s*\|\s*devlo$/i, ""),
+            description: academySeo.description,
+            path: "/academy",
+            datePublished: "2024-06-15",
+            dateModified: "2026-03-01",
+            author: "Charles Perret",
+            authorUrl: "https://www.linkedin.com/in/charlesperret/",
+          }),
           buildVideoObjectSchema({
             name: "Formation prospection B2B — Outbound Academy devlo",
             description:

@@ -1039,3 +1039,20 @@ export const footerContent = {
   bottomLink: { label: "Conditions générales", href: "/conditions" },
   copyright: "© 2026 devlo. Tous droits réservés.",
 };
+
+export const academyGeoContent = {
+  editorialTitle: "Pourquoi les équipes commerciales B2B investissent-elles dans une formation prospection structurée ?",
+  editorialParagraphs: [
+    "Dans un contexte où les acheteurs B2B reçoivent en moyenne **121 emails commerciaux par semaine** ([Salesforce State of Sales 2024](https://www.salesforce.com/resources/research-reports/state-of-sales/)), seules les équipes dotées d'une **méthodologie de prospection structurée** parviennent à se différencier. Une formation outbound bien conçue — couvrant le **ciblage ICP**, la rédaction de cold email et la gestion des objections — réduit significativement le temps nécessaire pour qu'un SDR atteigne sa pleine productivité, qui dépasse souvent six mois sans accompagnement formalisé.",
+    "Selon HubSpot (2024), les entreprises qui forment régulièrement leurs équipes commerciales affichent un **taux de conversion prospect-to-meeting 33 % supérieur** à celles qui n'investissent pas dans la formation continue. L'Outbound Academy de devlo s'appuie sur plus de 1 000 campagnes B2B réelles pour enseigner des techniques immédiatement applicables : **segmentation de données avec Apollo et Clay**, séquences multicanales email + LinkedIn, et **hygiène CRM** pour garantir la qualité des pipelines commerciaux.",
+  ],
+  summaryTitle: "En résumé",
+  summaryPoints: [
+    "**Ciblage ICP** : définir un profil client idéal précis multiplie le taux de réponse aux campagnes outbound.",
+    "**Cold email structuré** : des séquences bien construites atteignent 45 %+ de taux d'ouverture selon les campagnes devlo.",
+    "**Prospection multicanale** : combiner email, LinkedIn et téléphone augmente les prises de rendez-vous qualifiés de 2 à 3×.",
+    "**Hygiène CRM** : maintenir des données propres et enrichies réduit le gaspillage d'efforts commerciaux et améliore la prédictibilité du pipeline.",
+  ],
+  datePublished: "2024-06-15",
+  dateModified: "2026-03-01",
+};

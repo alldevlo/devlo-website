@@ -6,8 +6,10 @@ import { PersonaCard } from "@/components/ai-sales-ops/persona-card";
 import { ProcessStep } from "@/components/ai-sales-ops/process-step";
 import { SystemCard } from "@/components/ai-sales-ops/system-card";
 import { JsonLd } from "@/components/seo/json-ld";
+import { AuthorByline } from "@/components/shared/author-byline";
 import { FAQSection } from "@/components/shared/faq-section";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
+import { SummarySection } from "@/components/shared/summary-section";
 import { InfiniteLogoRail } from "@/components/shared/logo-rail";
 import { ServicesSectionHeader, ServicesSurfaceCard } from "@/components/services/services-ui";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
@@ -21,7 +23,8 @@ import type { ServiceFaq } from "@/content/services";
 import { getLocalizedAiSalesOpsContent } from "@/lib/i18n/ai-sales-ops-content";
 import { getLocalizedMasterfileContent } from "@/lib/i18n/masterfile-content";
 import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
-import { buildBreadcrumbSchema, buildFaqPageSchema, buildHowToSchema } from "@/lib/seo/schema-builders";
+import { RichParagraph } from "@/lib/utils/rich-text";
+import { buildArticleSchema, buildBreadcrumbSchema, buildFaqPageSchema, buildHowToSchema } from "@/lib/seo/schema-builders";
 import { siteConfig } from "@/lib/site";
 
 const CaseStudyCarousel = dynamic(
@@ -110,6 +113,15 @@ export function AiSalesOpsMasterPage({ locale = "fr" }: AiSalesOpsMasterPageProp
             content.processSection.title,
             content.processSteps.map((step) => ({ title: step.title, description: step.description })),
           ),
+          buildArticleSchema({
+            headline: content.hero.h1,
+            description: content.hero.subtitle,
+            path: "/ai-sales-ops",
+            datePublished: content.datePublished ?? "2024-06-15",
+            dateModified: content.dateModified ?? "2026-03-01",
+            author: "Charles Perret",
+            authorUrl: "https://www.linkedin.com/in/charlesperret/",
+          }),
           buildBreadcrumbSchema(breadcrumbItems),
         ]}
       />
@@ -127,6 +139,9 @@ export function AiSalesOpsMasterPage({ locale = "fr" }: AiSalesOpsMasterPageProp
                 <h1 className="mt-5 text-4xl font-black leading-[1.05] tracking-tight text-white md:text-5xl lg:text-6xl">
                   {content.hero.h1}
                 </h1>
+                <div className="mt-4 flex justify-center opacity-80">
+                  <AuthorByline datePublished={content.datePublished ?? "2024-06-15"} dateModified={content.dateModified ?? "2026-03-01"} locale={locale} />
+                </div>
                 <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/80 md:text-lg">
                   {content.hero.subtitle}
                 </p>
@@ -359,6 +374,31 @@ export function AiSalesOpsMasterPage({ locale = "fr" }: AiSalesOpsMasterPageProp
             </div>
           </FadeInOnScroll>
         </SectionWrapper>
+
+        {content.editorialTitle && (
+          <SectionWrapper background="white">
+            <div className="rounded-2xl border border-neutral-200 bg-white p-6 md:p-10">
+              <h2 className="text-2xl font-extrabold leading-[1.2] tracking-tight text-[#153a54] md:text-3xl">
+                {content.editorialTitle}
+              </h2>
+              {(content.editorialParagraphs ?? []).length > 0 && (
+                <div className="mt-5 space-y-4 text-neutral-600">
+                  {(content.editorialParagraphs ?? []).map((p: string, i: number) => (
+                    <RichParagraph key={i} className="text-sm leading-7 md:text-base md:leading-8">{p}</RichParagraph>
+                  ))}
+                </div>
+              )}
+              {(content.summaryPoints ?? []).length > 0 && (
+                <div className="mt-6">
+                  <SummarySection
+                    title={content.summaryTitle ?? "En résumé"}
+                    points={content.summaryPoints ?? []}
+                  />
+                </div>
+              )}
+            </div>
+          </SectionWrapper>
+        )}
 
         <FAQSection id="faq" title={content.faqSection.title} items={faqItems} />
 
