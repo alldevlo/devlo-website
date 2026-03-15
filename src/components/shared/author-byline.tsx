@@ -40,6 +40,7 @@ export function AuthorByline({
   return (
     <div
       className="flex flex-wrap items-center gap-3 text-sm text-neutral-500"
+      itemProp="author"
       itemScope
       itemType="https://schema.org/Person"
     >
