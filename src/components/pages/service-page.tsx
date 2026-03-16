@@ -334,14 +334,14 @@ export function ServicePageTemplate({ service, locale = "fr" }: ServicePageProps
         {showAiSalesOpsBridge ? (
           <section className="border-t border-neutral-200 bg-white py-14">
             <div className="mx-auto max-w-7xl px-6">
-              <ServicesSurfaceCard className="overflow-hidden border-devlo-200 bg-devlo-900 p-6 text-white shadow-panel md:p-8">
+              <ServicesSurfaceCard className="overflow-hidden border-devlo-200 bg-devlo-50 p-6 shadow-panel md:p-8">
                 <div className="grid gap-6 md:grid-cols-[minmax(0,1fr)_auto] md:items-center">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.08em] text-white/70">{aiSalesOpsBridgeCopy.eyebrow}</p>
-                    <h2 className="mt-3 text-2xl font-bold leading-tight md:text-3xl">
+                    <p className="text-xs font-semibold uppercase tracking-[0.08em] text-devlo-500">{aiSalesOpsBridgeCopy.eyebrow}</p>
+                    <h2 className="mt-3 text-2xl font-bold leading-tight text-devlo-900 md:text-3xl">
                       {aiSalesOpsBridgeCopy.title}
                     </h2>
-                    <p className="mt-3 max-w-3xl text-sm leading-7 text-white/75 md:text-base">
+                    <p className="mt-3 max-w-3xl text-sm leading-7 text-neutral-700 md:text-base">
                       {aiSalesOpsBridgeCopy.description}
                     </p>
                   </div>
@@ -349,7 +349,7 @@ export function ServicePageTemplate({ service, locale = "fr" }: ServicePageProps
                     <Link href={resolvePathForLocale("/ai-sales-ops", locale).path} className={buttonClassName("outline", "px-6 py-3 text-sm")}>
                       {aiSalesOpsBridgeCopy.ctaPrimary}
                     </Link>
-                    <Link href={resolvePathForLocale("/consultation", locale).path} className={buttonClassName("secondary", "border-white/20 bg-white/5 px-6 py-3 text-sm text-white hover:border-white/35 hover:text-white")}>
+                    <Link href={resolvePathForLocale("/consultation", locale).path} className={buttonClassName("secondary", "px-6 py-3 text-sm")}>
                       {aiSalesOpsBridgeCopy.ctaSecondary}
                     </Link>
                   </div>
