@@ -1,0 +1,37 @@
+name: Fix devlo.ch domain
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fix-domain:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add devlo.ch domain to project
+        run: |
+          echo "Adding devlo.ch to Vercel project..."
+          curl -s -X POST "https://api.vercel.com/v10/projects/$VERCEL_PROJECT_ID/domains?teamId=$VERCEL_ORG_ID" \
+            -H "Authorization: Bearer $VERCEL_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d '{"name":"devlo.ch"}' | tee /tmp/add-domain.json
+          echo ""
+
+          echo "Adding www.devlo.ch redirect to devlo.ch..."
+          curl -s -X POST "https://api.vercel.com/v10/projects/$VERCEL_PROJECT_ID/domains?teamId=$VERCEL_ORG_ID" \
+            -H "Authorization: Bearer $VERCEL_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d '{"name":"www.devlo.ch","redirect":"devlo.ch","redirectStatusCode":301}' | tee /tmp/add-www.json
+          echo ""
+
+          echo "Listing project domains..."
+          curl -s "https://api.vercel.com/v9/projects/$VERCEL_PROJECT_ID/domains?teamId=$VERCEL_ORG_ID" \
+            -H "Authorization: Bearer $VERCEL_TOKEN" | python3 -c "
+          import sys, json
+          data = json.load(sys.stdin)
+          for d in data.get('domains', []):
+              print(f'  {d[\"name\"]} (verified: {d.get(\"verified\", \"?\")})')
+          "
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
