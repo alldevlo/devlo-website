@@ -1,0 +1,281 @@
+# Instincts generated from https://github.com/alldevlo/devlo-website
+# Generated: 2026-03-22T11:48:34.084Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: devlo-website-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/alldevlo/devlo-website
+---
+
+# Devlo Website Commit Length
+
+## Action
+
+Write moderate-length commit messages (~54 characters)
+
+## Evidence
+
+- Average commit message length: 54 chars
+- Based on 163 commits
+
+---
+id: devlo-website-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/alldevlo/devlo-website
+---
+
+# Devlo Website Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: devlo-website-import-alias
+trigger: "when importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/alldevlo/devlo-website
+---
+
+# Devlo Website Import Alias
+
+## Action
+
+Use path aliases (@/, ~/) instead of relative imports
+
+## Evidence
+
+- Import analysis shows alias pattern
+- Example: import { x } from '@/lib/x'
+
+---
+id: devlo-website-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/alldevlo/devlo-website
+---
+
+# Devlo Website Export Style
+
+## Action
+
+Prefer default exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: default
+
+---
+id: devlo-website-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/alldevlo/devlo-website
+---
+
+# Devlo Website Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: app, components, content, data, lib
+
+---
+id: devlo-website-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/alldevlo/devlo-website
+---
+
+# Devlo Website Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: devlo-website-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/alldevlo/devlo-website
+---
+
+# Devlo Website Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~18x per month
+- Files: src/components/layout/*, src/components/pages/*, src/components/shared/*
+
+---
+id: devlo-website-workflow-add-or-enrich-localized-page-content
+trigger: "when doing add or enrich localized page content"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/alldevlo/devlo-website
+---
+
+# Devlo Website Workflow Add Or Enrich Localized Page Content
+
+## Action
+
+Follow the add-or-enrich-localized-page-content workflow:
+1. Create or update the page component (e.g., page.tsx) in the appropriate route directory.
+2. Add or update localized content in JSON files (e.g., masterfile-content.json, agency-content.json, alternatives-content.json, blog-content.json, geo-content.json, services-content.json, ai-sales-ops-content.json, case-studies-content.json).
+3. If needed, update or generate TypeScript content files (e.g., masterfile.fr.ts, ai-sales-ops-content.ts, agency-content.ts, etc.).
+4. Update slug-map.json to add or correct localized slugs for the new/changed page.
+5. If necessary, update or create translation scripts (e.g., translate_fr_only_pages_deepl.mjs, geo-translate-json.mjs).
+6. Update sitemap.ts to ensure the new/updated routes are discoverable.
+7. Optionally, update navigation components or index files to surface the new page.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: src/app/[locale]/[[...slug]]/page.tsx, src/app/insights/*/page.tsx, src/app/ai-sales-ops/page.tsx
+
+---
+id: devlo-website-workflow-seo-geo-ai-enrichment
+trigger: "when doing seo geo ai enrichment"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/alldevlo/devlo-website
+---
+
+# Devlo Website Workflow Seo Geo Ai Enrichment
+
+## Action
+
+Follow the seo-geo-ai-enrichment workflow:
+1. Add or update SummarySection, AuthorByline, ComparisonTable, FAQSection, or similar components in relevant page files.
+2. Add or update structured data (JSON-LD Article schema, microdata, meta tags) in page components.
+3. Enrich content JSON/TS files with new fields: summaryPoints, editorialTitle, editorialParagraphs, datePublished, dateModified, external citations, etc.
+4. Update or sync localized content files to propagate new enrichment fields.
+5. Update or create utility functions for rich-text rendering, metadata, or AI/SEO helpers.
+6. Optionally, update documentation or asset references.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: src/components/pages/*, src/components/shared/summary-section.tsx, src/components/shared/author-byline.tsx
+
+---
+id: devlo-website-workflow-fix-or-update-deployment-domain-workflow
+trigger: "when doing fix or update deployment domain workflow"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/alldevlo/devlo-website
+---
+
+# Devlo Website Workflow Fix Or Update Deployment Domain Workflow
+
+## Action
+
+Follow the fix-or-update-deployment-domain-workflow workflow:
+1. Update .github/workflows/deploy.yml to add/fix alias assignment steps after deployment.
+2. Add or update .github/workflows/fix-domain.yml for diagnostic or one-time domain fixes.
+3. Use Vercel API (not CLI output) to reliably resolve deployment IDs and assign domains.
+4. Pin or update Vercel CLI versions to avoid breaking changes.
+5. Optionally, add diagnostics or explicit domain verification steps.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: .github/workflows/deploy.yml, .github/workflows/fix-domain.yml
+
+---
+id: devlo-website-workflow-fix-or-translate-i18n-slugs-and-redirects
+trigger: "when doing fix or translate i18n slugs and redirects"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/alldevlo/devlo-website
+---
+
+# Devlo Website Workflow Fix Or Translate I18n Slugs And Redirects
+
+## Action
+
+Follow the fix-or-translate-i18n-slugs-and-redirects workflow:
+1. Update slug-map.json with correct localized slugs for all affected pages.
+2. Update next.config.mjs to add or fix 301 redirects for old or incorrect paths.
+3. Optionally, update sitemap.ts to ensure new slugs are indexed.
+4. Optionally, update navigation or header components for correct links.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: src/lib/i18n/slug-map.json, next.config.mjs, src/app/sitemap.ts
+
+---
+id: devlo-website-workflow-feature-development-with-component-and-content-sync
+trigger: "when doing feature development with component and content sync"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/alldevlo/devlo-website
+---
+
+# Devlo Website Workflow Feature Development With Component And Content Sync
+
+## Action
+
+Follow the feature-development-with-component-and-content-sync workflow:
+1. Create new React components or page files for the feature.
+2. Update or create supporting files (e.g., API route, integration config, content JSON/TS).
+3. Update or add entries in slug-map.json or i18n bundles if the feature is route-based.
+4. Optionally, update documentation or download assets.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: src/app/*/page.tsx, src/app/api/*/route.ts, src/components/*
+
