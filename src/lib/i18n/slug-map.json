@@ -322,5 +322,11 @@
     "en": "/en/insights/dictation-clean",
     "de": "/de/insights/dictation-clean",
     "nl": "/nl/insights/dictation-clean"
+  },
+  "insight:buying-signals": {
+    "fr": "/insights/buying-signals",
+    "en": "/en/insights/buying-signals",
+    "de": "/de/insights/buying-signals",
+    "nl": "/nl/insights/buying-signals"
   }
 }
