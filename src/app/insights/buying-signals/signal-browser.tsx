@@ -29,7 +29,7 @@ const INTENSITY_STYLES: Record<
   { label: string; bg: string; text: string; dot: string }
 > = {
   "tres-forte": {
-    label: "Tres forte",
+    label: "Très forte",
     bg: "#f9e8e8",
     text: "#af2520",
     dot: "#e0342d",
@@ -102,6 +102,47 @@ function SearchIcon() {
 }
 
 /* ------------------------------------------------------------------ */
+/*  Category tooltip descriptions                                      */
+/* ------------------------------------------------------------------ */
+
+const CATEGORY_TOOLTIPS: Record<string, string> = {
+  entreprise: "Signaux liés aux changements organisationnels, financiers et stratégiques d'une entreprise",
+  personne: "Signaux liés aux mouvements de carrière et à l'activité des décideurs",
+  "tech-stack": "Signaux liés aux changements technologiques détectables sur le site web",
+  "usage-produit": "Signaux liés au comportement des utilisateurs dans votre produit",
+  communaute: "Signaux détectés dans les forums, communautés en ligne et réseaux sociaux",
+  evenements: "Signaux liés à la participation ou l'organisation d'événements professionnels",
+  "lemlist-intent": "Signaux d'intention détectés via les outils de tracking web (lemlist, snitcher, Bombora)",
+};
+
+/* ------------------------------------------------------------------ */
+/*  Info icon SVG                                                      */
+/* ------------------------------------------------------------------ */
+
+function InfoIcon({ tooltip }: { tooltip: string }) {
+  return (
+    <span className="relative ml-1 inline-flex" title={tooltip}>
+      <svg
+        width="13"
+        height="13"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="opacity-50"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="12" r="10" />
+        <line x1="12" y1="16" x2="12" y2="12" />
+        <line x1="12" y1="8" x2="12.01" y2="8" />
+      </svg>
+    </span>
+  );
+}
+
+/* ------------------------------------------------------------------ */
 /*  Component                                                          */
 /* ------------------------------------------------------------------ */
 
@@ -160,7 +201,7 @@ export function SignalBrowser({
       <div
         className="mb-10 flex flex-wrap justify-center gap-2"
         role="tablist"
-        aria-label="Categories de signaux"
+        aria-label="Catégories de signaux"
       >
         <button
           role="tab"
@@ -187,6 +228,9 @@ export function SignalBrowser({
             }}
           >
             {cat.title.replace("Signaux ", "").replace("Signaux d'Intention ", "")} ({cat.count})
+            {CATEGORY_TOOLTIPS[cat.id] && (
+              <InfoIcon tooltip={CATEGORY_TOOLTIPS[cat.id]} />
+            )}
           </button>
         ))}
       </div>
@@ -196,7 +240,7 @@ export function SignalBrowser({
         className="mb-4 text-center text-xs text-[#666d70]"
         aria-live="polite"
       >
-        {visibleCount} signal{visibleCount !== 1 ? "x" : ""} affiche
+        {visibleCount} signal{visibleCount !== 1 ? "x" : ""} affiché
         {visibleCount !== 1 ? "s" : ""}
       </p>
 
