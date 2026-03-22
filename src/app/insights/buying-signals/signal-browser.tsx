@@ -143,13 +143,28 @@ function InfoIcon({ tooltip }: { tooltip: string }) {
 }
 
 /* ------------------------------------------------------------------ */
+/*  UI Labels type (for i18n)                                          */
+/* ------------------------------------------------------------------ */
+
+export type SignalBrowserUILabels = {
+  searchPlaceholder?: string;
+  allTab?: string;
+  resultsCounter?: string; // "{count} signals displayed"
+  resultsSingular?: string; // "{count} signal displayed"
+  intensityLabels?: Record<string, string>;
+  categoryTooltips?: Record<string, string>;
+};
+
+/* ------------------------------------------------------------------ */
 /*  Component                                                          */
 /* ------------------------------------------------------------------ */
 
 export function SignalBrowser({
   categories,
+  uiLabels,
 }: {
   categories: SignalCategory[];
+  uiLabels?: SignalBrowserUILabels;
 }) {
   const [activeTab, setActiveTab] = useState<string>("tous");
   const [search, setSearch] = useState("");
@@ -189,7 +204,7 @@ export function SignalBrowser({
         <SearchIcon />
         <input
           type="search"
-          placeholder="Rechercher un signal..."
+          placeholder={uiLabels?.searchPlaceholder ?? "Rechercher un signal..."}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="w-full rounded-lg border bg-white py-2.5 pl-10 pr-4 text-sm text-[#0d1a21] placeholder:text-[#666d70] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#074f74] focus-visible:ring-offset-2"
@@ -213,7 +228,7 @@ export function SignalBrowser({
             color: activeTab === "tous" ? "#ffffff" : "#666d70",
           }}
         >
-          Tous ({allSignals.length})
+          {uiLabels?.allTab ?? "Tous"} ({allSignals.length})
         </button>
         {categories.map((cat) => (
           <button
@@ -228,8 +243,8 @@ export function SignalBrowser({
             }}
           >
             {cat.title.replace("Signaux ", "").replace("Signaux d'Intention ", "")} ({cat.count})
-            {CATEGORY_TOOLTIPS[cat.id] && (
-              <InfoIcon tooltip={CATEGORY_TOOLTIPS[cat.id]} />
+            {(uiLabels?.categoryTooltips?.[cat.id] ?? CATEGORY_TOOLTIPS[cat.id]) && (
+              <InfoIcon tooltip={uiLabels?.categoryTooltips?.[cat.id] ?? CATEGORY_TOOLTIPS[cat.id]} />
             )}
           </button>
         ))}
@@ -240,15 +255,23 @@ export function SignalBrowser({
         className="mb-4 text-center text-xs text-[#666d70]"
         aria-live="polite"
       >
-        {visibleCount} signal{visibleCount !== 1 ? "x" : ""} affiché
-        {visibleCount !== 1 ? "s" : ""}
+        {(() => {
+          if (uiLabels?.resultsCounter || uiLabels?.resultsSingular) {
+            const template = visibleCount !== 1
+              ? (uiLabels.resultsCounter ?? "{count} signaux affichés")
+              : (uiLabels.resultsSingular ?? "{count} signal affiché");
+            return template.replace("{count}", String(visibleCount));
+          }
+          return `${visibleCount} signal${visibleCount !== 1 ? "x" : ""} affiché${visibleCount !== 1 ? "s" : ""}`;
+        })()}
       </p>
 
       {/* Signal cards grid */}
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {allSignals.map((signal, idx) => {
           const visible = visibility[idx];
-          const intensity = INTENSITY_STYLES[signal.intensity];
+          const intensityStyle = INTENSITY_STYLES[signal.intensity];
+          const intensityLabel = uiLabels?.intensityLabels?.[signal.intensity] ?? intensityStyle.label;
 
           return (
             <details
@@ -270,16 +293,16 @@ export function SignalBrowser({
                   <span
                     className="inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide"
                     style={{
-                      background: intensity.bg,
-                      color: intensity.text,
+                      background: intensityStyle.bg,
+                      color: intensityStyle.text,
                     }}
                   >
                     <span
                       className="inline-block h-1.5 w-1.5 rounded-full"
-                      style={{ background: intensity.dot }}
+                      style={{ background: intensityStyle.dot }}
                       aria-hidden="true"
                     />
-                    {intensity.label}
+                    {intensityLabel}
                   </span>
                 </div>
                 <ChevronDown className="mt-0.5 shrink-0 text-[#666d70] transition-transform duration-200 group-open:rotate-180" />

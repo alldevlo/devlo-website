@@ -16,12 +16,15 @@ import { AlternativePage } from "@/components/pages/alternative-page";
 import { HomePage } from "@/components/pages/home-page";
 import { ServicesHubPage as ServicesHubView } from "@/components/pages/services-hub-page";
 import { ServicePageTemplate } from "@/components/pages/service-page";
+import { InsightsHubMasterPage } from "@/components/pages/insights-hub-master-page";
+import { BuyingSignalsMasterPage } from "@/components/pages/buying-signals-master-page";
 import { LocalizedPage as LocalizedContentPage } from "@/components/pages/localized-page";
 import { GEO_PAGES } from "@/content/geo-pages";
 import { ALTERNATIVE_PAGES } from "@/content/alternatives";
 import { agencyContent } from "@/content/agency";
 import { SERVICE_PAGE_DATA, type ServiceSlug } from "@/content/services";
 import { academySeo, caseStudiesSeo, conditionsSeo, consultationSeo, homeSeo } from "@/content/masterfile.fr";
+import { getLocalizedInsightsHub, getLocalizedBuyingSignals } from "@/lib/i18n/insights-helpers";
 import { getLocalizedBlogArticle } from "@/lib/i18n/blog-content";
 import { getLocalizedGeoContent } from "@/lib/i18n/geo-content";
 import { getLocalizedAlternativeContent } from "@/lib/i18n/alternatives-content";
@@ -240,6 +243,23 @@ function resolveFrSeo(frPath: string): { title: string; description: string; ima
     };
   }
 
+  if (path === "/insights") {
+    return {
+      title: "Insights — Ressources et guides pour la prospection B2B",
+      description:
+        "Guides pratiques, listes de reference et ressources pour ameliorer votre prospection B2B. Signaux d'achat, automatisation IA, et strategies outbound.",
+    };
+  }
+
+  if (path === "/insights/buying-signals") {
+    return {
+      title: "94 Signaux d'Intention d'Achat B2B — Le Guide Complet pour Identifier vos Prospects",
+      description:
+        "Decouvrez 94 signaux d'achat B2B classes par categorie (entreprise, personne, tech stack, usage produit, communaute, evenements). Detectez les prospects prets a acheter avant vos concurrents.",
+      type: "article" as const,
+    };
+  }
+
   if (path === "/blog") {
     return {
       title: "Blog — Prospection B2B, cold email et outbound",
@@ -373,22 +393,39 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const localizedAlternativeSeo = resolved.frPath.startsWith("/alternative-")
     ? getLocalizedAlternativeContent(resolved.frPath.slice(1), resolved.locale)
     : null;
+  const localizedInsightsHubSeo = resolved.frPath === "/insights"
+    ? getLocalizedInsightsHub(resolved.locale)
+    : null;
+  const localizedBuyingSignalsSeo = resolved.frPath === "/insights/buying-signals"
+    ? getLocalizedBuyingSignals(resolved.locale)
+    : null;
   const baseSeo = resolved.frPath === "/ai-sales-ops"
     ? {
         title: getLocalizedAiSalesOpsContent(resolved.locale).metaTitle,
         description: getLocalizedAiSalesOpsContent(resolved.locale).metaDescription,
       }
-    : localizedGeoSeo
+    : localizedInsightsHubSeo
       ? {
-          title: localizedGeoSeo.metaTitle,
-          description: localizedGeoSeo.metaDescription,
+          title: localizedInsightsHubSeo.metaTitle,
+          description: localizedInsightsHubSeo.metaDescription,
         }
-      : localizedAlternativeSeo
+      : localizedBuyingSignalsSeo
         ? {
-            title: localizedAlternativeSeo.metaTitle,
-            description: localizedAlternativeSeo.metaDescription,
+            title: localizedBuyingSignalsSeo.metaTitle,
+            description: localizedBuyingSignalsSeo.metaDescription,
+            type: "article" as const,
           }
-        : resolveFrSeo(resolved.frPath);
+        : localizedGeoSeo
+          ? {
+              title: localizedGeoSeo.metaTitle,
+              description: localizedGeoSeo.metaDescription,
+            }
+          : localizedAlternativeSeo
+            ? {
+                title: localizedAlternativeSeo.metaTitle,
+                description: localizedAlternativeSeo.metaDescription,
+              }
+            : resolveFrSeo(resolved.frPath);
   const sanitySeo = await getSanityLocalizedSeo(resolved.pageId, resolved.locale);
   const title = stripDevloSuffix(sanitySeo?.title ?? baseSeo.title);
   const description = sanitySeo?.description ?? baseSeo.description;
@@ -523,6 +560,14 @@ export default async function LocalizedRoutePage({ params }: Params) {
 
   if (frPath === "/ai-sales-ops") {
     return <AiSalesOpsMasterPage locale={resolved.locale} />;
+  }
+
+  if (frPath === "/insights" && resolved.locale !== "fr") {
+    return <InsightsHubMasterPage locale={resolved.locale as Exclude<SupportedLocale, "fr">} />;
+  }
+
+  if (frPath === "/insights/buying-signals" && resolved.locale !== "fr") {
+    return <BuyingSignalsMasterPage locale={resolved.locale as Exclude<SupportedLocale, "fr">} />;
   }
 
   if (frPath === "/blog") {
