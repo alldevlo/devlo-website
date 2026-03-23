@@ -44,7 +44,7 @@ export const aiSalesOpsContent = {
       longDescription:
         "Chaque message entrant est classifié par intention, puis enrichi avec vos SOP, vos conversations passées et les règles commerciales propres à votre entreprise. Le système propose une réponse prête à envoyer. Votre équipe corrige si nécessaire, puis cette correction alimente la boucle d'apprentissage. Vous gardez la qualité humaine, sans garder la charge opérationnelle.",
       result: "Jusqu'à 80% du temps inbox récupéré, sans perte de personnalisation.",
-      stack: ["n8n", "Claude API", "HubSpot", "Lemlist"],
+      stack: ["Automation Platform", "Claude API", "HubSpot", "Lemlist"],
       links: [
         { label: "Outbound multicanal", href: "/services/outbound-multicanal" },
         { label: "CRM et délivrabilité", href: "/services/crm-delivrabilite" },
@@ -59,7 +59,7 @@ export const aiSalesOpsContent = {
       longDescription:
         "Le Sales Knowledge Bot centralise vos playbooks, FAQ, SOP et documents produit dans un point d'accès unique. Il répond dans la langue de la question, puis capture les réponses du manager quand une escalade est nécessaire. La base de connaissances s'enrichit sans nouveau projet documentaire. Résultat, l'onboarding s'accélère et les réponses se standardisent.",
       result: "Onboarding commercial 3 fois plus rapide, avec 70% d'escalades en moins après quelques mois.",
-      stack: ["Slack", "Teams", "n8n", "Claude API", "Google Docs"],
+      stack: ["Slack", "Teams", "Automation Platform", "Claude API", "Google Docs"],
       links: [],
     },
     {
@@ -71,7 +71,7 @@ export const aiSalesOpsContent = {
       longDescription:
         "Quand un rendez-vous entre dans le calendrier, le système prépare un dossier prospect : actualités récentes, activité LinkedIn, historique CRM, objections déjà rencontrées, talking points recommandés. Après l'appel, le commercial dicte un mémo vocal ou colle ses notes. L'IA structure le compte-rendu, met à jour le pipeline, crée les tâches et évite les relances oubliées.",
       result: "Jusqu'à 4 heures récupérées par jour et par commercial, avec un CRM enfin à jour.",
-      stack: ["n8n", "Claude API", "Google Calendar", "HubSpot", "Salesforce"],
+      stack: ["Automation Platform", "Claude API", "Google Calendar", "HubSpot", "Salesforce"],
       links: [
         { label: "Prise de rendez-vous", href: "/services/prise-de-rendez-vous" },
         { label: "CRM et délivrabilité", href: "/services/crm-delivrabilite" },
@@ -87,7 +87,7 @@ export const aiSalesOpsContent = {
         "Au lieu de laisser le savoir commercial dans la tête de deux seniors, le système collecte les objections remontées en call, les réponses qui ont marché et les signaux concurrentiels. Chaque nouvelle information renforce la bibliothèque. Les juniors accèdent aux meilleurs arguments en quelques secondes, directement dans leur environnement de travail.",
       result:
         "Le niveau d'argumentation des juniors converge vers celui des seniors, sans dépendre d'une seule personne.",
-      stack: ["n8n", "Claude API", "Google Docs", "Slack", "Teams"],
+      stack: ["Automation Platform", "Claude API", "Google Docs", "Slack", "Teams"],
       links: [],
     },
     {
@@ -99,7 +99,7 @@ export const aiSalesOpsContent = {
       longDescription:
         "Le système récupère les données CRM, les notes de meeting, le secteur du prospect, les objections soulevées et le ton de votre entreprise. Il produit ensuite un premier draft propre, structuré et cohérent. Vos équipes passent de plusieurs heures de rédaction à quelques minutes de revue, avec des follow-ups plus réguliers et mieux contextualisés.",
       result: "Des propositions prêtes à envoyer en 15 minutes au lieu de 2 ou 3 heures.",
-      stack: ["n8n", "Claude API", "HubSpot", "Salesforce", "Google Docs"],
+      stack: ["Automation Platform", "Claude API", "HubSpot", "Salesforce", "Google Docs"],
       links: [{ label: "Cold Email B2B", href: "/services/cold-email" }],
     },
     {
@@ -112,7 +112,7 @@ export const aiSalesOpsContent = {
         "Le dashboard transforme des notes dispersées, des feedbacks de coaching et des observations terrain en une vue structurée, par personne et par équipe. Vous obtenez des tendances lisibles, des priorités de coaching, une vision claire des patterns résolus ou persistants, et une base plus objective pour vos décisions RH.",
       result:
         "Des décisions de management fondées sur des données, avec un onboarding plus propre et moins de turnover caché.",
-      stack: ["Supabase", "n8n", "Claude API", "Lovable"],
+      stack: ["Supabase", "Automation Platform", "Claude API", "Lovable"],
       links: [],
     },
     {
@@ -125,7 +125,7 @@ export const aiSalesOpsContent = {
         "Chaque client ou direction consulte ses propres données via un accès contrôlé. Le portail remplace les fichiers Excel et les échanges de reporting récurrents. Vous centralisez les métriques utiles, les tendances, les prochaines actions et un simulateur de ROI. Le reporting devient un produit, pas une charge.",
       result:
         "Jusqu'à 90% de demandes de reporting ad hoc en moins, avec plus de confiance côté client et direction.",
-      stack: ["Lovable", "Supabase", "n8n", "RLS"],
+      stack: ["Lovable", "Supabase", "Automation Platform", "RLS"],
       links: [{ label: "Étude de cas Monizze", href: "/etudes-de-cas/monizze-120-rendez-vous" }],
     },
   ],
@@ -326,7 +326,7 @@ export const aiSalesOpsContent = {
     {
       question: "Mes données sont-elles sécurisées ?",
       answer:
-        "Oui. Nous utilisons des infrastructures hébergées en Europe (notamment Supabase et n8n Cloud), conformes au RGPD et à la nLPD suisse. Vos données clients ne sont jamais partagées entre clients. Chaque système est isolé.",
+        "Oui. Notre plateforme d'automatisation fonctionne sur une infrastructure européenne, garantissant la conformité au RGPD et à la nLPD suisse. Vos données clients ne sont jamais partagées entre clients. Chaque système est isolé.",
     },
     {
       question: "Peut-on commencer par un seul système et en ajouter d'autres ensuite ?",

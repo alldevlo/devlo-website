@@ -8,13 +8,6 @@ BASE_URL="${1:-https://devlo.ch}"
 SLUG_MAP="${SLUG_MAP:-src/lib/i18n/slug-map.json}"
 CHECK_SCOPE="${CHECK_SCOPE:-all}" # all | sample
 CHECK_PAGE_IDS="${CHECK_PAGE_IDS:-}" # comma-separated override
-N8N_WEBHOOK_URL="${N8N_WEBHOOK_URL:-}"
-N8N_REQUIRED="${N8N_REQUIRED:-0}"
-N8N_LOGS_URL_TEMPLATE="${N8N_LOGS_URL_TEMPLATE:-}"
-N8N_LOGS_AUTH_HEADER="${N8N_LOGS_AUTH_HEADER:-}"
-N8N_API_BASE="${N8N_API_BASE:-https://devlo.app.n8n.cloud/api/v1}"
-N8N_API_KEY="${N8N_API_KEY:-}"
-N8N_WORKFLOW_ID="${N8N_WORKFLOW_ID:-}"
 CURL_MAX_TIME="${CURL_MAX_TIME:-20}"
 STAMP="$(date +%Y%m%dT%H%M%S)"
 OUT_DIR="docs/i18n_sanity_migration/check_success_${STAMP}"
@@ -23,15 +16,6 @@ mkdir -p "$RAW_DIR"
 
 if [[ ! -f "$SLUG_MAP" ]]; then
   echo "slug map file not found: $SLUG_MAP"
-  exit 1
-fi
-
-if [[ "$N8N_REQUIRED" == "1" && -z "$N8N_WEBHOOK_URL" ]]; then
-  echo "N8N_REQUIRED=1 but N8N_WEBHOOK_URL is missing"
-  exit 1
-fi
-if [[ "$N8N_REQUIRED" == "1" && -z "$N8N_API_KEY" ]]; then
-  echo "N8N_REQUIRED=1 but N8N_API_KEY is missing"
   exit 1
 fi
 
@@ -314,101 +298,6 @@ build_summary() {
 }
 
 build_summary >"$summary_file"
-
-if [[ -n "$N8N_API_KEY" ]]; then
-  n8n_workflows_status="$(
-    curl -sS -o "${OUT_DIR}/n8n_workflows.json" \
-      -w "%{http_code}" \
-      -H "X-N8N-API-KEY: ${N8N_API_KEY}" \
-      "${N8N_API_BASE}/workflows?limit=1" || true
-  )"
-
-  if [[ "$n8n_workflows_status" -lt 200 || "$n8n_workflows_status" -ge 300 ]]; then
-    failures="$(jq -c --arg issue "n8n-api-workflows-http:$n8n_workflows_status" '. + [$issue]' <<<"$failures")"
-    overall_pass="false"
-    total_failures="$(jq 'length' <<<"$failures")"
-  fi
-
-  if [[ -n "$N8N_WORKFLOW_ID" ]]; then
-    n8n_exec_status="$(
-      curl -sS -o "${OUT_DIR}/n8n_executions.json" \
-        -w "%{http_code}" \
-        -H "X-N8N-API-KEY: ${N8N_API_KEY}" \
-        "${N8N_API_BASE}/executions?limit=1&workflowId=${N8N_WORKFLOW_ID}" || true
-    )"
-
-    if [[ "$n8n_exec_status" -lt 200 || "$n8n_exec_status" -ge 300 ]]; then
-      failures="$(jq -c --arg issue "n8n-api-executions-http:$n8n_exec_status" '. + [$issue]' <<<"$failures")"
-      overall_pass="false"
-      total_failures="$(jq 'length' <<<"$failures")"
-    else
-      n8n_execution_id="$(jq -r '.data[0].id // empty' "${OUT_DIR}/n8n_executions.json" 2>/dev/null || true)"
-      n8n_execution_status="$(jq -r '.data[0].status // empty' "${OUT_DIR}/n8n_executions.json" 2>/dev/null || true)"
-
-      if [[ -n "$n8n_execution_id" ]]; then
-        curl -sS \
-          -H "X-N8N-API-KEY: ${N8N_API_KEY}" \
-          "${N8N_API_BASE}/executions/${n8n_execution_id}" \
-          > "${OUT_DIR}/n8n_execution_${n8n_execution_id}.json" || true
-      fi
-
-      if [[ "$N8N_REQUIRED" == "1" && "$n8n_execution_status" != "success" ]]; then
-        failures="$(jq -c --arg issue "n8n-latest-execution-status:${n8n_execution_status:-unknown}" '. + [$issue]' <<<"$failures")"
-        overall_pass="false"
-        total_failures="$(jq 'length' <<<"$failures")"
-      fi
-    fi
-  fi
-fi
-
-if [[ -n "$N8N_WEBHOOK_URL" ]]; then
-  n8n_response_file="${OUT_DIR}/n8n_response.json"
-  n8n_status_file="${OUT_DIR}/n8n_status.txt"
-  curl -sS -X POST "$N8N_WEBHOOK_URL" \
-    -H "Content-Type: application/json" \
-    --data-binary "@${summary_file}" \
-    -w "%{http_code}" \
-    -o "$n8n_response_file" \
-    >"$n8n_status_file" || true
-
-  n8n_http_status="$(cat "$n8n_status_file" 2>/dev/null || echo "000")"
-  if [[ "$n8n_http_status" -lt 200 || "$n8n_http_status" -ge 300 ]]; then
-    warnings="$(jq -c --arg issue "n8n-webhook-http:$n8n_http_status" '. + [$issue]' <<<"$warnings")"
-  fi
-
-  if [[ "$overall_pass" != "true" && -n "$N8N_LOGS_URL_TEMPLATE" ]]; then
-    execution_id="$(
-      jq -r '
-        .executionId // .id // .execution_id // .data.executionId // .data.id // empty
-      ' "$n8n_response_file" 2>/dev/null || true
-    )"
-
-    if [[ -n "$execution_id" ]]; then
-      n8n_logs_url="${N8N_LOGS_URL_TEMPLATE//\{executionId\}/$execution_id}"
-      n8n_logs_file="${OUT_DIR}/n8n_logs.json"
-      if [[ -n "$N8N_LOGS_AUTH_HEADER" ]]; then
-        curl -sS "$n8n_logs_url" -H "$N8N_LOGS_AUTH_HEADER" >"$n8n_logs_file" || true
-      else
-        curl -sS "$n8n_logs_url" >"$n8n_logs_file" || true
-      fi
-
-      n8n_error_message="$(
-        jq -r '
-          [
-            .message,
-            .error,
-            .data?.error,
-            (.nodes[]?.error?.message // empty)
-          ] | map(select(type=="string" and length>0)) | .[0] // empty
-        ' "$n8n_logs_file" 2>/dev/null || true
-      )"
-
-      if [[ -n "$n8n_error_message" ]]; then
-        warnings="$(jq -c --arg issue "n8n-log:$n8n_error_message" '. + [$issue]' <<<"$warnings")"
-      fi
-    fi
-  fi
-fi
 
 build_summary >"$summary_file"
 

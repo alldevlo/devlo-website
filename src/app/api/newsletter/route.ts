@@ -9,20 +9,27 @@ const SUPABASE_KEY = process.env.SUPABASE_SERVICE_KEY ?? "";
 async function storeInSupabase(email: string, source: string) {
   if (!SUPABASE_URL || !SUPABASE_KEY) return;
   try {
-    await fetch(`${SUPABASE_URL}/rest/v1/newsletter_subscribers`, {
-      method: "POST",
-      headers: {
-        apikey: SUPABASE_KEY,
-        Authorization: `Bearer ${SUPABASE_KEY}`,
-        "Content-Type": "application/json",
-        Prefer: "resolution=merge-duplicates",
-      },
-      body: JSON.stringify({
-        email,
-        subscribed_at: new Date().toISOString(),
-        source,
-      }),
-    });
+    const res = await fetch(
+      `${SUPABASE_URL}/rest/v1/newsletter_subscribers?on_conflict=email`,
+      {
+        method: "POST",
+        headers: {
+          apikey: SUPABASE_KEY,
+          Authorization: `Bearer ${SUPABASE_KEY}`,
+          "Content-Type": "application/json",
+          Prefer: "return=minimal,resolution=merge-duplicates",
+        },
+        body: JSON.stringify({
+          email,
+          subscribed_at: new Date().toISOString(),
+          source,
+        }),
+      }
+    );
+    if (!res.ok) {
+      const errorBody = await res.text();
+      console.error("Supabase upsert error:", res.status, errorBody);
+    }
   } catch (err) {
     console.error("Supabase newsletter store error:", err);
   }
