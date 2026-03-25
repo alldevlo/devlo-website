@@ -143,6 +143,9 @@ function buildLayoutSchemas(locale: LayoutLocale) {
     foundingDate: "2020",
     sameAs: [
       "https://www.linkedin.com/company/devlo-connects-you-with-more-prospects/",
+      "https://www.crunchbase.com/organization/devlo",
+      "https://clutch.co/profile/devlo",
+      "https://www.linkedin.com/in/charlesperret/",
     ],
     address: {
       "@type": "PostalAddress",
@@ -199,6 +202,8 @@ function buildLayoutSchemas(locale: LayoutLocale) {
     ],
     sameAs: [
       "https://www.linkedin.com/company/devlo-connects-you-with-more-prospects/",
+      "https://www.crunchbase.com/organization/devlo",
+      "https://clutch.co/profile/devlo",
     ],
   };
 
@@ -220,6 +225,9 @@ function buildLayoutSchemas(locale: LayoutLocale) {
       addressCountry: "US",
     },
     areaServed: ["US", "CA"],
+    sameAs: [
+      "https://www.linkedin.com/company/devlo-connects-you-with-more-prospects/",
+    ],
     parentOrganization: {
       "@type": "Organization",
       name: "devlo",

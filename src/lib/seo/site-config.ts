@@ -30,9 +30,11 @@ export const seoConfig = {
     foundingDate: "2020",
     description:
       "devlo est une agence suisse spécialisée en prospection B2B, génération de leads et prise de rendez-vous qualifiés. Plus de 1000 campagnes depuis 2020.",
-    /** TODO: Add other active social profiles (X/Twitter, YouTube, etc.) */
     sameAs: [
       "https://www.linkedin.com/company/devlo-connects-you-with-more-prospects/",
+      "https://www.crunchbase.com/organization/devlo",
+      "https://clutch.co/profile/devlo",
+      "https://www.linkedin.com/in/charlesperret/",
     ],
 
     /** Swiss headquarters */
