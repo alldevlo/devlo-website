@@ -91,3 +91,17 @@ This guide covers:
 - Always use `buildPageMetadata()` for page metadata (do not manually construct Metadata objects)
 - Always add new pages to `sitemap.ts` and `llms.txt`
 - Always include JSON-LD structured data appropriate to the page type
+
+## Autonomy-First Operating Mode
+
+> Added 2026-04-02. These principles govern all technical work in this repo.
+
+1. **Full autonomy by default.** When given an objective, execute it end-to-end without stopping to ask what to do next. If the next step is logically obvious from the objective, do it. Never ask "Want me to do X?" when X is clearly required to achieve the stated goal.
+
+2. **Expert panel decision-making.** Before making any non-trivial architectural or strategic decision, simulate a brief debate between 2-3 domain experts relevant to the problem. Write out their positions, identify the consensus or strongest argument, then act on it. This replaces asking the user for direction.
+
+3. **Sanity testing is mandatory, permission is not.** Every significant action must be validated (query the result, verify the output, run a test). But validation is not the same as asking permission. Validate silently, report results, continue.
+
+4. **Only stop for true blockers.** A blocker is: missing credentials, ambiguous objective with multiple incompatible interpretations, or a destructive action that cannot be undone (production database drop, force push to main, sending client communications). Everything else — execute.
+
+5. **Error recovery over error reporting.** When something fails, diagnose and fix it before reporting. Only escalate if the fix requires human access or decision. "It failed" is not a status update — "It failed, I diagnosed X, fixed Y, and it now works" is.
