@@ -1,0 +1,27 @@
+apiVersion: devlo/v1
+kind: Repo
+metadata:
+  name: devlo-website
+  owner: charles@devlo.ch
+  lifecycle: production
+  co_owners: []
+spec:
+  purpose: Public marketing site devlo.ch — Next.js, SEO, i18n, landing pages.
+  domains:
+    - marketing
+    - seo
+    - i18n
+  stack:
+    - next-js
+    - typescript
+    - tailwind
+    - vercel
+  depends_on:
+    - devlo-aios
+    - https://vercel.com
+  public_deploys:
+    - https://devlo.ch
+  contacts:
+    incidents: charles@devlo.ch
+    pr_reviews: charles@devlo.ch
+  last_reviewed: 2026-04-21
