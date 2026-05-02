@@ -433,27 +433,27 @@
   },
   "home": {
     "title": {
-      "de": "B2B Akquise Agentur Schweiz | Leadgenerierung | devlo",
-      "en": "B2B Outreach Agency Switzerland | Lead Generation | devlo",
-      "fr": "Agence de prospection B2B en Suisse | Génération de leads | devlo",
-      "nl": "B2B prospectiebureau in Zwitserland | Leadgeneratie | devlo"
+      "fr": "Agence de prospection B2B en Suisse | RDV qualifiés | devlo",
+      "en": "B2B Prospecting Agency in Switzerland | Qualified Meetings | devlo",
+      "de": "B2B-Akquise Agentur Schweiz | Qualifizierte Termine | devlo",
+      "nl": "B2B prospectiebureau Zwitserland | Gekwalificeerde afspraken | devlo"
     },
     "description": {
-      "de": "Schweizer B2B Akquise Agentur fur Leadgenerierung und qualifizierte Termine via Cold E-Mail, LinkedIn und Telemarketing. Ergebnisse ab Woche 3.",
-      "en": "Swiss B2B outreach agency for lead generation and qualified appointments via cold email, LinkedIn and calling. Results from week 3.",
-      "fr": "Agence suisse de prospection B2B: génération de leads et rendez-vous qualifiés via cold email, LinkedIn et téléprospection. Plus de 1'000 campagnes lancées.",
-      "nl": "Zwitsers B2B prospectiebureau: genereren van leads en gekwalificeerde afspraken via koude e-mail, LinkedIn en telemarketing. Meer dan 1.000 campagnes gelanceerd."
+      "fr": "devlo génère des rendez-vous qualifiés en Suisse via lead generation, cold email, LinkedIn et calling. Campagnes multilingues et preuves clients.",
+      "en": "devlo generates qualified B2B meetings in Switzerland through lead generation, cold email, LinkedIn and calling. Multilingual campaigns with client proof.",
+      "de": "devlo generiert qualifizierte B2B-Termine in der Schweiz mit Leadgenerierung, Cold Email, LinkedIn und Calling. Mehrsprachige Kampagnen mit Nachweisen.",
+      "nl": "devlo genereert gekwalificeerde B2B-afspraken in Zwitserland via leadgeneratie, cold email, LinkedIn en calling. Meertalige campagnes met bewijs."
     },
     "body": {
-      "de": "B2B Akquise Agentur in der Schweiz | Leadgenerierung | devlo\n\nSchweizer B2B-Agentur: Generierung von Leads und qualifizierten Terminen über Cold E-Mail, LinkedIn und Teleprospecting. Mehr als 1'000 Kampagnen gestartet.",
-      "en": "B2B prospecting agency in Switzerland | Lead generation | devlo\n\nSwiss B2B prospecting agency: lead generation and qualified appointments via cold email, LinkedIn and telemarketing. Over 1,000 campaigns launched.",
       "fr": null,
-      "nl": "B2B prospectiebureau in Zwitserland | Leadgeneratie | devlo\n\nZwitsers B2B prospectiebureau: leadgeneratie en gekwalificeerde afspraken via koude e-mail, LinkedIn en telemarketing. Meer dan 1.000 campagnes gelanceerd."
+      "en": "B2B Prospecting Agency in Switzerland | Qualified Meetings | devlo\n\ndevlo generates qualified B2B meetings in Switzerland through lead generation, cold email, LinkedIn and calling. Multilingual campaigns with client proof.",
+      "de": "B2B-Akquise Agentur Schweiz | Qualifizierte Termine | devlo\n\ndevlo generiert qualifizierte B2B-Termine in der Schweiz mit Leadgenerierung, Cold Email, LinkedIn und Calling. Mehrsprachige Kampagnen mit Nachweisen.",
+      "nl": "B2B prospectiebureau Zwitserland | Gekwalificeerde afspraken | devlo\n\ndevlo genereert gekwalificeerde B2B-afspraken in Zwitserland via leadgeneratie, cold email, LinkedIn en calling. Meertalige campagnes met bewijs."
     },
     "ogImage": {
       "fr": "/images/devlo_OG_Banner.webp"
     },
-    "updatedAt": "2026-03-05T06:52:07.772Z"
+    "updatedAt": "2026-05-02T00:00:00.000Z"
   },
   "page:2020-b2b-sales-leaders-teams": {
     "title": {

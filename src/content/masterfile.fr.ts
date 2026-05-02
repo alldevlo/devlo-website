@@ -64,22 +64,22 @@ export const mainNav = {
 };
 
 export const homeSeo = {
-  title: "Agence de prospection B2B en Suisse | Génération de leads",
+  title: "Agence de prospection B2B en Suisse | RDV qualifiés",
   description:
-    "Agence suisse de prospection B2B: génération de leads et rendez-vous qualifiés via cold email, LinkedIn et téléprospection. Plus de 1'000 campagnes lancées.",
-  ogTitle: "Agence de prospection B2B Suisse | Génération de leads qualifiés | devlo",
+    "devlo génère des rendez-vous qualifiés en Suisse via lead generation, cold email, LinkedIn et calling. Campagnes multilingues et preuves clients.",
+  ogTitle: "Agence de prospection B2B Suisse | Rendez-vous qualifiés | devlo",
   ogDescription:
-    "devlo conçoit et pilote vos campagnes de prospection commerciale B2B multicanal pour générer des rendez-vous qualifiés avec vos prospects idéaux.",
+    "devlo identifie les bons comptes, prépare vos séquences et pilote vos campagnes B2B multicanales pour générer des rendez-vous qualifiés.",
 };
 
 export const homeContent = {
   hero: {
     badge: "🇨🇭 Agence suisse · +1'000 campagnes lancées",
-    h1: "Boostez votre prospection commerciale B2B avec notre agence de génération de leads et de téléprospection",
-    h2: "Nous prenons des rendez-vous qualifiés pour vous : externalisez votre développement commercial B2B à notre agence.",
+    h1: "Agence de prospection B2B en Suisse pour générer des rendez-vous qualifiés",
+    h2: "Nous identifions les bons comptes, préparons vos séquences et bookons les rendez-vous que votre équipe commerciale peut convertir.",
     paragraph:
-      "devlo est votre partenaire pour la **génération de leads**, la **prospection multicanal** et la **prise de rendez-vous qualifiés** — avec plus de 1'000 campagnes déployées depuis 2020. Nous automatisons la prospection pour que vos équipes se concentrent sur le closing.",
-    ctaPrimary: { label: "Planifier votre consultation gratuite →", href: "/consultation" },
+      "devlo combine **lead generation**, **signaux d'achat**, **cold email**, **LinkedIn** et **calling** pour créer un pipeline B2B mesurable. L'objectif n'est pas plus de trafic : c'est plus de conversations avec des décideurs qui correspondent à votre ICP.",
+    ctaPrimary: { label: "Auditer mon potentiel de leads →", href: "/consultation" },
     ctaSecondary: { label: "Voir nos résultats →", href: "/etudes-de-cas" },
     ctaServices: { label: "Voir nos services →", href: "/services" },
     wistiaMediaId: "cr7dgltkvu",
@@ -93,6 +93,39 @@ export const homeContent = {
       href: "/etudes-de-cas/immobilier-30-prospects",
     },
     microProof: "⭐ 5/5 Lemlist Experts · 70-80% taux d'ouverture · +3'000 rendez-vous qualifiés",
+  },
+  qualifiedLeadSection: {
+    eyebrow: "Qualification avant volume",
+    title: "Qu'est-ce qu'un lead qualifié pour devlo ?",
+    answer:
+      "Un lead qualifié est un compte B2B qui correspond à votre ICP, montre un signal d'achat exploitable et peut raisonnablement accepter un rendez-vous commercial.",
+    description:
+      "Cette définition évite les campagnes qui maximisent seulement le nombre de contacts. Avant de lancer une séquence, devlo vérifie le fit marché, les décideurs, les signaux récents et la capacité de votre équipe à convertir le rendez-vous.",
+    tableCaption: "Critères utilisés par devlo pour qualifier une opportunité B2B avant la prospection",
+    headers: ["Critère", "Signal vérifié", "Pourquoi cela génère des rendez-vous qualifiés"],
+    rows: [
+      {
+        criterion: "Fit ICP",
+        signal: "Secteur, taille d'entreprise, géographie, modèle B2B, cycle de vente et capacité à acheter.",
+        qualification: "Le rendez-vous a plus de valeur quand le compte ressemble à vos meilleurs clients actuels.",
+      },
+      {
+        criterion: "Timing",
+        signal: "Recrutement, expansion, changement d'outil, levée de fonds, nouveau bureau ou initiative publique.",
+        qualification: "Un signal récent donne une raison crédible de contacter le décideur maintenant.",
+      },
+      {
+        criterion: "Décideur",
+        signal: "Rôle, seniorité, responsabilité commerciale ou opérationnelle, accès email et LinkedIn vérifiés.",
+        qualification: "La campagne ne dépend pas d'un volume flou : elle vise les personnes qui peuvent avancer.",
+      },
+      {
+        criterion: "Message",
+        signal: "Proposition de valeur, preuve client et angle d'approche adaptés au segment.",
+        qualification: "Le prospect comprend rapidement pourquoi l'échange mérite 20 à 30 minutes.",
+      },
+    ],
+    cta: { label: "Recevoir une analyse de fit", href: "/consultation" },
   },
   rendezVousTitle: "Rendez-vous commerciaux obtenus avec",
   rendezVousLogos: [

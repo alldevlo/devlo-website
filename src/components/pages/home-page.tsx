@@ -82,6 +82,16 @@ type HomeContentData = typeof homeContent & {
   homeSummaryPoints?: string[];
   homeComparisonTable?: { caption: string; headers: string[]; rows: Array<{ criterion: string; colA: string; colB: string }> };
   homeAuthor?: { datePublished: string; dateModified: string };
+  qualifiedLeadSection?: {
+    eyebrow: string;
+    title: string;
+    answer: string;
+    description: string;
+    tableCaption: string;
+    headers: string[];
+    rows: Array<{ criterion: string; signal: string; qualification: string }>;
+    cta: { label: string; href: string };
+  };
 };
 
 type HomeContentProps = {
@@ -124,6 +134,7 @@ export function HomePage({
   const rendezVousRows = Array.from({ length: rendezVousRowCount }, (_, index) =>
     content.rendezVousLogos.slice(index * rendezVousPerRow, (index + 1) * rendezVousPerRow),
   ).filter((row) => row.length > 0);
+  const qualifiedLeadSection = content.qualifiedLeadSection;
 
   return (
     <>
@@ -202,6 +213,61 @@ export function HomePage({
           </FadeInOnScroll>
         </div>
       </section>
+
+      {qualifiedLeadSection ? (
+        <SectionWrapper background="light" className="py-[64px] md:py-[88px]">
+          <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+            <FadeInOnScroll>
+              <p className="text-sm font-semibold uppercase tracking-[0.1em] text-devlo-700">
+                {qualifiedLeadSection.eyebrow}
+              </p>
+              <h2 className="mt-3 text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">
+                {qualifiedLeadSection.title}
+              </h2>
+              <p className="mt-4 rounded-xl border border-devlo-100 bg-white p-4 text-base font-semibold leading-7 text-devlo-800 shadow-soft">
+                {qualifiedLeadSection.answer}
+              </p>
+              <p className="mt-4 text-base leading-7 text-neutral-600">
+                {qualifiedLeadSection.description}
+              </p>
+              <Link
+                href={qualifiedLeadSection.cta.href}
+                className={buttonClassName("primary", "mt-6 px-6 py-3 text-sm")}
+              >
+                {qualifiedLeadSection.cta.label}
+              </Link>
+            </FadeInOnScroll>
+
+            <FadeInOnScroll delay={0.15}>
+              <div className="overflow-x-auto rounded-2xl border border-neutral-200 bg-white shadow-soft">
+                <table className="min-w-[720px] w-full border-collapse text-left text-sm">
+                  <caption className="sr-only">{qualifiedLeadSection.tableCaption}</caption>
+                  <thead className="bg-devlo-900 text-white">
+                    <tr>
+                      {qualifiedLeadSection.headers.map((header) => (
+                        <th key={header} scope="col" className="px-4 py-3 font-semibold">
+                          {header}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-neutral-200">
+                    {qualifiedLeadSection.rows.map((row) => (
+                      <tr key={row.criterion} className="align-top">
+                        <th scope="row" className="w-[28%] px-4 py-4 font-semibold text-devlo-900">
+                          {row.criterion}
+                        </th>
+                        <td className="px-4 py-4 leading-6 text-neutral-600">{row.signal}</td>
+                        <td className="px-4 py-4 leading-6 text-neutral-600">{row.qualification}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </FadeInOnScroll>
+          </div>
+        </SectionWrapper>
+      ) : null}
 
       <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
