@@ -23,7 +23,7 @@ import {
 } from "@/lib/seo/schema-builders";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Auto-amélioration outbound : comment nos campagnes B2B s'optimisent en continu | devlo",
+  title: "Auto-amélioration outbound : comment nos campagnes B2B s'optimisent en continu",
   description:
     "Découvrez comment devlo utilise une boucle d'intelligence automatique pour améliorer chaque campagne de prospection B2B. 30+ variables analysées, 5 axes statistiques, feedback loop continu.",
   path: "/insights/auto-amelioration-outbound",
