@@ -64,22 +64,22 @@ export const mainNav = {
 };
 
 export const homeSeo = {
-  title: "Agence de prospection B2B en Suisse | Génération de leads",
+  title: "Agence de prospection B2B en Suisse | RDV qualifiés",
   description:
-    "Agence suisse de prospection B2B: génération de leads et rendez-vous qualifiés via cold email, LinkedIn et téléprospection. Plus de 1'000 campagnes lancées.",
-  ogTitle: "Agence de prospection B2B Suisse | Génération de leads qualifiés | devlo",
+    "devlo génère des rendez-vous qualifiés en Suisse via lead generation, cold email, LinkedIn et calling. Campagnes multilingues et preuves clients.",
+  ogTitle: "Agence de prospection B2B Suisse | Rendez-vous qualifiés | devlo",
   ogDescription:
-    "devlo conçoit et pilote vos campagnes de prospection commerciale B2B multicanal pour générer des rendez-vous qualifiés avec vos prospects idéaux.",
+    "devlo identifie les bons comptes, prépare vos séquences et pilote vos campagnes B2B multicanales pour générer des rendez-vous qualifiés.",
 };
 
 export const homeContent = {
   hero: {
     badge: "🇨🇭 Agence suisse · +1'000 campagnes lancées",
-    h1: "Boostez votre prospection commerciale B2B avec notre agence de génération de leads et de téléprospection",
-    h2: "Nous prenons des rendez-vous qualifiés pour vous : externalisez votre développement commercial B2B à notre agence.",
+    h1: "Agence de prospection B2B en Suisse pour générer des rendez-vous qualifiés",
+    h2: "Nous identifions les bons comptes, préparons vos séquences et bookons les rendez-vous que votre équipe commerciale peut convertir.",
     paragraph:
-      "devlo est votre partenaire pour la **génération de leads**, la **prospection multicanal** et la **prise de rendez-vous qualifiés** — avec plus de 1'000 campagnes déployées depuis 2020. Nous automatisons la prospection pour que vos équipes se concentrent sur le closing.",
-    ctaPrimary: { label: "Planifier votre consultation gratuite →", href: "/consultation" },
+      "devlo combine **lead generation**, **signaux d'achat**, **cold email**, **LinkedIn** et **calling** pour créer un pipeline B2B mesurable. L'objectif n'est pas plus de trafic : c'est plus de conversations avec des décideurs qui correspondent à votre ICP.",
+    ctaPrimary: { label: "Auditer mon potentiel de leads →", href: "/consultation" },
     ctaSecondary: { label: "Voir nos résultats →", href: "/etudes-de-cas" },
     ctaServices: { label: "Voir nos services →", href: "/services" },
     wistiaMediaId: "cr7dgltkvu",
@@ -93,6 +93,39 @@ export const homeContent = {
       href: "/etudes-de-cas/immobilier-30-prospects",
     },
     microProof: "⭐ 5/5 Lemlist Experts · 70-80% taux d'ouverture · +3'000 rendez-vous qualifiés",
+  },
+  qualifiedLeadSection: {
+    eyebrow: "Qualification avant volume",
+    title: "Qu'est-ce qu'un lead qualifié pour devlo ?",
+    answer:
+      "Un lead qualifié est un compte B2B qui correspond à votre ICP, montre un signal d'achat exploitable et peut raisonnablement accepter un rendez-vous commercial.",
+    description:
+      "Cette définition évite les campagnes qui maximisent seulement le nombre de contacts. Avant de lancer une séquence, devlo vérifie le fit marché, les décideurs, les signaux récents et la capacité de votre équipe à convertir le rendez-vous.",
+    tableCaption: "Critères utilisés par devlo pour qualifier une opportunité B2B avant la prospection",
+    headers: ["Critère", "Signal vérifié", "Pourquoi cela génère des rendez-vous qualifiés"],
+    rows: [
+      {
+        criterion: "Fit ICP",
+        signal: "Secteur, taille d'entreprise, géographie, modèle B2B, cycle de vente et capacité à acheter.",
+        qualification: "Le rendez-vous a plus de valeur quand le compte ressemble à vos meilleurs clients actuels.",
+      },
+      {
+        criterion: "Timing",
+        signal: "Recrutement, expansion, changement d'outil, levée de fonds, nouveau bureau ou initiative publique.",
+        qualification: "Un signal récent donne une raison crédible de contacter le décideur maintenant.",
+      },
+      {
+        criterion: "Décideur",
+        signal: "Rôle, seniorité, responsabilité commerciale ou opérationnelle, accès email et LinkedIn vérifiés.",
+        qualification: "La campagne ne dépend pas d'un volume flou : elle vise les personnes qui peuvent avancer.",
+      },
+      {
+        criterion: "Message",
+        signal: "Proposition de valeur, preuve client et angle d'approche adaptés au segment.",
+        qualification: "Le prospect comprend rapidement pourquoi l'échange mérite 20 à 30 minutes.",
+      },
+    ],
+    cta: { label: "Recevoir une analyse de fit", href: "/consultation" },
   },
   rendezVousTitle: "Rendez-vous commerciaux obtenus avec",
   rendezVousLogos: [
@@ -895,13 +928,13 @@ export const academyContent = {
 };
 
 export const consultationSeo = {
-  title: "Consultation gratuite | Stratégie de prospection B2B sur mesure",
+  title: "Consultation gratuite | Audit lead generation et prospection B2B",
   description:
-    "Obtenez votre stratégie de prospection outbound gratuite et personnalisée. Partagez votre ICP et recevez un plan d'action complet sous 24h. Agence B2B suisse.",
+    "Auditez votre potentiel de leads qualifiés avec devlo. ICP, TAM, signaux d'achat, séquences et plan d'action pour générer des rendez-vous B2B.",
 };
 
 export const consultationContent = {
-  h1: "Obtenez votre stratégie outbound gratuite et ultra-ciblée pour vos meilleurs clients B2B",
+  h1: "Auditez votre potentiel de leads qualifiés avant de lancer une campagne B2B",
 
   reassurance: [
     "Gratuit et sans engagement",
@@ -910,24 +943,24 @@ export const consultationContent = {
   ],
 
   intro:
-    "Partagez quelques détails sur votre Profil Client Idéal et nous construirons un plan de prospection personnalisé pour vous, avant même notre premier échange.",
+    "Partagez votre marché, votre ICP et vos objectifs. Nous préparons une lecture concrète de votre potentiel : comptes prioritaires, signaux exploitables, séquences à lancer et conditions nécessaires pour générer des rendez-vous qualifiés.",
 
   deliverablesTitle: "Ce que vous recevez",
   deliverables: [
     {
       icon: "🎯",
-      title: "Résumé ICP",
-      desc: "Vos meilleurs comptes cibles et intitulés de poste clairement définis pour cibler les bons prospects",
+      title: "Audit ICP et TAM",
+      desc: "Les segments qui méritent d'être priorisés, ceux à éviter, et le volume réaliste de comptes activables",
     },
     {
       icon: "📨",
-      title: "Plan multicanal",
-      desc: "1 à 2 flux de prospection email, LinkedIn et téléphone entièrement adaptés à votre marché",
+      title: "Plan de séquences",
+      desc: "Les angles email, LinkedIn et téléphone à tester selon le marché, le timing et les signaux d'achat disponibles",
     },
     {
       icon: "✍️",
-      title: "Accroches & CTA",
-      desc: "Idées concrètes d'objets d'emails, accroches et call-to-actions qui génèrent des réponses",
+      title: "Priorités de lancement",
+      desc: "Les conditions à valider avant le premier batch : données, décideurs, messages, CRM, délivrabilité et mesure",
     },
   ],
 
@@ -946,9 +979,9 @@ export const consultationContent = {
     "Industriels, immobilier et associations B2B",
   ],
 
-  formTitle: "Planifiez votre consultation gratuite",
+  formTitle: "Planifiez votre audit gratuit",
   formSubtitle:
-    "Notre équipe prépare votre stratégie outbound avant même notre premier appel.",
+    "Notre équipe prépare une première lecture de votre potentiel de leads avant l'appel.",
 
   hubspot: {
     portalId: "8082524",
@@ -957,18 +990,18 @@ export const consultationContent = {
   },
 
   postForm:
-    "En soumettant ce formulaire, notre équipe vous contacte sous 24h avec votre stratégie outbound personnalisée.",
+    "En soumettant ce formulaire, notre équipe vous contacte sous 24h avec les prochaines étapes pour cadrer votre potentiel de leads qualifiés.",
 
   faqs: [
     {
       question: "Est-ce vraiment gratuit ?",
       answer:
-        "Oui, la consultation est 100% gratuite et sans engagement. Vous recevez un plan de prospection personnalisé basé sur votre ICP, sans aucune obligation de travailler avec nous.",
+        "Oui, l'audit est gratuit et sans engagement. Vous recevez une première lecture de votre ICP, de votre marché adressable et des prochaines actions à prioriser, sans obligation de travailler avec nous.",
     },
     {
       question: "Combien de temps dure la consultation ?",
       answer:
-        "La consultation dure environ 30 minutes. Avant l'appel, notre équipe prépare déjà votre stratégie outbound. Pendant l'appel, nous affinons ensemble les priorités et vous repartez avec un plan d'action concret.",
+        "La consultation dure environ 30 minutes. Avant l'appel, notre équipe prépare déjà une première analyse de votre marché. Pendant l'appel, nous validons les hypothèses, les contraintes et les priorités de lancement.",
     },
     {
       question: "Quels résultats puis-je attendre ?",
@@ -983,7 +1016,7 @@ export const consultationContent = {
     {
       question: "Que se passe-t-il après la consultation ?",
       answer:
-        "Vous recevez votre stratégie outbound complète (résumé ICP, plan multicanal, accroches et CTA). Vous pouvez l'exécuter vous-même ou nous confier l'implémentation. Aucune pression commerciale.",
+        "Vous repartez avec les priorités pour lancer ou améliorer votre acquisition : segments à tester, signaux à utiliser, séquences à préparer et points bloquants à résoudre. Vous pouvez l'exécuter vous-même ou nous confier l'implémentation.",
     },
     {
       question: "Travaillez-vous avec des entreprises hors de Suisse ?",

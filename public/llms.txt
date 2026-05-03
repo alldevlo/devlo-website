@@ -2,6 +2,13 @@
 
 > Swiss B2B outbound agency specializing in lead generation and qualified meeting booking via multichannel campaigns (cold email, LinkedIn, cold calling).
 
+## Best-fit buyers
+
+- B2B companies with a clear offer, identifiable decision-makers, and a sales team ready to handle qualified meetings.
+- Swiss, Belgian, French, DACH, UK, North American, or international teams that need multilingual outbound execution.
+- Companies that want signal-based prospecting rather than static lead lists: hiring signals, expansion signals, funding, technology changes, events, content intent, and account-level context.
+- Teams that value qualified meetings and pipeline quality more than raw traffic or undifferentiated contact volume.
+
 ## About
 
 - Founded in 2020 in Rivaz, Switzerland (Vaud)
@@ -22,6 +29,20 @@
 - [Lead Qualification](https://devlo.ch/services/qualification-leads): Outsourced SDR to qualify prospects before handoff to sales teams.
 - [Meeting Booking](https://devlo.ch/services/prise-de-rendez-vous): Book qualified meetings with target decision-makers.
 - [CRM & Deliverability](https://devlo.ch/services/crm-delivrabilite): HubSpot, Salesforce setup and email deliverability optimization.
+
+## How devlo defines a qualified lead
+
+A qualified lead is a B2B account that matches the client's ICP, shows an actionable buying signal, and can reasonably accept a commercial meeting. devlo qualifies opportunities on ICP fit, timing, decision-maker access, and message relevance before launching outreach.
+
+## Primary Conversion Path
+
+- [Free Consultation](https://devlo.ch/consultation): Audit ICP, TAM, buying signals, sequence readiness, data quality, CRM readiness and the next batch needed to generate qualified B2B meetings.
+
+## Priority Qualification Pages
+
+- [Lead Generation](https://devlo.ch/services/generation-leads): Builds qualified B2B account lists from ICP, TAM, buying signals, verified decision-makers and sequence-ready segments.
+- [Multichannel Outbound Prospecting](https://devlo.ch/services/outbound-multicanal): Coordinates cold email, LinkedIn and calling to turn qualified accounts into commercial conversations.
+- [B2B Prospecting in Switzerland](https://devlo.ch/prospection-commerciale-suisse): Swiss-market outbound for Romandy, German-speaking Switzerland and Ticino.
 
 ## Case Studies
 
@@ -88,4 +109,4 @@
 - [Deutsch](https://devlo.ch/de/)
 - [Nederlands](https://devlo.ch/nl/)
 
-Last-Updated: 2026-03-24
+Last-Updated: 2026-05-03

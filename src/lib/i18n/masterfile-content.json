@@ -26,19 +26,19 @@
       }
     },
     "homeSeo": {
-      "title": "Agence de prospection B2B en Suisse | Génération de leads",
-      "description": "Agence suisse de prospection B2B: génération de leads et rendez-vous qualifiés via cold email, LinkedIn et téléprospection. Plus de 1'000 campagnes lancées.",
-      "ogTitle": "Agence de prospection B2B Suisse | Génération de leads qualifiés | devlo",
-      "ogDescription": "devlo conçoit et pilote vos campagnes de prospection commerciale B2B multicanal pour générer des rendez-vous qualifiés avec vos prospects idéaux."
+      "title": "Agence de prospection B2B en Suisse | RDV qualifiés",
+      "description": "devlo génère des rendez-vous qualifiés en Suisse via lead generation, cold email, LinkedIn et calling. Campagnes multilingues et preuves clients.",
+      "ogTitle": "Agence de prospection B2B Suisse | Rendez-vous qualifiés | devlo",
+      "ogDescription": "devlo identifie les bons comptes, prépare vos séquences et pilote vos campagnes B2B multicanales pour générer des rendez-vous qualifiés."
     },
     "homeContent": {
       "hero": {
         "badge": "🇨🇭 Agence suisse · +1'000 campagnes lancées",
-        "h1": "Boostez votre prospection commerciale B2B avec notre agence de génération de leads et de téléprospection",
-        "h2": "Nous prenons des rendez-vous qualifiés pour vous : externalisez votre développement commercial B2B à notre agence.",
-        "paragraph": "La **prospection commerciale B2B** est l'art de contacter les bons décideurs, au bon moment, sur le bon canal. devlo est votre partenaire de confiance pour la **génération de leads**, la **prospection multicanal** et la **prise de rendez-vous qualifiés** — avec plus de 1'000 campagnes déployées depuis 2020.",
+        "h1": "Agence de prospection B2B en Suisse pour générer des rendez-vous qualifiés",
+        "h2": "Nous identifions les bons comptes, préparons vos séquences et bookons les rendez-vous que votre équipe commerciale peut convertir.",
+        "paragraph": "devlo combine **lead generation**, **signaux d'achat**, **cold email**, **LinkedIn** et **calling** pour créer un pipeline B2B mesurable. L'objectif n'est pas plus de trafic : c'est plus de conversations avec des décideurs qui correspondent à votre ICP.",
         "ctaPrimary": {
-          "label": "Planifier votre consultation gratuite →",
+          "label": "Auditer mon potentiel de leads →",
           "href": "/consultation"
         },
         "ctaSecondary": {
@@ -652,36 +652,74 @@
         }
       },
       "methodDesc": "6 étapes éprouvées, chacune améliorée en continu par les données réelles de vos campagnes.",
-      "methodReturnLabel": "Retour à l'étape 1 — le cycle recommence avec de meilleures données"
+      "methodReturnLabel": "Retour à l'étape 1 — le cycle recommence avec de meilleures données",
+      "qualifiedLeadSection": {
+        "eyebrow": "Qualification avant volume",
+        "title": "Qu'est-ce qu'un lead qualifié pour devlo ?",
+        "answer": "Un lead qualifié est un compte B2B qui correspond à votre ICP, montre un signal d'achat exploitable et peut raisonnablement accepter un rendez-vous commercial.",
+        "description": "Cette définition évite les campagnes qui maximisent seulement le nombre de contacts. Avant de lancer une séquence, devlo vérifie le fit marché, les décideurs, les signaux récents et la capacité de votre équipe à convertir le rendez-vous.",
+        "tableCaption": "Critères utilisés par devlo pour qualifier une opportunité B2B avant la prospection",
+        "headers": [
+          "Critère",
+          "Signal vérifié",
+          "Pourquoi cela génère des rendez-vous qualifiés"
+        ],
+        "rows": [
+          {
+            "criterion": "Fit ICP",
+            "signal": "Secteur, taille d'entreprise, géographie, modèle B2B, cycle de vente et capacité à acheter.",
+            "qualification": "Le rendez-vous a plus de valeur quand le compte ressemble à vos meilleurs clients actuels."
+          },
+          {
+            "criterion": "Timing",
+            "signal": "Recrutement, expansion, changement d'outil, levée de fonds, nouveau bureau ou initiative publique.",
+            "qualification": "Un signal récent donne une raison crédible de contacter le décideur maintenant."
+          },
+          {
+            "criterion": "Décideur",
+            "signal": "Rôle, seniorité, responsabilité commerciale ou opérationnelle, accès email et LinkedIn vérifiés.",
+            "qualification": "La campagne ne dépend pas d’un volume flou : elle vise les personnes qui peuvent avancer."
+          },
+          {
+            "criterion": "Message",
+            "signal": "Proposition de valeur, preuve client et angle d'approche adaptés au segment.",
+            "qualification": "Le prospect comprend rapidement pourquoi l'échange mérite 20 à 30 minutes."
+          }
+        ],
+        "cta": {
+          "label": "Recevoir une analyse de fit",
+          "href": "/consultation"
+        }
+      }
     },
     "consultationSeo": {
-      "title": "Consultation gratuite | Stratégie de prospection B2B sur mesure",
-      "description": "Obtenez votre stratégie de prospection outbound gratuite et personnalisée. Partagez votre ICP et recevez un plan d'action complet sous 24h. Agence B2B suisse."
+      "title": "Consultation gratuite | Audit lead generation et prospection B2B",
+      "description": "Auditez votre potentiel de leads qualifiés avec devlo. ICP, TAM, signaux d'achat, séquences et plan d'action pour générer des rendez-vous B2B."
     },
     "consultationContent": {
-      "h1": "Obtenez votre stratégie outbound gratuite et ultra-ciblée pour vos meilleurs clients B2B",
+      "h1": "Auditez votre potentiel de leads qualifiés avant de lancer une campagne B2B",
       "reassurance": [
         "Gratuit et sans engagement",
         "Réponse sous 24h",
         "Top agence sur Outbound-experts.com"
       ],
-      "intro": "Partagez quelques détails sur votre Profil Client Idéal et nous construirons un plan de prospection personnalisé pour vous, avant même notre premier échange.",
+      "intro": "Partagez votre marché, votre ICP et vos objectifs. Nous préparons une lecture concrète de votre potentiel : comptes prioritaires, signaux exploitables, séquences à lancer et conditions nécessaires pour générer des rendez-vous qualifiés.",
       "deliverablesTitle": "Ce que vous recevez",
       "deliverables": [
         {
           "icon": "🎯",
-          "title": "Résumé ICP",
-          "desc": "Vos meilleurs comptes cibles et intitulés de poste clairement définis pour cibler les bons prospects"
+          "title": "Audit ICP et TAM",
+          "desc": "Les segments qui méritent d'être priorisés, ceux à éviter, et le volume réaliste de comptes activables"
         },
         {
           "icon": "📨",
-          "title": "Plan multicanal",
-          "desc": "1 à 2 flux de prospection email, LinkedIn et téléphone entièrement adaptés à votre marché"
+          "title": "Plan de séquences",
+          "desc": "Les angles email, LinkedIn et téléphone à tester selon le marché, le timing et les signaux d'achat disponibles"
         },
         {
           "icon": "✍️",
-          "title": "Accroches & CTA",
-          "desc": "Idées concrètes d'objets d'emails, accroches et call-to-actions qui génèrent des réponses"
+          "title": "Priorités de lancement",
+          "desc": "Les conditions à valider avant le premier batch : données, décideurs, messages, CRM, délivrabilité et mesure"
         }
       ],
       "proof": {
@@ -748,14 +786,14 @@
         "datePublished": "2024-01-15",
         "dateModified": "2026-03-15"
       },
-      "formTitle": "Planifiez votre consultation gratuite",
-      "formSubtitle": "Notre équipe prépare votre stratégie outbound avant même notre premier appel.",
+      "formTitle": "Planifiez votre audit gratuit",
+      "formSubtitle": "Notre équipe prépare une première lecture de votre potentiel de leads avant l'appel.",
       "hubspot": {
         "portalId": "8082524",
         "formId": "54090bd3-970d-4ad1-b3b3-1c81d54c291e",
         "region": "na2"
       },
-      "postForm": "En soumettant ce formulaire, notre équipe vous contacte sous 24h avec votre stratégie outbound personnalisée."
+      "postForm": "En soumettant ce formulaire, notre équipe vous contacte sous 24h avec les prochaines étapes pour cadrer votre potentiel de leads qualifiés."
     },
     "academySeo": {
       "title": "Outbound Academy | Formation prospection B2B pour SDR et BDR",
@@ -1254,19 +1292,19 @@
       }
     },
     "homeSeo": {
-      "title": "B2B prospecting agency in Switzerland | Lead generation",
-      "description": "Swiss B2B prospecting agency: generation of leads and qualified appointments via cold email, LinkedIn and telemarketing. Over 1,000 campaigns launched.",
-      "ogTitle": "B2B prospecting agency Switzerland | Qualified lead generation | devlo",
-      "ogDescription": "devlo designs and manages your multi-channel B2B sales prospecting campaigns to generate qualified appointments with your ideal prospects."
+      "title": "B2B Prospecting Agency in Switzerland | Qualified Meetings",
+      "description": "devlo generates qualified B2B meetings in Switzerland through lead generation, cold email, LinkedIn and calling. Multilingual campaigns with client proof.",
+      "ogTitle": "Swiss B2B Prospecting Agency | Qualified Meetings | devlo",
+      "ogDescription": "devlo identifies the right accounts, prepares your sequences and runs multichannel B2B campaigns that generate qualified sales meetings."
     },
     "homeContent": {
       "hero": {
         "badge": "🇨🇭 Swiss agency - +1,000 campaigns launched",
-        "h1": "Boost your B2B sales prospecting with our lead generation and telemarketing agency",
-        "h2": "We'll make qualified appointments for you: outsource your B2B sales development to our agency.",
-        "paragraph": "**B2B sales prospecting** is the art of contacting the right decision-makers, at the right time, on the right channel. devlo is your trusted partner for **lead generation**, **multi-channel prospecting** and **qualified appointment setting** — with over 1,000 campaigns deployed since 2020.",
+        "h1": "Swiss B2B prospecting agency for qualified sales meetings",
+        "h2": "We identify the right accounts, prepare your sequences and book meetings your sales team can convert.",
+        "paragraph": "devlo combines **lead generation**, **buying signals**, **cold email**, **LinkedIn** and **calling** to create a measurable B2B pipeline. The objective is not more traffic: it is more conversations with decision-makers who match your ICP.",
         "ctaPrimary": {
-          "label": "Schedule your free consultation →",
+          "label": "Audit my lead potential →",
           "href": "/consultation"
         },
         "ctaSecondary": {
@@ -1883,36 +1921,74 @@
         }
       },
       "methodDesc": "6 proven steps, each continuously improved by real data from your campaigns.",
-      "methodReturnLabel": "Back to step 1 — the cycle restarts with better data"
+      "methodReturnLabel": "Back to step 1 — the cycle restarts with better data",
+      "qualifiedLeadSection": {
+        "eyebrow": "Qualification before volume",
+        "title": "What does devlo consider a qualified lead?",
+        "answer": "A qualified lead is a B2B account that matches your ICP, shows an actionable buying signal and can reasonably accept a commercial meeting.",
+        "description": "This definition avoids campaigns that only maximize contact volume. Before launching a sequence, devlo checks market fit, decision-makers, recent signals and your team’s ability to convert the meeting.",
+        "tableCaption": "Criteria used by devlo to qualify a B2B opportunity before outreach",
+        "headers": [
+          "Criterion",
+          "Signal checked",
+          "Why it generates qualified meetings"
+        ],
+        "rows": [
+          {
+            "criterion": "ICP fit",
+            "signal": "Industry, company size, geography, B2B model, sales cycle and buying capacity.",
+            "qualification": "The meeting is more valuable when the account looks like your best current customers."
+          },
+          {
+            "criterion": "Timing",
+            "signal": "Hiring, expansion, tool change, funding, new office or public initiative.",
+            "qualification": "A recent signal gives a credible reason to contact the decision-maker now."
+          },
+          {
+            "criterion": "Decision-maker",
+            "signal": "Role, seniority, commercial or operational responsibility, verified email and LinkedIn access.",
+            "qualification": "The campaign does not rely on vague volume: it targets people who can move the deal forward."
+          },
+          {
+            "criterion": "Message",
+            "signal": "Value proposition, client proof and outreach angle adapted to the segment.",
+            "qualification": "The prospect quickly understands why a 20- to 30-minute conversation is worth it."
+          }
+        ],
+        "cta": {
+          "label": "Get a fit analysis",
+          "href": "/consultation"
+        }
+      }
     },
     "consultationSeo": {
-      "title": "Free consultation | Tailor-made B2B prospecting strategy",
-      "description": "Get your free, personalised outbound prospecting strategy. Share your KPI and receive a complete action plan within 24 hours. Swiss B2B agency."
+      "title": "Free consultation | B2B lead generation and prospecting audit",
+      "description": "Audit your qualified lead potential with devlo. ICP, TAM, buying signals, sequences and an action plan to generate B2B meetings."
     },
     "consultationContent": {
-      "h1": "Get your free, ultra-targeted outbound strategy for your best B2B customers",
+      "h1": "Audit your qualified lead potential before launching a B2B campaign",
       "reassurance": [
         "Free and without obligation",
         "Response within 24 hours",
         "Top agency on Outbound-experts.com"
       ],
-      "intro": "Share a few details about your Ideal Customer Profile and we'll build a personalised prospecting plan for you, even before our first meeting.",
+      "intro": "Share your market, ICP and objectives. We prepare a concrete readout of your potential: priority accounts, usable signals, sequences to launch and the conditions required to generate qualified meetings.",
       "deliverablesTitle": "What you receive",
       "deliverables": [
         {
           "icon": "🎯",
-          "title": "ICP summary",
-          "desc": "Your best target accounts and job titles clearly defined to target the right prospects"
+          "title": "ICP and TAM audit",
+          "desc": "The segments worth prioritizing, the ones to avoid and the realistic volume of activable accounts"
         },
         {
           "icon": "📨",
-          "title": "Multi-channel plan",
-          "desc": "1 to 2 email, LinkedIn and telephone prospecting flows tailored to your market"
+          "title": "Sequence plan",
+          "desc": "Email, LinkedIn and phone angles to test based on market, timing and available buying signals"
         },
         {
           "icon": "✍️",
-          "title": "Hangers & CTA",
-          "desc": "Concrete ideas for email subject lines, taglines and call-to-actions that generate responses"
+          "title": "Launch priorities",
+          "desc": "What must be validated before the first batch: data, decision-makers, messages, CRM, deliverability and measurement"
         }
       ],
       "proof": {
@@ -1979,14 +2055,14 @@
         "datePublished": "2024-01-15",
         "dateModified": "2026-03-15"
       },
-      "formTitle": "Schedule your free consultation",
-      "formSubtitle": "Our team prepares your outbound strategy before we even make our first call.",
+      "formTitle": "Schedule your free audit",
+      "formSubtitle": "Our team prepares an initial readout of your lead potential before the call.",
       "hubspot": {
         "portalId": "8082524",
         "formId": "54090bd3-970d-4ad1-b3b3-1c81d54c291e",
         "region": "na2"
       },
-      "postForm": "By submitting this form, our team will contact you within 24 hours with your personalised outbound strategy."
+      "postForm": "By submitting this form, our team will contact you within 24 hours with the next steps to frame your qualified lead potential."
     },
     "academySeo": {
       "title": "Outbound Academy | B2B prospecting training for SDR and BDR",
@@ -2485,19 +2561,19 @@
       }
     },
     "homeSeo": {
-      "title": "B2B Prospektionsagentur in der Schweiz | Leadgenerierung",
-      "description": "Schweizer B2B-Agentur: Generierung von Leads und qualifizierten Terminen über Cold E-Mail, LinkedIn und Teleprospecting. Mehr als 1'000 Kampagnen gestartet.",
-      "ogTitle": "B2B Prospektionsagentur Schweiz | Qualifizierte Leadgenerierung | devlo",
-      "ogDescription": "devlo entwirft und steuert Ihre B2B-Multichannel-Verkaufsakquisitionskampagnen, um qualifizierte Termine mit Ihren idealen Interessenten zu generieren."
+      "title": "B2B-Akquise Agentur Schweiz | Qualifizierte Termine",
+      "description": "devlo generiert qualifizierte B2B-Termine in der Schweiz mit Leadgenerierung, Cold Email, LinkedIn und Calling. Mehrsprachige Kampagnen mit Nachweisen.",
+      "ogTitle": "B2B-Akquise Agentur Schweiz | Qualifizierte Termine | devlo",
+      "ogDescription": "devlo identifiziert passende Accounts, bereitet Sequenzen vor und steuert mehrkanalige B2B-Kampagnen für qualifizierte Vertriebstermine."
     },
     "homeContent": {
       "hero": {
         "badge": "🇨🇭 Schweizer Agentur - +1'000 lancierte Kampagnen",
-        "h1": "Steigern Sie Ihre B2B-Geschäftsanbahnung mit unserer Agentur für Leadgenerierung und Teleprospektion",
-        "h2": "Wir vereinbaren qualifizierte Termine für Sie: Lagern Sie Ihre B2B-Geschäftsentwicklung an unsere Agentur aus.",
-        "paragraph": "**B2B-Vertriebsprospektion** ist die Kunst, die richtigen Entscheidungsträger zur richtigen Zeit über den richtigen Kanal zu kontaktieren. devlo ist Ihr zuverlässiger Partner für **Leadgenerierung**, **Multichannel-Prospektion** und **qualifizierte Terminvereinbarung** — mit mehr als 1.000 Kampagnen seit 2020.",
+        "h1": "Schweizer B2B-Akquise Agentur für qualifizierte Vertriebstermine",
+        "h2": "Wir identifizieren passende Accounts, bereiten Ihre Sequenzen vor und buchen Termine, die Ihr Vertriebsteam konvertieren kann.",
+        "paragraph": "devlo kombiniert **Leadgenerierung**, **Kaufsignale**, **Cold Email**, **LinkedIn** und **Calling**, um eine messbare B2B-Pipeline aufzubauen. Das Ziel ist nicht mehr Traffic, sondern mehr Gespräche mit Entscheidern, die zu Ihrem ICP passen.",
         "ctaPrimary": {
-          "label": "Planen Sie Ihre kostenlose Beratung →",
+          "label": "Lead-Potenzial prüfen →",
           "href": "/consultation"
         },
         "ctaSecondary": {
@@ -3114,36 +3190,74 @@
         }
       },
       "methodDesc": "6 bewährte Schritte, die jeweils durch reale Daten aus Ihren Kampagnen kontinuierlich verbessert werden.",
-      "methodReturnLabel": "Zurück zu Schritt 1 — der Zyklus beginnt mit besseren Daten von vorne"
+      "methodReturnLabel": "Zurück zu Schritt 1 — der Zyklus beginnt mit besseren Daten von vorne",
+      "qualifiedLeadSection": {
+        "eyebrow": "Qualifizierung vor Volumen",
+        "title": "Was ist für devlo ein qualifizierter Lead?",
+        "answer": "Ein qualifizierter Lead ist ein B2B-Account, der zu Ihrem ICP passt, ein nutzbares Kaufsignal zeigt und realistisch einen Vertriebstermin annehmen kann.",
+        "description": "Diese Definition verhindert Kampagnen, die nur Kontaktvolumen maximieren. Vor dem Start einer Sequenz prüft devlo Marktfit, Entscheider, aktuelle Signale und die Fähigkeit Ihres Teams, den Termin zu konvertieren.",
+        "tableCaption": "Kriterien, mit denen devlo eine B2B-Chance vor der Akquise qualifiziert",
+        "headers": [
+          "Kriterium",
+          "Geprüftes Signal",
+          "Warum daraus qualifizierte Termine entstehen"
+        ],
+        "rows": [
+          {
+            "criterion": "ICP-Fit",
+            "signal": "Branche, Unternehmensgröße, Geografie, B2B-Modell, Sales Cycle und Kaufkraft.",
+            "qualification": "Der Termin ist wertvoller, wenn der Account Ihren besten bestehenden Kunden ähnelt."
+          },
+          {
+            "criterion": "Timing",
+            "signal": "Recruiting, Expansion, Toolwechsel, Finanzierung, neuer Standort oder öffentliche Initiative.",
+            "qualification": "Ein aktuelles Signal liefert einen glaubwürdigen Grund, den Entscheider jetzt zu kontaktieren."
+          },
+          {
+            "criterion": "Entscheider",
+            "signal": "Rolle, Seniorität, kommerzielle oder operative Verantwortung, verifizierte E-Mail und LinkedIn-Zugang.",
+            "qualification": "Die Kampagne stützt sich nicht auf vages Volumen, sondern auf Personen, die Entscheidungen voranbringen können."
+          },
+          {
+            "criterion": "Botschaft",
+            "signal": "Wertversprechen, Kundennachweis und Ansprachewinkel passend zum Segment.",
+            "qualification": "Der Prospect versteht schnell, warum ein Gespräch von 20 bis 30 Minuten sinnvoll ist."
+          }
+        ],
+        "cta": {
+          "label": "Fit-Analyse erhalten",
+          "href": "/consultation"
+        }
+      }
     },
     "consultationSeo": {
-      "title": "Kostenlose Beratung | Maßgeschneiderte B2B-Prospektionsstrategie",
-      "description": "Erhalten Sie Ihre kostenlose und individuelle Outbound-Prospektionsstrategie. Teilen Sie Ihre PKI und erhalten Sie innerhalb von 24 Stunden einen vollständigen Aktionsplan. Schweizer B2B-Agentur."
+      "title": "Kostenlose Beratung | Audit für B2B Leadgenerierung und Akquise",
+      "description": "Prüfen Sie Ihr Potenzial für qualifizierte Leads mit devlo. ICP, TAM, Kaufsignale, Sequenzen und Aktionsplan für B2B-Termine."
     },
     "consultationContent": {
-      "h1": "Erhalten Sie Ihre kostenlose, ultra-gezielte Outbound-Strategie für Ihre besten B2B-Kunden",
+      "h1": "Prüfen Sie Ihr Potenzial für qualifizierte Leads vor dem Start einer B2B-Kampagne",
       "reassurance": [
         "Kostenlos und unverbindlich",
         "Antwort innerhalb von 24 Stunden",
         "Top-Agentur auf Outbound-experts.com"
       ],
-      "intro": "Teilen Sie uns einige Details über Ihr Ideales Kundenprofil mit, und wir werden noch vor unserem ersten Gespräch einen individuellen Akquiseplan für Sie erstellen.",
+      "intro": "Teilen Sie uns Markt, ICP und Ziele mit. Wir bereiten eine konkrete Einschätzung Ihres Potenzials vor: priorisierte Accounts, nutzbare Signale, zu startende Sequenzen und Bedingungen für qualifizierte Termine.",
       "deliverablesTitle": "Was Sie erhalten",
       "deliverables": [
         {
           "icon": "🎯",
-          "title": "ICP-Zusammenfassung",
-          "desc": "Ihre besten Zielkonten und klar definierten Jobtitel, um die richtigen Interessenten anzusprechen"
+          "title": "ICP- und TAM-Audit",
+          "desc": "Segmente, die priorisiert werden sollten, Segmente, die vermieden werden sollten, und das realistische Volumen aktivierbarer Accounts"
         },
         {
           "icon": "📨",
-          "title": "Mehrkanalplan",
-          "desc": "1 bis 2 vollständig auf Ihren Markt zugeschnittene E-Mail-, LinkedIn- und Telefon-Akquise-Feeds"
+          "title": "Sequenzplan",
+          "desc": "E-Mail-, LinkedIn- und Telefonwinkel, die je nach Markt, Timing und verfügbaren Kaufsignalen getestet werden sollten"
         },
         {
           "icon": "✍️",
-          "title": "Aufhänger & CTA",
-          "desc": "Konkrete Ideen für E-Mail-Betreffzeilen, Teaser und Call-to-Actions, die Antworten generieren"
+          "title": "Launch-Prioritäten",
+          "desc": "Was vor dem ersten Batch validiert werden muss: Daten, Entscheider, Messages, CRM, Zustellbarkeit und Messung"
         }
       ],
       "proof": {
@@ -3210,14 +3324,14 @@
         "datePublished": "2024-01-15",
         "dateModified": "2026-03-15"
       },
-      "formTitle": "Planen Sie Ihre kostenlose Beratung",
-      "formSubtitle": "Unser Team bereitet Ihre Outbound-Strategie schon vor unserem ersten Anruf vor.",
+      "formTitle": "Planen Sie Ihr kostenloses Audit",
+      "formSubtitle": "Unser Team bereitet vor dem Gespräch eine erste Einschätzung Ihres Lead-Potenzials vor.",
       "hubspot": {
         "portalId": "8082524",
         "formId": "54090bd3-970d-4ad1-b3b3-1c81d54c291e",
         "region": "na2"
       },
-      "postForm": "Wenn Sie dieses Formular absenden, wird sich unser Team innerhalb von 24 Stunden mit Ihrer individuellen Outbound-Strategie bei Ihnen melden."
+      "postForm": "Wenn Sie dieses Formular absenden, kontaktiert Sie unser Team innerhalb von 24 Stunden mit den nächsten Schritten zur Einschätzung Ihres Potenzials für qualifizierte Leads."
     },
     "academySeo": {
       "title": "Outbound Academy | B2B Prospektionstraining für SDR und BDR",
@@ -3716,19 +3830,19 @@
       }
     },
     "homeSeo": {
-      "title": "B2B prospectiebureau in Zwitserland | Leadgeneratie",
-      "description": "Zwitsers B2B prospectiebureau: genereren van leads en gekwalificeerde afspraken via koude e-mail, LinkedIn en telemarketing. Meer dan 1.000 campagnes gelanceerd.",
-      "ogTitle": "B2B prospectiebureau Zwitserland | Gekwalificeerde leadgeneratie | devlo",
-      "ogDescription": "devlo ontwerpt en beheert uw multi-channel B2B verkoopprospectiecampagnes om gekwalificeerde afspraken te genereren met uw ideale prospects."
+      "title": "B2B prospectiebureau Zwitserland | Gekwalificeerde afspraken",
+      "description": "devlo genereert gekwalificeerde B2B-afspraken in Zwitserland via leadgeneratie, cold email, LinkedIn en calling. Meertalige campagnes met bewijs.",
+      "ogTitle": "B2B prospectiebureau Zwitserland | Gekwalificeerde afspraken | devlo",
+      "ogDescription": "devlo identificeert de juiste accounts, bereidt uw sequenties voor en runt multichannel B2B-campagnes voor gekwalificeerde salesafspraken."
     },
     "homeContent": {
       "hero": {
         "badge": "🇨🇭 Zwitsers agentschap - +1.000 campagnes gelanceerd",
-        "h1": "Verhoog uw B2B sales prospectie met ons leadgeneratie- en telemarketingbureau",
-        "h2": "Wij maken gekwalificeerde afspraken voor u: besteed uw B2B verkoopontwikkeling uit aan ons bureau.",
-        "paragraph": "**B2B sales prospecting** is de kunst om contact op te nemen met de juiste beslissers, op het juiste moment, via het juiste kanaal. devlo is uw vertrouwde partner voor **leadgeneratie**, **multichannel prospecting** en **gekwalificeerde afspraken** — met meer dan 1.000 campagnes sinds 2020.",
+        "h1": "Zwitsers B2B prospectiebureau voor gekwalificeerde salesafspraken",
+        "h2": "Wij identificeren de juiste accounts, bereiden uw sequenties voor en boeken afspraken die uw salesteam kan converteren.",
+        "paragraph": "devlo combineert **leadgeneratie**, **koopsignalen**, **cold email**, **LinkedIn** en **calling** om een meetbare B2B-pipeline op te bouwen. Het doel is niet meer verkeer, maar meer gesprekken met beslissers die bij uw ICP passen.",
         "ctaPrimary": {
-          "label": "Plan je gratis consultatie →",
+          "label": "Audit mijn leadpotentieel →",
           "href": "/consultation"
         },
         "ctaSecondary": {
@@ -4345,36 +4459,74 @@
         }
       },
       "methodDesc": "6 bewezen stappen, elk continu verbeterd door echte gegevens uit uw campagnes.",
-      "methodReturnLabel": "Terug naar stap 1 — de cyclus herstart met betere gegevens"
+      "methodReturnLabel": "Terug naar stap 1 — de cyclus herstart met betere gegevens",
+      "qualifiedLeadSection": {
+        "eyebrow": "Kwalificatie vóór volume",
+        "title": "Wat ziet devlo als een gekwalificeerde lead?",
+        "answer": "Een gekwalificeerde lead is een B2B-account dat bij uw ICP past, een bruikbaar koopsignaal toont en redelijkerwijs een commerciële afspraak kan accepteren.",
+        "description": "Deze definitie voorkomt campagnes die alleen contactvolume maximaliseren. Voor een sequentie live gaat, controleert devlo marktfit, beslissers, recente signalen en het vermogen van uw team om de afspraak te converteren.",
+        "tableCaption": "Criteria die devlo gebruikt om een B2B-kans te kwalificeren vóór prospectie",
+        "headers": [
+          "Criterium",
+          "Gecontroleerd signaal",
+          "Waarom dit gekwalificeerde afspraken oplevert"
+        ],
+        "rows": [
+          {
+            "criterion": "ICP-fit",
+            "signal": "Sector, bedrijfsgrootte, geografie, B2B-model, salescyclus en koopcapaciteit.",
+            "qualification": "De afspraak is waardevoller wanneer het account lijkt op uw beste bestaande klanten."
+          },
+          {
+            "criterion": "Timing",
+            "signal": "Aanwerving, expansie, toolwissel, financiering, nieuw kantoor of openbaar initiatief.",
+            "qualification": "Een recent signaal geeft een geloofwaardige reden om de beslisser nu te contacteren."
+          },
+          {
+            "criterion": "Beslisser",
+            "signal": "Rol, senioriteit, commerciële of operationele verantwoordelijkheid, geverifieerde e-mail en LinkedIn-toegang.",
+            "qualification": "De campagne steunt niet op vaag volume, maar richt zich op mensen die het proces vooruit kunnen helpen."
+          },
+          {
+            "criterion": "Boodschap",
+            "signal": "Waardepropositie, klantbewijs en invalshoek aangepast aan het segment.",
+            "qualification": "De prospect begrijpt snel waarom een gesprek van 20 tot 30 minuten de moeite waard is."
+          }
+        ],
+        "cta": {
+          "label": "Ontvang een fitanalyse",
+          "href": "/consultation"
+        }
+      }
     },
     "consultationSeo": {
-      "title": "Gratis advies | B2B prospectie strategie op maat",
-      "description": "Ontvang je gratis, gepersonaliseerde outbound prospectiestrategie. Deel je KPI en ontvang binnen 24 uur een compleet actieplan. Zwitsers B2B-agentschap."
+      "title": "Gratis consultatie | Audit voor B2B leadgeneratie en prospectie",
+      "description": "Audit uw potentieel voor gekwalificeerde leads met devlo. ICP, TAM, koopsignalen, sequenties en actieplan voor B2B-afspraken."
     },
     "consultationContent": {
-      "h1": "Ontvang uw gratis, ultra-gerichte outbound strategie voor uw beste B2B klanten",
+      "h1": "Audit uw potentieel voor gekwalificeerde leads vóór de lancering van een B2B-campagne",
       "reassurance": [
         "Gratis en vrijblijvend",
         "Antwoord binnen 24 uur",
         "Topbureau op Outbound-experts.com"
       ],
-      "intro": "Deel een paar details over je ideale klantenprofiel en we stellen een gepersonaliseerd prospectieplan voor je op, nog voor onze eerste ontmoeting.",
-      "deliverablesTitle": "Wat je ontvangt",
+      "intro": "Deel uw markt, ICP en doelstellingen. Wij bereiden een concrete lezing van uw potentieel voor: prioritaire accounts, bruikbare signalen, te lanceren sequenties en voorwaarden om gekwalificeerde afspraken te genereren.",
+      "deliverablesTitle": "Wat u ontvangt",
       "deliverables": [
         {
           "icon": "🎯",
-          "title": "Samenvatting ICP",
-          "desc": "Je beste doelaccounts en functietitels duidelijk gedefinieerd om je op de juiste prospects te richten"
+          "title": "ICP- en TAM-audit",
+          "desc": "De segmenten die prioriteit verdienen, de segmenten om te vermijden en het realistische volume activeerbare accounts"
         },
         {
           "icon": "📨",
-          "title": "Plan voor meerdere kanalen",
-          "desc": "1 tot 2 e-mail, LinkedIn en telefonische prospectiestromen op maat van jouw markt"
+          "title": "Sequentieplan",
+          "desc": "E-mail-, LinkedIn- en telefoonhoeken om te testen op basis van markt, timing en beschikbare koopsignalen"
         },
         {
           "icon": "✍️",
-          "title": "Hangers & CTA",
-          "desc": "Concrete ideeën voor e-mailonderwerpregels, taglines en call-to-actions die reacties genereren"
+          "title": "Lanceringsprioriteiten",
+          "desc": "Wat moet worden gevalideerd vóór de eerste batch: data, beslissers, berichten, CRM, deliverability en meting"
         }
       ],
       "proof": {
@@ -4441,14 +4593,14 @@
         "datePublished": "2024-01-15",
         "dateModified": "2026-03-15"
       },
-      "formTitle": "Plan uw gratis consultatie",
-      "formSubtitle": "Ons team bereidt uw outbound strategie al voor ons eerste gesprek voor.",
+      "formTitle": "Plan uw gratis audit",
+      "formSubtitle": "Ons team bereidt vóór het gesprek een eerste lezing van uw leadpotentieel voor.",
       "hubspot": {
         "portalId": "8082524",
         "formId": "54090bd3-970d-4ad1-b3b3-1c81d54c291e",
         "region": "na2"
       },
-      "postForm": "Als je dit formulier verstuurt, neemt ons team binnen 24 uur contact met je op met jouw gepersonaliseerde outbound strategie."
+      "postForm": "Door dit formulier te verzenden, neemt ons team binnen 24 uur contact met u op met de volgende stappen om uw potentieel voor gekwalificeerde leads te kaderen."
     },
     "academySeo": {
       "title": "Outbound Academy | B2B training voor SDR en BDR",
