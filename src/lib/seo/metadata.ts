@@ -16,7 +16,7 @@ export function normalizeRoute(path: string): string {
 }
 
 export function stripDevloSuffix(title: string): string {
-  return title.replace(/\s*\|\s*devlo\s*$/i, "").trim();
+  return title.replace(/\s*(?:\|\s*devlo|[-—]\s*devlo)\s*$/i, "").trim();
 }
 
 export function buildLanguageAlternates(path: string): NonNullable<Metadata["alternates"]>["languages"] {
