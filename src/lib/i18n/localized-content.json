@@ -1823,22 +1823,22 @@
   },
   "service:generation-leads": {
     "title": {
-      "de": "B2B Leadgenerierung Schweiz: qualifizierte ICP-Listen | devlo",
-      "en": "B2B Lead Generation Switzerland: qualified ICP lists | devlo",
-      "fr": "Lead Generation B2B Suisse : listes ICP qualifiées | devlo",
-      "nl": "B2B leadgeneratie Zwitserland: gekwalificeerde ICP-lijsten | devlo"
+      "de": "B2B-Leadgenerierungsagentur Schweiz: ICP-Listen | devlo",
+      "en": "Swiss B2B lead generation agency: ICP lists | devlo",
+      "fr": "Agence Lead Generation B2B Suisse | Listes ICP | devlo",
+      "nl": "B2B leadgeneratiebureau Zwitserland: ICP-lijsten | devlo"
     },
     "description": {
-      "de": "devlo erstellt qualifizierte B2B-Listen für die Schweiz und Europa: ICP, TAM, Kaufsignale, Entscheider, verifizierte E-Mails und Scoring für Outbound-Sequenzen.",
-      "en": "devlo builds qualified B2B lists for Switzerland and Europe: ICP, TAM, buying signals, decision-makers, verified emails and scoring for outbound sequences.",
-      "fr": "Agence de lead generation B2B en Suisse : ICP, TAM, signaux d'achat, décideurs, emails vérifiés et scoring pour séquences outbound.",
-      "nl": "devlo bouwt gekwalificeerde B2B-lijsten voor Zwitserland en Europa: ICP, TAM, koopsignalen, beslissers, geverifieerde e-mails en scoring voor outbound sequenties."
+      "de": "Schweizer B2B-Leadgenerierungsagentur, die Ihren TAM in ICP-Accounts, verifizierte Entscheider und prospektionsbereite Segmente übersetzt.",
+      "en": "Swiss B2B lead generation agency turning your TAM into ICP accounts, verified decision-makers and segments ready for prospecting.",
+      "fr": "Agence lead generation B2B suisse pour transformer votre TAM en comptes ICP décideurs vérifiés et segments prêts à prospecter.",
+      "nl": "Zwitsers B2B leadgeneratiebureau dat uw TAM omzet in ICP-accounts, geverifieerde beslissers en prospectieklare segmenten."
     },
     "body": {
-      "de": "B2B Leadgenerierung Schweiz: qualifizierte ICP-Listen | devlo\n\ndevlo erstellt qualifizierte B2B-Listen für die Schweiz und Europa: ICP, TAM, Kaufsignale, Entscheider, verifizierte E-Mails und Scoring für Outbound-Sequenzen.",
-      "en": "B2B Lead Generation Switzerland: qualified ICP lists | devlo\n\ndevlo builds qualified B2B lists for Switzerland and Europe: ICP, TAM, buying signals, decision-makers, verified emails and scoring for outbound sequences.",
+      "de": "B2B-Leadgenerierungsagentur Schweiz: ICP-Listen | devlo\n\nSchweizer B2B-Leadgenerierungsagentur, die Ihren TAM in ICP-Accounts, verifizierte Entscheider und prospektionsbereite Segmente übersetzt.",
+      "en": "Swiss B2B lead generation agency: ICP lists | devlo\n\nSwiss B2B lead generation agency turning your TAM into ICP accounts, verified decision-makers and segments ready for prospecting.",
       "fr": null,
-      "nl": "B2B leadgeneratie Zwitserland: gekwalificeerde ICP-lijsten | devlo\n\ndevlo bouwt gekwalificeerde B2B-lijsten voor Zwitserland en Europa: ICP, TAM, koopsignalen, beslissers, geverifieerde e-mails en scoring voor outbound sequenties."
+      "nl": "B2B leadgeneratiebureau Zwitserland: ICP-lijsten | devlo\n\nZwitsers B2B leadgeneratiebureau dat uw TAM omzet in ICP-accounts, geverifieerde beslissers en prospectieklare segmenten."
     },
     "ogImage": {
       "fr": "/images/devlo_OG_Banner.webp"
@@ -1895,22 +1895,22 @@
   },
   "service:outbound-multicanal": {
     "title": {
-      "de": "B2B Multichannel-Outbound | Cold E-Mail + LinkedIn + Calling | devlo",
-      "en": "B2B Multichannel Outbound | Cold Email + LinkedIn + Calling | devlo",
-      "fr": "Outbound Multicanal B2B | Cold email + LinkedIn + Calling | devlo",
-      "nl": "B2B multichannel outbound | Cold email + LinkedIn + Calling | devlo"
+      "de": "B2B-Outbound-Agentur Schweiz | Email LinkedIn Calling | devlo",
+      "en": "Swiss B2B Outbound Agency | Email LinkedIn Calling | devlo",
+      "fr": "Agence Outbound B2B Suisse | Email LinkedIn Calling | devlo",
+      "nl": "B2B outbound bureau Zwitserland | Email LinkedIn Bellen | devlo"
     },
     "description": {
-      "de": "Schweizer B2B-Agentur für Multichannel-Outbound: koordinierte Cold E-Mail, LinkedIn und Calling für qualifizierte Termine mit den richtigen Entscheidern.",
-      "en": "Swiss B2B multichannel outbound agency: coordinated cold email, LinkedIn and calling to generate qualified meetings with the right decision-makers.",
-      "fr": "Agence outbound multicanal B2B en Suisse : cold email, LinkedIn et calling coordonnés pour générer des rendez-vous qualifiés avec les bons décideurs.",
-      "nl": "Zwitserse B2B agency voor multichannel outbound: gecoördineerde cold email, LinkedIn en calling voor gekwalificeerde afspraken met de juiste beslissers."
+      "de": "Schweizer B2B-Outbound-Agentur für Omnichannel-Akquise: Cold E-Mail LinkedIn Calling und qualifizierte Termine.",
+      "en": "Swiss B2B outbound agency for omnichannel prospecting: cold email LinkedIn calling and qualified meetings.",
+      "fr": "Agence outbound B2B suisse pour prospection omnicanale : cold email LinkedIn calling et rendez-vous qualifiés.",
+      "nl": "Zwitsers B2B outbound bureau voor omnichannel prospectie: cold email LinkedIn bellen en gekwalificeerde afspraken."
     },
     "body": {
-      "de": "B2B Multichannel-Outbound | Cold E-Mail + LinkedIn + Calling | devlo\n\nSchweizer B2B-Agentur für Multichannel-Outbound: koordinierte Cold E-Mail, LinkedIn und Calling für qualifizierte Termine mit den richtigen Entscheidern.",
-      "en": "B2B Multichannel Outbound | Cold Email + LinkedIn + Calling | devlo\n\nSwiss B2B multichannel outbound agency: coordinated cold email, LinkedIn and calling to generate qualified meetings with the right decision-makers.",
+      "de": "B2B-Outbound-Agentur Schweiz | Email LinkedIn Calling | devlo\n\nSchweizer B2B-Outbound-Agentur für Omnichannel-Akquise: Cold E-Mail LinkedIn Calling und qualifizierte Termine.",
+      "en": "Swiss B2B Outbound Agency | Email LinkedIn Calling | devlo\n\nSwiss B2B outbound agency for omnichannel prospecting: cold email LinkedIn calling and qualified meetings.",
       "fr": null,
-      "nl": "B2B multichannel outbound | Cold email + LinkedIn + Calling | devlo\n\nZwitserse B2B agency voor multichannel outbound: gecoördineerde cold email, LinkedIn en calling voor gekwalificeerde afspraken met de juiste beslissers."
+      "nl": "B2B outbound bureau Zwitserland | Email LinkedIn Bellen | devlo\n\nZwitsers B2B outbound bureau voor omnichannel prospectie: cold email LinkedIn bellen en gekwalificeerde afspraken."
     },
     "ogImage": {
       "fr": "/images/devlo_OG_Banner.webp"
@@ -1919,22 +1919,22 @@
   },
   "service:prise-de-rendez-vous": {
     "title": {
-      "de": "B2B-Terminvereinbarung: Qualifiziertes Booking | devlo",
-      "en": "B2B appointment setting: qualified booking | devlo",
-      "fr": "Prise de rendez-vous B2B : booking qualifié | devlo",
-      "nl": "B2B afspraken maken: gekwalificeerd boeken | devlo"
+      "de": "Qualifizierte B2B-Termine Schweiz | Booking | devlo",
+      "en": "Qualified B2B meetings Switzerland | Booking | devlo",
+      "fr": "Rendez-vous qualifiés B2B Suisse | Booking | devlo",
+      "nl": "Gekwalificeerde B2B-afspraken Zwitserland | Booking | devlo"
     },
     "description": {
-      "de": "Ausgelagerter B2B-Terminservice: Inbox-Management, Qualifizierung, Agenda-Booking und Reduzierung von No-Shows.",
-      "en": "Outsourced B2B appointment scheduling service: inbox management, qualification, diary booking and no-show reduction.",
-      "fr": "Service de prise de rendez-vous B2B externalisé : gestion inbox, qualification, booking agenda et réduction du no-show.",
-      "nl": "Uitbestede B2B afsprakenservice: inboxbeheer, kwalificatie, agendaboeking en no-showreductie."
+      "de": "B2B-Terminservice in der Schweiz: Inbox-Management Qualifizierung Kalender-Booking und Reduzierung von No-Shows.",
+      "en": "B2B appointment setting service in Switzerland: inbox management qualification calendar booking and no-show reduction.",
+      "fr": "Service de prise de rendez-vous B2B en Suisse : gestion inbox qualification booking agenda et réduction du no-show.",
+      "nl": "B2B afsprakenservice in Zwitserland: inboxbeheer kwalificatie agendaboeking en no-showreductie."
     },
     "body": {
-      "de": "B2B-Terminvereinbarung: Qualifiziertes Booking | devlo\n\nAusgelagerter B2B-Terminvereinbarungsservice: Inbox-Management, Qualifizierung, Agenda-Booking und Reduzierung von No-Shows.",
-      "en": "B2B appointment setting: qualified booking | devlo\n\nOutsourced B2B appointment scheduling service: inbox management, qualification, diary booking and no-show reduction.",
+      "de": "Qualifizierte B2B-Termine Schweiz | Booking | devlo\n\nB2B-Terminservice in der Schweiz: Inbox-Management Qualifizierung Kalender-Booking und Reduzierung von No-Shows.",
+      "en": "Qualified B2B meetings Switzerland | Booking | devlo\n\nB2B appointment setting service in Switzerland: inbox management qualification calendar booking and no-show reduction.",
       "fr": null,
-      "nl": "B2B afspraken maken: gekwalificeerd boeken | devlo\n\nUitbestede service voor het maken van B2B-afspraken: inboxbeheer, kwalificatie, agendaboeking en no-showreductie."
+      "nl": "Gekwalificeerde B2B-afspraken Zwitserland | Booking | devlo\n\nB2B afsprakenservice in Zwitserland: inboxbeheer kwalificatie agendaboeking en no-showreductie."
     },
     "ogImage": {
       "fr": "/images/devlo_OG_Banner.webp"

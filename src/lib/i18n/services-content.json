@@ -97,19 +97,20 @@
         "slug": "outbound-multicanal",
         "path": "/services/outbound-multicanal",
         "navTitle": "Outbound Multicanal",
-        "pageTitle": "Prospection Outbound Multicanal B2B : Cold Email, LinkedIn et Cold Calling",
+        "pageTitle": "Agence Outbound B2B Suisse : Cold Email, LinkedIn et Calling",
         "pageSubtitle": "Cold email + LinkedIn + calling coordonnés pour générer des rendez-vous qualifiés avec les bons décideurs.",
-        "metadataTitle": "Prospection Outbound Multicanal B2B",
-        "metadataDescription": "Agence de prospection outbound multicanal B2B basée en Suisse : cold email, LinkedIn et calling pour générer des rendez-vous qualifiés.",
+        "metadataTitle": "Agence Outbound B2B Suisse : multicanal",
+        "metadataDescription": "Agence outbound B2B suisse pour prospection omnicanale : cold email, LinkedIn, calling et rendez-vous qualifiés.",
         "metadataKeywords": [
           "prospection outbound multicanal",
+          "agence outbound B2B suisse",
           "agence outbound B2B",
           "cold email LinkedIn calling",
           "génération de rendez-vous B2B",
           "externaliser prospection commerciale"
         ],
         "heroParagraphs": [
-          "La prospection outbound multicanal consiste à contacter vos comptes prioritaires via plusieurs canaux coordonnés : cold email personnalisé, messages LinkedIn, appels ciblés et relances synchronisées. devlo conçoit et exécute ces campagnes de A à Z, de la définition de l'ICP à la qualification des réponses et à la prise de rendez-vous directement dans l'agenda de votre équipe commerciale.",
+          "En tant qu'agence outbound B2B en Suisse, devlo contacte vos comptes prioritaires via plusieurs canaux coordonnés : cold email personnalisé, messages LinkedIn, appels ciblés et relances synchronisées. Nous concevons et exécutons ces campagnes de A à Z, de la définition de l'ICP à la qualification des réponses et à la prise de rendez-vous directement dans l'agenda de votre équipe commerciale.",
           "Contrairement à une approche mono-canal, le multicanal réduit la dépendance à une seule boîte de réception. Nos campagnes combinent lemlist pour les séquences email, LinkedIn Sales Navigator pour le ciblage, et un script téléphonique adapté aux objections du marché. Le résultat attendu n'est pas un volume de contacts : ce sont des conversations commerciales avec les bons décideurs au bon moment."
         ],
         "coverageTitle": "Ce que couvre ce service",
@@ -148,7 +149,7 @@
             "description": "Itérer chaque semaine pour améliorer les performances."
           }
         ],
-        "editorialTitle": "Pourquoi le multicanal est-il plus performant que le mono-canal ?",
+        "editorialTitle": "Pourquoi choisir une agence outbound multicanal plutôt qu'un canal isolé ?",
         "editorialParagraphs": [
           "Le cold email seul atteint les prospects qui lisent leurs emails. Le LinkedIn outreach atteint ceux qui interagissent davantage sur le réseau. Le cold calling déclenche des conversations avec des décideurs très sollicités qui répondent peu par écrit. En combinant ces canaux, vous augmentez mécaniquement votre surface de contact.",
           "L'important n'est pas le volume brut, mais la coordination. Chez devlo, chaque canal sert un objectif précis dans la séquence : l'email ouvre, LinkedIn crédibilise, l'appel accélère. Cette orchestration réduit la dépendance à un canal unique et améliore la régularité du pipeline."
@@ -1373,19 +1374,21 @@
         "slug": "generation-leads",
         "path": "/services/generation-leads",
         "navTitle": "Génération de leads",
-        "pageTitle": "Lead Generation B2B : listes qualifiées basées sur ICP, TAM et signaux d'achat",
+        "pageTitle": "Agence Lead Generation B2B Suisse : listes qualifiées ICP, TAM et signaux",
         "pageSubtitle": "Nous transformons votre marché cible en comptes priorisés, décideurs vérifiés et segments prêts pour vos séquences.",
-        "metadataTitle": "Lead Generation B2B Suisse : listes ICP qualifiées",
-        "metadataDescription": "Agence de lead generation B2B en Suisse : ICP, TAM, signaux d'achat, décideurs, emails vérifiés et scoring pour séquences outbound.",
+        "metadataTitle": "Agence Lead Generation B2B Suisse : listes ICP",
+        "metadataDescription": "Agence lead generation B2B suisse pour transformer votre TAM en comptes ICP, décideurs vérifiés et segments prêts à prospecter.",
         "metadataKeywords": [
           "lead generation B2B",
+          "agence lead generation B2B suisse",
+          "génération de prospects B2B suisse",
           "construction ICP",
           "TAM SAM ICP",
           "qualification prospects",
           "signaux d'achat B2B"
         ],
         "heroParagraphs": [
-          "La lead generation B2B ne consiste pas à acheter une base de contacts. Elle consiste à déterminer quelles entreprises peuvent réellement devenir clientes, quels décideurs doivent être approchés, et quel signal rend le timing commercial pertinent.",
+          "Pour devlo, agence de lead generation B2B en Suisse, la génération de prospects ne consiste pas à acheter une base de contacts. Elle consiste à déterminer quelles entreprises peuvent réellement devenir clientes, quels décideurs doivent être approchés, et quel signal rend le timing commercial pertinent.",
           "Notre méthode croise ICP, TAM, signaux d'achat, séniorité, joignabilité et validation de données. Chaque compte est priorisé pour que les séquences outbound partent sur un segment cohérent, défendable et exploitable par les ventes.",
           "La livraison finale n'est pas seulement un CSV : c'est une base prête à lancer dans vos séquences, avec les règles de qualification documentées pour reproduire le processus sur les prochains batchs."
         ],
@@ -1428,7 +1431,7 @@
             "description": "Exporter une base propre et actionnable."
           }
         ],
-        "editorialTitle": "Un pipeline se construit avant la première séquence",
+        "editorialTitle": "Comment une agence de lead generation construit-elle un pipeline avant la séquence ?",
         "editorialParagraphs": [
           "Les meilleures séquences outbound échouent avec une mauvaise base. Nous traitons la lead generation comme une discipline à part entière : cadrage ICP, construction du marché adressable, priorisation des comptes, identification des décideurs et contrôle de la donnée avant activation.",
           "La valeur livrée n'est pas seulement la liste finale. C'est aussi la méthode reproductible qui permet à votre équipe de savoir pourquoi un compte entre dans le batch, quel message lui correspond, et quand il doit passer en séquence."
@@ -1810,18 +1813,20 @@
         "slug": "prise-de-rendez-vous",
         "path": "/services/prise-de-rendez-vous",
         "navTitle": "Prise de rendez-vous",
-        "pageTitle": "Prise de Rendez-Vous B2B : booking qualifié et gestion inbox pour remplir votre agenda",
+        "pageTitle": "Prise de Rendez-Vous B2B Suisse : rendez-vous qualifiés et gestion inbox",
         "pageSubtitle": "Réactivité, qualification et réduction des no-shows.",
-        "metadataTitle": "Prise de rendez-vous B2B : booking qualifié",
-        "metadataDescription": "Service de prise de rendez-vous B2B externalisé : gestion inbox, qualification, booking agenda et réduction du no-show.",
+        "metadataTitle": "Rendez-vous qualifiés B2B Suisse : booking",
+        "metadataDescription": "Service de prise de rendez-vous B2B en Suisse : gestion inbox, qualification, booking agenda et réduction du no-show.",
         "metadataKeywords": [
           "prise de rendez-vous B2B",
+          "prise de rendez-vous B2B suisse",
+          "rendez-vous qualifiés B2B suisse",
           "booking qualifié",
           "gestion inbox prospection",
           "appointment setting"
         ],
         "heroParagraphs": [
-          "La **prise de rendez-vous B2B** est l'étape opérationnelle qui consiste à convertir un intérêt prospect en meeting qualifié dans l'agenda de votre équipe commerciale. C'est le point critique entre prospection et revenu : un prospect intéressé peut être perdu si la réponse tarde, si la **qualification** est trop légère, ou si le suivi est insuffisant.",
+          "La prise de rendez-vous B2B est le point critique entre prospection et revenu. Un prospect intéressé peut être perdu si la réponse tarde, si la qualification est trop légère, ou si le suivi est insuffisant. devlo transforme cet intérêt en rendez-vous qualifiés B2B exploitables par votre équipe commerciale.",
           "devlo gère l'inbox de manière proactive et réactive : traitement rapide des réponses, qualification des opportunités, booking direct dans votre agenda et relances de confirmation pour sécuriser la présence aux rendez-vous.",
           "Cette discipline opérationnelle améliore la conversion réelle des campagnes outbound et réduit fortement le taux de no-show."
         ],
@@ -1859,7 +1864,7 @@
             "description": "Transmission des informations clés à votre équipe."
           }
         ],
-        "editorialTitle": "Comment transformer une réponse en rendez-vous réellement utile ?",
+        "editorialTitle": "Comment transformer une réponse en rendez-vous B2B réellement utile ?",
         "editorialParagraphs": [
           "Une inbox mal gérée détruit le **ROI outbound**. Selon une étude Harvard Business Review, les entreprises qui répondent en moins de **5 minutes** ont 21x plus de chances de qualifier un lead. La **vitesse de réponse** et la qualité de qualification font la différence entre un simple intérêt et un rendez-vous exploitable.",
           "Par conséquent, nous traitons chaque interaction avec une **logique de conversion** : contextualisation, qualification, planification et suivi jusqu'à la **présence effective** au rendez-vous."
@@ -2593,10 +2598,10 @@
         "slug": "outbound-multicanal",
         "path": "/services/outbound-multicanal",
         "navTitle": "Outbound Multichannel",
-        "pageTitle": "B2B Multichannel Outbound Prospecting: Cold Email, LinkedIn and Cold Calling",
+        "pageTitle": "Swiss B2B Outbound Agency: Cold Email, LinkedIn and Calling",
         "pageSubtitle": "Coordinated cold email, LinkedIn and calling to create qualified meetings with the right decision-makers.",
-        "metadataTitle": "B2B Outbound Multichannel Prospecting",
-        "metadataDescription": "Outbound multi-channel B2B prospecting agency based in Switzerland: cold email, LinkedIn and calling to generate qualified appointments.",
+        "metadataTitle": "Swiss B2B outbound agency: multichannel",
+        "metadataDescription": "Swiss B2B outbound agency for omnichannel prospecting: cold email, LinkedIn, calling and qualified meetings.",
         "metadataKeywords": [
           "prospection outbound multicanal",
           "agence outbound B2B",
@@ -2605,7 +2610,7 @@
           "externaliser prospection commerciale"
         ],
         "heroParagraphs": [
-          "Multichannel outbound prospecting means contacting priority accounts through coordinated channels: personalized cold email, LinkedIn messages, targeted calls and synchronized follow-ups. devlo designs and runs the campaign end to end, from ICP definition to reply qualification and booked meetings in your sales calendar.",
+          "As a B2B outbound agency in Switzerland, devlo contacts your priority accounts through coordinated channels: personalized cold email, LinkedIn messages, targeted calls and synchronized follow-ups. We design and run the campaign end to end, from ICP definition to reply qualification and booked meetings in your sales calendar.",
           "Unlike a single-channel approach, multichannel outbound reduces dependence on one inbox. We combine lemlist for email sequences, LinkedIn Sales Navigator for targeting and a phone script adapted to market objections. The expected output is not contact volume: it is commercial conversations with the right decision-makers at the right time."
         ],
         "coverageTitle": "What this service covers",
@@ -2644,7 +2649,7 @@
             "description": "Iterate every week to improve performance."
           }
         ],
-        "editorialTitle": "Why does multi-channel outperform single-channel prospecting?",
+        "editorialTitle": "Why choose a multichannel outbound agency instead of one isolated channel?",
         "editorialParagraphs": [
           "Cold email reaches prospects who read and answer their inbox. LinkedIn outreach reaches people who interact more on the network. Calling creates conversations with busy decision-makers who rarely answer in writing. Combining these channels increases the number of ways a target account can engage.",
           "The point is not raw volume but coordination. At devlo, each channel has a precise role in the sequence: email opens, LinkedIn builds credibility, calls accelerate. This orchestration reduces dependency on one channel and improves pipeline consistency."
@@ -3869,10 +3874,10 @@
         "slug": "generation-leads",
         "path": "/services/generation-leads",
         "navTitle": "Lead generation",
-        "pageTitle": "B2B Lead Generation: qualified lists based on ICP, TAM and buying signals",
+        "pageTitle": "Swiss B2B Lead Generation Agency: qualified ICP, TAM and signal-based lists",
         "pageSubtitle": "We turn your target market into prioritized accounts, verified decision-makers and segments ready for outbound sequences.",
-        "metadataTitle": "B2B Lead Generation Switzerland: qualified ICP lists",
-        "metadataDescription": "devlo builds qualified B2B lists for Switzerland and Europe: ICP, TAM, buying signals, decision-makers, verified emails and scoring for outbound sequences.",
+        "metadataTitle": "Swiss B2B lead generation agency: ICP lists",
+        "metadataDescription": "Swiss B2B lead generation agency turning your TAM into ICP accounts, verified decision-makers and segments ready for prospecting.",
         "metadataKeywords": [
           "B2B lead generation",
           "ICP building",
@@ -3881,7 +3886,7 @@
           "B2B buying signals"
         ],
         "heroParagraphs": [
-          "B2B lead generation is not buying a contact database. It is deciding which companies can realistically become customers, which decision-makers should be approached and which signal makes the timing commercially relevant.",
+          "For devlo, a B2B lead generation agency in Switzerland, prospect generation is not buying a contact database. It is deciding which companies can realistically become customers, which decision-makers should be approached and which signal makes the timing commercially relevant.",
           "Our method combines ICP, TAM, buying signals, seniority, reachability and data validation. Each account is prioritized so outbound sequences start from a coherent, defensible and sales-ready segment.",
           "The final delivery is not only a CSV. It is a sequence-ready base with documented qualification rules so the process can be repeated on the next batches."
         ],
@@ -3924,7 +3929,7 @@
             "description": "Export a clean, actionable database."
           }
         ],
-        "editorialTitle": "A pipeline is built before the first sequence",
+        "editorialTitle": "How does a lead generation agency build pipeline before the first sequence?",
         "editorialParagraphs": [
           "The best outbound sequences fail with a weak base. We treat lead generation as a discipline in its own right: ICP framing, addressable-market mapping, account prioritization, decision-maker identification and data checks before activation.",
           "The value delivered is not just the final list. It is also the repeatable method that tells your team why an account enters a batch, which message fits it and when it should move into sequence."
@@ -4306,10 +4311,10 @@
         "slug": "prise-de-rendez-vous",
         "path": "/services/prise-de-rendez-vous",
         "navTitle": "Making an appointment",
-        "pageTitle": "B2B appointment scheduling: qualified booking and inbox management to fill your diary",
+        "pageTitle": "B2B Appointment Setting in Switzerland: qualified meetings and inbox management",
         "pageSubtitle": "Reactivity, qualification and reduction of no-shows.",
-        "metadataTitle": "B2B appointments: qualified booking",
-        "metadataDescription": "Outsourced B2B appointment scheduling service: inbox management, qualification, diary booking and no-show reduction.",
+        "metadataTitle": "Qualified B2B meetings Switzerland: booking",
+        "metadataDescription": "B2B appointment setting service in Switzerland: inbox management, qualification, calendar booking and no-show reduction.",
         "metadataKeywords": [
           "prise de rendez-vous B2B",
           "booking qualifié",
@@ -4317,7 +4322,7 @@
           "appointment setting"
         ],
         "heroParagraphs": [
-          "B2B appointment scheduling **is the critical conversion point** between prospecting and revenue. An interested prospect can be lost if the response is slow, if the qualification is too light, or if the follow-up is insufficient.",
+          "B2B appointment setting is the critical conversion point between prospecting and revenue. An interested prospect can be lost if the response is slow, if the qualification is too light, or if the follow-up is insufficient. devlo turns that interest into qualified B2B meetings your sales team can use.",
           "devlo manages inboxes proactively and reactively: rapid processing of responses, qualification of opportunities, direct booking in your diary and confirmation reminders to ensure you attend appointments.",
           "This operational discipline improves the actual conversion of outbound campaigns and significantly reduces the no-show rate."
         ],
@@ -4355,7 +4360,7 @@
             "description": "Passing on key information to your team."
           }
         ],
-        "editorialTitle": "How do you turn a response into a truly useful sales meeting?",
+        "editorialTitle": "How do you turn a response into a truly useful B2B meeting?",
         "editorialParagraphs": [
           "A poorly managed inbox destroys **outbound ROI**. According to InsideSales.com, responding to a lead within 5 minutes makes you 21x more likely to qualify them. The speed of response and the quality of qualification make the difference between simple interest and a **profitable appointment**.",
           "Therefore, we treat each interaction with a conversion logic: **contextualisation**, qualification, planning and follow-up until the actual presence. This operational discipline reduces **no-show rates** and ensures your sales team meets only genuinely qualified prospects."
@@ -5089,10 +5094,10 @@
         "slug": "outbound-multicanal",
         "path": "/services/outbound-multicanal",
         "navTitle": "Outbound Mehrkanal",
-        "pageTitle": "B2B Multichannel Outbound Prospecting: Cold Email, LinkedIn und Cold Calling",
+        "pageTitle": "B2B-Outbound-Agentur Schweiz: Cold E-Mail, LinkedIn und Calling",
         "pageSubtitle": "Koordinierte Cold E-Mail, LinkedIn und Calling für qualifizierte Termine mit den richtigen Entscheidern.",
-        "metadataTitle": "Outbound Multichannel B2B Akquise",
-        "metadataDescription": "B2B-Multichannel-Outbound-Prospektionsagentur mit Sitz in der Schweiz: Cold E-Mail, LinkedIn und Calling zur Generierung qualifizierter Termine.",
+        "metadataTitle": "B2B-Outbound-Agentur Schweiz: Multichannel",
+        "metadataDescription": "Schweizer B2B-Outbound-Agentur für Omnichannel-Akquise: Cold E-Mail, LinkedIn, Calling und qualifizierte Termine.",
         "metadataKeywords": [
           "prospection outbound multicanal",
           "agence outbound B2B",
@@ -5101,7 +5106,7 @@
           "externaliser prospection commerciale"
         ],
         "heroParagraphs": [
-          "Multichannel-Outbound bedeutet, priorisierte Accounts über koordinierte Kanäle zu kontaktieren: personalisierte Cold E-Mail, LinkedIn-Nachrichten, gezielte Anrufe und synchronisierte Follow-ups. devlo konzipiert und steuert die Kampagne von der ICP-Definition bis zur Antwortqualifizierung und Terminbuchung im Kalender Ihres Vertriebsteams.",
+          "Als B2B-Outbound-Agentur in der Schweiz kontaktiert devlo Ihre priorisierten Accounts über koordinierte Kanäle: personalisierte Cold E-Mail, LinkedIn-Nachrichten, gezielte Anrufe und synchronisierte Follow-ups. Wir konzipieren und steuern die Kampagne von der ICP-Definition bis zur Antwortqualifizierung und Terminbuchung im Kalender Ihres Vertriebsteams.",
           "Anders als ein Einzelkanal-Ansatz reduziert Multichannel die Abhängigkeit von einer einzigen Inbox. Wir kombinieren lemlist für E-Mail-Sequenzen, LinkedIn Sales Navigator für das Targeting und ein Telefonskript für die Einwände des Marktes. Das Ziel ist nicht Kontaktvolumen, sondern kommerzielle Gespräche mit den richtigen Entscheidern zum richtigen Zeitpunkt."
         ],
         "coverageTitle": "Was dieser Dienst abdeckt",
@@ -5140,7 +5145,7 @@
             "description": "Iterieren Sie jede Woche, um die Leistung zu verbessern."
           }
         ],
-        "editorialTitle": "Warum übertrifft Multichanneling das Singlechanneling?",
+        "editorialTitle": "Warum eine Multichannel-Outbound-Agentur statt eines isolierten Kanals wählen?",
         "editorialParagraphs": [
           "Cold E-Mail erreicht Prospects, die ihre Inbox lesen. LinkedIn Outreach erreicht Personen, die auf dem Netzwerk aktiver sind. Calling schafft Gespräche mit stark ausgelasteten Entscheidern, die schriftlich selten antworten. Die Kombination dieser Kanäle erhöht die Kontaktfläche pro Zielaccount.",
           "Entscheidend ist nicht das Rohvolumen, sondern die Koordination. Bei devlo hat jeder Kanal eine klare Rolle in der Sequenz: E-Mail öffnet, LinkedIn schafft Glaubwürdigkeit, der Anruf beschleunigt. Diese Orchestrierung reduziert die Abhängigkeit von einem einzelnen Kanal und stabilisiert die Pipeline."
@@ -6365,10 +6370,10 @@
         "slug": "generation-leads",
         "path": "/services/generation-leads",
         "navTitle": "Lead-Generierung",
-        "pageTitle": "B2B Leadgenerierung: qualifizierte Listen auf Basis von ICP, TAM und Kaufsignalen",
+        "pageTitle": "B2B-Leadgenerierungsagentur Schweiz: qualifizierte ICP-, TAM- und Signal-Listen",
         "pageSubtitle": "Wir verwandeln Ihren Zielmarkt in priorisierte Accounts, geprüfte Entscheider und Segmente, die bereit für Outbound-Sequenzen sind.",
-        "metadataTitle": "B2B Leadgenerierung Schweiz: qualifizierte ICP-Listen",
-        "metadataDescription": "devlo erstellt qualifizierte B2B-Listen für die Schweiz und Europa: ICP, TAM, Kaufsignale, Entscheider, verifizierte E-Mails und Scoring für Outbound-Sequenzen.",
+        "metadataTitle": "B2B-Leadgenerierungsagentur Schweiz: ICP-Listen",
+        "metadataDescription": "Schweizer B2B-Leadgenerierungsagentur, die Ihren TAM in ICP-Accounts, verifizierte Entscheider und prospektionsbereite Segmente übersetzt.",
         "metadataKeywords": [
           "B2B Leadgenerierung",
           "ICP Aufbau",
@@ -6377,7 +6382,7 @@
           "B2B Kaufsignale"
         ],
         "heroParagraphs": [
-          "B2B Leadgenerierung bedeutet nicht, eine Kontaktliste zu kaufen. Sie entscheidet, welche Unternehmen realistisch Kunden werden können, welche Entscheider angesprochen werden sollten und welches Signal das Timing kommerziell relevant macht.",
+          "Für devlo, eine B2B-Leadgenerierungsagentur in der Schweiz, bedeutet Prospect-Generierung nicht, eine Kontaktliste zu kaufen. Sie entscheidet, welche Unternehmen realistisch Kunden werden können, welche Entscheider angesprochen werden sollten und welches Signal das Timing kommerziell relevant macht.",
           "Unsere Methode kombiniert ICP, TAM, Kaufsignale, Seniorität, Erreichbarkeit und Datenvalidierung. Jeder Account wird priorisiert, damit Outbound-Sequenzen mit einem kohärenten, belastbaren und vertriebsfähigen Segment starten.",
           "Die finale Lieferung ist nicht nur eine CSV-Datei. Es ist eine sequenzbereite Basis mit dokumentierten Qualifizierungsregeln, damit der Prozess für die nächsten Batches wiederholt werden kann."
         ],
@@ -6420,7 +6425,7 @@
             "description": "Exportieren Sie eine saubere und handlungsfähige Grundlage."
           }
         ],
-        "editorialTitle": "Eine Pipeline entsteht vor der ersten Sequenz",
+        "editorialTitle": "Wie baut eine Leadgenerierungsagentur Pipeline vor der ersten Sequenz auf?",
         "editorialParagraphs": [
           "Die besten Outbound-Sequenzen scheitern an einer schwachen Basis. Wir behandeln Leadgenerierung als eigene Disziplin: ICP-Rahmen, Mapping des adressierbaren Marktes, Account-Priorisierung, Entscheideridentifikation und Datenprüfung vor der Aktivierung.",
           "Der gelieferte Wert ist nicht nur die finale Liste. Es ist auch die wiederholbare Methode, mit der Ihr Team versteht, warum ein Account in einen Batch kommt, welche Botschaft passt und wann er in die Sequenz gehen sollte."
@@ -6802,10 +6807,10 @@
         "slug": "prise-de-rendez-vous",
         "path": "/services/prise-de-rendez-vous",
         "navTitle": "Einen Termin vereinbaren",
-        "pageTitle": "B2B-Terminvereinbarung: qualifiziertes Booking und Inbox-Management, um Ihren Terminkalender zu füllen",
+        "pageTitle": "B2B-Terminvereinbarung Schweiz: qualifizierte Termine und Inbox-Management",
         "pageSubtitle": "Reaktivität, Qualifikation und Reduzierung von No-Shows.",
-        "metadataTitle": "B2B-Terminvereinbarung: Qualifiziertes Booking",
-        "metadataDescription": "Ausgelagerter B2B-Terminservice: Inbox-Management, Qualifizierung, Agenda-Booking und Reduzierung von No-Shows.",
+        "metadataTitle": "Qualifizierte B2B-Termine Schweiz: Booking",
+        "metadataDescription": "B2B-Terminservice in der Schweiz: Inbox-Management, Qualifizierung, Kalender-Booking und Reduzierung von No-Shows.",
         "metadataKeywords": [
           "prise de rendez-vous B2B",
           "booking qualifié",
@@ -6813,7 +6818,7 @@
           "appointment setting"
         ],
         "heroParagraphs": [
-          "**B2B-Terminvereinbarung** ist eine Methode, die den kritischen Punkt zwischen Akquise und Einkommen abdeckt. Ein interessierter Lead kann verloren gehen, wenn die Antwort zu lange auf sich warten lässt, die Qualifikation zu gering ist oder die Nachbereitung unzureichend ist.",
+          "B2B-Terminvereinbarung ist der kritische Konversionspunkt zwischen Akquise und Umsatz. Ein interessierter Lead kann verloren gehen, wenn die Antwort zu lange dauert, die Qualifikation zu leicht ist oder die Nachbereitung unzureichend bleibt. devlo verwandelt dieses Interesse in qualifizierte B2B-Termine, die Ihr Vertriebsteam nutzen kann.",
           "devlo verwaltet die Inbox proaktiv und reaktiv: schnelle Bearbeitung der Antworten, Qualifizierung der Chancen, direktes Booking in Ihrem Kalender und Bestätigungsmahnungen, um die Anwesenheit bei Terminen zu sichern.",
           "Diese operative Disziplin verbessert die tatsächliche Konversion von Outbound-Kampagnen und reduziert die No-Show-Rate drastisch."
         ],
@@ -6851,7 +6856,7 @@
             "description": "Weitergabe von Schlüsselinformationen an Ihr Team"
           }
         ],
-        "editorialTitle": "Warum ist der Weg von der Antwort zum wirklich nützlichen Termin entscheidend?",
+        "editorialTitle": "Wie wird aus einer Antwort ein wirklich nützlicher B2B-Termin?",
         "editorialParagraphs": [
           "Tatsächlich, eine schlecht verwaltete Inbox zerstört den **Outbound-ROI**. Die Geschwindigkeit der Antwort und die Qualität der Qualifizierung machen den Unterschied zwischen einem bloßen Interesse und einem **verwertbaren Termin** aus.",
           "Daher, wir behandeln jede Interaktion mit einer **Konversionslogik**: Kontextualisierung, Qualifizierung, Planung und Nachverfolgung bis hin zur tatsächlichen Präsenz. Laut einer InsideSales-Studie (2024), erhöht eine Antwortzeit unter **2 Stunden** die Konversionsrate um bis zu **7x** im Vergleich zu einer Antwort nach 24 Stunden."
@@ -7585,10 +7590,10 @@
         "slug": "outbound-multicanal",
         "path": "/services/outbound-multicanal",
         "navTitle": "Uitgaande multichannel",
-        "pageTitle": "B2B Multichannel Outbound Prospecting: Koude e-mail, LinkedIn en koud bellen",
+        "pageTitle": "B2B outbound bureau Zwitserland: cold email, LinkedIn en bellen",
         "pageSubtitle": "Gecoördineerde cold email, LinkedIn en calling om gekwalificeerde afspraken met de juiste beslissers te creëren.",
-        "metadataTitle": "B2B prospectie via meerdere kanalen",
-        "metadataDescription": "Outbound multi-channel B2B prospectiebureau gevestigd in Zwitserland: koude e-mail, LinkedIn en bellen om gekwalificeerde afspraken te genereren.",
+        "metadataTitle": "B2B outbound bureau Zwitserland: multichannel",
+        "metadataDescription": "Zwitsers B2B outbound bureau voor omnichannel prospectie: cold email, LinkedIn, bellen en gekwalificeerde afspraken.",
         "metadataKeywords": [
           "prospection outbound multicanal",
           "agence outbound B2B",
@@ -7597,7 +7602,7 @@
           "externaliser prospection commerciale"
         ],
         "heroParagraphs": [
-          "Multichannel outbound prospectie betekent dat prioritaire accounts via gecoördineerde kanalen worden benaderd: gepersonaliseerde cold email, LinkedIn-berichten, gerichte telefoongesprekken en gesynchroniseerde follow-ups. devlo ontwerpt en voert de campagne end-to-end uit, van ICP-definitie tot reply-kwalificatie en geboekte afspraken in de agenda van uw salesteam.",
+          "Als B2B outbound bureau in Zwitserland benadert devlo uw prioritaire accounts via gecoördineerde kanalen: gepersonaliseerde cold email, LinkedIn-berichten, gerichte telefoongesprekken en gesynchroniseerde follow-ups. We ontwerpen en voeren de campagne end-to-end uit, van ICP-definitie tot reply-kwalificatie en geboekte afspraken in de agenda van uw salesteam.",
           "In tegenstelling tot een aanpak via één kanaal vermindert multichannel de afhankelijkheid van één inbox. We combineren lemlist voor e-mailsequenties, LinkedIn Sales Navigator voor targeting en een telefoonscript dat is aangepast aan marktbezwaren. Het doel is niet contactvolume, maar commerciële gesprekken met de juiste beslissers op het juiste moment."
         ],
         "coverageTitle": "Wat deze service omvat",
@@ -7636,7 +7641,7 @@
             "description": "Iterate elke week om de prestaties te verbeteren."
           }
         ],
-        "editorialTitle": "Waarom presteert meerkanaals beter dan eenkanaals?",
+        "editorialTitle": "Waarom kiezen voor een multichannel outbound bureau in plaats van één geïsoleerd kanaal?",
         "editorialParagraphs": [
           "Cold email bereikt prospects die hun inbox lezen. LinkedIn outreach bereikt mensen die actiever zijn op het netwerk. Calling creëert gesprekken met drukbezette beslissers die zelden schriftelijk antwoorden. Door deze kanalen te combineren vergroot u de contactoppervlakte per doelaccount.",
           "Het gaat niet om ruw volume, maar om coördinatie. Bij devlo heeft elk kanaal een duidelijke rol in de sequentie: e-mail opent, LinkedIn bouwt geloofwaardigheid op, bellen versnelt. Deze orkestratie vermindert de afhankelijkheid van één kanaal en maakt de pipeline consistenter."
@@ -8861,10 +8866,10 @@
         "slug": "generation-leads",
         "path": "/services/generation-leads",
         "navTitle": "Leads genereren",
-        "pageTitle": "B2B leadgeneratie: gekwalificeerde lijsten op basis van ICP, TAM en koopsignalen",
+        "pageTitle": "B2B leadgeneratiebureau Zwitserland: gekwalificeerde ICP-, TAM- en signaallijsten",
         "pageSubtitle": "We zetten uw doelmarkt om in geprioriteerde accounts, geverifieerde beslissers en segmenten die klaar zijn voor outbound sequenties.",
-        "metadataTitle": "B2B leadgeneratie Zwitserland: gekwalificeerde ICP-lijsten",
-        "metadataDescription": "devlo bouwt gekwalificeerde B2B-lijsten voor Zwitserland en Europa: ICP, TAM, koopsignalen, beslissers, geverifieerde e-mails en scoring voor outbound sequenties.",
+        "metadataTitle": "B2B leadgeneratiebureau Zwitserland: ICP-lijsten",
+        "metadataDescription": "Zwitsers B2B leadgeneratiebureau dat uw TAM omzet in ICP-accounts, geverifieerde beslissers en prospectieklare segmenten.",
         "metadataKeywords": [
           "B2B leadgeneratie",
           "ICP opbouw",
@@ -8873,7 +8878,7 @@
           "B2B koopsignalen"
         ],
         "heroParagraphs": [
-          "B2B leadgeneratie is niet het kopen van een contactdatabase. Het bepaalt welke bedrijven realistisch klant kunnen worden, welke beslissers moeten worden benaderd en welk signaal de timing commercieel relevant maakt.",
+          "Voor devlo, een B2B leadgeneratiebureau in Zwitserland, betekent prospectgeneratie niet het kopen van een contactdatabase. Het bepaalt welke bedrijven realistisch klant kunnen worden, welke beslissers moeten worden benaderd en welk signaal de timing commercieel relevant maakt.",
           "Onze methode combineert ICP, TAM, koopsignalen, senioriteit, bereikbaarheid en datavalidatie. Elk account wordt geprioriteerd zodat outbound sequenties starten vanuit een coherent, verdedigbaar en sales-ready segment.",
           "De uiteindelijke levering is niet alleen een CSV. Het is een sequentieklare basis met gedocumenteerde kwalificatieregels zodat het proces op volgende batches kan worden herhaald."
         ],
@@ -8916,7 +8921,7 @@
             "description": "Exporteer een schone, bruikbare database."
           }
         ],
-        "editorialTitle": "Een pipeline wordt gebouwd vóór de eerste sequentie",
+        "editorialTitle": "Hoe bouwt een leadgeneratiebureau pipeline vóór de eerste sequentie?",
         "editorialParagraphs": [
           "De beste outbound sequenties falen met een zwakke basis. Wij behandelen leadgeneratie als een eigen discipline: ICP-kadering, mapping van de adresseerbare markt, accountprioritering, identificatie van beslissers en datacontrole vóór activatie.",
           "De geleverde waarde is niet alleen de uiteindelijke lijst. Het is ook de herhaalbare methode waarmee uw team weet waarom een account in een batch komt, welke boodschap past en wanneer het in sequentie moet gaan."
@@ -9298,10 +9303,10 @@
         "slug": "prise-de-rendez-vous",
         "path": "/services/prise-de-rendez-vous",
         "navTitle": "Een afspraak maken",
-        "pageTitle": "B2B afsprakenplanning: gekwalificeerd boeken en inboxbeheer om uw agenda te vullen",
+        "pageTitle": "B2B afsprakenplanning Zwitserland: gekwalificeerde afspraken en inboxbeheer",
         "pageSubtitle": "Reactiviteit, kwalificatie en vermindering van no-shows.",
-        "metadataTitle": "B2B-afspraken: gekwalificeerd boeken",
-        "metadataDescription": "Uitbestede B2B afsprakenservice: inboxbeheer, kwalificatie, agendaboeking en no-showreductie.",
+        "metadataTitle": "Gekwalificeerde B2B-afspraken Zwitserland: booking",
+        "metadataDescription": "B2B afsprakenservice in Zwitserland: inboxbeheer, kwalificatie, agendaboeking en no-showreductie.",
         "metadataKeywords": [
           "prise de rendez-vous B2B",
           "booking qualifié",
@@ -9309,7 +9314,7 @@
           "appointment setting"
         ],
         "heroParagraphs": [
-          "**B2B-afsprakenplanning** is een methode die het kritieke punt tussen prospectie en omzet afdekt. Een geïnteresseerde prospect kan verloren gaan als de respons traag is, als de kwalificatie te licht is of als de follow-up onvoldoende is.",
+          "B2B afsprakenplanning is het kritieke conversiepunt tussen prospectie en omzet. Een geïnteresseerde prospect kan verloren gaan als de respons traag is, als de kwalificatie te licht is of als de follow-up onvoldoende blijft. devlo zet die interesse om in gekwalificeerde B2B-afspraken die uw salesteam kan gebruiken.",
           "devlo beheert inboxen proactief en reactief: snelle verwerking van reacties, kwalificatie van kansen, direct boeken in je agenda en bevestigingsherinneringen om ervoor te zorgen dat je op afspraken verschijnt.",
           "Deze operationele discipline verbetert de daadwerkelijke conversie van uitgaande campagnes en verlaagt het no-show percentage aanzienlijk."
         ],
@@ -9347,7 +9352,7 @@
             "description": "Belangrijke informatie doorgeven aan je team."
           }
         ],
-        "editorialTitle": "Waarom is de weg van reactie tot echt nuttige afspraak cruciaal?",
+        "editorialTitle": "Hoe verandert u een reactie in een echt nuttige B2B-afspraak?",
         "editorialParagraphs": [
           "Inderdaad, een slecht beheerde inbox vernietigt de **outbound-ROI**. De reactiesnelheid en de kwaliteit van de kwalificatie maken het verschil tussen interesse en een **winstgevende afspraak**.",
           "Daarom, we behandelen elke interactie met een **conversielogica**: contextualisering, kwalificatie, planning en follow-up tot de daadwerkelijke aanwezigheid. Volgens een InsideSales-onderzoek (2024), verhoogt een reactietijd onder **2 uur** de conversiegraad met tot **7x** in vergelijking met een reactie na 24 uur."

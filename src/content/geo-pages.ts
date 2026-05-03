@@ -28,12 +28,12 @@ export const GEO_PAGES: Record<string, GeoPageData> = {
   "prospection-commerciale-suisse": {
     country: "ch",
     slug: "prospection-commerciale-suisse",
-    metaTitle: "Prospection B2B Suisse : leads qualifiés et rendez-vous — devlo",
+    metaTitle: "Agence de prospection B2B Suisse : leads & RDV — devlo",
     metaDescription:
-      "Agence B2B basée en Suisse pour lead generation, séquences outbound et rendez-vous qualifiés en Romandie, Suisse alémanique et Tessin.",
-    h1: "Prospection B2B en Suisse pour générer des rendez-vous qualifiés",
+      "Agence de prospection B2B en Suisse pour lead generation, prospection multicanale et rendez-vous qualifiés en Romandie, Suisse alémanique et Tessin.",
+    h1: "Agence de prospection B2B en Suisse pour générer des rendez-vous qualifiés",
     intro: [
-      "Basée à Rivaz dans le canton de Vaud, devlo aide les entreprises suisses et internationales à transformer le marché helvétique en comptes prioritaires, séquences multicanales et rendez-vous commerciaux qualifiés.",
+      "Basée à Rivaz dans le canton de Vaud, devlo agit comme agence de prospection B2B suisse pour transformer le marché helvétique en comptes prioritaires, séquences multicanales et rendez-vous commerciaux qualifiés.",
       "Notre connaissance du tissu économique suisse - Romandie, Suisse alémanique et Tessin - permet d'adapter l'ICP, les signaux d'achat, les messages et les langues avant de lancer les campagnes.",
       "L'objectif n'est pas de contacter plus d'entreprises suisses. L'objectif est d'identifier les bons décideurs, au bon moment, avec un contexte assez précis pour créer une conversation commerciale utile.",
     ],

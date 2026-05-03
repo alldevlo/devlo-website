@@ -63,8 +63,8 @@ export const hadoseoMetadataOverrides: HadoSeoMetadataOverride[] = [
   },
   {
     route: "/services/outbound-multicanal",
-    title: "Outbound Multicanal B2B | Cold email + LinkedIn + Calling | devlo",
-    description: "Agence outbound multicanal B2B en Suisse : cold email LinkedIn et calling coordonnés pour générer des rendez-vous qualifiés avec les bons décideurs.",
+    title: "Agence Outbound B2B Suisse | Email LinkedIn Calling | devlo",
+    description: "Agence outbound B2B suisse pour prospection omnicanale : cold email LinkedIn calling et rendez-vous qualifiés.",
     canonical: "https://devlo.ch/services/outbound-multicanal",
     ogImage: "/images/devlo_OG_Banner.webp",
     status: "✅ OPTIMISÉ",
@@ -111,8 +111,8 @@ export const hadoseoMetadataOverrides: HadoSeoMetadataOverride[] = [
   },
   {
     route: "/services/generation-leads",
-    title: "Lead Generation B2B Suisse | Listes ICP qualifiées | devlo",
-    description: "Agence lead generation B2B en Suisse : ICP TAM signaux d'achat décideurs emails vérifiés et scoring pour séquences outbound.",
+    title: "Agence Lead Generation B2B Suisse | Listes ICP | devlo",
+    description: "Agence lead generation B2B suisse pour transformer votre TAM en comptes ICP décideurs vérifiés et segments prêts à prospecter.",
     canonical: "https://devlo.ch/services/generation-leads",
     ogImage: "/images/devlo_OG_Banner.webp",
     status: "✅ OPTIMISÉ",
@@ -127,8 +127,8 @@ export const hadoseoMetadataOverrides: HadoSeoMetadataOverride[] = [
   },
   {
     route: "/services/prise-de-rendez-vous",
-    title: "Prise de RDV B2B | Booking | devlo",
-    description: "Service de prise de rendez-vous B2B externalisé : gestion inbox qualification booking agenda et réduction du no-show.",
+    title: "Rendez-vous qualifiés B2B Suisse | Booking | devlo",
+    description: "Service de prise de rendez-vous B2B en Suisse : gestion inbox qualification booking agenda et réduction du no-show.",
     canonical: "https://devlo.ch/services/prise-de-rendez-vous",
     ogImage: "/images/devlo_OG_Banner.webp",
     status: "✅ OPTIMISÉ",
@@ -263,8 +263,8 @@ export const hadoseoMetadataOverrides: HadoSeoMetadataOverride[] = [
   },
   {
     route: "/prospection-commerciale-suisse",
-    title: "Prospection B2B Suisse | Leads qualifiés et RDV | devlo",
-    description: "Agence B2B basée en Suisse pour lead generation séquences outbound et rendez-vous qualifiés en Romandie Suisse alémanique et Tessin.",
+    title: "Agence prospection B2B Suisse | Leads & RDV | devlo",
+    description: "Agence de prospection B2B en Suisse pour lead generation prospection multicanale et rendez-vous qualifiés en Romandie Suisse alémanique et Tessin.",
     canonical: "https://devlo.ch/prospection-commerciale-suisse",
     ogImage: "/images/devlo_OG_Banner.webp",
     status: "✅ OPTIMISÉ",
