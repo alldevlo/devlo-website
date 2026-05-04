@@ -40,6 +40,11 @@ type HubspotFormProps = {
   onSubmitted?: () => void;
 };
 
+type HubSpotSubmittedField = {
+  name?: unknown;
+  value?: unknown;
+};
+
 const copyByLocale: Record<
   SupportedLocale,
   {
@@ -206,6 +211,31 @@ function serializeFormFields(form: HTMLFormElement) {
   return fields;
 }
 
+function serializeHubSpotSubmittedFields(data: unknown) {
+  if (!Array.isArray(data)) return null;
+
+  const fields: Record<string, string | string[]> = {};
+  data.forEach((field: HubSpotSubmittedField) => {
+    if (!field || typeof field.name !== "string" || field.name === "hs_context") return;
+
+    if (typeof field.value === "string") {
+      fields[field.name] = field.value;
+      return;
+    }
+
+    if (Array.isArray(field.value)) {
+      const values = field.value.filter((value): value is string => typeof value === "string");
+      if (values.length === 1) {
+        fields[field.name] = values[0];
+      } else if (values.length > 1) {
+        fields[field.name] = values;
+      }
+    }
+  });
+
+  return Object.keys(fields).length > 0 ? fields : null;
+}
+
 export function HubspotForm({
   portalId,
   formId,
@@ -219,6 +249,7 @@ export function HubspotForm({
   const copy = copyByLocale[locale];
   const initialized = useRef(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const submittedBackupRef = useRef(false);
   const formInstanceRef = useRef<HubspotFormApi | null>(null);
   const hiddenFieldsRef = useRef<Record<string, string> | undefined>(hiddenFields);
   const [loaded, setLoaded] = useState(false);
@@ -233,6 +264,7 @@ export function HubspotForm({
 
   useEffect(() => {
     initialized.current = false;
+    submittedBackupRef.current = false;
     formInstanceRef.current = null;
     setLoaded(false);
     setSubmitted(false);
@@ -342,8 +374,20 @@ export function HubspotForm({
     const onMessage = (event: MessageEvent) => {
       if (typeof event.data !== "object" || !event.data) return;
 
-      const payload = event.data as { type?: string; eventName?: string; data?: unknown };
+      const payload = event.data as { id?: string; type?: string; eventName?: string; data?: unknown };
       if (payload.type !== "hsFormCallback") return;
+      if (payload.id && payload.id !== formId) return;
+
+      if (
+        !submittedBackupRef.current &&
+        (payload.eventName === "onFormSubmit" || payload.eventName === "onBeforeFormSubmit")
+      ) {
+        const fields = serializeHubSpotSubmittedFields(payload.data);
+        if (fields) {
+          submittedBackupRef.current = true;
+          onFormSubmitCapture?.(fields);
+        }
+      }
 
       if (payload.eventName === "onFormSubmitFailed" || payload.eventName === "onFormError") {
         if (process.env.NODE_ENV !== "production") {
@@ -356,7 +400,7 @@ export function HubspotForm({
 
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);
-  }, [copy.submissionError]);
+  }, [copy.submissionError, formId, onFormSubmitCapture]);
 
   return (
     <div ref={containerRef} className="relative">
