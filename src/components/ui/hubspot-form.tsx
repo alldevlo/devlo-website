@@ -36,6 +36,7 @@ type HubspotFormProps = {
   targetId: string;
   locale?: SupportedLocale;
   hiddenFields?: Record<string, string>;
+  onFormSubmitCapture?: (fields: Record<string, string | string[]>) => void;
   onSubmitted?: () => void;
 };
 
@@ -181,6 +182,30 @@ function syncFormInstanceValues(formInstance: HubspotFormApi | null, hiddenField
   });
 }
 
+function serializeFormFields(form: HTMLFormElement) {
+  const fields: Record<string, string | string[]> = {};
+  const formData = new FormData(form);
+
+  formData.forEach((value, name) => {
+    if (typeof value !== "string" || name === "hs_context") return;
+
+    const existing = fields[name];
+    if (Array.isArray(existing)) {
+      existing.push(value);
+      return;
+    }
+
+    if (typeof existing === "string") {
+      fields[name] = [existing, value];
+      return;
+    }
+
+    fields[name] = value;
+  });
+
+  return fields;
+}
+
 export function HubspotForm({
   portalId,
   formId,
@@ -188,6 +213,7 @@ export function HubspotForm({
   targetId,
   locale = "fr",
   hiddenFields,
+  onFormSubmitCapture,
   onSubmitted,
 }: HubspotFormProps) {
   const copy = copyByLocale[locale];
@@ -266,6 +292,7 @@ export function HubspotForm({
           const form = resolveFormElement(formRef, targetId);
           if (form) {
             syncHiddenFields(form, hiddenFieldsRef.current);
+            onFormSubmitCapture?.(serializeFormFields(form));
           }
           syncFormInstanceValues(formInstanceRef.current, hiddenFieldsRef.current);
           setSubmissionError(null);
@@ -297,7 +324,7 @@ export function HubspotForm({
     return () => {
       cancelled = true;
     };
-  }, [formId, isNearViewport, onSubmitted, portalId, region, targetId]);
+  }, [formId, isNearViewport, onFormSubmitCapture, onSubmitted, portalId, region, targetId]);
 
   useEffect(() => {
     if (!loaded || submitted) return;
