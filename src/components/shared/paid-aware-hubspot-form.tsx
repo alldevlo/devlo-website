@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { HubspotForm } from "@/components/ui/hubspot-form";
 import type { SupportedLocale } from "@/lib/i18n/slug-map";
@@ -68,6 +68,26 @@ function buildPaidHiddenFields(attribution: PaidAttribution) {
   };
 }
 
+function sendPaidSubmissionBackup(fields: Record<string, string | string[]>) {
+  const email = fields.email;
+  const hasEmail = typeof email === "string" && email.includes("@");
+  const hasPaidSignal =
+    fields.paid_host === "true" ||
+    typeof fields.paid_gclid === "string" ||
+    typeof fields.paid_utm_source === "string";
+
+  if (!hasEmail || !hasPaidSignal) return;
+
+  fetch("/api/paid-form-backup", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    keepalive: true,
+    body: JSON.stringify({ fields }),
+  }).catch(() => {
+    // HubSpot's native form submission remains the primary path.
+  });
+}
+
 export function PaidAwareHubspotForm({
   formId,
   locale = "fr",
@@ -94,6 +114,10 @@ export function PaidAwareHubspotForm({
     pushPaidAnalyticsEvent("paid_form_start", attribution);
   };
 
+  const handleFormSubmitCapture = useCallback((fields: Record<string, string | string[]>) => {
+    sendPaidSubmissionBackup(fields);
+  }, []);
+
   return (
     <div onClickCapture={trackFormStart} onFocusCapture={trackFormStart}>
       <HubspotForm
@@ -103,6 +127,7 @@ export function PaidAwareHubspotForm({
         targetId={targetId}
         locale={locale}
         hiddenFields={hiddenFields}
+        onFormSubmitCapture={handleFormSubmitCapture}
         onSubmitted={() => pushPaidAnalyticsEvent("paid_lead_submitted", attribution)}
       />
     </div>
