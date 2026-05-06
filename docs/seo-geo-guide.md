@@ -1,7 +1,7 @@
-# SEO & GEO Guide -- devlo.ch (Next.js 14 App Router)
+# SEO & GEO Guide -- devlo.ch (Next.js 16 App Router)
 
-**Last updated:** 2026-03-20
-**Stack:** Next.js 14.2.35 / App Router / Vercel / TypeScript
+**Last updated:** 2026-05-06
+**Stack:** Next.js 16.2.4 / App Router / Vercel / TypeScript
 **Domain:** https://devlo.ch
 **Languages:** fr (default, no prefix), en, de, nl
 
@@ -15,6 +15,7 @@
 
 | Date | Change |
 |------|--------|
+| 2026-05-06 | Updated current stack from Next.js 14.2.35 to Next.js 16.2.4 after the SEO/GEO P1 refresh. Added `npm run check:seo-quality` as the local/live quality audit command for metadata, H1, canonical, hreflang, schema, CTA, freshness and extractability checks. |
 | 2026-03-20 | Major enrichment: added URL/routing rules, title tag formulas, meta description CTR data, canonical URL rules, sitemap best practices, AI platform citation patterns (Google AI Overviews, ChatGPT, Perplexity), tiered AI crawler management, entity/knowledge graph optimization, CWV optimization strategies per metric, internal linking cluster sizing, image srcset/AVIF guidance, structured data entity graph patterns. Restructured TOC to 11 sections. |
 | 2026-03-20 | Initial guide created. Covers SEO fundamentals + GEO (Generative Engine Optimization). |
 
@@ -1177,6 +1178,10 @@ npm run build
 # Run the SEO crawler against production
 node scripts/crawl-seo.mjs
 
+# Run the quality gate against the live sitemap.
+# Warnings are reported but do not fail unless --fail-on-warnings is passed.
+npm run check:seo-quality
+
 # Verify HadoSEO metadata parity (titles/descriptions match expectations)
 npm run check:hadoseo-metadata
 
@@ -1271,5 +1276,6 @@ Run this audit every quarter to catch drift and maintain quality:
 | `src/lib/i18n/slug-map.ts` | Locale-aware URL mappings for hreflang |
 | `public/llms.txt` | LLM-optimized site map |
 | `scripts/crawl-seo.mjs` | SEO crawler for migration/audit |
+| `scripts/check-seo-quality.mjs` | Live sitemap quality gate for metadata, H1, canonical, hreflang, JSON-LD, CTA, freshness and GEO extractability warnings |
 | `scripts/verify-hadoseo-metadata.mjs` | HadoSEO parity checker |
 | `docs/I18N_SEO_PLAN.md` | Multilingual SEO architecture decisions |

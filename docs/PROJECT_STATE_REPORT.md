@@ -1,5 +1,7 @@
 # PROJECT_STATE_REPORT
 
+> Historical snapshot from the earlier migration baseline. Current repo stack after the 2026-05-06 SEO/GEO refresh is Next.js 16.2.4.
+
 ## Scope and method
 - Phase 0 baseline (read-only) completed from the current repository state on disk in `/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next`.
 - No application code was modified in this phase.
@@ -11,7 +13,7 @@
 - Package manager: **npm** (`package-lock.json` present; scripts use `npm run ...`)
 - Node version (current machine): `v25.2.1`
 - npm version (current machine): `11.6.2`
-- Next.js version (from `package.json`): `14.2.35`
+- Next.js version at report time: `14.2.35`; current `package.json` uses Next.js `^16.2.4`
 - Current branch: `main`
 - Git remote: `origin` (GitHub HTTPS)
 - Vercel project link: `.vercel/` exists and project is linked locally
