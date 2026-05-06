@@ -64,6 +64,21 @@ export function buildFaqPageSchema(items: FaqItemLike[]) {
   };
 }
 
+export function buildQaPageSchema(question: string, answer: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "QAPage",
+    mainEntity: {
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: answer,
+      },
+    },
+  };
+}
+
 export function buildHowToSchema(name: string, steps: HowToStepLike[]) {
   return {
     "@context": "https://schema.org",
