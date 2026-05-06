@@ -11,6 +11,7 @@
     "start": "next start",
     "lint": "eslint .",
     "check:hadoseo-metadata": "node scripts/verify-hadoseo-metadata.mjs",
+    "check:seo-quality": "node scripts/check-seo-quality.mjs",
     "check:slug-map-navigation": "node scripts/check_slug_map_navigation.mjs",
     "check:deploy": "npm run lint && npm run build",
     "sync:case-studies": "node scripts/sync-case-studies.mjs",

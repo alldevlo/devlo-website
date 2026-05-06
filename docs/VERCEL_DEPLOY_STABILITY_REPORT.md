@@ -2,7 +2,8 @@
 
 ## Context
 - Symptom: deployment failed after successful build at `Deploying outputs...` with `Error: We encountered an internal error. Please try again.`
-- Scope: Next.js 14.2.35 app router, production domain `https://devlo.ch`.
+- Scope at report time: Next.js 14.2.35 app router, production domain `https://devlo.ch`.
+- Current note: after the 2026-05-06 SEO/GEO refresh, the site runs on Next.js 16.2.4.
 
 ## A) Diagnostic checks
 

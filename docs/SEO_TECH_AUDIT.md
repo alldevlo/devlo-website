@@ -3,6 +3,7 @@
 **Date:** 2026-02-24
 **Auditor:** AI audit (Claude Code)
 **Codebase:** devlo-next / `src/`
+**Status:** Historical snapshot. Current runtime stack after the 2026-05-06 refresh is Next.js 16.2.4.
 
 ---
 
@@ -10,7 +11,7 @@
 
 | Property | Value |
 |---|---|
-| Framework | Next.js 14.2.35 |
+| Framework | Next.js 14.2.35 at audit time; current stack is Next.js 16.2.4 |
 | Router | **App Router** (`src/app/`) |
 | Pages | ~21 static routes + dynamic case studies (`/etudes-de-cas/[slug]`) |
 | Deployment | Vercel |

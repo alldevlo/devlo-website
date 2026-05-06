@@ -1,6 +1,6 @@
 # devlo.ch -- Next.js Website
 
-**Stack:** Next.js 14 (App Router) / TypeScript / Tailwind CSS / Framer Motion / Vercel
+**Stack:** Next.js 16 (App Router) / TypeScript / Tailwind CSS / Vercel
 **Domain:** https://devlo.ch
 **Languages:** fr (default), en, de, nl
 
