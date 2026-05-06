@@ -12,6 +12,7 @@ type GeoTranslatableContent = {
     label: string;
     title: string;
     body: string;
+    proofPoints?: string[];
   };
   // GEO fields (optional, progressive enhancement)
   editorialTitle?: string;

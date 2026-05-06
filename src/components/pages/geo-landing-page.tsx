@@ -15,7 +15,7 @@ import { type GeoPageData } from "@/content/geo-pages";
 import { getLocalizedCaseStudyBySlug } from "@/lib/i18n/case-studies-content";
 import { getLocalizedGeoContent } from "@/lib/i18n/geo-content";
 import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
-import { buildArticleSchema, buildBreadcrumbSchema, buildFaqPageSchema } from "@/lib/seo/schema-builders";
+import { buildArticleSchema, buildBreadcrumbSchema, buildFaqPageSchema, buildQaPageSchema } from "@/lib/seo/schema-builders";
 import { RichParagraph } from "@/lib/utils/rich-text";
 
 const copyByLocale: Record<
@@ -82,12 +82,12 @@ const geoMarketTables: Record<
   }
 > = {
   fr: {
-    caption: "Adaptations de prospection B2B par region suisse",
-    headers: ["Region", "Adaptation necessaire", "Execution devlo"],
+    caption: "Adaptations de prospection B2B par région suisse",
+    headers: ["Région", "Adaptation nécessaire", "Exécution devlo"],
     rows: [
-      ["Suisse romande", "Message direct, preuves locales et references francophones.", "Sequences FR avec cas clients suisses et relances multicanales."],
-      ["Suisse alemanique", "Ton plus factuel, allemand natif et precision sur le ROI.", "Copies DE, ciblage DACH et qualification des decideurs."],
-      ["Comptes nationaux", "Coordination entre langues, filiales et cycles de decision.", "Segmentation ICP par region, langue et signal d'achat."],
+      ["Suisse romande", "Message sobre, preuves locales et références francophones.", "Séquences FR avec cas clients suisses et relances multicanales."],
+      ["Suisse alémanique", "Ton plus factuel, allemand natif et précision sur le ROI.", "Copies DE, ciblage DACH et qualification des décideurs."],
+      ["Comptes nationaux", "Coordination entre langues, filiales et cycles de décision.", "Segmentation ICP par région, langue et signal d'achat."],
     ],
   },
   en: {
@@ -101,11 +101,11 @@ const geoMarketTables: Record<
   },
   de: {
     caption: "B2B-Prospecting-Anpassungen nach Schweizer Region",
-    headers: ["Region", "Noetige Anpassung", "devlo-Umsetzung"],
+    headers: ["Region", "Nötige Anpassung", "devlo-Umsetzung"],
     rows: [
-      ["Westschweiz", "Direkte Ansprache, lokale Belege und franzoesische Referenzen.", "FR-Sequenzen mit Schweizer Case Studies und Multichannel-Follow-ups."],
+      ["Westschweiz", "Direkte Ansprache, lokale Belege und französische Referenzen.", "FR-Sequenzen mit Schweizer Case Studies und Multichannel-Follow-ups."],
       ["Deutschschweiz", "Faktischer Ton, natives Deutsch und klare ROI-Argumente.", "DE-Copy, DACH-Targeting und Entscheiderqualifikation."],
-      ["Nationale Accounts", "Koordination ueber Sprachen, Filialen und Entscheidungszyklen.", "ICP-Segmentierung nach Region, Sprache und Kaufsignal."],
+      ["Nationale Accounts", "Koordination über Sprachen, Filialen und Entscheidungszyklen.", "ICP-Segmentierung nach Region, Sprache und Kaufsignal."],
     ],
   },
   nl: {
@@ -132,7 +132,7 @@ const swissRegionalLinks: Array<{ frPath: string; labels: Record<SupportedLocale
   {
     frPath: "/prospection-commerciale-suisse-alemanique",
     labels: {
-      fr: "Suisse alemanique",
+      fr: "Suisse alémanique",
       en: "German-speaking Switzerland",
       de: "Deutschschweiz",
       nl: "Duitstalig Zwitserland",
@@ -141,10 +141,10 @@ const swissRegionalLinks: Array<{ frPath: string; labels: Record<SupportedLocale
   {
     frPath: "/prospection-commerciale-geneve",
     labels: {
-      fr: "Geneve",
+      fr: "Genève",
       en: "Geneva",
       de: "Genf",
-      nl: "Geneve",
+      nl: "Genève",
     },
   },
   {
@@ -161,7 +161,7 @@ const swissRegionalLinks: Array<{ frPath: string; labels: Record<SupportedLocale
     labels: {
       fr: "Zurich",
       en: "Zurich",
-      de: "Zuerich",
+      de: "Zürich",
       nl: "Zurich",
     },
   },
@@ -178,15 +178,15 @@ const swissRegionalLinks: Array<{ frPath: string; labels: Record<SupportedLocale
 
 const swissRegionalSectionCopy: Record<SupportedLocale, { title: string; description: string }> = {
   fr: {
-    title: "Marches suisses et DACH a cibler",
-    description: "Choisissez une page locale lorsque votre campagne doit isoler une region, une ville ou un marche germanophone precis.",
+    title: "Marchés suisses et DACH à cibler",
+    description: "Choisissez une page locale lorsque votre campagne doit isoler une région, une ville ou un marché germanophone précis.",
   },
   en: {
     title: "Swiss and DACH markets to target",
     description: "Use a local page when your campaign needs to isolate a region, city, or German-speaking market.",
   },
   de: {
-    title: "Schweizer und DACH-Maerkte im Fokus",
+    title: "Schweizer und DACH-Märkte im Fokus",
     description: "Nutzen Sie eine lokale Seite, wenn Ihre Kampagne eine Region, Stadt oder einen deutschsprachigen Markt separat behandeln soll.",
   },
   nl: {
@@ -248,6 +248,7 @@ export function GeoLandingPage({ data, locale = "fr" }: { data: GeoPageData; loc
         schema={[
           buildBreadcrumbSchema(breadcrumbItems),
           buildFaqPageSchema(faqs),
+          ...(directAnswer ? [buildQaPageSchema(directAnswer.title, directAnswer.body)] : []),
           buildArticleSchema({
             headline: h1,
             description: intro[0] ?? h1,
@@ -301,6 +302,15 @@ export function GeoLandingPage({ data, locale = "fr" }: { data: GeoPageData; loc
               <p className="mt-3 max-w-4xl text-sm leading-7 text-neutral-700 md:text-base">
                 {directAnswer.body}
               </p>
+              {directAnswer.proofPoints && directAnswer.proofPoints.length > 0 && (
+                <ul className="mt-5 grid gap-2 text-sm leading-6 text-neutral-700 md:grid-cols-3">
+                  {directAnswer.proofPoints.map((point) => (
+                    <li key={point} className="rounded-lg border border-neutral-200 bg-white px-4 py-3">
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
         </section>
