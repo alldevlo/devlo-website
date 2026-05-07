@@ -9,12 +9,12 @@ import { BlogHubMasterPage } from "@/components/pages/blog-hub-master-page";
 import { BlogArticleMasterPage } from "@/components/pages/blog-article-master-page";
 import { CaseStudiesMasterPage } from "@/components/pages/case-studies-master-page";
 import { CaseStudyMasterPage } from "@/components/pages/case-study-master-page";
-import { ConditionsMasterPage } from "@/components/pages/conditions-master-page";
 import { ConsultationMasterPage } from "@/components/pages/consultation-master-page";
 import { GeoLandingPage } from "@/components/pages/geo-landing-page";
 import { AlternativePage } from "@/components/pages/alternative-page";
 import { DictationCleanMasterPage } from "@/components/pages/dictation-clean-master-page";
 import { HomePage } from "@/components/pages/home-page";
+import { LegalPage } from "@/components/pages/legal-page";
 import { ServicesHubPage as ServicesHubView } from "@/components/pages/services-hub-page";
 import { ServicePageTemplate } from "@/components/pages/service-page";
 import { InsightsHubMasterPage } from "@/components/pages/insights-hub-master-page";
@@ -25,6 +25,7 @@ import { LocalizedPage as LocalizedContentPage } from "@/components/pages/locali
 import { GEO_PAGES } from "@/content/geo-pages";
 import { ALTERNATIVE_PAGES } from "@/content/alternatives";
 import { type ServiceSlug } from "@/content/services";
+import { getLegalPageContent } from "@/content/legal";
 import { getLocalizedInsightsHub, getLocalizedBuyingSignals, getLocalizedColdEmailHub, getLocalizedColdEmailSequence, getLocalizedAutoAmelioration } from "@/lib/i18n/insights-helpers";
 import { AutoAmeliorationMasterPage } from "@/components/pages/auto-amelioration-master-page";
 import { getLocalizedBlogArticle, getLocalizedBlogHub } from "@/lib/i18n/blog-content";
@@ -89,10 +90,14 @@ const academyAliases = new Set([
 
 const conditionsAliases = new Set([
   "/terms",
-  "/politique-confidentialite",
+  "/terms-of-service",
   "/conditions-utilisation-academie",
-  "/privacy-policy",
   "/academy-terms-conditions",
+]);
+
+const privacyAliases = new Set([
+  "/politique-confidentialite",
+  "/privacy-policy",
 ]);
 
 const openGraphLocaleByLanguage: Record<SupportedLocale, string> = {
@@ -109,29 +114,6 @@ const openGraphImageAltByLanguage: Record<SupportedLocale, string> = {
   nl: "devlo - Zwitsers B2B prospectiebureau",
 };
 
-const privacySeoByLanguage: Record<SupportedLocale, { title: string; description: string }> = {
-  fr: {
-    title: "Politique de confidentialité",
-    description:
-      "Consultez la politique de confidentialité de devlo.ch: données collectées, finalités, conservation, droits des utilisateurs et contact.",
-  },
-  en: {
-    title: "Privacy policy",
-    description:
-      "Read the devlo.ch privacy policy: collected data, processing purposes, retention, user rights and contact details.",
-  },
-  de: {
-    title: "Datenschutzerklärung",
-    description:
-      "Lesen Sie die Datenschutzerklärung von devlo.ch: erhobene Daten, Verarbeitungszwecke, Aufbewahrung, Nutzerrechte und Kontakt.",
-  },
-  nl: {
-    title: "Privacybeleid",
-    description:
-      "Lees het privacybeleid van devlo.ch: verzamelde gegevens, verwerkingsdoeleinden, bewaring, gebruikersrechten en contact.",
-  },
-};
-
 function isPrefixedLocale(value: string): value is Exclude<SupportedLocale, "fr"> {
   return value === "en" || value === "de" || value === "nl";
 }
@@ -145,6 +127,7 @@ function mapFrPathToRenderable(path: string): string {
   if (consultationAliases.has(normalized)) return "/consultation";
   if (academyAliases.has(normalized)) return "/academy";
   if (conditionsAliases.has(normalized)) return "/conditions";
+  if (privacyAliases.has(normalized)) return "/politique-confidentialite";
 
   if (normalized === "/resultats" || normalized === "/resultats-cas-etudes") return "/etudes-de-cas";
   if (normalized.startsWith("/resultats/")) {
@@ -419,6 +402,13 @@ function resolveLocalizedTemplateFromPath(
     };
   }
 
+  if (frPath === "/politique-confidentialite") {
+    return {
+      kind: "privacy" as const,
+      content,
+    };
+  }
+
   if (frPath === "/etudes-de-cas") {
     return {
       kind: "case-studies" as const,
@@ -468,8 +458,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     ? getLocalizedColdEmailSequence(resolved.frPath.slice("/insights/cold-email-templates/".length), resolved.locale)
     : null;
   const baseSeo: { title: string; description: string; imagePath?: string; type?: "website" | "article" } =
-    resolved.pageId === "politique-confidentialite"
-    ? privacySeoByLanguage[resolved.locale]
+    resolved.frPath === "/politique-confidentialite"
+    ? getLegalPageContent(resolved.locale, "privacy").seo
+    : resolved.frPath === "/conditions"
+    ? getLegalPageContent(resolved.locale, "terms").seo
     : resolved.frPath === "/ai-sales-ops"
     ? {
         title: getLocalizedAiSalesOpsContent(resolved.locale).metaTitle,
@@ -614,11 +606,10 @@ export default async function LocalizedRoutePage({ params }: Params) {
     );
   }
   if (localizedTemplate?.kind === "conditions") {
-    return (
-      <ConditionsMasterPage
-        content={localizedTemplate.content.conditionsContent as Parameters<typeof ConditionsMasterPage>[0]["content"]}
-      />
-    );
+    return <LegalPage content={getLegalPageContent(resolved.locale, "terms")} />;
+  }
+  if (localizedTemplate?.kind === "privacy") {
+    return <LegalPage content={getLegalPageContent(resolved.locale, "privacy")} />;
   }
   if (localizedTemplate?.kind === "case-studies") {
     return (

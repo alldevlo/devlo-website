@@ -103,7 +103,7 @@
   },
   "conditions": {
     "fr": "/conditions",
-    "en": "/en/terms",
+    "en": "/en/terms-of-service",
     "de": "/de/agb",
     "nl": "/nl/voorwaarden"
   },
@@ -151,7 +151,7 @@
   },
   "page:terms": {
     "fr": "/terms",
-    "en": null,
+    "en": "/en/terms",
     "de": "/de/terms",
     "nl": "/nl/terms"
   },

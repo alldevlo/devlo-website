@@ -202,6 +202,8 @@ const nextConfig = {
       { source: "/blog-list/", destination: "/blog", permanent: true },
       { source: "/terms", destination: "/conditions", permanent: true },
       { source: "/terms/", destination: "/conditions", permanent: true },
+      { source: "/terms-of-service", destination: "/en/terms-of-service", permanent: true },
+      { source: "/terms-of-service/", destination: "/en/terms-of-service", permanent: true },
     ];
 
     // ─── WordPress legacy URL patterns ────────────────────────────────────────
@@ -575,7 +577,11 @@ const nextConfig = {
       { source: "/ausbildung-prospektion-b2b", destination: "/academy", permanent: true },
       { source: "/academy-our-call", destination: "/consultation", permanent: true },
       { source: "/academy-terms-conditions", destination: "/conditions", permanent: true },
-      { source: "/privacy-policy", destination: "/politique-confidentialite", permanent: true },
+      { source: "/about", destination: "/agence", permanent: true },
+      { source: "/about/", destination: "/agence", permanent: true },
+      { source: "/about-us", destination: "/agence", permanent: true },
+      { source: "/about-us/", destination: "/agence", permanent: true },
+      { source: "/privacy-policy", destination: "/en/privacy-policy", permanent: true },
       { source: "/telefonanruf", destination: "/telephone", permanent: true },
       { source: "/ultimativer-verkaufstrainingskurs", destination: "/formation-prospection-b2b", permanent: true },
       { source: "/unser-termin", destination: "/consultation", permanent: true },
@@ -711,8 +717,10 @@ const nextConfig = {
       { source: "/nl/services/qualification-leads", destination: "/nl/services/lead-kwalificatie", permanent: true },
       { source: "/nl/services/qualification-leads/", destination: "/nl/services/lead-kwalificatie", permanent: true },
       // Conditions (untranslated slugs)
-      { source: "/en/conditions", destination: "/en/terms", permanent: true },
-      { source: "/en/conditions/", destination: "/en/terms", permanent: true },
+      { source: "/en/conditions", destination: "/en/terms-of-service", permanent: true },
+      { source: "/en/conditions/", destination: "/en/terms-of-service", permanent: true },
+      { source: "/en/about-us", destination: "/en/about", permanent: true },
+      { source: "/en/about-us/", destination: "/en/about", permanent: true },
       { source: "/de/conditions", destination: "/de/agb", permanent: true },
       { source: "/de/conditions/", destination: "/de/agb", permanent: true },
       { source: "/nl/conditions", destination: "/nl/voorwaarden", permanent: true },

@@ -2,14 +2,16 @@ import type { Metadata } from "next";
 
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { JsonLd } from "@/components/seo/json-ld";
-import { ConditionsMasterPage } from "@/components/pages/conditions-master-page";
+import { LegalPage } from "@/components/pages/legal-page";
+import { getLegalPageContent } from "@/content/legal";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildBreadcrumbSchema } from "@/lib/seo/schema-builders";
 
+const content = getLegalPageContent("fr", "privacy");
+
 export const metadata: Metadata = buildPageMetadata({
-  title: "Politique de confidentialité",
-  description:
-    "Consultez la politique de confidentialité de devlo.ch: données collectées, finalités, conservation, droits des utilisateurs et contact.",
+  title: content.seo.title,
+  description: content.seo.description,
   path: "/politique-confidentialite",
 });
 
@@ -23,7 +25,7 @@ export default function Page() {
     <>
       <JsonLd schema={buildBreadcrumbSchema(breadcrumbItems)} />
       <Breadcrumb items={breadcrumbItems} />
-      <ConditionsMasterPage />
+      <LegalPage content={content} />
     </>
   );
 }

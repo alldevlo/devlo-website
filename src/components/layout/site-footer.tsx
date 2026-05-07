@@ -23,10 +23,14 @@ const footerLabelsByLocale: Record<
     navCaseStudies: string;
     navAcademy: string;
     navConsultation: string;
+    navAbout: string;
     services: string;
     caseStudies: string;
     officeSwiss: string;
     officeUs: string;
+    legal: string;
+    privacy: string;
+    terms: string;
     servicesHome: string;
     aiSalesOps: string;
     aiSalesOpsItems: { label: string; href: string }[];
@@ -38,10 +42,14 @@ const footerLabelsByLocale: Record<
     navCaseStudies: "Études de cas",
     navAcademy: "Outbound Academy",
     navConsultation: "Consultation gratuite",
+    navAbout: "À propos",
     services: "Services",
     caseStudies: "Études de cas",
     officeSwiss: "Bureau Suisse:",
     officeUs: "Bureau US:",
+    legal: "Légal",
+    privacy: "Politique de confidentialité",
+    terms: "Conditions générales",
     servicesHome: "Services",
     aiSalesOps: "AI Sales Ops",
     aiSalesOpsItems: [
@@ -62,10 +70,14 @@ const footerLabelsByLocale: Record<
     navCaseStudies: "Case studies",
     navAcademy: "Outbound Academy",
     navConsultation: "Free consultation",
+    navAbout: "About us",
     services: "Services",
     caseStudies: "Case studies",
     officeSwiss: "Swiss Office:",
     officeUs: "US Office:",
+    legal: "Legal",
+    privacy: "Privacy Policy",
+    terms: "Terms of Service",
     servicesHome: "Services",
     aiSalesOps: "AI Sales Ops",
     aiSalesOpsItems: [
@@ -86,10 +98,14 @@ const footerLabelsByLocale: Record<
     navCaseStudies: "Fallstudien",
     navAcademy: "Outbound Academy",
     navConsultation: "Kostenlose Beratung",
+    navAbout: "Über uns",
     services: "Leistungen",
     caseStudies: "Fallstudien",
     officeSwiss: "Schweizer Büro:",
     officeUs: "US-Büro:",
+    legal: "Rechtliches",
+    privacy: "Datenschutzerklärung",
+    terms: "Allgemeine Bedingungen",
     servicesHome: "Leistungen",
     aiSalesOps: "AI Sales Ops",
     aiSalesOpsItems: [
@@ -110,10 +126,14 @@ const footerLabelsByLocale: Record<
     navCaseStudies: "Praktijkvoorbeelden",
     navAcademy: "Outbound Academy",
     navConsultation: "Gratis consultatie",
+    navAbout: "Over ons",
     services: "Diensten",
     caseStudies: "Praktijkvoorbeelden",
     officeSwiss: "Zwitsers kantoor:",
     officeUs: "VS-kantoor:",
+    legal: "Juridisch",
+    privacy: "Privacybeleid",
+    terms: "Servicevoorwaarden",
     servicesHome: "Diensten",
     aiSalesOps: "AI Sales Ops",
     aiSalesOpsItems: [
@@ -199,10 +219,16 @@ export function SiteFooter() {
 
   const navigationLinks = [
     { label: labels.navHome, href: toLocaleHref("/") },
+    { label: labels.navAbout, href: toLocaleHref("/agence") },
     { label: labels.navCaseStudies, href: toLocaleHref("/etudes-de-cas") },
     { label: labels.navAcademy, href: toLocaleHref("/academy") },
     { label: labels.navConsultation, href: toLocaleHref("/consultation") },
     { label: labels.servicesHome, href: toLocaleHref("/services") },
+  ];
+
+  const legalLinks = [
+    { label: labels.privacy, href: toLocaleHref("/politique-confidentialite") },
+    { label: labels.terms, href: toLocaleHref("/conditions") },
   ];
 
   const serviceLinks = [
@@ -313,10 +339,14 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="mx-auto mt-12 flex w-full max-w-[1320px] flex-col gap-3 border-t border-neutral-200 px-6 pt-8 text-xs text-neutral-500 md:flex-row md:items-center md:justify-between md:px-8">
-        <Link href={footerContent.bottomLink.href} className="transition hover:text-devlo-900">
-          {footerContent.bottomLink.label}
-        </Link>
+      <div className="mx-auto mt-12 flex w-full max-w-[1320px] flex-col gap-4 border-t border-neutral-200 px-6 pt-8 text-xs text-neutral-500 md:flex-row md:items-center md:justify-between md:px-8">
+        <div className="flex flex-wrap gap-x-5 gap-y-2" aria-label={labels.legal}>
+          {legalLinks.map((link) => (
+            <Link key={link.href} href={link.href} className="transition hover:text-devlo-900">
+              {link.label}
+            </Link>
+          ))}
+        </div>
         <p>{footerContent.copyright}</p>
       </div>
 
