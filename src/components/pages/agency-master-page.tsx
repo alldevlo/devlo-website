@@ -45,7 +45,7 @@ const copyByLocale: Record<
   fr: {
     home: "Accueil",
     agencyLabel: "L'agence",
-    foundedEyebrow: "Fondée en 2020 — Lausanne, Suisse",
+    foundedEyebrow: "Fondée en 2020 — Vaud, Suisse",
     ctaConsultation: "Consultation gratuite",
     ctaResults: "Voir les résultats",
     ctaServices: "Voir les services",
@@ -66,7 +66,7 @@ const copyByLocale: Record<
   en: {
     home: "Home",
     agencyLabel: "Agency",
-    foundedEyebrow: "Founded in 2020 — Lausanne, Switzerland",
+    foundedEyebrow: "Founded in 2020 — Vaud, Switzerland",
     ctaConsultation: "Free consultation",
     ctaResults: "View results",
     ctaServices: "View services",
@@ -87,7 +87,7 @@ const copyByLocale: Record<
   de: {
     home: "Startseite",
     agencyLabel: "Über uns",
-    foundedEyebrow: "Gegründet 2020 — Lausanne, Schweiz",
+    foundedEyebrow: "Gegründet 2020 — Waadt, Schweiz",
     ctaConsultation: "Kostenlose Beratung",
     ctaResults: "Ergebnisse ansehen",
     ctaServices: "Leistungen ansehen",
@@ -108,7 +108,7 @@ const copyByLocale: Record<
   nl: {
     home: "Home",
     agencyLabel: "Over ons",
-    foundedEyebrow: "Opgericht in 2020 — Lausanne, Zwitserland",
+    foundedEyebrow: "Opgericht in 2020 — Vaud, Zwitserland",
     ctaConsultation: "Gratis consultatie",
     ctaResults: "Resultaten bekijken",
     ctaServices: "Diensten bekijken",
@@ -147,9 +147,28 @@ export function AgencyMasterPage({ locale = "fr" }: AgencyMasterPageProps) {
     about: {
       "@type": "Organization",
       name: "devlo",
+      legalName: "devlo LLC",
       url: siteConfig.url,
       foundingDate: "2020",
-      foundingLocation: "Lausanne, Vaud, Suisse",
+      foundingLocation: "Lausanne, Vaud, Switzerland",
+      address: [
+        {
+          "@type": "PostalAddress",
+          streetAddress: "Ruelle des Dolles 1",
+          addressLocality: "Rivaz",
+          postalCode: "1071",
+          addressRegion: "Vaud",
+          addressCountry: "CH",
+        },
+        {
+          "@type": "PostalAddress",
+          streetAddress: "500 4TH ST NW SUITE 102 #1591",
+          addressLocality: "Albuquerque",
+          addressRegion: "NM",
+          postalCode: "87102",
+          addressCountry: "US",
+        },
+      ],
       founder: {
         "@type": "Person",
         name: agencyContent.founderName,

@@ -105,8 +105,9 @@ A qualified lead is a B2B account that matches the client's ICP, shows an action
 ## Optional
 
 - [About / Agency](https://devlo.ch/agence)
+- [Privacy Policy](https://devlo.ch/en/privacy-policy)
 - [AI Sales Ops](https://devlo.ch/ai-sales-ops)
-- [Terms & Conditions](https://devlo.ch/conditions)
+- [Terms of Service](https://devlo.ch/en/terms-of-service)
 
 ## Contact
 

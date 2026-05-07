@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { JsonLd } from "@/components/seo/json-ld";
-import { ConditionsMasterPage } from "@/components/pages/conditions-master-page";
-import { conditionsSeo } from "@/content/masterfile.fr";
+import { LegalPage } from "@/components/pages/legal-page";
+import { getLegalPageContent } from "@/content/legal";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildBreadcrumbSchema } from "@/lib/seo/schema-builders";
 
-const conditionsTitle = conditionsSeo.title.replace(/\s*\|\s*devlo$/i, "");
+const content = getLegalPageContent("fr", "terms");
 
 export const metadata: Metadata = buildPageMetadata({
-  title: conditionsTitle,
-  description: conditionsSeo.description,
+  title: content.seo.title,
+  description: content.seo.description,
   path: "/conditions",
 });
 
@@ -25,7 +25,7 @@ export default function Page() {
     <>
       <JsonLd schema={buildBreadcrumbSchema(breadcrumbItems)} />
       <Breadcrumb items={breadcrumbItems} />
-      <ConditionsMasterPage />
+      <LegalPage content={content} />
     </>
   );
 }
