@@ -25,7 +25,11 @@ import { ColdEmailSequenceMasterPage } from "@/components/pages/cold-email-seque
 import { LocalizedPage as LocalizedContentPage } from "@/components/pages/localized-page";
 import { GEO_PAGES } from "@/content/geo-pages";
 import { ALTERNATIVE_PAGES } from "@/content/alternatives";
-import { getProgrammaticSeoPilotPage } from "@/content/programmatic-seo-pilot";
+import {
+  PROGRAMMATIC_SEO_ROUTE_ENTRIES,
+  findProgrammaticSeoRouteByLocalePath,
+  getProgrammaticSeoPilotPage,
+} from "@/content/programmatic-seo-pilot";
 import { type ServiceSlug } from "@/content/services";
 import { getLegalPageContent } from "@/content/legal";
 import { getLocalizedInsightsHub, getLocalizedBuyingSignals, getLocalizedColdEmailHub, getLocalizedColdEmailSequence, getLocalizedAutoAmelioration } from "@/lib/i18n/insights-helpers";
@@ -73,7 +77,25 @@ export function generateStaticParams() {
     }
   }
 
-  return params;
+  for (const { entry } of PROGRAMMATIC_SEO_ROUTE_ENTRIES) {
+    for (const locale of ["en", "de", "nl"] as const) {
+      const path = entry[locale];
+      if (!path) continue;
+      const withoutPrefix = path.replace(new RegExp(`^/${locale}/?`), "");
+      params.push({
+        locale,
+        slug: withoutPrefix ? withoutPrefix.split("/") : undefined,
+      });
+    }
+  }
+
+  const seen = new Set<string>();
+  return params.filter((param) => {
+    const key = `${param.locale}/${(param.slug ?? []).join("/")}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 
 const consultationAliases = new Set([
@@ -144,7 +166,18 @@ function resolveRoute(locale: string, slug: string[] | undefined) {
     const relativePath = slug && slug.length > 0 ? `/${slug.join("/")}` : "/";
     const localePath = relativePath === "/" ? `/${locale}` : `/${locale}${relativePath}`;
     const found = findEntryByLocalePath(locale, localePath);
-    if (!found || !found.entry.fr) return null;
+    if (!found || !found.entry.fr) {
+      const programmaticSeoRoute = findProgrammaticSeoRouteByLocalePath(locale, localePath);
+      if (!programmaticSeoRoute || !programmaticSeoRoute.entry.fr) return null;
+
+      return {
+        locale,
+        localePath: normalizePath(localePath),
+        pageId: programmaticSeoRoute.pageId,
+        entry: programmaticSeoRoute.entry,
+        frPath: mapFrPathToRenderable(programmaticSeoRoute.entry.fr),
+      };
+    }
 
     return {
       locale,
@@ -157,7 +190,18 @@ function resolveRoute(locale: string, slug: string[] | undefined) {
 
   const frCandidatePath = normalizePath(`/${[locale, ...(slug ?? [])].join("/")}`);
   const frMatch = findEntryByFrPath(frCandidatePath);
-  if (!frMatch || !frMatch.entry.fr) return null;
+  if (!frMatch || !frMatch.entry.fr) {
+    const programmaticSeoRoute = findProgrammaticSeoRouteByLocalePath("fr", frCandidatePath);
+    if (!programmaticSeoRoute || !programmaticSeoRoute.entry.fr) return null;
+
+    return {
+      locale: "fr" as const,
+      localePath: normalizePath(programmaticSeoRoute.entry.fr),
+      pageId: programmaticSeoRoute.pageId,
+      entry: programmaticSeoRoute.entry,
+      frPath: mapFrPathToRenderable(programmaticSeoRoute.entry.fr),
+    };
+  }
 
   return {
     locale: "fr" as const,
@@ -521,15 +565,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const description = normalizeSeoDescription(sanitySeo?.description ?? baseSeo.description, resolved.locale);
   const imagePath = resolveOgImagePath(sanitySeo?.ogImage ?? baseSeo.imagePath ?? defaultOgImagePath);
   const alternates = buildAlternates(resolved.entry, resolved.frPath);
-  const shouldNoindex = Boolean(programmaticSeoPilotPage);
 
   return {
     title,
     description,
     robots: {
-      index: !shouldNoindex,
+      index: true,
       follow: true,
-      googleBot: { index: !shouldNoindex, follow: true },
+      googleBot: { index: true, follow: true },
     },
     alternates: {
       canonical: resolved.localePath,

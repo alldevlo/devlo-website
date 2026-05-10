@@ -1,42 +1,34 @@
-# Programmatic SEO and GEO Pilot Validation
+# Programmatic SEO and GEO Publication Validation
 
 Date: 2026-05-10
 Branch: `feat/programmatic-seo-geo-pilot`
-Production deploy: not performed
-Sitemap publication: not performed
+Production deploy: approved by Charles on 2026-05-10
+Sitemap publication: approved by Charles on 2026-05-10
 
-## Pilot URLs
+## Published URL Set
 
-Five pilot cells were generated in four locales each:
+The pilot was expanded into 27 service-location cells across 4 locales, for 108 localized URLs.
 
-- `/agence-prospection-b2b-geneve`
-- `/en/b2b-prospecting-agency-geneva`
-- `/de/b2b-prospecting-agentur-genf`
-- `/nl/b2b-prospectie-bureau-geneve`
-- `/agence-prospection-b2b-lausanne`
-- `/en/b2b-prospecting-agency-lausanne`
-- `/de/b2b-prospecting-agentur-lausanne`
-- `/nl/b2b-prospectie-bureau-lausanne`
-- `/agence-prospection-b2b-zurich`
-- `/en/b2b-outbound-agency-zurich`
-- `/de/b2b-outbound-agentur-zuerich`
-- `/nl/b2b-outbound-bureau-zurich`
-- `/agence-outbound-b2b-suisse`
-- `/en/b2b-outbound-agency-switzerland`
-- `/de/b2b-outbound-agentur-schweiz`
-- `/nl/b2b-outbound-bureau-zwitserland`
-- `/agence-prospection-b2b-paris`
-- `/en/b2b-outbound-agency-paris`
-- `/de/b2b-outbound-agentur-paris`
-- `/nl/b2b-outbound-bureau-parijs`
+Markets:
 
-## Safety Controls
+- Switzerland: Geneva, Lausanne, Zurich, Basel, Bern, Zug, Winterthur, Lugano, St. Gallen, Switzerland.
+- France: Paris, Lyon, Marseille.
+- DACH and Europe: Munich, Berlin, Hamburg, Frankfurt, Vienna, Amsterdam, London, Brussels, Milan, Madrid, Barcelona, Dublin, Stockholm, Copenhagen.
 
-- All pilot pages return `robots: noindex, follow`.
-- Pilot page IDs are prefixed with `page:` in `slug-map.json`, so `src/app/sitemap.ts` skips them.
-- Local sitemap validation found zero pilot URL leaks.
+URL patterns:
+
+- French: `/agence-prospection-b2b-{city}`
+- English: `/en/b2b-prospecting-agency-{city}`
+- German: `/de/b2b-prospecting-agentur-{city}`
+- Dutch: `/nl/b2b-prospectie-bureau-{city}`
+
+## Publication Controls
+
+- Pages are indexable and included in the generated sitemap.
+- The pages use a category-guide frame, not copied competitor-list content.
 - No favicon, icon or apple-icon asset was modified.
-- No `robots.ts`, `sitemap.ts`, `public/llms.txt`, deploy config or analytics code was modified.
+- `robots.txt`, `llms.txt`, deploy config and analytics code were not modified.
+- `sitemap.ts` was updated only to include the approved programmatic SEO routes.
 
 ## Automated Validation
 
@@ -47,7 +39,7 @@ npm run lint
 npm run build
 npm run check:slug-map-navigation
 npm run check:hadoseo-metadata
-npm run check:seo-quality -- http://localhost:3000 --limit=40 --json
+npm run check:seo-quality -- http://localhost:3001 --limit=80 --json
 ```
 
 Results:
@@ -56,38 +48,39 @@ Results:
 - `npm run build`: passed.
 - `check:slug-map-navigation`: passed, 100 entries.
 - `check:hadoseo-metadata`: passed, 34 routes.
-- `check:seo-quality`: passed on first 40 sitemap URLs, 0 errors, 0 warnings.
+- `check:seo-quality`: passed on first 80 sitemap URLs, 0 errors, 0 warnings.
 
-Custom pilot checks:
+Custom rendered-page checks:
 
-- 20 pilot URLs checked.
-- 20 returned HTTP 200.
-- 20 had `noindex, follow`.
-- 20 had exactly one H1.
-- 20 had 5 hreflang alternates.
-- 20 had parseable JSON-LD.
-- 0 pilot URLs appeared in local sitemap.
-- 188 internal hrefs discovered from pilot pages.
-- 0 internal hrefs returned 4xx or 5xx.
+- 108 programmatic URLs discovered in local sitemap.
+- 108 returned HTTP 200.
+- 108 had no `noindex`.
+- 108 had exactly one H1.
+- 108 had hreflang alternates.
+- 108 had JSON-LD.
+- French rendered text passed the targeted accent regression check for prior problem terms such as `Genève`, `qualifiés`, `décideurs`, `vérifier`, `références`, `générique`, `données` and `français`.
 
-## Manual Review Notes
+## SalesCaptain Pattern Backtest
 
-The pilot deliberately avoids "best agencies" rankings and competitor listicles. It uses a first-party service-location guide frame with:
+Adopted:
 
-- direct answer block;
-- proof points;
-- local signals;
-- criteria table;
-- market notes;
-- related internal links;
-- FAQ;
-- `Article`, `FAQPage`, `BreadcrumbList` and `Service` JSON-LD.
+- Service-location URL matrix.
+- Intent-led titles and H1s.
+- Local proof and market-context sections.
+- Selection criteria table.
+- FAQ blocks.
+- Internal links to service, location and consultation pages.
+- Sitemap inclusion for indexable pages.
 
-## Remaining Gates Before Public Indexation
+Rejected:
 
-- Decide whether these pages should remain first-party guides or become legally reviewed market comparison pages.
-- Run capped DataForSEO keyword validation if approved by the CFO gate.
-- Review copy quality in each locale with a human or locale-specific reviewer.
-- Decide whether to add pages to sitemap and remove `noindex`.
-- Production deploy only after final approval.
+- Copying SalesCaptain text.
+- Ranking competitors as "best agencies" without legal and editorial review.
+- Thin city swaps without local sector signals.
 
+## Remaining Measurement Work
+
+- Track GSC impressions, CTR and average position by URL.
+- Track GA4 sessions and consultation conversions by URL.
+- Sample AI answer citations for target queries after pages are crawled.
+- Rewrite or remove weak cells after a 30-day measurement window.

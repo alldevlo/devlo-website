@@ -11,7 +11,7 @@ import { siteConfig } from "@/lib/site";
 const uiCopy = {
   fr: {
     home: "Accueil",
-    pilot: "Pilot SEO",
+    guide: "Guide local",
     answer: "Réponse directe",
     proof: "Preuves et signaux",
     criteria: "Critères de sélection",
@@ -19,11 +19,11 @@ const uiCopy = {
     links: "Pages utiles",
     faq: "Questions fréquentes",
     cta: "Planifier une consultation",
-    noindex: "Page pilot noindex - non publiee dans le sitemap.",
+    answerHeading: (service: string, market: string) => `${service} à ${market}`,
   },
   en: {
     home: "Home",
-    pilot: "SEO pilot",
+    guide: "Local guide",
     answer: "Direct answer",
     proof: "Proof and signals",
     criteria: "Selection criteria",
@@ -31,23 +31,23 @@ const uiCopy = {
     links: "Useful pages",
     faq: "Frequently asked questions",
     cta: "Book a consultation",
-    noindex: "Noindex pilot page - not published in the sitemap.",
+    answerHeading: (service: string, market: string) => `${service} in ${market}`,
   },
   de: {
     home: "Startseite",
-    pilot: "SEO Pilot",
+    guide: "Lokaler Guide",
     answer: "Direkte Antwort",
     proof: "Nachweise und Signale",
     criteria: "Auswahlkriterien",
     market: "Lokaler Kontext",
-    links: "Nuetzliche Seiten",
-    faq: "Haeufige Fragen",
+    links: "Nützliche Seiten",
+    faq: "Häufige Fragen",
     cta: "Beratung planen",
-    noindex: "Noindex-Pilotseite - nicht in der Sitemap veroeffentlicht.",
+    answerHeading: (service: string, market: string) => `${service} in ${market}`,
   },
   nl: {
     home: "Home",
-    pilot: "SEO pilot",
+    guide: "Lokale gids",
     answer: "Direct antwoord",
     proof: "Bewijs en signalen",
     criteria: "Selectiecriteria",
@@ -55,7 +55,7 @@ const uiCopy = {
     links: "Nuttige pagina's",
     faq: "Veelgestelde vragen",
     cta: "Plan een consultatie",
-    noindex: "Noindex pilotpagina - niet gepubliceerd in de sitemap.",
+    answerHeading: (service: string, market: string) => `${service} in ${market}`,
   },
 } as const;
 
@@ -63,7 +63,7 @@ export function ProgrammaticSeoPilotPage({ page }: { page: ProgrammaticSeoPage }
   const copy = uiCopy[page.locale];
   const breadcrumbItems = [
     { name: copy.home, path: page.locale === "fr" ? "/" : `/${page.locale}` },
-    { name: copy.pilot, path: page.path },
+    { name: copy.guide, path: page.path },
   ];
   const consultationHref =
     page.relatedLinks.find((link) => /consultation|beratung|adviesgesprek/.test(link.href))?.href ?? "/consultation";
@@ -108,7 +108,7 @@ export function ProgrammaticSeoPilotPage({ page }: { page: ProgrammaticSeoPage }
         <Breadcrumb items={breadcrumbItems} variant="dark" />
         <div className="mx-auto w-full max-w-screen-xl px-6 pt-8 lg:px-10">
           <p className="text-xs font-semibold uppercase tracking-[0.12em] text-white/70">
-            {copy.noindex}
+            {copy.guide}
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl font-extrabold leading-tight md:text-5xl">
             {page.h1}
@@ -136,7 +136,7 @@ export function ProgrammaticSeoPilotPage({ page }: { page: ProgrammaticSeoPage }
             <div className="rounded-lg border border-neutral-200 bg-[#F7F8FC] p-6 md:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#074f74]">{copy.answer}</p>
               <h2 className="mt-2 text-2xl font-extrabold text-[#153a54]">
-                {page.service} in {page.market}
+                {copy.answerHeading(page.service, page.market)}
               </h2>
               <p className="mt-4 text-base leading-7 text-neutral-700">{page.answer}</p>
             </div>
@@ -225,4 +225,3 @@ export function ProgrammaticSeoPilotPage({ page }: { page: ProgrammaticSeoPage }
     </>
   );
 }
-
