@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 
+import { PROGRAMMATIC_SEO_ROUTE_ENTRIES } from "@/content/programmatic-seo-pilot";
 import { entriesByPageId, normalizePath } from "@/lib/i18n/slug-map";
 import { siteConfig } from "@/lib/site";
 
@@ -35,6 +36,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       urls.add(`${siteConfig.url}${normalized}`);
     }
   }
+
+  for (const { entry } of PROGRAMMATIC_SEO_ROUTE_ENTRIES) {
+    for (const path of [entry.fr, entry.en, entry.de, entry.nl]) {
+      if (!path) continue;
+      const normalized = normalizeSitemapPath(path);
+      if (!normalized) continue;
+      urls.add(`${siteConfig.url}${normalized}`);
+    }
+  }
+
   return Array.from(urls)
     .sort((a, b) => a.localeCompare(b))
     .map((url) => {
