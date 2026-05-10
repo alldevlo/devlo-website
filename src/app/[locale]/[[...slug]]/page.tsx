@@ -12,6 +12,7 @@ import { CaseStudyMasterPage } from "@/components/pages/case-study-master-page";
 import { ConsultationMasterPage } from "@/components/pages/consultation-master-page";
 import { GeoLandingPage } from "@/components/pages/geo-landing-page";
 import { AlternativePage } from "@/components/pages/alternative-page";
+import { ProgrammaticSeoPilotPage } from "@/components/pages/programmatic-seo-pilot-page";
 import { DictationCleanMasterPage } from "@/components/pages/dictation-clean-master-page";
 import { HomePage } from "@/components/pages/home-page";
 import { LegalPage } from "@/components/pages/legal-page";
@@ -24,6 +25,7 @@ import { ColdEmailSequenceMasterPage } from "@/components/pages/cold-email-seque
 import { LocalizedPage as LocalizedContentPage } from "@/components/pages/localized-page";
 import { GEO_PAGES } from "@/content/geo-pages";
 import { ALTERNATIVE_PAGES } from "@/content/alternatives";
+import { getProgrammaticSeoPilotPage } from "@/content/programmatic-seo-pilot";
 import { type ServiceSlug } from "@/content/services";
 import { getLegalPageContent } from "@/content/legal";
 import { getLocalizedInsightsHub, getLocalizedBuyingSignals, getLocalizedColdEmailHub, getLocalizedColdEmailSequence, getLocalizedAutoAmelioration } from "@/lib/i18n/insights-helpers";
@@ -439,6 +441,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const localizedGeoSeo = resolved.frPath.startsWith("/prospection-commerciale-")
     ? getLocalizedGeoContent(resolved.frPath.slice(1), resolved.locale)
     : null;
+  const programmaticSeoPilotPage = getProgrammaticSeoPilotPage(resolved.frPath, resolved.locale);
   const localizedAlternativeSeo = resolved.frPath.startsWith("/alternative-")
     ? getLocalizedAlternativeContent(resolved.frPath.slice(1), resolved.locale)
     : null;
@@ -458,7 +461,13 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     ? getLocalizedColdEmailSequence(resolved.frPath.slice("/insights/cold-email-templates/".length), resolved.locale)
     : null;
   const baseSeo: { title: string; description: string; imagePath?: string; type?: "website" | "article" } =
-    resolved.frPath === "/politique-confidentialite"
+    programmaticSeoPilotPage
+    ? {
+        title: programmaticSeoPilotPage.metaTitle,
+        description: programmaticSeoPilotPage.metaDescription,
+        type: "article" as const,
+      }
+    : resolved.frPath === "/politique-confidentialite"
     ? getLegalPageContent(resolved.locale, "privacy").seo
     : resolved.frPath === "/conditions"
     ? getLegalPageContent(resolved.locale, "terms").seo
@@ -512,14 +521,15 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const description = normalizeSeoDescription(sanitySeo?.description ?? baseSeo.description, resolved.locale);
   const imagePath = resolveOgImagePath(sanitySeo?.ogImage ?? baseSeo.imagePath ?? defaultOgImagePath);
   const alternates = buildAlternates(resolved.entry, resolved.frPath);
+  const shouldNoindex = Boolean(programmaticSeoPilotPage);
 
   return {
     title,
     description,
     robots: {
-      index: true,
+      index: !shouldNoindex,
       follow: true,
-      googleBot: { index: true, follow: true },
+      googleBot: { index: !shouldNoindex, follow: true },
     },
     alternates: {
       canonical: resolved.localePath,
@@ -558,6 +568,11 @@ export default async function LocalizedRoutePage({ params }: Params) {
   }
 
   const frPath = resolved.frPath;
+  const programmaticSeoPilotPage = getProgrammaticSeoPilotPage(frPath, resolved.locale);
+  if (programmaticSeoPilotPage) {
+    return <ProgrammaticSeoPilotPage page={programmaticSeoPilotPage} />;
+  }
+
   const localizedServiceView = resolveLocalizedServiceFromPath(frPath, resolved.locale);
   if (localizedServiceView?.kind === "hub") {
     return (

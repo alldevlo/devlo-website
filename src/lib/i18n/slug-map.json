@@ -568,5 +568,35 @@
     "en": "/en/insights/cold-email-templates/supply-chain",
     "de": "/de/insights/cold-email-templates/supply-chain",
     "nl": "/nl/insights/cold-email-templates/supply-chain"
+  },
+  "page:programmatic-seo-pilot:geneva": {
+    "fr": "/agence-prospection-b2b-geneve",
+    "en": "/en/b2b-prospecting-agency-geneva",
+    "de": "/de/b2b-prospecting-agentur-genf",
+    "nl": "/nl/b2b-prospectie-bureau-geneve"
+  },
+  "page:programmatic-seo-pilot:lausanne": {
+    "fr": "/agence-prospection-b2b-lausanne",
+    "en": "/en/b2b-prospecting-agency-lausanne",
+    "de": "/de/b2b-prospecting-agentur-lausanne",
+    "nl": "/nl/b2b-prospectie-bureau-lausanne"
+  },
+  "page:programmatic-seo-pilot:zurich": {
+    "fr": "/agence-prospection-b2b-zurich",
+    "en": "/en/b2b-outbound-agency-zurich",
+    "de": "/de/b2b-outbound-agentur-zuerich",
+    "nl": "/nl/b2b-outbound-bureau-zurich"
+  },
+  "page:programmatic-seo-pilot:switzerland": {
+    "fr": "/agence-outbound-b2b-suisse",
+    "en": "/en/b2b-outbound-agency-switzerland",
+    "de": "/de/b2b-outbound-agentur-schweiz",
+    "nl": "/nl/b2b-outbound-bureau-zwitserland"
+  },
+  "page:programmatic-seo-pilot:paris": {
+    "fr": "/agence-prospection-b2b-paris",
+    "en": "/en/b2b-outbound-agency-paris",
+    "de": "/de/b2b-outbound-agentur-paris",
+    "nl": "/nl/b2b-outbound-bureau-parijs"
   }
 }
