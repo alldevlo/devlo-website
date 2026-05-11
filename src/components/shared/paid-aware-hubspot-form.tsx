@@ -178,6 +178,10 @@ export function PaidAwareHubspotForm({
         targetId={targetId}
         locale={locale}
         hiddenFields={hiddenFields}
+        analyticsContext={{
+          form_type: "consultation",
+          form_location: "consultation_page",
+        }}
         onFormSubmitCapture={handleFormSubmitCapture}
         onSubmitted={() => {
           pushAnalyticsEvent("demo_requested", {

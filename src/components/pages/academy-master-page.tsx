@@ -10,7 +10,7 @@ import { FadeInOnScroll } from "@/components/ui/fade-in-on-scroll";
 import { WistiaPlayer } from "@/components/ui/wistia-player";
 import { RichParagraph } from "@/lib/utils/rich-text";
 import { academyContent, homeContent } from "@/content/masterfile.fr";
-import type { SupportedLocale } from "@/lib/i18n/slug-map";
+import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
 
 const DeferredAccordionSingle = dynamic(
   () => import("@/components/ui/accordion-single").then((module) => module.AccordionSingle),
@@ -129,6 +129,11 @@ export function AcademyMasterPage({
   locale = "fr",
 }: AcademyMasterPageProps) {
   const academyGeoContent = academyGeoContentByLocale[locale];
+  const localizeInternalHref = (href: string) => {
+    if (/^[a-z][a-z0-9+.-]*:/i.test(href) || href.startsWith("#")) return href;
+    return resolvePathForLocale(href, locale).path;
+  };
+
   return (
     <>
       <SectionWrapper background="white" className="pt-[80px] md:pt-[120px]">
@@ -180,7 +185,7 @@ export function AcademyMasterPage({
               <Link href={content.whyTraining.cta1.href} target="_blank" rel="noreferrer" className={buttonClassName("primary", "px-8 py-4 text-base")}>
                 {content.whyTraining.cta1.label}
               </Link>
-              <Link href={content.whyTraining.cta2.href} className={buttonClassName("outline", "px-8 py-4 text-base")}>
+              <Link href={localizeInternalHref(content.whyTraining.cta2.href)} className={buttonClassName("outline", "px-8 py-4 text-base")}>
                 {content.whyTraining.cta2.label}
               </Link>
             </div>
@@ -273,7 +278,7 @@ export function AcademyMasterPage({
                 <div>
                   <h3 className="text-lg font-semibold text-devlo-900">{chapter.title}</h3>
                   <p className="mt-1.5 text-base leading-7 text-neutral-600">{chapter.description}</p>
-                  <Link href={chapter.link.href} className="mt-3 inline-flex text-sm font-semibold text-devlo-700 hover:underline">
+                  <Link href={localizeInternalHref(chapter.link.href)} className="mt-3 inline-flex text-sm font-semibold text-devlo-700 hover:underline">
                     {chapter.link.label} →
                   </Link>
                 </div>

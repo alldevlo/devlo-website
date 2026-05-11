@@ -968,7 +968,7 @@ function buildPage(profile: CityProfile, locale: SupportedLocale): ProgrammaticS
       ],
       relatedLinks: [
         { label: `Prospection B2B à ${market}`, href: `/prospection-commerciale-${profile.slugs.fr.replace("agence-prospection-b2b-", "")}` },
-        { label: "Services outbound B2B", href: "/services/outbound-engine" },
+        { label: "Services outbound B2B", href: "/services/outbound-multicanal" },
         { label: consultationLabel.fr, href: consultationPath.fr },
       ],
       datePublished,
@@ -1020,7 +1020,7 @@ function buildPage(profile: CityProfile, locale: SupportedLocale): ProgrammaticS
       ],
       relatedLinks: [
         { label: `B2B-Akquise in ${market}`, href: `/de/b2b-akquise-${profile.slugs.de.replace("b2b-prospecting-agentur-", "")}` },
-        { label: "B2B-Outbound-Services", href: "/de/services/outbound-engine" },
+        { label: "B2B-Outbound-Services", href: "/de/services/outbound-multikanal" },
         { label: consultationLabel.de, href: consultationPath.de },
       ],
       datePublished,
@@ -1072,7 +1072,7 @@ function buildPage(profile: CityProfile, locale: SupportedLocale): ProgrammaticS
       ],
       relatedLinks: [
         { label: `B2B prospectie in ${market}`, href: `/nl/b2b-prospectie-${profile.slugs.nl.replace("b2b-prospectie-bureau-", "")}` },
-        { label: "B2B outbound diensten", href: "/nl/services/outbound-engine" },
+        { label: "B2B outbound diensten", href: "/nl/services/outbound-multichannel" },
         { label: consultationLabel.nl, href: consultationPath.nl },
       ],
       datePublished,
@@ -1123,7 +1123,7 @@ function buildPage(profile: CityProfile, locale: SupportedLocale): ProgrammaticS
     ],
     relatedLinks: [
       { label: `B2B prospecting in ${market}`, href: `/en/b2b-prospecting-${profile.slugs.en.replace("b2b-prospecting-agency-", "")}` },
-      { label: "B2B outbound services", href: "/en/services/outbound-engine" },
+      { label: "B2B outbound services", href: "/en/services/outbound-multichannel" },
       { label: consultationLabel.en, href: consultationPath.en },
     ],
     datePublished,
