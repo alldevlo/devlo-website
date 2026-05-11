@@ -479,7 +479,7 @@ export function AlternativePage({ data, locale = "fr" }: { data: AlternativePage
         </section>
       )}
 
-      {/* Editorial / GEO section */}
+      {/* Editorial section */}
       {editorialTitle && (
         <section className="bg-white py-12 md:py-16">
           <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">

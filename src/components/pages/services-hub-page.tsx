@@ -70,13 +70,13 @@ const serviceSelectionTables: Record<
     ],
   },
   de: {
-    caption: "Den passenden devlo B2B-Prospecting-Service waehlen",
-    headers: ["Ziel", "Prioritaerer Service", "Wann nutzen"],
+    caption: "Den passenden devlo B2B-Prospecting-Service wählen",
+    headers: ["Ziel", "Prioritärer Service", "Wann nutzen"],
     rows: [
-      ["GTM-System aufbauen", "GTM Engineering", "Wenn ICP, Signale, Daten, Sequenzen, CRM und Reporting verbunden werden muessen."],
+      ["GTM-System aufbauen", "GTM Engineering", "Wenn ICP, Signale, Daten, Sequenzen, CRM und Reporting verbunden werden müssen."],
       ["ICP-Liste erstellen", "Leadgenerierung", "Wenn der TAM existiert, aber Accounts nicht qualifiziert sind."],
       ["Termine buchen", "Terminvereinbarung", "Wenn Sales mit mehr Entscheidern sprechen muss."],
-      ["Datenqualitaet verbessern", "Clay-Enrichment", "Wenn E-Mails, Rollen oder Domains fehlen."],
+      ["Datenqualität verbessern", "Clay-Enrichment", "Wenn E-Mails, Rollen oder Domains fehlen."],
       ["Accounts priorisieren", "Intent Data", "Wenn Unternehmen zum richtigen Zeitpunkt kontaktiert werden sollen."],
     ],
   },

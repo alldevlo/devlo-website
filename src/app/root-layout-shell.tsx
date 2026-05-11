@@ -106,7 +106,7 @@ const schemaCopyByLocale: Record<
   },
   de: {
     organizationDescription:
-      "Europaeische GTM Engineering Agentur mit Sitz in der Schweiz fuer AI Outbound, mehrkanalige B2B-Akquise, Kaufsignale, Clay Enrichment und qualifizierte Termine. Seit 2020 wurden mehr als 1.000 Kampagnen gestartet.",
+      "Europäische GTM Engineering Agentur mit Sitz in der Schweiz für AI Outbound, mehrkanalige B2B-Akquise, Kaufsignale, Clay Enrichment und qualifizierte Termine. Seit 2020 wurden mehr als 1.000 Kampagnen gestartet.",
     serviceName: "GTM Engineering und ausgelagerte B2B-Vertriebsakquise",
     serviceType: "AI Outbound, signalbasierte Akquise, B2B-Leadgenerierung und qualifizierte Termine",
     reviewBodies: [

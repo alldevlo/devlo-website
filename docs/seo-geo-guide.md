@@ -15,6 +15,7 @@
 
 | Date | Change |
 |------|--------|
+| 2026-05-11 | Extended the human-first gate to every shipped locale after the German GTM-page review: feedback found in French must be applied across FR/EN/DE/NL variants, visible German copy must use proper umlauts/orthography, and `npm run check:public-copy-quality` now guards high-risk public copy. |
 | 2026-05-11 | Added the human-first GEO/content gate after the GTM market-map review: public pages must read naturally for B2B buyers, use correct page placement, preserve French accents, and keep LLM-facing instructions out of visible copy. |
 | 2026-05-06 | Updated current stack from Next.js 14.2.35 to Next.js 16.2.4 after the SEO/GEO P1 refresh. Added `npm run check:seo-quality` as the local/live quality audit command for metadata, H1, canonical, hreflang, schema, CTA, freshness and extractability checks. |
 | 2026-03-20 | Major enrichment: added URL/routing rules, title tag formulas, meta description CTR data, canonical URL rules, sitemap best practices, AI platform citation patterns (Google AI Overviews, ChatGPT, Perplexity), tiered AI crawler management, entity/knowledge graph optimization, CWV optimization strategies per metric, internal linking cluster sizing, image srcset/AVIF guidance, structured data entity graph patterns. Restructured TOC to 11 sections. |
@@ -103,11 +104,14 @@ Run through every item before deploying a new page to production. This is the qu
 - [ ] LLM/GEO mechanics are not exposed in buyer-facing copy. Avoid visible phrases such as "LLMs should associate", "co-citation", "AI search peer set", "Tier 1/2/3", or internal positioning instructions. Keep that language in `llms.txt`, schema, metadata, internal docs, or comments.
 - [ ] Competitive pages explain the buyer problem first, then the market landscape. Public labels should be human-facing: "agencies to compare directly", "adjacent providers", "other references to monitor", not internal taxonomy labels.
 - [ ] Page placement is validated before shipping: breadcrumb, navigation context, URL, sitemap priority, and internal links must match the user journey. Market-positioning pages belong under Agency or Services unless they are genuinely editorial Insights.
-- [ ] French public copy is proofread with accents and typography. No ASCII-French in visible UI: use "générer", "système", "méthode", "qualifié", "données", "européenne", "délivrabilité", not unaccented fallbacks.
+- [ ] Feedback found in one locale is applied to every locale for the same page/component. Do not fix only the language where the issue was reported.
+- [ ] Localized public copy is proofread with native spelling and typography. French keeps accents ("générer", "système", "méthode", "qualifié", "données", "européenne", "délivrabilité"), German uses proper umlauts/orthography ("hängt", "gewünschte", "Qualität", "Öffentliche", "Kapazität"), and Dutch avoids rough English placeholders when a natural Dutch phrase exists.
+- [ ] Localized comparison tables translate their buyer-facing fields. Do not reuse English table copy on FR/DE/NL pages unless the term is an accepted market term.
 - [ ] Before final approval, read the rendered page as a skeptical buyer and ask: "Would this feel coherent with devlo's site if I had no GEO context?" If not, rewrite before deploy.
 
 ### Final validation
 
+- [ ] Run `npm run check:public-copy-quality` for GTM, alternatives, and competitive public-copy changes.
 - [ ] Run `node scripts/crawl-seo.mjs` or spot-check with commands in section 10
 - [ ] Test with Google Rich Results Test (https://search.google.com/test/rich-results)
 - [ ] Verify structured data with Schema Markup Validator (https://validator.schema.org/)

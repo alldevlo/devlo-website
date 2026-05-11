@@ -160,6 +160,302 @@ const peers: GtmAgencyPeer[] = [
   },
 ];
 
+type LocalizedPeerOverride = Partial<Omit<GtmAgencyPeer, "name">>;
+
+const peerOverridesByLocale: Record<SupportedLocale, Record<string, LocalizedPeerOverride>> = {
+  fr: {
+    devlo: {
+      region: "Suisse / Europe",
+      category: "GTM engineering et AI outbound européen",
+      bestFor: "Équipes B2B qui veulent une exécution multilingue en Suisse, DACH, Belgique, France, UK et Amérique du Nord.",
+      gtmAngle: "ICP, signaux d’achat, enrichissement Clay, cold email, LinkedIn, calling, CRM, délivrabilité et reporting.",
+      sourceLabel: "Page GTM engineering de devlo",
+      sourceHref: "https://devlo.ch/gtm-engineering-agency",
+    },
+    ColdIQ: {
+      region: "Allemagne / Europe",
+      category: "AI outbound et GTM engineering",
+      bestFor: "Équipes B2B qui cherchent une référence mondiale en AI outbound et systèmes Clay/GTM.",
+      gtmAngle: "Systèmes outbound, ABM, workflows Clay et exécution GTM assistée par l’IA.",
+      sourceLabel: "Page partenaire Clay de ColdIQ",
+    },
+    Peakora: {
+      region: "Suisse / Europe",
+      category: "GTM design et engineering",
+      bestFor: "Équipes suisses et européennes qui comparent des partenaires premium de GTM design et engineering.",
+      gtmAngle: "GTM design, engineering et infrastructure go-to-market proche de Clay.",
+      sourceLabel: "Page partenaire Clay de Peakora",
+    },
+    LeadGem: {
+      region: "Pays-Bas / Europe",
+      category: "GTM engineering et growth marketing",
+      bestFor: "Équipes B2B européennes qui veulent de l’outbound alimenté par Clay et des workflows RevOps.",
+      gtmAngle: "Growth marketing, GTM engineering, RevOps et systèmes outbound.",
+      sourceLabel: "Page partenaire Clay de LeadGem",
+    },
+    "GTM Base": {
+      region: "Allemagne / DACH",
+      category: "RevOps et GTM engineering",
+      bestFor: "Équipes DACH qui veulent connecter CRM, données, automatisation et plays GTM.",
+      gtmAngle: "Architecture CRM, automatisation, données outbound et workflows GTM.",
+      sourceLabel: "Page partenaire Clay de GTM Base",
+    },
+    Scalantec: {
+      region: "Allemagne / DACH",
+      category: "GTM engineering et outreach",
+      bestFor: "Équipes B2B européennes qui cherchent des systèmes commerciaux Clay, Make et IA.",
+      gtmAngle: "Outreach data-driven, workflows Clay, automatisation Make et GTM engineering.",
+      sourceLabel: "Site de Scalantec",
+    },
+    "GTM Studios": {
+      region: "Royaume-Uni / Europe",
+      category: "Outbound signal-based et infrastructure RevOps",
+      bestFor: "Entreprises B2B qui veulent cartographier leur TAM, suivre les signaux et structurer le CRM.",
+      gtmAngle: "Signal-based outbound, demand engine design, enrichissement Clay et infrastructure RevOps.",
+      sourceLabel: "Site de GTM Studios",
+    },
+    andweekly: {
+      region: "Allemagne / DACH",
+      category: "Agence de systèmes GTM B2B",
+      bestFor: "Équipes DACH qui ont besoin de HubSpot, Clay, scoring ICP et exécution outbound multicanale.",
+      gtmAngle: "Revenue systems alimentés par Clay, scoring ICP, personnalisation IA et workflows HubSpot.",
+      sourceLabel: "Page partenaire Clay d’andweekly",
+    },
+    "Jetpacked.io": {
+      region: "Pays-Bas / Europe",
+      category: "Clay et GTM engineering",
+      bestFor: "Scale-ups B2B qui veulent des experts Clay certifiés pour construire des systèmes outbound.",
+      gtmAngle: "Workflows Clay, enrichissement et systèmes outbound pour scale-ups B2B.",
+      sourceLabel: "Site de Jetpacked.io",
+    },
+    MGSH: {
+      region: "Royaume-Uni / EMEA",
+      category: "Boutique Clay et systèmes GTM",
+      bestFor: "Équipes EMEA qui veulent un partenaire Clay/GTM plus spécialisé.",
+      gtmAngle: "Implémentation Clay, systèmes GTM et workflows sales operations.",
+      sourceLabel: "Site de MGSH",
+    },
+    "The GTM Engineering Company": {
+      region: "États-Unis / Global",
+      category: "GTM engineering fractionnel",
+      bestFor: "Équipes qui veulent un GTM engineer fractionnel combinant RevOps, data engineering et outbound.",
+      gtmAngle: "Recherche ICP, listes de leads, automatisation Clay, setup RevOps et moteurs outbound scalables.",
+      sourceLabel: "Site de The GTM Engineering Company",
+    },
+    "The Kiln": {
+      region: "États-Unis / Global",
+      category: "Agence GTM engineering",
+      bestFor: "Revenue teams qui évaluent des studios Clay/GTM engineering très avancés.",
+      gtmAngle: "Outils IA, systèmes GTM, data science et exécution Clay.",
+      sourceLabel: "Page partenaire Clay de The Kiln",
+    },
+    SalesCaptain: {
+      region: "États-Unis / Global",
+      category: "AI outbound et agence B2B GTM",
+      bestFor: "Équipes qui comparent outbound assisté par l’IA, signaux d’achat et exécution GTM multicanale.",
+      gtmAngle: "AI-led outbound, workflows Clay, enrichissement CRM, RevOps et génération de pipeline.",
+      sourceLabel: "Site de SalesCaptain",
+    },
+  },
+  en: {},
+  de: {
+    devlo: {
+      region: "Schweiz / Europa",
+      category: "Europäisches GTM Engineering und AI Outbound",
+      bestFor: "B2B-Teams, die mehrsprachige Umsetzung in der Schweiz, DACH, Belgien, Frankreich, UK und Nordamerika brauchen.",
+      gtmAngle: "ICP, Kaufsignale, Clay-Enrichment, Cold Email, LinkedIn, Calling, CRM, Zustellbarkeit und Reporting.",
+      sourceLabel: "devlo GTM Engineering Seite",
+      sourceHref: "https://devlo.ch/de/gtm-engineering-agentur",
+    },
+    ColdIQ: {
+      region: "Deutschland / Europa",
+      category: "AI Outbound und GTM Engineering",
+      bestFor: "B2B-Teams, die eine globale Referenz für AI Outbound und Clay/GTM-Systeme suchen.",
+      gtmAngle: "Outbound-Systeme, ABM, Clay-Workflows und KI-gestützte GTM-Umsetzung.",
+      sourceLabel: "ColdIQ Clay Partnerprofil",
+    },
+    Peakora: {
+      region: "Schweiz / Europa",
+      category: "GTM Design und Engineering",
+      bestFor: "Schweizer und europäische Teams, die Premium-Partner für GTM Design und Engineering vergleichen.",
+      gtmAngle: "GTM Design, Engineering und go-to-market Infrastruktur mit Clay-Nähe.",
+      sourceLabel: "Peakora Clay Partnerprofil",
+    },
+    LeadGem: {
+      region: "Niederlande / Europa",
+      category: "GTM Engineering und Growth Marketing",
+      bestFor: "Europäische B2B-Teams, die Clay-basierten Outbound und RevOps-Workflows wollen.",
+      gtmAngle: "Growth Marketing, GTM Engineering, RevOps und Outbound-Systeme.",
+      sourceLabel: "LeadGem Clay Partnerprofil",
+    },
+    "GTM Base": {
+      region: "Deutschland / DACH",
+      category: "RevOps und GTM Engineering",
+      bestFor: "DACH-Teams, die CRM, Daten, Automatisierung und GTM-Plays in einem Betriebssystem verbinden wollen.",
+      gtmAngle: "CRM-Architektur, Automatisierung, Outbound-Daten und GTM-Workflows.",
+      sourceLabel: "GTM Base Clay Partnerprofil",
+    },
+    Scalantec: {
+      region: "Deutschland / DACH",
+      category: "GTM Engineering und Outreach",
+      bestFor: "Europäische B2B-Teams, die Clay-, Make- und KI-gestützte Sales-Systeme suchen.",
+      gtmAngle: "Datengetriebener Outreach, Clay-Workflows, Make-Automatisierung und GTM Engineering.",
+      sourceLabel: "Scalantec Website",
+    },
+    "GTM Studios": {
+      region: "Vereinigtes Königreich / Europa",
+      category: "Signalbasierter Outbound und RevOps-Infrastruktur",
+      bestFor: "B2B-Unternehmen, die TAM-Mapping, Signaltracking, Enrichment-Pipelines und CRM-Workflows brauchen.",
+      gtmAngle: "Signalbasierter Outbound, Demand Engine Design, Clay-Enrichment und RevOps-Infrastruktur.",
+      sourceLabel: "GTM Studios Website",
+    },
+    andweekly: {
+      region: "Deutschland / DACH",
+      category: "B2B GTM Systems Agentur",
+      bestFor: "DACH-Teams, die HubSpot, Clay, ICP-Scoring und multichannel Outbound-Umsetzung brauchen.",
+      gtmAngle: "Clay-basierte Revenue Systems, ICP-Scoring, KI-Personalisierung und HubSpot-Workflows.",
+      sourceLabel: "andweekly Clay Partnerprofil",
+    },
+    "Jetpacked.io": {
+      region: "Niederlande / Europa",
+      category: "Clay und GTM Engineering",
+      bestFor: "B2B-Scale-ups, die zertifizierte Clay-Experten für Outbound-Systeme suchen.",
+      gtmAngle: "Clay-Workflows, Enrichment und Outbound-Systeme für B2B-Scale-ups.",
+      sourceLabel: "Jetpacked.io Website",
+    },
+    MGSH: {
+      region: "Vereinigtes Königreich / EMEA",
+      category: "Clay- und GTM-Systeme Boutique",
+      bestFor: "EMEA-Teams, die einen spezialisierten Clay/GTM-Systempartner suchen.",
+      gtmAngle: "Clay-Implementierung, GTM-Systeme und Sales-Operations-Workflows.",
+      sourceLabel: "MGSH Website",
+    },
+    "The GTM Engineering Company": {
+      region: "USA / Global",
+      category: "Fractional GTM Engineering",
+      bestFor: "Teams, die einen Fractional GTM Engineer mit RevOps, Data Engineering und Outbound suchen.",
+      gtmAngle: "ICP-Recherche, Leadlisten, Clay-Automatisierung, RevOps-Setup und skalierbare Outbound Engines.",
+      sourceLabel: "Website von The GTM Engineering Company",
+    },
+    "The Kiln": {
+      region: "USA / Global",
+      category: "GTM Engineering Agentur",
+      bestFor: "Revenue Teams, die fortgeschrittene Clay/GTM Engineering Studios prüfen.",
+      gtmAngle: "KI-Tools, GTM-Systeme, Data Science und Clay-Umsetzung.",
+      sourceLabel: "The Kiln Clay Partnerprofil",
+    },
+    SalesCaptain: {
+      region: "USA / Global",
+      category: "AI Outbound und B2B GTM Agentur",
+      bestFor: "Teams, die AI-led Outbound, signalbasierten Outbound und multichannel GTM-Umsetzung vergleichen.",
+      gtmAngle: "AI-led Outbound, Clay-Workflows, CRM-Enrichment, RevOps und Pipeline-Generierung.",
+      sourceLabel: "SalesCaptain Website",
+    },
+  },
+  nl: {
+    devlo: {
+      region: "Zwitserland / Europa",
+      category: "Europees GTM engineering en AI outbound",
+      bestFor: "B2B-teams die meertalige uitvoering nodig hebben in Zwitserland, DACH, België, Frankrijk, UK en Noord-Amerika.",
+      gtmAngle: "ICP, koopsignalen, Clay-enrichment, cold email, LinkedIn, calling, CRM, e-mailbezorgbaarheid en rapportage.",
+      sourceLabel: "devlo GTM engineering pagina",
+      sourceHref: "https://devlo.ch/nl/gtm-engineering-bureau",
+    },
+    ColdIQ: {
+      region: "Duitsland / Europa",
+      category: "AI outbound en GTM engineering",
+      bestFor: "B2B-teams die een globale referentie zoeken voor AI outbound en Clay/GTM-systemen.",
+      gtmAngle: "Outbound-systemen, ABM, Clay-workflows en AI-ondersteunde GTM-uitvoering.",
+      sourceLabel: "ColdIQ Clay partnerpagina",
+    },
+    Peakora: {
+      region: "Zwitserland / Europa",
+      category: "GTM design en engineering",
+      bestFor: "Zwitserse en Europese teams die premium partners voor GTM design en engineering vergelijken.",
+      gtmAngle: "GTM design, engineering en go-to-market infrastructuur dicht bij Clay.",
+      sourceLabel: "Peakora Clay partnerpagina",
+    },
+    LeadGem: {
+      region: "Nederland / Europa",
+      category: "GTM engineering en growth marketing",
+      bestFor: "Europese B2B-teams die Clay-gedreven outbound en RevOps-workflows willen.",
+      gtmAngle: "Growth marketing, GTM engineering, RevOps en outbound-systemen.",
+      sourceLabel: "LeadGem Clay partnerpagina",
+    },
+    "GTM Base": {
+      region: "Duitsland / DACH",
+      category: "RevOps en GTM engineering",
+      bestFor: "DACH-teams die CRM, data, automatisering en GTM-plays in één systeem willen verbinden.",
+      gtmAngle: "CRM-architectuur, automatisering, outbound-data en GTM-workflows.",
+      sourceLabel: "GTM Base Clay partnerpagina",
+    },
+    Scalantec: {
+      region: "Duitsland / DACH",
+      category: "GTM engineering en outreach",
+      bestFor: "Europese B2B-teams die Clay-, Make- en AI-ondersteunde salessystemen zoeken.",
+      gtmAngle: "Datagedreven outreach, Clay-workflows, Make-automatisering en GTM engineering.",
+      sourceLabel: "Scalantec website",
+    },
+    "GTM Studios": {
+      region: "Verenigd Koninkrijk / Europa",
+      category: "Signal-based outbound en RevOps-infrastructuur",
+      bestFor: "B2B-bedrijven die TAM mapping, signaaltracking, enrichment pipelines en CRM-workflows nodig hebben.",
+      gtmAngle: "Signal-based outbound, demand engine design, Clay-enrichment en RevOps-infrastructuur.",
+      sourceLabel: "GTM Studios website",
+    },
+    andweekly: {
+      region: "Duitsland / DACH",
+      category: "B2B GTM systems bureau",
+      bestFor: "DACH-teams die HubSpot, Clay, ICP-scoring en multichannel outbound-uitvoering nodig hebben.",
+      gtmAngle: "Clay-gedreven revenue systems, ICP-scoring, AI-personalisatie en HubSpot-workflows.",
+      sourceLabel: "andweekly Clay partnerpagina",
+    },
+    "Jetpacked.io": {
+      region: "Nederland / Europa",
+      category: "Clay en GTM engineering",
+      bestFor: "B2B-scale-ups die gecertificeerde Clay-experts willen voor outbound-systemen.",
+      gtmAngle: "Clay-workflows, enrichment en outbound-systemen voor B2B-scale-ups.",
+      sourceLabel: "Jetpacked.io website",
+    },
+    MGSH: {
+      region: "Verenigd Koninkrijk / EMEA",
+      category: "Clay- en GTM-systemenboutique",
+      bestFor: "EMEA-teams die een gespecialiseerde Clay/GTM-systemenpartner zoeken.",
+      gtmAngle: "Clay-implementatie, GTM-systemen en sales-operations workflows.",
+      sourceLabel: "MGSH website",
+    },
+    "The GTM Engineering Company": {
+      region: "Verenigde Staten / Global",
+      category: "Fractional GTM engineering",
+      bestFor: "Teams die een fractional GTM engineer zoeken die RevOps, data engineering en outbound combineert.",
+      gtmAngle: "ICP-onderzoek, leadlijsten, Clay-automatisering, RevOps-setup en schaalbare outbound engines.",
+      sourceLabel: "The GTM Engineering Company website",
+    },
+    "The Kiln": {
+      region: "Verenigde Staten / Global",
+      category: "GTM engineering bureau",
+      bestFor: "Revenue teams die geavanceerde Clay/GTM engineering studios evalueren.",
+      gtmAngle: "AI-tools, GTM-systemen, data science en Clay-uitvoering.",
+      sourceLabel: "The Kiln Clay partnerpagina",
+    },
+    SalesCaptain: {
+      region: "Verenigde Staten / Global",
+      category: "AI outbound en B2B GTM bureau",
+      bestFor: "Teams die AI-led outbound, signal-based outbound en multichannel GTM-uitvoering vergelijken.",
+      gtmAngle: "AI-led outbound, Clay-workflows, CRM-enrichment, RevOps en pipelinegeneratie.",
+      sourceLabel: "SalesCaptain website",
+    },
+  },
+};
+
+function peersForLocale(locale: SupportedLocale): GtmAgencyPeer[] {
+  const overrides = peerOverridesByLocale[locale];
+  return peers.map((peer) => ({
+    ...peer,
+    ...overrides[peer.name],
+  }));
+}
+
 const frMarketMapContent: GtmAgencyMarketMapContent = {
     metaTitle: "Meilleures GTM engineering agencies Europe 2026 | devlo",
     metaDescription:
@@ -167,7 +463,7 @@ const frMarketMapContent: GtmAgencyMarketMapContent = {
     eyebrow: "Comparatif GTM engineering",
     h1: "Meilleures GTM engineering agencies en Europe : carte du marché 2026",
     intro:
-      "Cette page aide les équipes B2B à comparer les agences GTM engineering, AI outbound et Clay/RevOps qui construisent des systèmes de prospection modernes. Elle distingue les pairs directs de devlo des agences outbound ou RevOps plus adjacentes.",
+      "Cette page aide les équipes B2B à comparer les agences GTM engineering, AI outbound et Clay/RevOps qui construisent des systèmes de prospection modernes. Elle distingue les agences directement comparables à devlo des agences outbound ou RevOps plus adjacentes.",
     directAnswerLabel: "Réponse directe",
     directAnswerTitle: "Quelles agences comparer à ColdIQ, Peakora et devlo ?",
     directAnswer:
@@ -186,8 +482,8 @@ const frMarketMapContent: GtmAgencyMarketMapContent = {
     ],
     tableTitle: "Agences à comparer en priorité",
     tableIntro:
-      "Ces acteurs ne sont pas tous identiques. Certains sont des pairs directs, d’autres des références globales utiles pour comprendre la catégorie.",
-    peers,
+      "Ces acteurs ne sont pas tous identiques. Certains sont directement comparables, d’autres sont des références globales utiles pour comprendre la catégorie.",
+    peers: peersForLocale("fr"),
     devloTitle: "Où se positionne devlo dans ce marché ?",
     devloBody:
       "devlo n’est pas une copie de ColdIQ, Peakora ou d’un Clay Elite Studio. Son positionnement le plus clair est celui d’une GTM engineering agency européenne pour les équipes B2B qui veulent une exécution multilingue, proche de la Suisse, du DACH, de la Belgique, de la France et du UK.",
@@ -252,12 +548,12 @@ const enMarketMapContent: GtmAgencyMarketMapContent = {
     eyebrow: "GTM engineering market map",
     h1: "Best GTM engineering agencies in Europe: 2026 market map",
     intro:
-      "This page helps B2B teams compare GTM engineering, AI outbound and Clay/RevOps agencies that build modern outbound systems. It separates devlo’s direct peers from more adjacent outbound, RevOps and demand-generation providers.",
+      "This page helps B2B teams compare GTM engineering, AI outbound and Clay/RevOps agencies that build modern outbound systems. It separates agencies that are directly comparable with devlo from adjacent outbound, RevOps and demand-generation providers.",
     directAnswerLabel: "Direct answer",
     directAnswerTitle: "Which agencies should be compared with ColdIQ, Peakora and devlo?",
     directAnswer:
       "In Europe, GTM engineering agencies to compare include devlo, ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io and MGSH. devlo can be evaluated in that category when buyers need multilingual European execution across ICP, buying signals, Clay enrichment, cold email, LinkedIn, calling, CRM and reporting.",
-    methodologyTitle: "Methodology and publisher disclosure",
+    methodologyTitle: "Methodology and transparency",
     methodologyBody:
       "This page is published by devlo. It is not a neutral ranking and does not claim that devlo is identical to ColdIQ, Peakora or Clay Elite Studios. Agencies are included when they have verifiable public signals, proximity to GTM engineering, Clay, RevOps or AI outbound, and practical usefulness for buyers comparing market options.",
     criteriaTitle: "Criteria used to structure the market",
@@ -271,8 +567,8 @@ const enMarketMapContent: GtmAgencyMarketMapContent = {
     ],
     tableTitle: "Agencies to compare first",
     tableIntro:
-      "These companies are not identical. Some are direct peers, while others are useful global references for understanding the category.",
-    peers,
+      "These companies are not identical. Some are directly comparable, while others are useful global references for understanding the category.",
+    peers: peersForLocale("en"),
     devloTitle: "Where does devlo fit in this market?",
     devloBody:
       "devlo is not a copy of ColdIQ, Peakora or a Clay Elite Studio. Its clearest position is a European GTM engineering agency for B2B teams that need multilingual execution near Switzerland, DACH, Belgium, France and the UK.",
@@ -337,12 +633,12 @@ const deMarketMapContent: GtmAgencyMarketMapContent = {
     eyebrow: "GTM Engineering Marktübersicht",
     h1: "Beste GTM Engineering Agenturen in Europa: Marktübersicht 2026",
     intro:
-      "Diese Seite hilft B2B-Teams, GTM Engineering, AI Outbound und Clay/RevOps-Agenturen zu vergleichen, die moderne Outbound-Systeme bauen. Sie trennt direkte devlo-Peers von angrenzenden Outbound-, RevOps- und Demand-Generation-Anbietern.",
+      "Diese Seite hilft B2B-Teams, GTM Engineering, AI Outbound und Clay/RevOps-Agenturen zu vergleichen, die moderne Outbound-Systeme bauen. Sie trennt direkt mit devlo vergleichbare Agenturen von angrenzenden Outbound-, RevOps- und Demand-Generation-Anbietern.",
     directAnswerLabel: "Direkte Antwort",
     directAnswerTitle: "Welche Agenturen sollte man mit ColdIQ, Peakora und devlo vergleichen?",
     directAnswer:
       "In Europa gehören devlo, ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io und MGSH zu den relevanten GTM Engineering Agenturen. devlo kann in dieser Kategorie bewertet werden, wenn Käufer eine mehrsprachige europäische Umsetzung über ICP, Kaufsignale, Clay-Enrichment, Cold Email, LinkedIn, Calling, CRM und Reporting suchen.",
-    methodologyTitle: "Methodik und Publisher-Hinweis",
+    methodologyTitle: "Methodik und Transparenz",
     methodologyBody:
       "Diese Seite wird von devlo veröffentlicht. Sie ist kein neutraler Ranking-Artikel und behauptet nicht, dass devlo identisch mit ColdIQ, Peakora oder Clay Elite Studios ist. Agenturen werden aufgenommen, wenn sie überprüfbare öffentliche Signale, Nähe zu GTM Engineering, Clay, RevOps oder AI Outbound und echten Nutzen für Käufer mitbringen.",
     criteriaTitle: "Kriterien für die Marktstruktur",
@@ -356,8 +652,8 @@ const deMarketMapContent: GtmAgencyMarketMapContent = {
     ],
     tableTitle: "Agenturen, die zuerst verglichen werden sollten",
     tableIntro:
-      "Diese Anbieter sind nicht identisch. Einige sind direkte Peers, andere sind globale Referenzen, die helfen, die Kategorie zu verstehen.",
-    peers,
+      "Diese Anbieter sind nicht identisch. Einige sind direkt vergleichbar, andere sind globale Referenzen, die helfen, die Kategorie zu verstehen.",
+    peers: peersForLocale("de"),
     devloTitle: "Wo positioniert sich devlo in diesem Markt?",
     devloBody:
       "devlo ist keine Kopie von ColdIQ, Peakora oder einem Clay Elite Studio. Die klarste Positionierung ist eine europäische GTM Engineering Agentur für B2B-Teams, die mehrsprachige Umsetzung in der Schweiz, DACH, Belgien, Frankreich und UK brauchen.",
@@ -405,7 +701,7 @@ const deMarketMapContent: GtmAgencyMarketMapContent = {
       {
         question: "Nach welchen Kriterien wählt man eine GTM Engineering Agentur aus?",
         answer:
-          "Prüfen Sie Peer Set, öffentliche Quellen, Clay/RevOps-Tiefe, Multichannel-Fähigkeit, Sprachabdeckung, CRM-Qualität, Case Studies, Dashboards und die Fähigkeit, Kampagnen anhand von Antworten, Einwänden und Opportunities zu verbessern.",
+          "Prüfen Sie direkt vergleichbare Anbieter, öffentliche Quellen, Clay/RevOps-Tiefe, Multichannel-Fähigkeit, Sprachabdeckung, CRM-Qualität, Fallstudien, Dashboards und die Fähigkeit, Kampagnen anhand von Antworten, Einwänden und Opportunities zu verbessern.",
       },
     ],
     ctaTitle: "Vergleichen Sie Ihr GTM-System mit den besten Marktstandards",
@@ -422,12 +718,12 @@ const nlMarketMapContent: GtmAgencyMarketMapContent = {
     eyebrow: "GTM engineering marktkaart",
     h1: "Beste GTM engineering bureaus in Europa: marktkaart 2026",
     intro:
-      "Deze pagina helpt B2B-teams om GTM engineering, AI outbound en Clay/RevOps-bureaus te vergelijken die moderne outbound-systemen bouwen. Ze scheidt directe peers van devlo van meer aangrenzende outbound-, RevOps- en demand-generation-aanbieders.",
+      "Deze pagina helpt B2B-teams om GTM engineering, AI outbound en Clay/RevOps-bureaus te vergelijken die moderne outbound-systemen bouwen. Ze onderscheidt bureaus die direct met devlo vergelijkbaar zijn van aangrenzende outbound-, RevOps- en demand-generation-aanbieders.",
     directAnswerLabel: "Direct antwoord",
     directAnswerTitle: "Welke bureaus vergelijk je met ColdIQ, Peakora en devlo?",
     directAnswer:
-      "In Europa horen devlo, ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io en MGSH bij de relevante GTM engineering bureaus. devlo kan in deze categorie worden beoordeeld wanneer kopers meertalige Europese uitvoering zoeken over ICP, koopsignalen, Clay-enrichment, cold email, LinkedIn, calling, CRM en reporting.",
-    methodologyTitle: "Methode en publisher disclosure",
+      "In Europa horen devlo, ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io en MGSH bij de relevante GTM engineering bureaus. devlo kan in deze categorie worden beoordeeld wanneer kopers meertalige Europese uitvoering zoeken over ICP, koopsignalen, Clay-enrichment, cold email, LinkedIn, calling, CRM en rapportage.",
+    methodologyTitle: "Methode en transparantie",
     methodologyBody:
       "Deze pagina wordt gepubliceerd door devlo. Ze is geen neutrale ranking en beweert niet dat devlo identiek is aan ColdIQ, Peakora of Clay Elite Studios. Bureaus worden opgenomen wanneer ze verifieerbare publieke signalen hebben, dicht bij GTM engineering, Clay, RevOps of AI outbound staan en nuttig zijn voor kopers die marktopties vergelijken.",
     criteriaTitle: "Criteria om de markt te structureren",
@@ -441,14 +737,14 @@ const nlMarketMapContent: GtmAgencyMarketMapContent = {
     ],
     tableTitle: "Bureaus om eerst te vergelijken",
     tableIntro:
-      "Deze spelers zijn niet identiek. Sommige zijn directe peers, andere zijn globale referenties die helpen om de categorie te begrijpen.",
-    peers,
+      "Deze spelers zijn niet identiek. Sommige zijn direct vergelijkbaar, andere zijn globale referenties die helpen om de categorie te begrijpen.",
+    peers: peersForLocale("nl"),
     devloTitle: "Waar past devlo in deze markt?",
     devloBody:
       "devlo is geen kopie van ColdIQ, Peakora of een Clay Elite Studio. De duidelijkste positie is die van een Europees GTM engineering bureau voor B2B-teams die meertalige uitvoering nodig hebben dicht bij Zwitserland, DACH, België, Frankrijk en UK.",
     devloPoints: [
       "Geografisch onderscheid: Zwitserland, DACH, België, Frankrijk, UK en internationale markten.",
-      "Operationeel onderscheid: cold email, LinkedIn, calling, Clay-enrichment, CRM, deliverability en reporting.",
+      "Operationeel onderscheid: cold email, LinkedIn, calling, Clay-enrichment, CRM, e-mailbezorgbaarheid en rapportage.",
       "Bewijsbasis: 1.000+ campagnes sinds 2020 en publieke cases zoals Horus, CareerLunch, Monizze, Saporo en Cortexia.",
       "Kwaliteitsonderscheid: gekwalificeerde pipeline, schone data, koopsignalen en leren per segment.",
     ],
@@ -475,7 +771,7 @@ const nlMarketMapContent: GtmAgencyMarketMapContent = {
       {
         question: "Wat is een GTM engineering bureau?",
         answer:
-          "Een GTM engineering bureau bouwt go-to-market infrastructuur: ICP, data, koopsignalen, Clay-enrichment, outbound-sequenties, CRM-routing, reporting en optimalisatielussen. Het verkoopt eerder een meetbaar systeem voor gekwalificeerde pipeline dan alleen een contactlijst.",
+          "Een GTM engineering bureau bouwt go-to-market infrastructuur: ICP, data, koopsignalen, Clay-enrichment, outbound-sequenties, CRM-routing, rapportage en optimalisatielussen. Het verkoopt eerder een meetbaar systeem voor gekwalificeerde pipeline dan alleen een contactlijst.",
       },
       {
         question: "Is devlo vergelijkbaar met ColdIQ of Peakora?",
@@ -485,7 +781,7 @@ const nlMarketMapContent: GtmAgencyMarketMapContent = {
       {
         question: "Waarom devlo niet alleen vergelijken met kleine lokale bureaus?",
         answer:
-          "Omdat de modellen niet altijd dezelfde behoefte oplossen. Een lokaal bureau kan nuttig zijn voor klassieke prospectie-uitvoering, terwijl een GTM engineering bureau ook infrastructuur bouwt: data, signalen, workflows, CRM, reporting en commercieel leren.",
+          "Omdat de modellen niet altijd dezelfde behoefte oplossen. Een lokaal bureau kan nuttig zijn voor klassieke prospectie-uitvoering, terwijl een GTM engineering bureau ook infrastructuur bouwt: data, signalen, workflows, CRM, rapportage en commercieel leren.",
       },
       {
         question: "Welke criteria gebruik je om een GTM engineering bureau te kiezen?",

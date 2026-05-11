@@ -32,10 +32,10 @@ const coldEmailGuideTables: Record<
     caption: "Wesentliche Elemente einer starken B2B-Cold-E-Mail-Kampagne",
     headers: ["Element", "Empfehlung", "Warum es wichtig ist"],
     rows: [
-      ["ICP", "Nach Markt, Groesse, Rolle und Kaufsignal segmentieren.", "Relevantes Targeting beeinflusst die Antwortquote staerker als Volumen."],
-      ["Infrastruktur", "Dedizierte Domains, SPF, DKIM, DMARC und Warm-up nutzen.", "Deliverability schuetzt Reputation und Versandkapazitaet."],
+      ["ICP", "Nach Markt, Größe, Rolle und Kaufsignal segmentieren.", "Relevantes Targeting beeinflusst die Antwortquote stärker als Volumen."],
+      ["Infrastruktur", "Dedizierte Domains, SPF, DKIM, DMARC und Warm-up nutzen.", "Deliverability schützt Reputation und Versandkapazität."],
       ["Nachricht", "Einstieg personalisieren und mehrere Winkel testen.", "Entscheider reagieren besser auf konkrete Probleme als auf generische Pitches."],
-      ["Follow-up", "Oeffnungen, Antworten, Termine und Pipeline-Qualitaet messen.", "Optimierung sollte qualifizierte Chancen fokussieren, nicht nur Klicks."],
+      ["Follow-up", "Öffnungen, Antworten, Termine und Pipeline-Qualität messen.", "Optimierung sollte qualifizierte Chancen fokussieren, nicht nur Klicks."],
     ],
   },
   nl: {
