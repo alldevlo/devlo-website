@@ -72,6 +72,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       const isGtmEngineering = path.endsWith("/gtm-engineering-agency")
         || path.endsWith("/gtm-engineering-agentur")
         || path.endsWith("/gtm-engineering-bureau");
+      const isGtmMarketMap = path.endsWith("/best-gtm-engineering-agencies-europe")
+        || path.endsWith("/beste-gtm-engineering-agenturen-europa")
+        || path.endsWith("/beste-gtm-engineering-bureaus-europa");
       const isCaseStudiesHub = path.endsWith("/etudes-de-cas")
         || path.endsWith("/case-studies")
         || path.endsWith("/fallstudien")
@@ -86,6 +89,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         || isAcademy
         || isAiSalesOps
         || isGtmEngineering
+        || isGtmMarketMap
         || isCaseStudiesHub
         || isAlternative;
 
@@ -99,7 +103,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url,
         lastModified: lastModifiedDate,
         changeFrequency: isHome ? "weekly" : isService ? "monthly" : isCaseStudy ? "yearly" : isBlog ? "monthly" : ("monthly" as const),
-        priority: isHome ? 1.0 : isService ? 0.9 : isGtmEngineering ? 0.85 : isCaseStudy ? 0.8 : isBlog ? 0.7 : isGeo ? 0.8 : isAgence ? 0.8 : isAlternative ? 0.75 : 0.6,
+        priority: isHome ? 1.0 : isService ? 0.9 : isGtmEngineering || isGtmMarketMap ? 0.85 : isCaseStudy ? 0.8 : isBlog ? 0.7 : isGeo ? 0.8 : isAgence ? 0.8 : isAlternative ? 0.75 : 0.6,
       };
     });
 }
