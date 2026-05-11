@@ -105,7 +105,16 @@ export function AlternativePage({ data, locale = "fr" }: { data: AlternativePage
   const localizedContent = getLocalizedAlternativeContent(data.slug, locale);
   const h1 = localizedContent?.h1 ?? data.h1;
   const intro = localizedContent?.intro ?? data.intro;
+  const evaluationDisclosure = localizedContent?.evaluationDisclosure ?? (locale === "fr" ? data.evaluationDisclosure : undefined);
+  const directAnswer = localizedContent?.directAnswer ?? (locale === "fr" ? data.directAnswer : undefined);
+  const comparisonTitle = localizedContent?.comparisonTitle ?? (locale === "fr" ? data.comparisonTitle : undefined);
+  const marketAlternatives = localizedContent?.marketAlternatives ?? (locale === "fr" ? data.marketAlternatives : undefined);
   const comparisonTable = localizedContent?.comparisonTable ?? data.comparisonTable;
+  const sourceNote = localizedContent?.sourceNote ?? (locale === "fr" ? data.sourceNote : undefined);
+  const sourceLinks = localizedContent?.sourceLinks ?? (locale === "fr" ? data.sourceLinks : undefined) ?? [];
+  const decisionGuide = localizedContent?.decisionGuide ?? (locale === "fr" ? data.decisionGuide : undefined);
+  const buyerChecklist = localizedContent?.buyerChecklist ?? (locale === "fr" ? data.buyerChecklist : undefined);
+  const implementationPlan = localizedContent?.implementationPlan ?? (locale === "fr" ? data.implementationPlan : undefined);
   const whyDevlo = localizedContent?.whyDevlo ?? data.whyDevlo;
   const faqs = localizedContent?.faqs ?? data.faqs;
   const editorialTitle = localizedContent?.editorialTitle;
@@ -129,7 +138,7 @@ export function AlternativePage({ data, locale = "fr" }: { data: AlternativePage
     { name: copy.home, path: homePath },
     { name: copy.comparatif, path: comparatifPath },
     ...(data.slug !== "alternative-agences-prospection-b2b"
-      ? [{ name: `vs ${data.competitorName}`, path: altPath }]
+      ? [{ name: `${copy.comparatif} ${data.competitorName}`, path: altPath }]
       : []),
   ];
 
@@ -180,6 +189,38 @@ export function AlternativePage({ data, locale = "fr" }: { data: AlternativePage
         </div>
       </section>
 
+      {directAnswer && (
+        <section className="bg-white py-10">
+          <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">
+            <div className="rounded-xl border border-neutral-200 bg-[#F7F8FC] p-6 md:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#074f74]">
+                {directAnswer.label}
+              </p>
+              <h2 className="mt-2 text-2xl font-extrabold leading-tight text-[#153a54] md:text-3xl">
+                {directAnswer.title}
+              </h2>
+              <p className="mt-3 max-w-4xl text-sm leading-7 text-neutral-700 md:text-base">
+                {directAnswer.body}
+              </p>
+              {directAnswer.proofPoints && directAnswer.proofPoints.length > 0 && (
+                <ul className="mt-5 grid gap-2 text-sm leading-6 text-neutral-700 md:grid-cols-3">
+                  {directAnswer.proofPoints.map((point) => (
+                    <li key={point} className="rounded-lg border border-neutral-200 bg-white px-4 py-3">
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {evaluationDisclosure && (
+                <p className="mt-5 rounded-lg border border-neutral-200 bg-white px-4 py-3 text-xs leading-6 text-neutral-500">
+                  {evaluationDisclosure}
+                </p>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Logo rail */}
       <section className="border-b border-neutral-200 bg-white py-10">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-5 md:px-8">
@@ -191,6 +232,57 @@ export function AlternativePage({ data, locale = "fr" }: { data: AlternativePage
         </div>
       </section>
 
+      {marketAlternatives && marketAlternatives.options.length > 0 && (
+        <section className="bg-white py-16">
+          <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--primary)]">
+              Options à comparer
+            </p>
+            <h2 className="mt-3 text-2xl font-bold text-[#153a54] md:text-3xl">
+              {marketAlternatives.title}
+            </h2>
+            {marketAlternatives.intro && (
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-neutral-600 md:text-base">
+                {marketAlternatives.intro}
+              </p>
+            )}
+            <div className="mt-8 overflow-x-auto rounded-xl border border-neutral-200 bg-white">
+              <table className="min-w-[760px] w-full border-collapse text-left text-sm">
+                <thead className="bg-[#f7f8fc] text-xs font-semibold uppercase tracking-[0.08em] text-[#074f74]">
+                  <tr>
+                    <th scope="col" className="px-5 py-3">Option</th>
+                    <th scope="col" className="px-5 py-3">Meilleur contexte</th>
+                    <th scope="col" className="px-5 py-3">Point à vérifier</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-neutral-200 text-neutral-700">
+                  {marketAlternatives.options.map((option) => (
+                    <tr key={option.name}>
+                      <td className="px-5 py-4 font-semibold text-[#153a54]">
+                        {option.href ? (
+                          <a
+                            href={option.href}
+                            target={option.href.startsWith("http") ? "_blank" : undefined}
+                            rel={option.href.startsWith("http") ? "noopener noreferrer nofollow" : undefined}
+                            className="text-[#074f74] underline-offset-4 hover:underline"
+                          >
+                            {option.name}
+                          </a>
+                        ) : (
+                          option.name
+                        )}
+                      </td>
+                      <td className="px-5 py-4">{option.bestFor}</td>
+                      <td className="px-5 py-4">{option.note}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Comparison table */}
       <section className="bg-white py-16">
         <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">
@@ -198,7 +290,7 @@ export function AlternativePage({ data, locale = "fr" }: { data: AlternativePage
             {copy.comparisonEyebrow}
           </p>
           <h2 className="mt-3 text-2xl font-bold text-[#153a54] md:text-3xl">
-            devlo vs {data.competitorName}
+            {comparisonTitle ?? `devlo vs ${data.competitorName}`}
           </h2>
           <div className="mt-8 overflow-x-auto rounded-2xl border border-neutral-200">
             <table className="w-full text-sm">
@@ -228,8 +320,111 @@ export function AlternativePage({ data, locale = "fr" }: { data: AlternativePage
               </tbody>
             </table>
           </div>
+          {(sourceNote || sourceLinks.length > 0) && (
+            <div className="mt-5 rounded-xl border border-neutral-200 bg-[#f7f8fc] p-5 text-sm leading-7 text-neutral-600">
+              {sourceNote && <p>{sourceNote}</p>}
+              {sourceLinks.length > 0 && (
+                <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+                  {sourceLinks.map((source) => (
+                    <a
+                      key={source.href}
+                      href={source.href}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="font-semibold text-[#074f74] underline-offset-4 hover:underline"
+                    >
+                      {source.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </section>
+
+      {decisionGuide && (
+        <section className="bg-[#f7f8fc] py-16">
+          <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--primary)]">
+              Guide de décision
+            </p>
+            <h2 className="mt-3 text-2xl font-bold text-[#153a54] md:text-3xl">
+              {decisionGuide.title}
+            </h2>
+            <div className="mt-8 grid gap-4 md:grid-cols-2">
+              <div className="rounded-xl border border-neutral-200 bg-white p-6">
+                <h3 className="text-lg font-semibold text-[#153a54]">{decisionGuide.bestFitTitle}</h3>
+                <ul className="mt-4 space-y-3 text-sm leading-6 text-neutral-700">
+                  {decisionGuide.bestFit.map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <span className="mt-0.5 text-green-600">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="rounded-xl border border-neutral-200 bg-white p-6">
+                <h3 className="text-lg font-semibold text-[#153a54]">{decisionGuide.notBestFitTitle}</h3>
+                <ul className="mt-4 space-y-3 text-sm leading-6 text-neutral-700">
+                  {decisionGuide.notBestFit.map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <span className="mt-0.5 text-neutral-400">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {(buyerChecklist || implementationPlan) && (
+        <section className="bg-white py-16">
+          <div className="mx-auto grid w-full max-w-screen-xl gap-8 px-6 lg:grid-cols-2 lg:px-10">
+            {buyerChecklist && (
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--primary)]">
+                  Questions d&apos;achat
+                </p>
+                <h2 className="mt-3 text-2xl font-bold text-[#153a54] md:text-3xl">
+                  {buyerChecklist.title}
+                </h2>
+                <div className="mt-6 space-y-3">
+                  {buyerChecklist.items.map((item) => (
+                    <div key={item.question} className="rounded-xl border border-neutral-200 bg-white p-5">
+                      <h3 className="text-sm font-semibold text-[#153a54]">{item.question}</h3>
+                      <p className="mt-2 text-sm leading-6 text-neutral-600">{item.why}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            {implementationPlan && (
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--primary)]">
+                  Plan de démarrage
+                </p>
+                <h2 className="mt-3 text-2xl font-bold text-[#153a54] md:text-3xl">
+                  {implementationPlan.title}
+                </h2>
+                <div className="mt-6 overflow-hidden rounded-xl border border-neutral-200 bg-white">
+                  {implementationPlan.steps.map((step) => (
+                    <div key={step.period} className="border-b border-neutral-200 p-5 last:border-0">
+                      <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[#074f74]">
+                        {step.period}
+                      </p>
+                      <h3 className="mt-2 text-sm font-semibold text-[#153a54]">{step.action}</h3>
+                      <p className="mt-2 text-sm leading-6 text-neutral-600">{step.outcome}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Why devlo */}
       <section className="bg-[#f7f8fc] py-16">
