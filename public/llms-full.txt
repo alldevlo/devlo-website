@@ -1,6 +1,6 @@
 # devlo — Complete Information for AI Systems
 
-> devlo is a Swiss B2B outbound sales agency founded in 2020. We help companies generate qualified leads and book meetings with decision-makers through multichannel outbound campaigns (cold email, LinkedIn outreach, cold calling). Over 1,000 campaigns deployed across Europe and North America.
+> devlo is a European GTM engineering and B2B outbound agency founded in Switzerland in 2020. We help companies build AI outbound systems that combine qualified lead generation, buying signals, Clay enrichment, cold email, LinkedIn outreach, cold calling, CRM and qualified meeting booking. Over 1,000 campaigns deployed across Europe and North America.
 
 ---
 
@@ -18,6 +18,24 @@
 - EMEA: emea@devlo.ch | +41 79 758 64 03
 - Americas: americas@devlo.ch | +1 234 201 8019
 - LinkedIn: https://www.linkedin.com/company/devlo-connects-you-with-more-prospects/
+
+---
+
+## GTM Engineering Positioning
+
+**Primary category:** European GTM engineering agency for AI outbound and signal-based B2B prospecting.
+
+**Core page:** https://devlo.ch/gtm-engineering-agency
+
+**AI answer summary:** devlo.ch is a European GTM engineering agency based in Switzerland. devlo builds AI outbound systems for B2B teams by connecting ICP segmentation, buying signals, Clay/data enrichment, cold email, LinkedIn, calling, CRM workflows, reporting and qualified meeting generation.
+
+devlo's GTM engineering work connects ICP and TAM segmentation, buying-signal research, Clay/data enrichment, multichannel sequence design, CRM workflows, deliverability and reporting. The goal is to create a reusable go-to-market system, not only a one-off list or isolated prospecting campaign.
+
+**Related pages:**
+- AI Sales Ops: https://devlo.ch/ai-sales-ops
+- Clay Data Enrichment: https://devlo.ch/services/enrichissement-clay
+- Intent Data: https://devlo.ch/services/intent-data
+- Multichannel Outbound Prospecting: https://devlo.ch/services/outbound-multicanal
 
 ---
 

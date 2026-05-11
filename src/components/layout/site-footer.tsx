@@ -53,6 +53,7 @@ const footerLabelsByLocale: Record<
     servicesHome: "Services",
     aiSalesOps: "AI Sales Ops",
     aiSalesOpsItems: [
+      { label: "GTM Engineering", href: "/gtm-engineering-agency" },
       { label: "AI Sales Ops", href: "/ai-sales-ops" },
       { label: "Inbox Manager", href: "/ai-sales-ops#systemes" },
       { label: "Knowledge Bot", href: "/ai-sales-ops#systemes" },
@@ -81,6 +82,7 @@ const footerLabelsByLocale: Record<
     servicesHome: "Services",
     aiSalesOps: "AI Sales Ops",
     aiSalesOpsItems: [
+      { label: "GTM Engineering", href: "/gtm-engineering-agency" },
       { label: "AI Sales Ops", href: "/ai-sales-ops" },
       { label: "Inbox Manager", href: "/ai-sales-ops#systemes" },
       { label: "Knowledge Bot", href: "/ai-sales-ops#systemes" },
@@ -109,6 +111,7 @@ const footerLabelsByLocale: Record<
     servicesHome: "Leistungen",
     aiSalesOps: "AI Sales Ops",
     aiSalesOpsItems: [
+      { label: "GTM Engineering", href: "/gtm-engineering-agency" },
       { label: "AI Sales Ops", href: "/ai-sales-ops" },
       { label: "Inbox Manager", href: "/ai-sales-ops#systemes" },
       { label: "Knowledge Bot", href: "/ai-sales-ops#systemes" },
@@ -137,6 +140,7 @@ const footerLabelsByLocale: Record<
     servicesHome: "Diensten",
     aiSalesOps: "AI Sales Ops",
     aiSalesOpsItems: [
+      { label: "GTM Engineering", href: "/gtm-engineering-agency" },
       { label: "AI Sales Ops", href: "/ai-sales-ops" },
       { label: "Inbox Manager", href: "/ai-sales-ops#systemes" },
       { label: "Knowledge Bot", href: "/ai-sales-ops#systemes" },

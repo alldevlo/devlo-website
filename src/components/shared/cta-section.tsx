@@ -5,6 +5,11 @@ type CTASectionProps = {
   locale?: SupportedLocale;
   title: string;
   subtitle: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+  showServicesLink?: boolean;
 };
 
 const copyByLocale: Record<SupportedLocale, { ctaConsultation: string; ctaCaseStudies: string; ctaServices: string }> = {
@@ -30,8 +35,19 @@ const copyByLocale: Record<SupportedLocale, { ctaConsultation: string; ctaCaseSt
   },
 };
 
-export function CTASection({ locale = "fr", title, subtitle }: CTASectionProps) {
+export function CTASection({
+  locale = "fr",
+  title,
+  subtitle,
+  primaryLabel,
+  primaryHref,
+  secondaryLabel,
+  secondaryHref,
+  showServicesLink = true,
+}: CTASectionProps) {
   const copy = copyByLocale[locale];
+  const resolvedPrimaryHref = primaryHref ?? resolvePathForLocale("/consultation", locale).path;
+  const resolvedSecondaryHref = secondaryHref ?? resolvePathForLocale("/etudes-de-cas", locale).path;
   return (
     <section className="border-t border-neutral-200 bg-white py-16 md:py-18">
       <div className="mx-auto max-w-5xl px-6 text-center">
@@ -39,23 +55,25 @@ export function CTASection({ locale = "fr", title, subtitle }: CTASectionProps) 
         <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-neutral-600 md:text-lg">{subtitle}</p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Link
-            href={resolvePathForLocale("/consultation", locale).path}
+            href={resolvedPrimaryHref}
             className="rounded-lg bg-[var(--primary)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--primary-dark)]"
           >
-            {copy.ctaConsultation}
+            {primaryLabel ?? copy.ctaConsultation}
           </Link>
           <Link
-            href={resolvePathForLocale("/etudes-de-cas", locale).path}
+            href={resolvedSecondaryHref}
             className="rounded-lg border border-neutral-300 px-6 py-3 text-sm font-semibold text-devlo-900 transition hover:border-devlo-700/40 hover:text-devlo-700"
           >
-            {copy.ctaCaseStudies}
+            {secondaryLabel ?? copy.ctaCaseStudies}
           </Link>
-          <Link
-            href={resolvePathForLocale("/services", locale).path}
-            className="rounded-lg border border-neutral-300 px-6 py-3 text-sm font-semibold text-devlo-900 transition hover:border-devlo-700/40 hover:text-devlo-700"
-          >
-            {copy.ctaServices}
-          </Link>
+          {showServicesLink && (
+            <Link
+              href={resolvePathForLocale("/services", locale).path}
+              className="rounded-lg border border-neutral-300 px-6 py-3 text-sm font-semibold text-devlo-900 transition hover:border-devlo-700/40 hover:text-devlo-700"
+            >
+              {copy.ctaServices}
+            </Link>
+          )}
         </div>
       </div>
     </section>

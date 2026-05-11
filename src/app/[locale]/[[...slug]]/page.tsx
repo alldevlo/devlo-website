@@ -12,6 +12,7 @@ import { CaseStudyMasterPage } from "@/components/pages/case-study-master-page";
 import { ConsultationMasterPage } from "@/components/pages/consultation-master-page";
 import { GeoLandingPage } from "@/components/pages/geo-landing-page";
 import { AlternativePage } from "@/components/pages/alternative-page";
+import { GtmEngineeringPage } from "@/components/pages/gtm-engineering-page";
 import { ProgrammaticSeoPilotPage } from "@/components/pages/programmatic-seo-pilot-page";
 import { DictationCleanMasterPage } from "@/components/pages/dictation-clean-master-page";
 import { HomePage } from "@/components/pages/home-page";
@@ -25,6 +26,7 @@ import { ColdEmailSequenceMasterPage } from "@/components/pages/cold-email-seque
 import { LocalizedPage as LocalizedContentPage } from "@/components/pages/localized-page";
 import { GEO_PAGES } from "@/content/geo-pages";
 import { ALTERNATIVE_PAGES } from "@/content/alternatives";
+import { GTM_ENGINEERING_CONTENT } from "@/content/gtm-engineering";
 import {
   PROGRAMMATIC_SEO_ROUTE_ENTRIES,
   findProgrammaticSeoRouteByLocalePath,
@@ -132,10 +134,10 @@ const openGraphLocaleByLanguage: Record<SupportedLocale, string> = {
 };
 
 const openGraphImageAltByLanguage: Record<SupportedLocale, string> = {
-  fr: "devlo - agence suisse de prospection B2B",
-  en: "devlo - Swiss B2B outreach agency",
-  de: "devlo - Schweizer B2B Akquise Agentur",
-  nl: "devlo - Zwitsers B2B prospectiebureau",
+  fr: "devlo - GTM engineering agency et partenaire outbound B2B",
+  en: "devlo - GTM engineering agency and B2B outbound partner",
+  de: "devlo - GTM Engineering Agentur und B2B-Outbound-Partner",
+  nl: "devlo - GTM engineering bureau en B2B outbound partner",
 };
 
 function isPrefixedLocale(value: string): value is Exclude<SupportedLocale, "fr"> {
@@ -292,6 +294,15 @@ async function resolveLocalizedSeo(
     return {
       title: content.metaTitle,
       description: content.metaDescription,
+    };
+  }
+
+  if (path === "/gtm-engineering-agency") {
+    const content = GTM_ENGINEERING_CONTENT[locale];
+    return {
+      title: content.metaTitle,
+      description: content.metaDescription,
+      type: "article" as const,
     };
   }
 
@@ -495,6 +506,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const localizedInsightsHubSeo = resolved.frPath === "/insights"
     ? getLocalizedInsightsHub(resolved.locale)
     : null;
+  const localizedGtmEngineeringSeo = resolved.frPath === "/gtm-engineering-agency"
+    ? GTM_ENGINEERING_CONTENT[resolved.locale]
+    : null;
   const localizedBuyingSignalsSeo = resolved.frPath === "/insights/buying-signals"
     ? getLocalizedBuyingSignals(resolved.locale)
     : null;
@@ -520,6 +534,12 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
         title: getLocalizedAiSalesOpsContent(resolved.locale).metaTitle,
         description: getLocalizedAiSalesOpsContent(resolved.locale).metaDescription,
       }
+    : localizedGtmEngineeringSeo
+      ? {
+          title: localizedGtmEngineeringSeo.metaTitle,
+          description: localizedGtmEngineeringSeo.metaDescription,
+          type: "article" as const,
+        }
     : localizedAutoAmeliorationSeo
       ? {
           title: localizedAutoAmeliorationSeo.metaTitle,
@@ -700,6 +720,10 @@ export default async function LocalizedRoutePage({ params }: Params) {
 
   if (frPath === "/ai-sales-ops") {
     return <AiSalesOpsMasterPage locale={resolved.locale} />;
+  }
+
+  if (frPath === "/gtm-engineering-agency") {
+    return <GtmEngineeringPage locale={resolved.locale} />;
   }
 
   if (frPath === "/insights") {

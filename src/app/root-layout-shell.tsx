@@ -23,11 +23,11 @@ type LayoutLocale = "fr" | "en" | "de" | "nl";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Agence de prospection commerciale B2B en Suisse",
+    default: "GTM engineering agency Europe | devlo",
     template: "%s | devlo",
   },
   description:
-    "Agence B2B en Suisse spécialisée en génération de leads et rendez-vous qualifiés. Campagnes cold email, LinkedIn et téléprospection orientées résultats.",
+    "devlo construit des systemes GTM pour equipes B2B: AI outbound, signaux d'achat, enrichissement Clay, cold email, LinkedIn, calling et rendez-vous qualifies.",
   robots: {
     index: true,
     follow: true,
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     languages: buildLanguageAlternates("/"),
   },
   openGraph: {
-    title: "Agence de prospection commerciale B2B en Suisse",
+    title: "GTM engineering agency Europe | devlo",
     description:
-      "Agence B2B en Suisse spécialisée en génération de leads et rendez-vous qualifiés. Campagnes cold email, LinkedIn et téléprospection orientées résultats.",
+      "devlo construit des systemes GTM pour equipes B2B: AI outbound, signaux d'achat, enrichissement Clay, cold email, LinkedIn, calling et rendez-vous qualifies.",
     siteName: "devlo",
     locale: "fr_CH",
     type: "website",
@@ -50,15 +50,15 @@ export const metadata: Metadata = {
         url: toAbsoluteUrl(defaultOgImagePath),
         width: 1200,
         height: 630,
-        alt: "devlo — Agence B2B de Prospection Commerciale",
+        alt: "devlo - GTM engineering agency and B2B outbound partner",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Agence de prospection commerciale B2B en Suisse",
+    title: "GTM engineering agency Europe | devlo",
     description:
-      "Agence B2B en Suisse spécialisée en génération de leads et rendez-vous qualifiés. Campagnes cold email, LinkedIn et téléprospection orientées résultats.",
+      "devlo construit des systemes GTM pour equipes B2B: AI outbound, signaux d'achat, enrichissement Clay, cold email, LinkedIn, calling et rendez-vous qualifies.",
     images: [toAbsoluteUrl(defaultOgImagePath)],
   },
   icons: {
@@ -86,9 +86,9 @@ const schemaCopyByLocale: Record<
 > = {
   fr: {
     organizationDescription:
-      "Agence suisse spécialisée en prospection B2B, génération de leads et prise de rendez-vous qualifiés. Plus de 1000 campagnes depuis 2020.",
-    serviceName: "Prospection commerciale B2B externalisée",
-    serviceType: "Génération de leads B2B et prise de rendez-vous qualifiés",
+      "GTM engineering agency europeenne basee en Suisse, specialisee en AI outbound, prospection B2B multicanale, signaux d'achat, enrichissement Clay et rendez-vous qualifies. Plus de 1000 campagnes depuis 2020.",
+    serviceName: "GTM engineering et prospection B2B externalisee",
+    serviceType: "AI outbound, signal-based outbound, generation de leads B2B et rendez-vous qualifies",
     reviewBodies: [
       "devlo a complètement révolutionné notre approche commerciale. 80 rendez-vous qualifiés et 200 000 € de contrats signés.",
       "Charles est l'un des experts en vente les plus créatifs que je connaisse. Il nous a aidés à obtenir des rendez-vous commerciaux qualifiés dans la région DACH.",
@@ -96,9 +96,9 @@ const schemaCopyByLocale: Record<
   },
   en: {
     organizationDescription:
-      "Swiss B2B outbound agency focused on lead generation and qualified meetings. More than 1,000 campaigns launched since 2020.",
-    serviceName: "Outsourced B2B outbound prospecting",
-    serviceType: "B2B lead generation and qualified meeting booking",
+      "European GTM engineering agency based in Switzerland, focused on AI outbound, multichannel B2B prospecting, buying signals, Clay enrichment and qualified meetings. More than 1,000 campaigns launched since 2020.",
+    serviceName: "GTM engineering and outsourced B2B outbound prospecting",
+    serviceType: "AI outbound, signal-based outbound, B2B lead generation and qualified meeting booking",
     reviewBodies: [
       "devlo completely transformed our commercial approach. We generated 80 qualified meetings and €200,000 in signed business.",
       "Charles is one of the most creative sales experts I know. He helped us secure qualified meetings across the DACH region.",
@@ -106,9 +106,9 @@ const schemaCopyByLocale: Record<
   },
   de: {
     organizationDescription:
-      "Schweizer B2B-Outbound-Agentur für Leadgenerierung und qualifizierte Termine. Seit 2020 wurden mehr als 1.000 Kampagnen gestartet.",
-    serviceName: "Ausgelagerte B2B-Vertriebsakquise",
-    serviceType: "B2B-Leadgenerierung und Vereinbarung qualifizierter Termine",
+      "Europaeische GTM Engineering Agentur mit Sitz in der Schweiz fuer AI Outbound, mehrkanalige B2B-Akquise, Kaufsignale, Clay Enrichment und qualifizierte Termine. Seit 2020 wurden mehr als 1.000 Kampagnen gestartet.",
+    serviceName: "GTM Engineering und ausgelagerte B2B-Vertriebsakquise",
+    serviceType: "AI Outbound, signalbasierte Akquise, B2B-Leadgenerierung und qualifizierte Termine",
     reviewBodies: [
       "devlo hat unseren Vertriebsansatz komplett verändert. Wir haben 80 qualifizierte Termine und 200.000 € an Neuumsatz erzielt.",
       "Charles ist einer der kreativsten Vertriebsexperten, die ich kenne. Er hat uns geholfen, qualifizierte Termine in der DACH-Region zu gewinnen.",
@@ -116,9 +116,9 @@ const schemaCopyByLocale: Record<
   },
   nl: {
     organizationDescription:
-      "Zwitsers B2B-outboundbureau voor leadgeneratie en gekwalificeerde afspraken. Sinds 2020 werden meer dan 1.000 campagnes gelanceerd.",
-    serviceName: "Uitbestede B2B outbound prospectie",
-    serviceType: "B2B-leadgeneratie en het boeken van gekwalificeerde afspraken",
+      "Europees GTM engineering bureau gevestigd in Zwitserland voor AI outbound, multichannel B2B-prospectie, koopsignalen, Clay enrichment en gekwalificeerde afspraken. Sinds 2020 werden meer dan 1.000 campagnes gelanceerd.",
+    serviceName: "GTM engineering en uitbestede B2B outbound prospectie",
+    serviceType: "AI outbound, signal-based outbound, B2B-leadgeneratie en gekwalificeerde afspraken",
     reviewBodies: [
       "devlo heeft onze commerciële aanpak volledig veranderd. We genereerden 80 gekwalificeerde afspraken en 200.000 euro aan nieuwe omzet.",
       "Charles is een van de meest creatieve verkoopexperts die ik ken. Hij hielp ons om gekwalificeerde afspraken te verkrijgen in de DACH-regio.",
@@ -139,6 +139,30 @@ function buildLayoutSchemas(locale: LayoutLocale) {
     foundingDate: "2020",
     sameAs: [
       "https://www.linkedin.com/company/devlo-connects-you-with-more-prospects/",
+    ],
+    areaServed: [
+      { "@type": "Country", name: "Switzerland" },
+      { "@type": "Country", name: "Belgium" },
+      { "@type": "Country", name: "France" },
+      { "@type": "Country", name: "Germany" },
+      { "@type": "Country", name: "Austria" },
+      { "@type": "Country", name: "Luxembourg" },
+      { "@type": "Country", name: "Netherlands" },
+      { "@type": "Country", name: "United Kingdom" },
+      { "@type": "Country", name: "United States" },
+      { "@type": "Country", name: "Canada" },
+    ],
+    knowsAbout: [
+      "GTM engineering",
+      "AI outbound",
+      "B2B lead generation",
+      "signal-based outbound",
+      "Clay enrichment",
+      "cold email",
+      "LinkedIn outreach",
+      "cold calling",
+      "CRM operations",
+      "sales deliverability",
     ],
     address: {
       "@type": "PostalAddress",

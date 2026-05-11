@@ -7,7 +7,7 @@ import { buildLanguageAlternatesForFrPath, normalizePath as normalizeLocalizedPa
 import { siteConfig } from "@/lib/site";
 
 export const defaultOgImagePath = "/images/devlo_OG_Banner.webp";
-const defaultOgImageAlt = "devlo - agence suisse de prospection B2B";
+const defaultOgImageAlt = "devlo - GTM engineering agency and B2B outbound partner";
 export type SeoMetadataLocale = "fr" | "en" | "de" | "nl";
 
 const titleSuffixByLocale: Record<SeoMetadataLocale, string> = {

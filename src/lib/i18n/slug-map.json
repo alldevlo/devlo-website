@@ -11,6 +11,12 @@
     "de": "/de/ki-vertriebsautomatisierung",
     "nl": "/nl/ai-sales-automatisering"
   },
+  "gtm-engineering-agency": {
+    "fr": "/gtm-engineering-agency",
+    "en": "/en/gtm-engineering-agency",
+    "de": "/de/gtm-engineering-agentur",
+    "nl": "/nl/gtm-engineering-bureau"
+  },
   "case-studies": {
     "fr": "/etudes-de-cas",
     "en": "/en/case-studies",

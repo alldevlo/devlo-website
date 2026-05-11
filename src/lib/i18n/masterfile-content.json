@@ -26,19 +26,19 @@
       }
     },
     "homeSeo": {
-      "title": "Agence de prospection B2B en Suisse | RDV qualifiés",
-      "description": "devlo génère des rendez-vous qualifiés en Suisse via lead generation, cold email, LinkedIn et calling. Campagnes multilingues et preuves clients.",
-      "ogTitle": "Agence de prospection B2B Suisse | Rendez-vous qualifiés | devlo",
-      "ogDescription": "devlo identifie les bons comptes, prépare vos séquences et pilote vos campagnes B2B multicanales pour générer des rendez-vous qualifiés."
+      "title": "GTM engineering agency Europe | Prospection B2B",
+      "description": "devlo construit des systemes GTM B2B: AI outbound, signaux d'achat, Clay, cold email, LinkedIn, calling et rendez-vous qualifies.",
+      "ogTitle": "GTM engineering agency Europe | AI outbound & prospection B2B | devlo",
+      "ogDescription": "devlo identifie les bons comptes, detecte les signaux, enrichit les donnees et pilote les campagnes B2B multicanales pour generer du pipeline qualifie."
     },
     "homeContent": {
       "hero": {
-        "badge": "🇨🇭 Agence suisse · +1'000 campagnes lancées",
-        "h1": "Agence de prospection B2B en Suisse pour générer des rendez-vous qualifiés",
-        "h2": "Nous identifions les bons comptes, préparons vos séquences et bookons les rendez-vous que votre équipe commerciale peut convertir.",
-        "paragraph": "devlo combine **lead generation**, **signaux d'achat**, **cold email**, **LinkedIn** et **calling** pour créer un pipeline B2B mesurable. L'objectif n'est pas plus de trafic : c'est plus de conversations avec des décideurs qui correspondent à votre ICP.",
+        "badge": "🇨🇭 GTM engineering agency · +1'000 campagnes lancées",
+        "h1": "GTM engineering agency en Europe pour generer du pipeline B2B qualifie",
+        "h2": "Nous construisons votre systeme outbound IA: ICP, signaux d'achat, enrichissement Clay, sequences multicanales, CRM et rendez-vous qualifies.",
+        "paragraph": "devlo combine **lead generation**, **signaux d'achat**, **Clay**, **cold email**, **LinkedIn** et **calling** pour creer un pipeline B2B mesurable. L'objectif n'est pas plus de trafic : c'est plus de conversations avec des decideurs qui correspondent a votre ICP.",
         "ctaPrimary": {
-          "label": "Auditer mon potentiel de leads →",
+          "label": "Auditer mon systeme GTM →",
           "href": "/consultation"
         },
         "ctaSecondary": {
@@ -46,8 +46,8 @@
           "href": "/etudes-de-cas"
         },
         "ctaServices": {
-          "label": "Voir nos services →",
-          "href": "/services"
+          "label": "Voir l'approche GTM engineering →",
+          "href": "/gtm-engineering-agency"
         },
         "wistiaMediaId": "cr7dgltkvu",
         "posterSrc": "/images/video-thumb-abacus.webp",
@@ -1292,19 +1292,19 @@
       }
     },
     "homeSeo": {
-      "title": "B2B Prospecting Agency in Switzerland | Qualified Meetings",
-      "description": "devlo generates qualified B2B meetings in Switzerland through lead generation, cold email, LinkedIn and calling. Multilingual campaigns with client proof.",
-      "ogTitle": "Swiss B2B Prospecting Agency | Qualified Meetings | devlo",
-      "ogDescription": "devlo identifies the right accounts, prepares your sequences and runs multichannel B2B campaigns that generate qualified sales meetings."
+      "title": "GTM engineering agency Europe | B2B outbound",
+      "description": "devlo builds B2B GTM systems: AI outbound, buying signals, Clay, cold email, LinkedIn, calling and qualified meetings.",
+      "ogTitle": "GTM engineering agency Europe | AI outbound & B2B prospecting | devlo",
+      "ogDescription": "devlo identifies target accounts, detects signals, enriches data and runs multichannel B2B campaigns that generate qualified pipeline."
     },
     "homeContent": {
       "hero": {
-        "badge": "🇨🇭 Swiss agency - +1,000 campaigns launched",
-        "h1": "Swiss B2B prospecting agency for qualified sales meetings",
-        "h2": "We identify the right accounts, prepare your sequences and book meetings your sales team can convert.",
-        "paragraph": "devlo combines **lead generation**, **buying signals**, **cold email**, **LinkedIn** and **calling** to create a measurable B2B pipeline. The objective is not more traffic: it is more conversations with decision-makers who match your ICP.",
+        "badge": "🇨🇭 GTM engineering agency - +1,000 campaigns launched",
+        "h1": "European GTM engineering agency for qualified B2B pipeline",
+        "h2": "We build your AI outbound system: ICP, buying signals, Clay enrichment, multichannel sequences, CRM and qualified meetings.",
+        "paragraph": "devlo combines **lead generation**, **buying signals**, **Clay**, **cold email**, **LinkedIn** and **calling** to create measurable B2B pipeline. The objective is not more traffic: it is more conversations with decision-makers who match your ICP.",
         "ctaPrimary": {
-          "label": "Audit my lead potential →",
+          "label": "Audit my GTM system →",
           "href": "/consultation"
         },
         "ctaSecondary": {
@@ -1312,8 +1312,8 @@
           "href": "/etudes-de-cas"
         },
         "ctaServices": {
-          "label": "See our services →",
-          "href": "/services"
+          "label": "View the GTM engineering approach →",
+          "href": "/gtm-engineering-agency"
         },
         "wistiaMediaId": "cr7dgltkvu",
         "posterSrc": "/images/video-thumb-abacus.webp",
@@ -2561,19 +2561,19 @@
       }
     },
     "homeSeo": {
-      "title": "B2B-Akquise Agentur Schweiz | Qualifizierte Termine",
-      "description": "devlo generiert qualifizierte B2B-Termine in der Schweiz mit Leadgenerierung, Cold Email, LinkedIn und Calling. Mehrsprachige Kampagnen mit Nachweisen.",
-      "ogTitle": "B2B-Akquise Agentur Schweiz | Qualifizierte Termine | devlo",
-      "ogDescription": "devlo identifiziert passende Accounts, bereitet Sequenzen vor und steuert mehrkanalige B2B-Kampagnen für qualifizierte Vertriebstermine."
+      "title": "GTM Engineering Agentur Europa | B2B Outbound",
+      "description": "devlo baut B2B GTM Systeme: AI Outbound, Kaufsignale, Clay, Cold Email, LinkedIn, Calling und qualifizierte Termine.",
+      "ogTitle": "GTM Engineering Agentur Europa | AI Outbound & B2B Akquise | devlo",
+      "ogDescription": "devlo identifiziert Zielaccounts, erkennt Signale, reichert Daten an und steuert mehrkanalige B2B-Kampagnen fuer qualifizierte Pipeline."
     },
     "homeContent": {
       "hero": {
-        "badge": "🇨🇭 Schweizer Agentur - +1'000 lancierte Kampagnen",
-        "h1": "Schweizer B2B-Akquise Agentur für qualifizierte Vertriebstermine",
-        "h2": "Wir identifizieren passende Accounts, bereiten Ihre Sequenzen vor und buchen Termine, die Ihr Vertriebsteam konvertieren kann.",
-        "paragraph": "devlo kombiniert **Leadgenerierung**, **Kaufsignale**, **Cold Email**, **LinkedIn** und **Calling**, um eine messbare B2B-Pipeline aufzubauen. Das Ziel ist nicht mehr Traffic, sondern mehr Gespräche mit Entscheidern, die zu Ihrem ICP passen.",
+        "badge": "🇨🇭 GTM Engineering Agentur - +1'000 lancierte Kampagnen",
+        "h1": "Europaeische GTM Engineering Agentur fuer qualifizierte B2B Pipeline",
+        "h2": "Wir bauen Ihr AI-Outbound-System: ICP, Kaufsignale, Clay Enrichment, Multichannel-Sequenzen, CRM und qualifizierte Termine.",
+        "paragraph": "devlo kombiniert **Leadgenerierung**, **Kaufsignale**, **Clay**, **Cold Email**, **LinkedIn** und **Calling**, um eine messbare B2B-Pipeline aufzubauen. Das Ziel ist nicht mehr Traffic, sondern mehr Gespraeche mit Entscheidern, die zu Ihrem ICP passen.",
         "ctaPrimary": {
-          "label": "Lead-Potenzial prüfen →",
+          "label": "GTM-System auditieren →",
           "href": "/consultation"
         },
         "ctaSecondary": {
@@ -2581,8 +2581,8 @@
           "href": "/etudes-de-cas"
         },
         "ctaServices": {
-          "label": "Siehe unsere Dienstleistungen →",
-          "href": "/services"
+          "label": "GTM Engineering ansehen →",
+          "href": "/gtm-engineering-agency"
         },
         "wistiaMediaId": "cr7dgltkvu",
         "posterSrc": "/images/video-thumb-abacus.webp",
@@ -3830,19 +3830,19 @@
       }
     },
     "homeSeo": {
-      "title": "B2B prospectiebureau Zwitserland | Gekwalificeerde afspraken",
-      "description": "devlo genereert gekwalificeerde B2B-afspraken in Zwitserland via leadgeneratie, cold email, LinkedIn en calling. Meertalige campagnes met bewijs.",
-      "ogTitle": "B2B prospectiebureau Zwitserland | Gekwalificeerde afspraken | devlo",
-      "ogDescription": "devlo identificeert de juiste accounts, bereidt uw sequenties voor en runt multichannel B2B-campagnes voor gekwalificeerde salesafspraken."
+      "title": "GTM engineering bureau Europa | B2B outbound",
+      "description": "devlo bouwt B2B GTM systemen: AI outbound, koopsignalen, Clay, cold email, LinkedIn, calling en gekwalificeerde afspraken.",
+      "ogTitle": "GTM engineering bureau Europa | AI outbound & B2B prospectie | devlo",
+      "ogDescription": "devlo identificeert target accounts, detecteert signalen, verrijkt data en runt multichannel B2B-campagnes voor gekwalificeerde pipeline."
     },
     "homeContent": {
       "hero": {
-        "badge": "🇨🇭 Zwitsers agentschap - +1.000 campagnes gelanceerd",
-        "h1": "Zwitsers B2B prospectiebureau voor gekwalificeerde salesafspraken",
-        "h2": "Wij identificeren de juiste accounts, bereiden uw sequenties voor en boeken afspraken die uw salesteam kan converteren.",
-        "paragraph": "devlo combineert **leadgeneratie**, **koopsignalen**, **cold email**, **LinkedIn** en **calling** om een meetbare B2B-pipeline op te bouwen. Het doel is niet meer verkeer, maar meer gesprekken met beslissers die bij uw ICP passen.",
+        "badge": "🇨🇭 GTM engineering bureau - +1.000 campagnes gelanceerd",
+        "h1": "Europees GTM engineering bureau voor gekwalificeerde B2B pipeline",
+        "h2": "Wij bouwen je AI outbound systeem: ICP, koopsignalen, Clay enrichment, multichannel sequences, CRM en gekwalificeerde afspraken.",
+        "paragraph": "devlo combineert **leadgeneratie**, **koopsignalen**, **Clay**, **cold email**, **LinkedIn** en **calling** om een meetbare B2B-pipeline op te bouwen. Het doel is niet meer verkeer, maar meer gesprekken met beslissers die bij je ICP passen.",
         "ctaPrimary": {
-          "label": "Audit mijn leadpotentieel →",
+          "label": "Audit mijn GTM-systeem →",
           "href": "/consultation"
         },
         "ctaSecondary": {
@@ -3850,8 +3850,8 @@
           "href": "/etudes-de-cas"
         },
         "ctaServices": {
-          "label": "Bekijk onze diensten →",
-          "href": "/services"
+          "label": "Bekijk de GTM engineering aanpak →",
+          "href": "/gtm-engineering-agency"
         },
         "wistiaMediaId": "cr7dgltkvu",
         "posterSrc": "/images/video-thumb-abacus.webp",

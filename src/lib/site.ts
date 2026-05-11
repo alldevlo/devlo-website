@@ -7,7 +7,7 @@ function resolveSiteUrl(): string {
 export const siteConfig = {
   name: "devlo",
   description:
-    "Agence suisse spécialisée en prospection B2B, génération de leads et prise de rendez-vous qualifiés.",
+    "GTM engineering agency europeenne pour AI outbound, prospection B2B multicanale, signaux d'achat, enrichissement Clay et rendez-vous qualifies.",
   url: resolveSiteUrl(),
   locale: "fr-CH",
   nav: [
