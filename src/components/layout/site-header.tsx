@@ -198,7 +198,7 @@ export function SiteHeader() {
     { key: "caseStudies", href: caseStudiesHref as string, label: navCopy.caseStudies },
     { key: "aiSalesOps", href: aiSalesOpsHref as string, label: navCopy.aiSalesOps },
     { key: "services", href: toCurrentLocalePath("/services") as string, label: navCopy.services },
-    { key: "insights", href: "/insights" as string, label: navCopy.insights },
+    { key: "insights", href: toCurrentLocalePath("/insights") as string, label: navCopy.insights },
   ] as const;
 
   const geoLinks = [
