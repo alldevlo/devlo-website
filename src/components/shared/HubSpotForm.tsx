@@ -44,6 +44,10 @@ export function HubSpotForm({ serviceInterest, configuratorData, locale = "fr", 
         strategy_selections: strategySelections,
       }}
       locale={locale}
+      analyticsContext={{
+        form_type: "service_lead",
+        service_interest: serviceInterest,
+      }}
       onSubmitted={() => {
         window.dataLayer?.push({ event: "lead_form_submit", service: serviceInterest });
         onSuccess?.();

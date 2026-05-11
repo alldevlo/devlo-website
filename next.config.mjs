@@ -50,6 +50,7 @@ const nextConfig = {
     formats: ["image/avif", "image/webp"],
     // Add finer-grained responsive widths so small logos don't jump to 256/384px.
     imageSizes: [16, 24, 32, 40, 48, 64, 72, 80, 96, 120, 128, 160, 192, 240, 256, 320, 384],
+    qualities: [68, 70, 72, 74, 75, 76, 78],
   },
   async headers() {
     return [
@@ -648,16 +649,27 @@ const nextConfig = {
       { source: "/de/etudes-de-cas/iddi-generation-leads-biotech-pharma", destination: "/de/fallstudien/iddi-leadgenerierung-biotech-pharma", permanent: true },
       { source: "/nl/etudes-de-cas/immobilier-30-prospects", destination: "/nl/casestudy/vastgoed-30-prospects", permanent: true },
       // EN long-form legacy case-study URLs
+      { source: "/en/casestudy/cybersecurity-lead-generation-and-cold-calling-180-qualified-prospects-for-this-client-using-outbound", destination: "/en/casestudy/cybersecurity-4500-companies", permanent: true },
       { source: "/en/casestudy/how-to-identify-the-most-valuable-ideal-customer-profiles-among-several-buyer-personas-using-cold-outreach-2", destination: "/en/casestudy/biofuels-52-sales-meetings", permanent: true },
       { source: "/en/casestudy/how-can-you-identify-the-best-prospects-among-several-ideal-customer-profiles-icp-using-sales-prospecting-campaigns", destination: "/en/casestudy/biofuels-52-sales-meetings", permanent: true },
       { source: "/en/casestudy/how-we-helped-an-accounting-software-firm-close-200k-in-belgium-using-multichannel-outbound", destination: "/en/casestudy/accounting-200k-revenue", permanent: true },
+      { source: "/en/casestudy/setting-appointments-with-decision-makers-in-learning-and-development-of-swiss-enterprises-half-the-leads-responded-to-our-prospecting-sequence", destination: "/en/casestudy/learning-development-14-meetings", permanent: true },
       { source: "/en/casestudy/how-this-audiovisual-integrator-obtained-16-qualified-appointments-through-b2b-sales-prospecting", destination: "/en/casestudy/audiovisual-16-meetings", permanent: true },
+      { source: "/en/casestudy/40-interested-companies-out-of-286-contacted-in-the-mobility-sector", destination: "/en/casestudy/mobility-40-prospects", permanent: true },
       { source: "/en/casestudy/how-this-commercial-building-project-gets-tenants-to-rent-the-space-in-fahrwerk-winterthur", destination: "/en/casestudy/commercial-real-estate-11-prospects", permanent: true },
+      { source: "/en/casestudy/telemarketing-b2b-in-real-estate-switzerland-30-interested-prospects-for-meeting", destination: "/en/casestudy/real-estate-30-prospects", permanent: true },
       { source: "/en/casestudy/how-this-merchandising-company-obtained-70-responses-and-8-meetings-with-their-prospects-thanks-to-this-b2b-sales-prospecting-sequence", destination: "/en/casestudy/merchandising-23-prospects", permanent: true },
       { source: "/en/casestudy/how-this-association-outsourced-their-customer-acquisition-and-secured-70-qualified-appointments-with-companies-such-as-uefa-tag-heuer-rothschild-etc", destination: "/en/casestudy/biodiversity-70-meetings", permanent: true },
       // DE long-form legacy case-study URLs
+      { source: "/de/externaliser-le-developpement-des-ventes-b2b-comment-eviter-les-depenses-excessives", destination: "/de/blog/b2b-akquise-auslagern", permanent: true },
+      { source: "/de/akademie-unser-ruf", destination: "/de/beratung", permanent: true },
+      { source: "/de/fallstudien/einzigartige-strategie-zur-lead-generierung-wie-careerlunch-54-meetings-in-dach-bekam-wahrend-die-meisten-organisationen-in-dieser-region-bereits-kontaktiert-wurden", destination: "/de/fallstudien/hr-54-termine-dach", permanent: true },
+      { source: "/de/fallstudien/generierung-von-cybersicherheits-leads-und-kaltakquise-180-qualifizierte-interessenten-fur-diesen-kunden-mithilfe-von-outbound", destination: "/de/fallstudien/cybersicherheit-4500-unternehmen", permanent: true },
       { source: "/de/fallstudien/wie-dieser-verband-seine-kundenakquise-auslagerte-und-sich-70-qualifizierte-termine-bei-unternehmen-wie-uefa-tag-heuer-rothschild-usw-sicherte", destination: "/de/fallstudien/biodiversitat-70-termine", permanent: true },
       { source: "/de/fallstudien/wie-dieser-audiovisuelle-integrator-durch-b2b-verkaufsakquise-16-qualifizierte-termine-erhielt", destination: "/de/fallstudien/av-integration-16-termine", permanent: true },
+      { source: "/de/fallstudien/wie-dieses-gewerbebauprojekt-im-fahrwerk-winterthur-mieterinnen-und-mieter-findet", destination: "/de/fallstudien/gewerbeimmobilien-11-interessenten", permanent: true },
+      { source: "/de/fallstudien/telemarketing-b2b-in-immobilien-schweiz30-interessenten-fur-einen-termin", destination: "/de/fallstudien/immobilien-30-interessenten", permanent: true },
+      { source: "/de/fallstudien/terminvereinbarung-mit-entscheidungstragern-im-bereich-lernen-und-entwicklung-von-schweizer-unternehmen-die-halfte-der-leads-antwortete-auf-unsere-prospektionssequenz", destination: "/de/fallstudien/training-14-termine", permanent: true },
       { source: "/de/fallstudien/wie-konnen-sie-mit-hilfe-von-prospektionskampagnen-die-besten-potenziellen-kunden-unter-mehreren-idealen-kundenprofilen-icp-identifizieren-2", destination: "/de/fallstudien/biokraftstoffe-52-termine", permanent: true },
       { source: "/de/fallstudien/wie-wir-einem-buchhaltungssoftware-anbieter-halfen-200k-in-belgien-mit-multikanal-outbound-zu-gewinnen", destination: "/de/fallstudien/buchhaltungssoftware-200k-umsatz", permanent: true },
       { source: "/de/fallstudien/wie-dieses-unternehmen-fur-reinigungsmanagement-71-treffen-mit-top-entscheidungstragern-in-den-grosten-stadten-der-schweiz-frankreichs-und-belgiens-organisiert-hat", destination: "/de/fallstudien/stadtreinigung-71-termine", permanent: true },
@@ -670,6 +682,7 @@ const nextConfig = {
       { source: "/resultats/comment-cet-integrateur-audiovisuel-a-obtenu-16-rendez-vous-qualifies-grace-a-notre-agence-de-prospection-commerciale-b2b", destination: "/resultats/audiovisuel-16-rendez-vous", permanent: true },
       { source: "/resultats/comment-cette-association-a-externalise-son-acquisition-de-clients-et-obtenu-70-rendez-vous-qualifies-avec-des-entreprises-comme-luefa-tag-heuer-rothschild-etc", destination: "/resultats/biodiversite-70-rendez-vous", permanent: true },
       { source: "/resultats/planification-de-rendez-vous-b2b-avec-decideurs-formation-developpement-des-competences-ld-50-des-prospects-repondent-agence-de-prospection-commerciale-b2b", destination: "/resultats/formation-14-rendez-vous", permanent: true },
+      { source: "/resultats/telemarketing-b2b-dans-limmobilier-suisse30-prospects-interesses-pour-un-rendez-vous", destination: "/resultats/immobilier-30-prospects", permanent: true },
     ]);
 
     // ─── Slug fix redirects: old FR slugs copied to EN/DE/NL → correct translations ──

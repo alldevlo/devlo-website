@@ -435,6 +435,10 @@ export function AiSalesOpsMasterPage({ locale = "fr" }: AiSalesOpsMasterPageProp
                     region={DIAGNOSTIC_REGION}
                     targetId={`hubspot-ai-sales-ops-diagnostic-${locale}`}
                     locale={locale}
+                    analyticsContext={{
+                      form_type: "ai_sales_ops_diagnostic",
+                      form_location: "ai_sales_ops_diagnostic_section",
+                    }}
                   />
                 </div>
               </FadeInOnScroll>

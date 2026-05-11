@@ -977,6 +977,11 @@ export function CaseStudyMasterPage({
                   region={consultationData.hubspot.region}
                   targetId={`hubspot-case-${study.slug}`}
                   locale={locale}
+                  analyticsContext={{
+                    form_type: "case_study_contact",
+                    form_location: "case_study_final_cta",
+                    case_study_slug: study.slug,
+                  }}
                 />
               </div>
             </div>

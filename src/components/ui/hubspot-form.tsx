@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { SupportedLocale } from "@/lib/i18n/slug-map";
+import { pushAnalyticsEvent } from "@/lib/analytics";
 
 type HubspotFormApi = {
   setFieldValue?: (fieldName: string, value: string) => void;
@@ -36,6 +37,7 @@ type HubspotFormProps = {
   targetId: string;
   locale?: SupportedLocale;
   hiddenFields?: Record<string, string>;
+  analyticsContext?: Record<string, string | number | boolean | null | undefined>;
   onFormSubmitCapture?: (fields: Record<string, string | string[]>) => void;
   onSubmitted?: () => void;
 };
@@ -235,6 +237,12 @@ function serializeHubSpotSubmittedFields(data: unknown) {
   return Object.keys(fields).length > 0 ? fields : null;
 }
 
+function compactAnalyticsParams(params: Record<string, string | number | boolean | null | undefined>) {
+  return Object.fromEntries(
+    Object.entries(params).filter(([, value]) => value !== undefined && value !== null && value !== ""),
+  );
+}
+
 export function HubspotForm({
   portalId,
   formId,
@@ -242,6 +250,7 @@ export function HubspotForm({
   targetId,
   locale = "fr",
   hiddenFields,
+  analyticsContext,
   onFormSubmitCapture,
   onSubmitted,
 }: HubspotFormProps) {
@@ -249,6 +258,7 @@ export function HubspotForm({
   const initialized = useRef(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const submittedBackupRef = useRef(false);
+  const startedAnalyticsRef = useRef(false);
   const formInstanceRef = useRef<HubspotFormApi | null>(null);
   const hiddenFieldsRef = useRef<Record<string, string> | undefined>(hiddenFields);
   const [loaded, setLoaded] = useState(false);
@@ -264,12 +274,29 @@ export function HubspotForm({
   useEffect(() => {
     initialized.current = false;
     submittedBackupRef.current = false;
+    startedAnalyticsRef.current = false;
     formInstanceRef.current = null;
     setLoaded(false);
     setSubmitted(false);
     setLoadError(false);
     setSubmissionError(null);
   }, [formId, portalId, region, targetId]);
+
+  const buildAnalyticsParams = useCallback(() =>
+    compactAnalyticsParams({
+      form_id: formId,
+      form_target: targetId,
+      form_type: "hubspot",
+      locale,
+      page_path: window.location.pathname,
+      ...analyticsContext,
+    }), [analyticsContext, formId, locale, targetId]);
+
+  const trackFormStart = () => {
+    if (startedAnalyticsRef.current) return;
+    startedAnalyticsRef.current = true;
+    pushAnalyticsEvent("form_start", buildAnalyticsParams());
+  };
 
   useEffect(() => {
     if (isNearViewport) return;
@@ -331,6 +358,9 @@ export function HubspotForm({
         },
         onFormSubmitted: () => {
           setSubmitted(true);
+          const params = buildAnalyticsParams();
+          pushAnalyticsEvent("form_submit", params);
+          pushAnalyticsEvent("generate_lead", params);
           onSubmitted?.();
         },
       });
@@ -356,7 +386,7 @@ export function HubspotForm({
     return () => {
       cancelled = true;
     };
-  }, [formId, isNearViewport, onFormSubmitCapture, onSubmitted, portalId, region, targetId]);
+  }, [buildAnalyticsParams, formId, isNearViewport, onFormSubmitCapture, onSubmitted, portalId, region, targetId]);
 
   useEffect(() => {
     if (!loaded || submitted) return;
@@ -401,7 +431,7 @@ export function HubspotForm({
   }, [copy.submissionError, formId, onFormSubmitCapture]);
 
   return (
-    <div ref={containerRef} className="relative">
+    <div ref={containerRef} className="relative" onClickCapture={trackFormStart} onFocusCapture={trackFormStart}>
       {!loaded && !submitted && (
         <div className={`flex ${RESERVED_FORM_HEIGHT_CLASS} items-center justify-center rounded-xl bg-neutral-50`}>
           <div className="flex flex-col items-center gap-3 text-neutral-400">

@@ -7,6 +7,7 @@ import { InfiniteLogoRail } from "@/components/shared/logo-rail";
 import { ServicesSectionHeader, ServicesSurfaceCard } from "@/components/services/services-ui";
 import { CaseStudyGrid } from "@/components/shared/case-study-grid";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
+import { PROGRAMMATIC_SEO_PILOT_PAGES } from "@/content/programmatic-seo-pilot";
 import { TRUSTED_LOGOS_STRIP } from "@/content/service-brand-assets";
 import type { CaseStudyCard, ServiceHubCard } from "@/content/services";
 import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
@@ -120,12 +121,47 @@ const gtmBridgeByLocale: Record<SupportedLocale, { title: string; body: string; 
   },
 };
 
+const coverageCopyByLocale: Record<
+  SupportedLocale,
+  { eyebrow: string; title: string; description: string }
+> = {
+  fr: {
+    eyebrow: "Maillage local",
+    title: "Pages de prospection B2B par marché",
+    description:
+      "Accès direct aux guides locaux pour renforcer la découverte, le maillage interne et la compréhension des zones couvertes.",
+  },
+  en: {
+    eyebrow: "Local coverage",
+    title: "B2B prospecting pages by market",
+    description:
+      "Direct access to local guides so crawlers and buyers can understand which markets devlo covers.",
+  },
+  de: {
+    eyebrow: "Lokale Abdeckung",
+    title: "B2B-Prospecting-Seiten nach Markt",
+    description:
+      "Direkter Zugriff auf lokale Guides, damit Crawler und Käufer die abgedeckten Märkte besser verstehen.",
+  },
+  nl: {
+    eyebrow: "Lokale dekking",
+    title: "B2B-prospectiepagina's per markt",
+    description:
+      "Directe toegang tot lokale gidsen zodat crawlers en kopers begrijpen welke markten devlo bedient.",
+  },
+};
+
 export function ServicesHubPage({ cards, copy, caseStudies, locale = "fr" }: ServicesHubPageProps) {
   const labels = breadcrumbLabelsByLocale[locale];
   const serviceSelectionTable = serviceSelectionTables[locale];
   const gtmBridge = gtmBridgeByLocale[locale];
+  const coverageCopy = coverageCopyByLocale[locale];
   const toLocalePath = (frPath: string) => resolvePathForLocale(frPath, locale).path;
   const servicesHubPath = toLocalePath("/services");
+  const coverageLinks = PROGRAMMATIC_SEO_PILOT_PAGES
+    .filter((page) => page.locale === locale)
+    .sort((a, b) => a.market.localeCompare(b.market, locale))
+    .map((page) => ({ label: page.market, href: page.path }));
   const breadcrumbItems = [
     { name: labels.home, path: toLocalePath("/") },
     { name: labels.services, path: servicesHubPath },
@@ -262,6 +298,31 @@ export function ServicesHubPage({ cards, copy, caseStudies, locale = "fr" }: Ser
                 </ServicesSurfaceCard>
               </Link>
             ))}
+          </div>
+        </SectionWrapper>
+
+        <SectionWrapper background="white" className="border-t border-neutral-200">
+          <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-devlo-700">
+                {coverageCopy.eyebrow}
+              </p>
+              <h2 className="mt-3 text-2xl font-extrabold leading-tight text-devlo-900 md:text-3xl">
+                {coverageCopy.title}
+              </h2>
+              <p className="mt-4 text-sm leading-7 text-neutral-600">{coverageCopy.description}</p>
+            </div>
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              {coverageLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="rounded-md border border-neutral-200 px-3 py-2 text-sm font-semibold text-devlo-800 transition hover:border-devlo-700 hover:bg-devlo-50"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
         </SectionWrapper>
 
