@@ -7,7 +7,7 @@
  */
 
 import { readFileSync, writeFileSync, readdirSync, statSync } from "fs";
-import { join, basename } from "path";
+import { join } from "path";
 
 const TEMPLATES_DIR = join(
   process.cwd(),
@@ -27,17 +27,6 @@ const slugDirs = readdirSync(TEMPLATES_DIR)
   .sort();
 
 console.log(`Found ${slugDirs.length} template directories`);
-
-function extractStringContent(source, varName) {
-  // Look for const varName = "..." or const varName = `...`
-  const regex = new RegExp(
-    `const\\s+${varName}\\s*=\\s*(?:"([^"]*?)"|'([^']*?)'|\`([\\s\\S]*?)\`)`,
-    "m"
-  );
-  const match = source.match(regex);
-  if (match) return match[1] || match[2] || match[3] || "";
-  return null;
-}
 
 function extractMetadata(source) {
   // Extract title from buildPageMetadata
@@ -196,17 +185,6 @@ function extractTouches(source) {
   return touches;
 }
 
-function extractSectionContent(source, sectionIdentifier) {
-  // Generic section extractor for "why it works", "learnings", "when to use", "who can use"
-  const sectionRegex = new RegExp(
-    `<h2[\\s\\S]*?>\\s*${sectionIdentifier}\\s*<\\/h2>([\\s\\S]*?)<\\/section>`,
-    "m"
-  );
-  const match = source.match(sectionRegex);
-  if (!match) return null;
-  return match[1];
-}
-
 function extractWhyItWorks(source) {
   // Find the "Pourquoi cette séquence fonctionne" section
   const sectionMatch = source.match(
@@ -318,31 +296,6 @@ function extractSequenceDetailsSubtitle(source) {
     .replace(/<[^>]*>/g, "")
     .replace(/\s+/g, " ")
     .trim();
-}
-
-function extractCtaSection(source) {
-  // CTA heading and body
-  const ctaSection = source.match(
-    /Vous voulez une séquence personnalisée[\s\S]*?<\/section>/
-  );
-  if (!ctaSection) {
-    // Try to find any CTA heading
-    const altMatch = source.match(
-      /<h2[\s\S]*?className="font-black text-white"[\s\S]*?>\s*([\s\S]*?)\s*<\/h2>\s*<p className="text-base text-white\/80">\s*([\s\S]*?)\s*<\/p>/
-    );
-    if (altMatch) {
-      return {
-        heading: altMatch[1].replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim(),
-        body: altMatch[2].replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim(),
-      };
-    }
-    return { heading: "", body: "" };
-  }
-
-  return {
-    heading: "Vous voulez une séquence personnalisée pour votre industrie ?",
-    body: "",
-  };
 }
 
 function extractPageData(slug) {

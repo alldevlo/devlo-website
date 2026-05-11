@@ -180,7 +180,6 @@ function syncFormInstanceValues(formInstance: HubspotFormApi | null, hiddenField
       formInstance.setFieldValue?.(name, value);
     } catch {
       if (process.env.NODE_ENV !== "production") {
-        // eslint-disable-next-line no-console
         console.warn(`[HubSpot] Unable to set field value for "${name}"`);
       }
     }
@@ -391,7 +390,6 @@ export function HubspotForm({
 
       if (payload.eventName === "onFormSubmitFailed" || payload.eventName === "onFormError") {
         if (process.env.NODE_ENV !== "production") {
-          // eslint-disable-next-line no-console
           console.error("[HubSpot] Form submission failed", payload.data);
         }
         setSubmissionError(copy.submissionError);

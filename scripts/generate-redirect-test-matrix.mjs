@@ -32,38 +32,6 @@ const MAX_HOPS = 10;
 const CONCURRENCY = 8;
 const USER_AGENT = "Devlo-Redirect-Matrix/1.0 (+https://devlo-agency.ch)";
 
-function parseCsvLine(line) {
-  const cells = [];
-  let current = "";
-  let inQuotes = false;
-
-  for (let i = 0; i < line.length; i += 1) {
-    const ch = line[i];
-
-    if (ch === "\"") {
-      const next = line[i + 1];
-      if (inQuotes && next === "\"") {
-        current += "\"";
-        i += 1;
-      } else {
-        inQuotes = !inQuotes;
-      }
-      continue;
-    }
-
-    if (ch === "," && !inQuotes) {
-      cells.push(current);
-      current = "";
-      continue;
-    }
-
-    current += ch;
-  }
-
-  cells.push(current);
-  return cells;
-}
-
 function parseCsvRows(text) {
   const rows = [];
   let row = [];
