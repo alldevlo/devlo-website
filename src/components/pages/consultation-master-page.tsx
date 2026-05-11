@@ -22,8 +22,8 @@ const consultationAuditTables: Record<
     headers: ["Axe", "Ce que l'on verifie", "Impact attendu"],
     rows: [
       ["ICP et TAM", "Segments, comptes prioritaires et decideurs accessibles.", "Eviter le volume inutile et concentrer la prospection."],
-      ["Signaux d'achat", "Recrutements, changements, intent data et actualites marche.", "Approcher les comptes au bon moment."],
-      ["Sequences", "Canaux, messages, cadence et criteres de qualification.", "Lancer une campagne mesurable sans recruter."],
+      ["Signaux d'achat", "Recrutements, changements, intent data et actualités marché.", "Approcher les comptes au bon moment."],
+      ["Séquences", "Canaux, messages, cadence et critères de qualification.", "Lancer une campagne mesurable sans recruter."],
     ],
   },
   en: {
@@ -36,12 +36,12 @@ const consultationAuditTables: Record<
     ],
   },
   de: {
-    caption: "Bereiche, die in einer devlo-Demo geprueft werden",
-    headers: ["Bereich", "Was wir pruefen", "Erwarteter Effekt"],
+    caption: "Bereiche, die in einer devlo-Demo geprüft werden",
+    headers: ["Bereich", "Was wir prüfen", "Erwarteter Effekt"],
     rows: [
-      ["ICP und TAM", "Segmente, Zielaccounts und erreichbare Entscheider.", "Unnuetzes Volumen vermeiden und Prospektion fokussieren."],
+      ["ICP und TAM", "Segmente, Zielaccounts und erreichbare Entscheider.", "Unnützes Volumen vermeiden und Prospektion fokussieren."],
       ["Kaufsignale", "Rekrutierung, Wechsel, Intent Data und Marktnews.", "Accounts zum richtigen Zeitpunkt ansprechen."],
-      ["Sequenzen", "Kanaele, Messaging, Kadenz und Qualifikationskriterien.", "Messbare Kampagne ohne Neueinstellung starten."],
+      ["Sequenzen", "Kanäle, Messaging, Kadenz und Qualifikationskriterien.", "Messbare Kampagne ohne Neueinstellung starten."],
     ],
   },
   nl: {
@@ -50,7 +50,7 @@ const consultationAuditTables: Record<
     rows: [
       ["ICP en TAM", "Segmenten, prioritaire accounts en bereikbare beslissers.", "Onnodig volume vermijden en prospectie focussen."],
       ["Koopsignalen", "Werving, veranderingen, intent data en marktnieuws.", "Accounts op het juiste moment benaderen."],
-      ["Sequences", "Kanalen, messaging, cadans en kwalificatiecriteria.", "Meetbare campagne lanceren zonder aan te werven."],
+      ["Sequenties", "Kanalen, messaging, cadans en kwalificatiecriteria.", "Meetbare campagne lanceren zonder aan te werven."],
     ],
   },
 };

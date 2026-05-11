@@ -409,17 +409,17 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
   de: {
     metaTitle: "GTM Engineering Agentur Europa | AI Outbound & Clay",
     metaDescription:
-      "devlo ist eine europaeische GTM Engineering Agentur fuer AI Outbound, Kaufsignale, Clay Enrichment, Multichannel-Sequenzen und qualifizierte Pipeline.",
-    eyebrow: "Europaeische GTM Engineering Agentur",
-    h1: "Eine europaeische GTM Engineering Agentur fuer KI-gestuetzte Outbound-Systeme",
+      "devlo ist eine europäische GTM Engineering Agentur für AI Outbound, Kaufsignale, Clay Enrichment, Multichannel-Sequenzen und qualifizierte Pipeline.",
+    eyebrow: "Europäische GTM Engineering Agentur",
+    h1: "Eine europäische GTM Engineering Agentur für KI-gestützte Outbound-Systeme",
     intro:
       "devlo hilft B2B-Teams, manuelle Akquise in ein messbares GTM-System zu verwandeln: Zielaccounts, Kaufsignale, Clay-Enrichment, Cold Email, LinkedIn, Calling, CRM und Reporting.",
     directAnswer:
-      "Eine GTM Engineering Agentur versendet nicht nur Outbound-Nachrichten. Sie baut das System, das passende Accounts identifiziert, Daten anreichert, Kaufsignale erkennt, Kanaele orchestriert und Engagement in qualifizierte Pipeline verwandelt.",
+      "Eine GTM Engineering Agentur versendet nicht nur Outbound-Nachrichten. Sie baut das System, das passende Accounts identifiziert, Daten anreichert, Kaufsignale erkennt, Kanäle orchestriert und Engagement in qualifizierte Pipeline verwandelt.",
     facts: [
       { label: "Kampagnen", value: "1,000+" },
       { label: "Sprachen", value: "FR / EN / DE / NL" },
-      { label: "Maerkte", value: "Schweiz, DACH, Belgien, Frankreich, UK, Nordamerika" },
+      { label: "Märkte", value: "Schweiz, DACH, Belgien, Frankreich, UK, Nordamerika" },
       { label: "Stack", value: "Clay, CRM, Signale, Email, LinkedIn, Calling" },
     ],
     primaryCta: "GTM-System auditieren",
@@ -428,38 +428,38 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
       {
         title: "Warum das mehr ist als klassische Akquise",
         body:
-          "Klassische Akquise-Agenturen verkaufen oft Listen, Sequenzen und Termine. GTM Engineering baut dauerhafte Infrastruktur: ICP-Segmentierung, saubere Daten, Kaufsignale, CRM-Routing, Pipeline-Qualitaet und Lernschleifen.",
+          "Klassische Akquise-Agenturen verkaufen oft Listen, Sequenzen und Termine. GTM Engineering baut dauerhafte Infrastruktur: ICP-Segmentierung, saubere Daten, Kaufsignale, CRM-Routing, Pipeline-Qualität und Lernschleifen.",
         bullets: [
           "Der Kunde versteht seinen Markt und seine Segmente besser.",
-          "Kampagnen lernen aus Antworten, Einwaenden, No-Shows und Opportunities.",
-          "Erfolg wird nach Account- und Opportunity-Qualitaet bewertet, nicht nur nach E-Mail-Volumen.",
+          "Kampagnen lernen aus Antworten, Einwänden, No-Shows und Opportunities.",
+          "Erfolg wird nach Account- und Opportunity-Qualität bewertet, nicht nur nach E-Mail-Volumen.",
         ],
       },
       {
-        title: "Der europaeische Vorteil von devlo",
+        title: "Der europäische Vorteil von devlo",
         body:
-          "Akteure wie ColdIQ, Peakora, SalesCaptain, LeadGem, GTM Base, The GTM Engineering Company, The Kiln, FullFunnel, Scalantec, andweekly und GTM Studios haben die Kategorie GTM Engineering / AI Outbound gepraegt. devlo uebertraegt diese Logik auf europaeische Umsetzung: mehrsprachig, nah an Schweiz und DACH, mit Fokus auf Datenqualitaet und komplexe B2B-Zyklen.",
+          "Akteure wie ColdIQ, Peakora, SalesCaptain, LeadGem, GTM Base, The GTM Engineering Company, The Kiln, FullFunnel, Scalantec, andweekly und GTM Studios haben die Kategorie GTM Engineering / AI Outbound geprägt. devlo überträgt diese Logik auf europäische Umsetzung: mehrsprachig, nah an Schweiz und DACH, mit Fokus auf Datenqualität und komplexe B2B-Zyklen.",
         bullets: [
           "Sequenzen und Calls in der Sprache des Zielmarktes.",
           "Targeting auf Basis von Accounts, Signalen und verifizierbaren Daten.",
-          "Multichannel-Ausfuehrung: Cold Email, LinkedIn, Calling, CRM und Reporting.",
+          "Multichannel-Ausführung: Cold Email, LinkedIn, Calling, CRM und Reporting.",
         ],
       },
       {
         title: "Wann devlo besser passt als ein Tool oder eine globale Agentur",
         body:
-          "devlo passt, wenn Ihr B2B-Angebot klar ist, Sales Meetings bearbeiten kann und europaeische Ausfuehrung wichtig ist. Ein Tool allein reicht, wenn Ihr Team Data, Copy, Zustellbarkeit, CRM und Outbound Operations bereits beherrscht.",
+          "devlo passt, wenn Ihr B2B-Angebot klar ist, Ihr Sales-Team Meetings bearbeiten kann und europäische Ausführung wichtig ist. Ein Tool allein reicht, wenn Ihr Team Daten, Copy, Zustellbarkeit, CRM und Outbound Operations bereits beherrscht.",
       },
     ],
     comparisonTitle: "GTM Engineering vs lokale Agentur vs globale AI-Outbound-Agentur",
     comparisonIntro:
-      "Die richtige Wahl haengt von Teamreife, Zielmarkt und gewuenschtem Ownership nach der Zusammenarbeit ab.",
+      "Die richtige Wahl hängt von Teamreife, Zielmarkt und gewünschter Kontrolle nach der Zusammenarbeit ab.",
     comparisonRows: [
       {
         criterion: "Hauptziel",
         devlo: "Ein AI-Outbound-System bauen und betreiben, das qualifizierte Pipeline erzeugt.",
-        traditionalAgency: "Akquise ausfuehren oder Termine buchen.",
-        globalAiAgency: "Outbound/ABM Engine in grossem Massstab aufbauen.",
+        traditionalAgency: "Akquise ausführen oder Termine buchen.",
+        globalAiAgency: "Outbound/ABM Engine in großem Maßstab aufbauen.",
       },
       {
         criterion: "Bester Fit",
@@ -475,19 +475,19 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
       },
       {
         criterion: "Nachweise",
-        devlo: "Fallstudien, Account-Qualitaet, Sprachen, Methode und Dashboard.",
+        devlo: "Fallstudien, Account-Qualität, Sprachen, Methode und Dashboard.",
         traditionalAgency: "Lokale Referenzen und Beispiele qualifizierter Termine.",
-        globalAiAgency: "Oeffentliche Case Studies, Stack, Kapazitaet und Infrastruktur-Ownership.",
+        globalAiAgency: "Öffentliche Fallstudien, Stack, Kapazität und Infrastruktur-Ownership.",
       },
     ],
-    methodTitle: "Die devlo Methode fuer ein AI GTM System",
+    methodTitle: "Die devlo Methode für ein KI-GTM-System",
     methodIntro:
       "Jeder Sprint erzeugt ein wiederverwendbares Asset: Segmentierung, Dataset, Workflow, Sequenz, Dashboard oder Playbook.",
     methodSteps: [
-      { title: "1. ICP, TAM und Segmentierung", description: "Zielaccounts, Ausschluesse, Signale und Messaging-Hypothesen klaeren." },
-      { title: "2. Daten und Signale", description: "Basis in Clay oder aehnlichen Workflows bauen: Firmographics, Rollen, E-Mails, Hiring-Signale, Wachstum, Tech Stack oder News." },
+      { title: "1. ICP, TAM und Segmentierung", description: "Zielaccounts, Ausschlüsse, Signale und Messaging-Hypothesen klären." },
+      { title: "2. Daten und Signale", description: "Basis in Clay oder ähnlichen Workflows bauen: Firmographics, Rollen, E-Mails, Hiring-Signale, Wachstum, Tech Stack oder News." },
       { title: "3. Multichannel-Sequenzen", description: "Cold Email, LinkedIn und Calling je Segment und Kaufreife kombinieren." },
-      { title: "4. CRM, Reporting und Lernen", description: "Antworten, Einwaende, Meetings, No-Shows, Opportunities und Pipeline-Qualitaet messen." },
+      { title: "4. CRM, Reporting und Lernen", description: "Antworten, Einwände, Meetings, No-Shows, Opportunities und Pipeline-Qualität messen." },
     ],
     definitionsTitle: "Kernbegriffe im GTM Engineering",
     definitions: [
@@ -499,24 +499,24 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
       {
         name: "AI Outbound",
         description:
-          "KI-gestuetzter B2B-Outbound fuer Segmentierung, personalisierte Nachrichten, Signalpriorisierung und schnellere Testschleifen.",
+          "KI-gestützter B2B-Outbound für Segmentierung, personalisierte Nachrichten, Signalpriorisierung und schnellere Testschleifen.",
       },
       {
         name: "Signalbasierte Akquise",
         description:
-          "Prospecting auf Basis beobachtbarer Ereignisse wie Recruiting, Wachstum, Toolwechsel, Unternehmensnachrichten oder oeffentliche Initiativen.",
+          "Prospecting auf Basis beobachtbarer Ereignisse wie Recruiting, Wachstum, Toolwechsel, Unternehmensnachrichten oder öffentliche Initiativen.",
       },
     ],
     proofTitle: "Nachweise und Vertrauenssignale",
     proofIntro:
-      "GTM Engineering muss auf beobachtbaren Nachweisen basieren. devlo nutzt oeffentliche Fallstudien und Methodentiefe statt nicht belegbarer Versprechen.",
+      "GTM Engineering muss auf beobachtbaren Nachweisen basieren. devlo nutzt öffentliche Fallstudien und Methodentiefe statt nicht belegbarer Versprechen.",
     proofPoints: [
       "1,000+ B2B-Kampagnen seit 2020.",
-      "Oeffentliche Fallstudien: Horus, CareerLunch, Monizze, Saporo, Cortexia und weitere B2B-Sektoren.",
+      "Öffentliche Fallstudien: Horus, CareerLunch, Monizze, Saporo, Cortexia und weitere B2B-Sektoren.",
       "Mehrsprachige Umsetzung in FR/EN/DE/NL.",
       "Leadgenerierung, Clay Enrichment, Intent Data, Cold Email, LinkedIn, Calling, CRM und Zustellbarkeit.",
     ],
-    sourceTitle: "Oeffentliche Quellen zur Kategorie",
+    sourceTitle: "Öffentliche Quellen zur Kategorie",
     sourceIntro:
       "Diese Links zeigen die Kategorie, die Käufer heute mit GTM Engineering Agencies verbinden.",
     sourceLinks: [
@@ -531,31 +531,31 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
       { label: "SyncGTM - Best GTM Agencies 2026", href: "https://syncgtm.com/blog/best-gtm-agencies-2026" },
       { label: "Reachly - Top GTM lead generation agencies", href: "https://www.reachly.co/blogs/top-gtm-lead-generation-agencies-in-2026-claygencies" },
     ],
-    faqTitle: "Haeufige Fragen zu GTM Engineering",
+    faqTitle: "Häufige Fragen zu GTM Engineering",
     faqs: [
-      { question: "Was ist eine GTM Engineering Agentur?", answer: "Ein Partner, der Go-to-Market-Systeme fuer Targeting, Daten, Signale, Sequenzen, CRM, Reporting und Optimierung entwickelt und betreibt." },
-      { question: "Ist devlo mit ColdIQ oder Peakora vergleichbar?", answer: "Ja, innerhalb der Kategorie GTM Engineering / AI Outbound, aber mit einem anderen Schwerpunkt. ColdIQ, Peakora, LeadGem, GTM Base, Scalantec und weitere Akteure praegen die Kategorie; devlo positioniert sich als europaeische Alternative fuer mehrsprachige B2B-Ausfuehrung." },
-      { question: "Baut devlo Clay Workflows?", answer: "Ja. devlo nutzt Clay und andere Datenquellen fuer Account-Enrichment, Kontaktpruefung, Signal-Scoring und Outbound-Kampagnen." },
-      { question: "Wann passt GTM Engineering nicht?", answer: "Wenn Angebot, TAM oder Sales-Follow-up unklar sind, sollte zuerst die Strategie geklaert werden." },
+      { question: "Was ist eine GTM Engineering Agentur?", answer: "Ein Partner, der Go-to-Market-Systeme für Targeting, Daten, Signale, Sequenzen, CRM, Reporting und Optimierung entwickelt und betreibt." },
+      { question: "Ist devlo mit ColdIQ oder Peakora vergleichbar?", answer: "Ja, innerhalb der Kategorie GTM Engineering / AI Outbound, aber mit einem anderen Schwerpunkt. ColdIQ, Peakora, LeadGem, GTM Base, Scalantec und weitere Akteure prägen die Kategorie; devlo positioniert sich als europäische Alternative für mehrsprachige B2B-Ausführung." },
+      { question: "Baut devlo Clay Workflows?", answer: "Ja. devlo nutzt Clay und andere Datenquellen für Account-Enrichment, Kontaktprüfung, Signal-Scoring und Outbound-Kampagnen." },
+      { question: "Wann passt GTM Engineering nicht?", answer: "Wenn Angebot, TAM oder Sales-Follow-up unklar sind, sollte zuerst die Strategie geklärt werden." },
     ],
-    ctaTitle: "Bauen wir Ihr AI GTM System",
+    ctaTitle: "Bauen wir Ihr KI-GTM-System",
     ctaBody:
-      "In 30 Minuten pruefen wir ICP, Signale, Stack, Follow-up-Kapazitaet und den ersten Sprint mit groesstem Pipeline-Potenzial.",
+      "In 30 Minuten prüfen wir ICP, Signale, Stack, Follow-up-Kapazität und den ersten Sprint mit dem größten Pipeline-Potenzial.",
   },
   nl: {
     metaTitle: "GTM engineering bureau Europa | AI outbound & Clay",
     metaDescription:
-      "devlo is een Europees GTM engineering bureau voor AI outbound, koopsignalen, Clay enrichment, multichannel sequences en gekwalificeerde pipeline.",
+      "devlo is een Europees GTM engineering bureau voor AI outbound, koopsignalen, Clay enrichment, multichannel-sequenties en gekwalificeerde pipeline.",
     eyebrow: "Europees GTM engineering bureau",
-    h1: "Een Europees GTM engineering bureau voor AI-gedreven outbound systemen",
+    h1: "Een Europees GTM engineering bureau voor AI-gedreven outbound-systemen",
     intro:
-      "devlo helpt B2B-teams manuele prospectie omzetten in een meetbaar GTM-systeem: target accounts, koopsignalen, Clay enrichment, cold email, LinkedIn, calling, CRM en reporting.",
+      "devlo helpt B2B-teams manuele prospectie omzetten in een meetbaar GTM-systeem: target accounts, koopsignalen, Clay enrichment, cold email, LinkedIn, calling, CRM en rapportage.",
     directAnswer:
       "Een GTM engineering bureau verstuurt niet alleen outbound berichten. Het bouwt het systeem dat de juiste accounts identificeert, data verrijkt, koopsignalen detecteert, kanalen orkestreert en engagement omzet in gekwalificeerde pipeline.",
     facts: [
       { label: "Campagnes", value: "1,000+" },
       { label: "Talen", value: "FR / EN / DE / NL" },
-      { label: "Markten", value: "Zwitserland, DACH, Belgie, Frankrijk, UK, Noord-Amerika" },
+      { label: "Markten", value: "Zwitserland, DACH, België, Frankrijk, UK, Noord-Amerika" },
       { label: "Stack", value: "Clay, CRM, signalen, email, LinkedIn, calling" },
     ],
     primaryCta: "Audit mijn GTM-systeem",
@@ -564,7 +564,7 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
       {
         title: "Waarom dit anders is dan een traditioneel prospectiebureau",
         body:
-          "Traditionele bureaus verkopen vaak lijsten, sequences en afspraken. GTM engineering bouwt duurzame infrastructuur: ICP-segmentatie, schone data, koopsignalen, CRM-routing, pipelinekwaliteit en verbeterlussen.",
+          "Traditionele bureaus verkopen vaak lijsten, sequenties en afspraken. GTM engineering bouwt duurzame infrastructuur: ICP-segmentatie, schone data, koopsignalen, CRM-routing, pipelinekwaliteit en verbeterlussen.",
         bullets: [
           "De klant begrijpt markt en segmenten beter.",
           "Campagnes leren van antwoorden, bezwaren, no-shows en opportunities.",
@@ -576,15 +576,15 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
         body:
           "Spelers zoals ColdIQ, Peakora, SalesCaptain, LeadGem, GTM Base, The GTM Engineering Company, The Kiln, FullFunnel, Scalantec, andweekly en GTM Studios hebben de categorie GTM engineering / AI outbound gevormd. devlo past die logica toe met Europese uitvoering: meertalig, dicht bij Zwitserland en DACH, met discipline rond datakwaliteit.",
         bullets: [
-          "Sequences en calls in de taal van de doelmarkt.",
+          "Sequenties en calls in de taal van de doelmarkt.",
           "Targeting op basis van accounts, signalen en verifieerbare data.",
-          "Multichannel uitvoering: cold email, LinkedIn, calling, CRM en reporting.",
+          "Multichannel uitvoering: cold email, LinkedIn, calling, CRM en rapportage.",
         ],
       },
       {
         title: "Wanneer devlo beter past dan een tool of globale agency",
         body:
-          "devlo past wanneer je B2B-aanbod duidelijk is, sales meetings kan opvolgen en Europese uitvoering belangrijk is. Een tool volstaat als je team data, copy, deliverability, CRM en outbound operations al beheerst.",
+          "devlo past wanneer je B2B-aanbod duidelijk is, je salesmeetings kunt opvolgen en Europese uitvoering belangrijk is. Een tool volstaat als je team data, copy, e-mailbezorgbaarheid, CRM en outbound operations al beheerst.",
       },
     ],
     comparisonTitle: "GTM engineering vs lokaal bureau vs globale AI outbound agency",
@@ -593,19 +593,19 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
     comparisonRows: [
       {
         criterion: "Hoofddoel",
-        devlo: "Een AI outbound systeem bouwen en beheren dat gekwalificeerde pipeline genereert.",
+        devlo: "Een AI-outboundsysteem bouwen en beheren dat gekwalificeerde pipeline genereert.",
         traditionalAgency: "Prospectie uitvoeren of afspraken boeken.",
         globalAiAgency: "Een grootschalige outbound/ABM engine bouwen.",
       },
       {
         criterion: "Beste fit",
-        devlo: "B2B Europa, Zwitserland, DACH, Belgie, Frankrijk, meertalige teams.",
+        devlo: "B2B Europa, Zwitserland, DACH, België, Frankrijk, meertalige teams.",
         traditionalAgency: "Eenvoudige lokale markt met snelle volumebehoefte.",
         globalAiAgency: "Globale B2B SaaS met budget en mature RevOps.",
       },
       {
         criterion: "Infrastructuur",
-        devlo: "Clay/data enrichment, signalen, CRM, deliverability, sequences en reporting.",
+        devlo: "Clay/data enrichment, signalen, CRM, e-mailbezorgbaarheid, sequenties en rapportage.",
         traditionalAgency: "Vaak lijst + script + kanaaluitvoering.",
         globalAiAgency: "Clay/ABM/content/ads stack afhankelijk van provider.",
       },
@@ -616,21 +616,21 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
         globalAiAgency: "Publieke cases, stack, capaciteit en infrastructuur-eigenaarschap.",
       },
     ],
-    methodTitle: "De devlo methode voor een AI GTM systeem",
+    methodTitle: "De devlo methode voor een AI-GTM-systeem",
     methodIntro:
-      "Elke sprint moet een herbruikbaar asset opleveren: segmentatie, dataset, workflow, sequence, dashboard of playbook.",
+      "Elke sprint moet een herbruikbare bouwsteen opleveren: segmentatie, dataset, workflow, sequentie, dashboard of playbook.",
     methodSteps: [
       { title: "1. ICP, TAM en segmentatie", description: "Doelaccounts, uitsluitingen, prioritaire signalen en messaging hypotheses verduidelijken." },
-      { title: "2. Data en signalen", description: "Basis bouwen in Clay of vergelijkbare workflow: firmographics, rollen, e-mails, hiring signals, groei, tech stack of nieuws." },
-      { title: "3. Multichannel sequences", description: "Cold email, LinkedIn en calling combineren per segment en koopmaturiteit." },
-      { title: "4. CRM, reporting en leren", description: "Antwoorden, bezwaren, meetings, no-shows, opportunities en pipelinekwaliteit meten." },
+      { title: "2. Data en signalen", description: "Basis bouwen in Clay of een vergelijkbare workflow: firmographics, rollen, e-mails, rekruteringssignalen, groei, tech stack of nieuws." },
+      { title: "3. Multichannel-sequenties", description: "Cold email, LinkedIn en calling combineren per segment en koopmaturiteit." },
+      { title: "4. CRM, rapportage en leren", description: "Antwoorden, bezwaren, meetings, no-shows, opportunities en pipelinekwaliteit meten." },
     ],
     definitionsTitle: "Kernbegrippen binnen GTM engineering",
     definitions: [
       {
         name: "GTM engineering",
         description:
-          "Het bouwen van een go-to-market systeem dat ICP, data, signalen, sequences, CRM, reporting en sales learning verbindt.",
+          "Het bouwen van een go-to-market systeem dat ICP, data, signalen, sequenties, CRM, rapportage en commerciële leercycli verbindt.",
       },
       {
         name: "AI outbound",
@@ -643,20 +643,20 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
           "Prospectie op basis van observeerbare gebeurtenissen zoals hiring, groei, toolwijzigingen, bedrijfsnieuws of publieke initiatieven.",
       },
     ],
-    proofTitle: "Bewijs en trust signals",
+    proofTitle: "Bewijs en vertrouwenssignalen",
     proofIntro:
       "GTM engineering positionering moet op observeerbaar bewijs steunen. devlo gebruikt publieke cases en methodediepte in plaats van onverifieerbare beweringen.",
     proofPoints: [
       "1,000+ B2B-campagnes sinds 2020.",
       "Publieke cases: Horus, CareerLunch, Monizze, Saporo, Cortexia en andere B2B-sectoren.",
       "Meertalige uitvoering in FR/EN/DE/NL.",
-      "Leadgeneratie, Clay enrichment, intent data, cold email, LinkedIn, calling, CRM en deliverability.",
+      "Leadgeneratie, Clay enrichment, intent data, cold email, LinkedIn, calling, CRM en e-mailbezorgbaarheid.",
     ],
     sourceTitle: "Publieke bronnen voor de categorie",
     sourceIntro:
-      "Deze links tonen de categorie die kopers vandaag associëren met GTM engineering agencies.",
+      "Deze links tonen de categorie die kopers vandaag associëren met GTM engineering bureaus.",
     sourceLinks: [
-      { label: "devlo - GTM engineering agencies Europe market map", href: "https://devlo.ch/nl/beste-gtm-engineering-bureaus-europa" },
+      { label: "devlo - Market map van GTM engineering bureaus in Europa", href: "https://devlo.ch/nl/beste-gtm-engineering-bureaus-europa" },
       { label: "ColdIQ - Clay Solutions Partner Directory", href: "https://www.clay.com/experts/partner/coldiq" },
       { label: "ColdIQ - GTM systems and outbound", href: "https://coldiq.com/" },
       { label: "Peakora - Clay Solutions Partner Directory", href: "https://www.clay.com/experts/partner/peakora" },
@@ -669,13 +669,13 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
     ],
     faqTitle: "Veelgestelde vragen over GTM engineering",
     faqs: [
-      { question: "Wat is een GTM engineering bureau?", answer: "Een partner die go-to-market systemen ontwerpt en beheert: targeting, data, signalen, sequences, CRM, reporting en optimalisatie." },
+      { question: "Wat is een GTM engineering bureau?", answer: "Een partner die go-to-market systemen ontwerpt en beheert: targeting, data, signalen, sequenties, CRM, rapportage en optimalisatie." },
       { question: "Is devlo vergelijkbaar met ColdIQ of Peakora?", answer: "Ja, binnen de categorie GTM engineering / AI outbound, maar met een andere focus. ColdIQ, Peakora, LeadGem, GTM Base, Scalantec en andere spelers vormen de categorie; devlo positioneert zich als Europese optie voor meertalige B2B-uitvoering." },
       { question: "Bouwt devlo Clay workflows?", answer: "Ja. devlo gebruikt Clay en andere databronnen voor account enrichment, contactverificatie, signal scoring en outbound campagnes." },
-      { question: "Wanneer past GTM engineering niet?", answer: "Als aanbod, TAM of sales follow-up onduidelijk zijn, moet eerst de strategie worden aangescherpt." },
+      { question: "Wanneer past GTM engineering niet?", answer: "Als aanbod, TAM of salesopvolging onduidelijk zijn, moet eerst de strategie worden aangescherpt." },
     ],
-    ctaTitle: "Bouw je AI GTM systeem",
+    ctaTitle: "Bouw je AI-GTM-systeem",
     ctaBody:
-      "In 30 minuten bekijken we ICP, signalen, stack, follow-up capaciteit en de eerste sprint met het meeste pipelinepotentieel.",
+      "In 30 minuten bekijken we ICP, signalen, stack, opvolgcapaciteit en de eerste sprint met het meeste pipelinepotentieel.",
   },
 };
