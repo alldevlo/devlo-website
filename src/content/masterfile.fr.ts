@@ -64,24 +64,24 @@ export const mainNav = {
 };
 
 export const homeSeo = {
-  title: "Agence de prospection B2B en Suisse | RDV qualifiés",
+  title: "GTM engineering agency Europe | Prospection B2B",
   description:
-    "devlo génère des rendez-vous qualifiés en Suisse via lead generation, cold email, LinkedIn et calling. Campagnes multilingues et preuves clients.",
-  ogTitle: "Agence de prospection B2B Suisse | Rendez-vous qualifiés | devlo",
+    "devlo construit des systemes GTM B2B: AI outbound, signaux d'achat, Clay, cold email, LinkedIn, calling et rendez-vous qualifies.",
+  ogTitle: "GTM engineering agency Europe | AI outbound & prospection B2B | devlo",
   ogDescription:
-    "devlo identifie les bons comptes, prépare vos séquences et pilote vos campagnes B2B multicanales pour générer des rendez-vous qualifiés.",
+    "devlo identifie les bons comptes, detecte les signaux, enrichit les donnees et pilote les campagnes B2B multicanales pour generer du pipeline qualifie.",
 };
 
 export const homeContent = {
   hero: {
-    badge: "🇨🇭 Agence suisse · +1'000 campagnes lancées",
-    h1: "Agence de prospection B2B en Suisse pour générer des rendez-vous qualifiés",
-    h2: "Nous identifions les bons comptes, préparons vos séquences et bookons les rendez-vous que votre équipe commerciale peut convertir.",
+    badge: "🇨🇭 GTM engineering agency · +1'000 campagnes lancées",
+    h1: "GTM engineering agency en Europe pour generer du pipeline B2B qualifie",
+    h2: "Nous construisons votre systeme outbound IA: ICP, signaux d'achat, enrichissement Clay, sequences multicanales, CRM et rendez-vous qualifies.",
     paragraph:
-      "devlo combine **lead generation**, **signaux d'achat**, **cold email**, **LinkedIn** et **calling** pour créer un pipeline B2B mesurable. L'objectif n'est pas plus de trafic : c'est plus de conversations avec des décideurs qui correspondent à votre ICP.",
-    ctaPrimary: { label: "Auditer mon potentiel de leads →", href: "/consultation" },
+      "devlo combine **lead generation**, **signaux d'achat**, **Clay**, **cold email**, **LinkedIn** et **calling** pour creer un pipeline B2B mesurable. L'objectif n'est pas plus de trafic : c'est plus de conversations avec des decideurs qui correspondent a votre ICP.",
+    ctaPrimary: { label: "Auditer mon systeme GTM →", href: "/consultation" },
     ctaSecondary: { label: "Voir nos résultats →", href: "/etudes-de-cas" },
-    ctaServices: { label: "Voir nos services →", href: "/services" },
+    ctaServices: { label: "Voir l'approche GTM engineering →", href: "/gtm-engineering-agency" },
     wistiaMediaId: "cr7dgltkvu",
     posterSrc: "/images/video-thumb-abacus.webp",
     posterAlt: "Aperçu de la vidéo témoignage Abacus",

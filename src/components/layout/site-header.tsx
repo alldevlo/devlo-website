@@ -49,6 +49,8 @@ const navCopyByLocale: Record<
     openMarketsMenu: string;
     showMarkets: string;
     academySubtitle: string;
+    gtmEngineering: string;
+    gtmEngineeringSubtitle: string;
     aiSalesOps: string;
     aiSalesOpsSubtitle: string;
     insights: string;
@@ -80,6 +82,8 @@ const navCopyByLocale: Record<
     openMarketsMenu: "Ouvrir le menu présence",
     showMarkets: "Afficher la présence",
     academySubtitle: "Formation prospection B2B gratuite",
+    gtmEngineering: "GTM Engineering",
+    gtmEngineeringSubtitle: "Systeme outbound IA: signaux, Clay, sequences, CRM",
     aiSalesOps: "AI Sales Ops",
     aiSalesOpsSubtitle: "Systèmes IA pour équipes commerciales B2B",
   },
@@ -108,6 +112,8 @@ const navCopyByLocale: Record<
     openMarketsMenu: "Open coverage menu",
     showMarkets: "Show coverage",
     academySubtitle: "Free B2B outbound training",
+    gtmEngineering: "GTM Engineering",
+    gtmEngineeringSubtitle: "AI outbound system: signals, Clay, sequences, CRM",
     aiSalesOps: "AI Sales Ops",
     aiSalesOpsSubtitle: "AI systems for B2B sales teams",
     insights: "Insights",
@@ -137,6 +143,8 @@ const navCopyByLocale: Record<
     openMarketsMenu: "Präsenz-Menü öffnen",
     showMarkets: "Präsenz anzeigen",
     academySubtitle: "Kostenlose B2B-Akquise-Schulung",
+    gtmEngineering: "GTM Engineering",
+    gtmEngineeringSubtitle: "AI-Outbound-System: Signale, Clay, Sequenzen, CRM",
     aiSalesOps: "AI Sales Ops",
     aiSalesOpsSubtitle: "KI-Systeme für B2B-Vertriebsteams",
     insights: "Insights",
@@ -166,6 +174,8 @@ const navCopyByLocale: Record<
     openMarketsMenu: "Aanwezigheid menu openen",
     showMarkets: "Aanwezigheid tonen",
     academySubtitle: "Gratis B2B outbound training",
+    gtmEngineering: "GTM Engineering",
+    gtmEngineeringSubtitle: "AI outbound systeem: signalen, Clay, sequences, CRM",
     aiSalesOps: "AI Sales Ops",
     aiSalesOpsSubtitle: "AI-systemen voor B2B salesteams",
     insights: "Insights",
@@ -181,6 +191,7 @@ export function SiteHeader() {
 
   const toCurrentLocalePath = (frPath: string) => resolvePathForLocale(frPath, currentLocale).path;
   const caseStudiesHref = toCurrentLocalePath("/etudes-de-cas");
+  const gtmEngineeringHref = toCurrentLocalePath("/gtm-engineering-agency");
   const aiSalesOpsHref = toCurrentLocalePath("/ai-sales-ops");
   const navItems = [
     { key: "agency", href: toCurrentLocalePath("/agence") as string, label: navCopy.agency },
@@ -204,7 +215,8 @@ export function SiteHeader() {
   const agencyActive = canonicalFrPath === "/agence";
   const caseStudiesActive = canonicalFrPath === "/etudes-de-cas" || canonicalFrPath.startsWith("/etudes-de-cas/");
   const aiSalesOpsActive = canonicalFrPath === "/ai-sales-ops" || canonicalFrPath.startsWith("/ai-sales-ops/");
-  const servicesActive = canonicalFrPath === "/services" || canonicalFrPath.startsWith("/services/");
+  const gtmEngineeringActive = canonicalFrPath === "/gtm-engineering-agency";
+  const servicesActive = canonicalFrPath === "/services" || canonicalFrPath.startsWith("/services/") || gtmEngineeringActive;
   const marketsActive = canonicalFrPath.startsWith("/prospection-commerciale-");
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -504,6 +516,16 @@ export function SiteHeader() {
                           </p>
                           <div className="mt-3 rounded-2xl border border-white/20 bg-white/10 p-3">
                             <Link
+                              href={gtmEngineeringHref}
+                              className="mb-2 flex items-start justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-3 py-3 transition hover:border-white/35 hover:bg-white/10"
+                            >
+                              <div>
+                                <p className="whitespace-nowrap text-sm font-semibold text-white">{navCopy.gtmEngineering}</p>
+                                <p className="mt-1 text-xs leading-5 text-white/75">{navCopy.gtmEngineeringSubtitle}</p>
+                              </div>
+                              <span className="text-sm font-semibold text-white">→</span>
+                            </Link>
+                            <Link
                               href={aiSalesOpsHref}
                               className="flex items-start justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-3 py-3 transition hover:border-white/35 hover:bg-white/10"
                             >
@@ -767,6 +789,18 @@ export function SiteHeader() {
 
                       {isMobileServicesOpen ? (
                         <div className="mt-2 overflow-hidden motion-safe:animate-fade-in-up">
+                          <Link
+                            href={gtmEngineeringHref}
+                            className="mb-2 block rounded-xl border border-devlo-200 bg-devlo-50 px-3 py-3 transition hover:border-devlo-400"
+                          >
+                            <div className="flex items-center justify-between gap-3">
+                              <div>
+                                <p className="whitespace-nowrap text-sm font-semibold text-devlo-900">{navCopy.gtmEngineering}</p>
+                                <p className="mt-1 text-xs text-neutral-600">{navCopy.gtmEngineeringSubtitle}</p>
+                              </div>
+                              <span className="text-sm font-semibold text-devlo-700">→</span>
+                            </div>
+                          </Link>
                           <Link
                             href={aiSalesOpsHref}
                             className="mb-2 block rounded-xl border border-devlo-200 bg-devlo-50 px-3 py-3 transition hover:border-devlo-400"

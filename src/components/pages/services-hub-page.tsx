@@ -51,6 +51,7 @@ const serviceSelectionTables: Record<
     caption: "Choisir le bon service de prospection B2B devlo",
     headers: ["Objectif", "Service prioritaire", "Quand l'utiliser"],
     rows: [
+      ["Construire un systeme GTM", "GTM engineering", "Quand il faut relier ICP, signaux, donnees, sequences, CRM et reporting."],
       ["Creer une liste ICP", "Generation de leads", "Quand le TAM existe mais que les comptes ne sont pas qualifies."],
       ["Obtenir des rendez-vous", "Prise de rendez-vous", "Quand l'equipe commerciale doit parler a plus de decideurs."],
       ["Fiabiliser les donnees", "Enrichissement Clay", "Quand les emails, roles ou domaines sont incomplets."],
@@ -61,6 +62,7 @@ const serviceSelectionTables: Record<
     caption: "Choose the right devlo B2B prospecting service",
     headers: ["Goal", "Priority service", "When to use it"],
     rows: [
+      ["Build a GTM system", "GTM engineering", "When ICP, signals, data, sequences, CRM and reporting need to work together."],
       ["Build an ICP list", "Lead generation", "When the TAM exists but accounts are not qualified."],
       ["Book meetings", "Appointment setting", "When sales needs to speak with more decision makers."],
       ["Improve data quality", "Clay enrichment", "When emails, roles, or domains are incomplete."],
@@ -71,6 +73,7 @@ const serviceSelectionTables: Record<
     caption: "Den passenden devlo B2B-Prospecting-Service waehlen",
     headers: ["Ziel", "Prioritaerer Service", "Wann nutzen"],
     rows: [
+      ["GTM-System aufbauen", "GTM Engineering", "Wenn ICP, Signale, Daten, Sequenzen, CRM und Reporting verbunden werden muessen."],
       ["ICP-Liste erstellen", "Leadgenerierung", "Wenn der TAM existiert, aber Accounts nicht qualifiziert sind."],
       ["Termine buchen", "Terminvereinbarung", "Wenn Sales mit mehr Entscheidern sprechen muss."],
       ["Datenqualitaet verbessern", "Clay-Enrichment", "Wenn E-Mails, Rollen oder Domains fehlen."],
@@ -81,6 +84,7 @@ const serviceSelectionTables: Record<
     caption: "Kies de juiste devlo B2B-prospectiedienst",
     headers: ["Doel", "Prioritaire dienst", "Wanneer gebruiken"],
     rows: [
+      ["GTM-systeem bouwen", "GTM engineering", "Wanneer ICP, signalen, data, sequences, CRM en reporting moeten samenwerken."],
       ["ICP-lijst bouwen", "Leadgeneratie", "Wanneer de TAM bestaat maar accounts niet gekwalificeerd zijn."],
       ["Afspraken boeken", "Afspraakplanning", "Wanneer sales met meer beslissers moet praten."],
       ["Datakwaliteit verbeteren", "Clay-verrijking", "Wanneer e-mails, rollen of domeinen ontbreken."],
@@ -89,9 +93,37 @@ const serviceSelectionTables: Record<
   },
 };
 
+const gtmBridgeByLocale: Record<SupportedLocale, { title: string; body: string; cta: string }> = {
+  fr: {
+    title: "Besoin d'un systeme complet plutot qu'un service isole ?",
+    body:
+      "Le GTM engineering relie ciblage ICP, signaux d'achat, enrichissement Clay, sequences multicanales, CRM et reporting pour produire un actif go-to-market reutilisable.",
+    cta: "Voir l'approche GTM engineering",
+  },
+  en: {
+    title: "Need a complete system instead of one isolated service?",
+    body:
+      "GTM engineering connects ICP targeting, buying signals, Clay enrichment, multichannel sequences, CRM and reporting into a reusable go-to-market asset.",
+    cta: "View the GTM engineering approach",
+  },
+  de: {
+    title: "Brauchen Sie ein vollstaendiges System statt eines einzelnen Services?",
+    body:
+      "GTM Engineering verbindet ICP-Targeting, Kaufsignale, Clay Enrichment, Multichannel-Sequenzen, CRM und Reporting zu einem wiederverwendbaren Go-to-Market-Asset.",
+    cta: "GTM Engineering ansehen",
+  },
+  nl: {
+    title: "Een volledig systeem nodig in plaats van een losse dienst?",
+    body:
+      "GTM engineering verbindt ICP-targeting, koopsignalen, Clay enrichment, multichannel sequences, CRM en reporting tot een herbruikbaar go-to-market asset.",
+    cta: "Bekijk de GTM engineering aanpak",
+  },
+};
+
 export function ServicesHubPage({ cards, copy, caseStudies, locale = "fr" }: ServicesHubPageProps) {
   const labels = breadcrumbLabelsByLocale[locale];
   const serviceSelectionTable = serviceSelectionTables[locale];
+  const gtmBridge = gtmBridgeByLocale[locale];
   const toLocalePath = (frPath: string) => resolvePathForLocale(frPath, locale).path;
   const servicesHubPath = toLocalePath("/services");
   const breadcrumbItems = [
@@ -194,6 +226,19 @@ export function ServicesHubPage({ cards, copy, caseStudies, locale = "fr" }: Ser
                 ))}
               </tbody>
             </table>
+          </div>
+
+          <div className="mb-8 rounded-lg border border-devlo-700/20 bg-[#F7F8FC] p-6 md:flex md:items-center md:justify-between md:gap-8">
+            <div className="max-w-3xl">
+              <h2 className="text-xl font-bold leading-tight text-devlo-900">{gtmBridge.title}</h2>
+              <p className="mt-3 text-sm leading-7 text-neutral-700">{gtmBridge.body}</p>
+            </div>
+            <Link
+              href={toLocalePath("/gtm-engineering-agency")}
+              className="mt-5 inline-flex h-11 shrink-0 items-center rounded-lg bg-devlo-800 px-5 text-sm font-semibold text-white transition hover:bg-devlo-900 md:mt-0"
+            >
+              {gtmBridge.cta}
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">

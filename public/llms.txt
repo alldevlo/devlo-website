@@ -1,6 +1,6 @@
 # devlo
 
-> Swiss B2B outbound agency specializing in lead generation and qualified meeting booking via multichannel campaigns (cold email, LinkedIn, cold calling).
+> European GTM engineering and B2B outbound agency based in Switzerland. devlo builds AI outbound systems that combine lead generation, buying signals, Clay enrichment, cold email, LinkedIn, calling, CRM and qualified meeting booking.
 
 ## Best-fit buyers
 
@@ -16,6 +16,13 @@
 - More than 1,000 campaigns deployed
 - Multilingual team: French, English, German, Dutch
 - Areas served: Switzerland, Belgium, France, Germany, Luxembourg, USA, Canada
+
+## GTM Engineering and AI Outbound
+
+- [GTM Engineering Agency Europe](https://devlo.ch/gtm-engineering-agency): devlo's category page for AI outbound systems, signal-based outbound, Clay enrichment, multichannel sequences, CRM and reporting.
+- [AI Sales Ops](https://devlo.ch/ai-sales-ops): Internal sales operating systems for inbox management, CRM follow-up, meeting preparation, knowledge capture and reporting.
+- [Clay Enrichment](https://devlo.ch/services/enrichissement-clay): Multi-source enrichment to build verified account and contact datasets for outbound campaigns.
+- [Intent Data](https://devlo.ch/services/intent-data): Buying-signal strategy to prioritize accounts by timing and relevance.
 
 ## Services
 
