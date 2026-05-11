@@ -13,6 +13,7 @@ import { ConsultationMasterPage } from "@/components/pages/consultation-master-p
 import { GeoLandingPage } from "@/components/pages/geo-landing-page";
 import { AlternativePage } from "@/components/pages/alternative-page";
 import { GtmEngineeringPage } from "@/components/pages/gtm-engineering-page";
+import { GtmAgencyMarketMapPage } from "@/components/pages/gtm-agency-market-map-page";
 import { ProgrammaticSeoPilotPage } from "@/components/pages/programmatic-seo-pilot-page";
 import { DictationCleanMasterPage } from "@/components/pages/dictation-clean-master-page";
 import { HomePage } from "@/components/pages/home-page";
@@ -27,6 +28,7 @@ import { LocalizedPage as LocalizedContentPage } from "@/components/pages/locali
 import { GEO_PAGES } from "@/content/geo-pages";
 import { ALTERNATIVE_PAGES } from "@/content/alternatives";
 import { GTM_ENGINEERING_CONTENT } from "@/content/gtm-engineering";
+import { GTM_AGENCY_MARKET_MAP_CONTENT } from "@/content/gtm-agency-market-map";
 import {
   PROGRAMMATIC_SEO_ROUTE_ENTRIES,
   findProgrammaticSeoRouteByLocalePath,
@@ -306,6 +308,15 @@ async function resolveLocalizedSeo(
     };
   }
 
+  if (path === "/best-gtm-engineering-agencies-europe") {
+    const content = GTM_AGENCY_MARKET_MAP_CONTENT[locale];
+    return {
+      title: content.metaTitle,
+      description: content.metaDescription,
+      type: "article" as const,
+    };
+  }
+
   if (path === "/insights") {
     return {
       title: "Insights — Ressources et guides pour la prospection B2B",
@@ -509,6 +520,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const localizedGtmEngineeringSeo = resolved.frPath === "/gtm-engineering-agency"
     ? GTM_ENGINEERING_CONTENT[resolved.locale]
     : null;
+  const localizedGtmAgencyMarketMapSeo = resolved.frPath === "/best-gtm-engineering-agencies-europe"
+    ? GTM_AGENCY_MARKET_MAP_CONTENT[resolved.locale]
+    : null;
   const localizedBuyingSignalsSeo = resolved.frPath === "/insights/buying-signals"
     ? getLocalizedBuyingSignals(resolved.locale)
     : null;
@@ -538,6 +552,12 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       ? {
           title: localizedGtmEngineeringSeo.metaTitle,
           description: localizedGtmEngineeringSeo.metaDescription,
+          type: "article" as const,
+        }
+    : localizedGtmAgencyMarketMapSeo
+      ? {
+          title: localizedGtmAgencyMarketMapSeo.metaTitle,
+          description: localizedGtmAgencyMarketMapSeo.metaDescription,
           type: "article" as const,
         }
     : localizedAutoAmeliorationSeo
@@ -724,6 +744,10 @@ export default async function LocalizedRoutePage({ params }: Params) {
 
   if (frPath === "/gtm-engineering-agency") {
     return <GtmEngineeringPage locale={resolved.locale} />;
+  }
+
+  if (frPath === "/best-gtm-engineering-agencies-europe") {
+    return <GtmAgencyMarketMapPage locale={resolved.locale} />;
   }
 
   if (frPath === "/insights") {
