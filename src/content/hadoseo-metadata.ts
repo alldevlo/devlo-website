@@ -15,8 +15,8 @@ export type HadoSeoMetadataOverride = {
 export const hadoseoMetadataOverrides: HadoSeoMetadataOverride[] = [
   {
     route: "/",
-    title: "GTM engineering agency Europe | Prospection B2B | devlo",
-    description: "devlo construit des systèmes GTM B2B : AI outbound, signaux d'achat, Clay, cold email, LinkedIn, calling et rendez-vous qualifiés.",
+    title: "Agence prospection B2B Suisse | Leads et RDV | devlo",
+    description: "Agence suisse de prospection B2B : lead generation, cold email, LinkedIn, calling et rendez-vous qualifiés. +1'000 campagnes lancées.",
     canonical: "https://devlo.ch/",
     ogImage: "/images/devlo_OG_Banner.webp",
     status: "✅ OPTIMISÉ",
@@ -119,8 +119,8 @@ export const hadoseoMetadataOverrides: HadoSeoMetadataOverride[] = [
   },
   {
     route: "/services/generation-leads",
-    title: "Agence génération de leads B2B Suisse | Listes ICP | devlo",
-    description: "Agence de génération de leads B2B en Suisse pour transformer votre TAM en comptes ICP, décideurs vérifiés et segments prêts à prospecter.",
+    title: "Agence lead generation B2B Suisse | Listes ICP | devlo",
+    description: "Agence lead generation B2B en Suisse : ICP, TAM, comptes prioritaires, décideurs vérifiés, signaux d'achat et listes prêtes à prospecter.",
     canonical: "https://devlo.ch/services/generation-leads",
     ogImage: "/images/devlo_OG_Banner.webp",
     status: "✅ OPTIMISÉ",
@@ -136,7 +136,7 @@ export const hadoseoMetadataOverrides: HadoSeoMetadataOverride[] = [
   {
     route: "/services/prise-de-rendez-vous",
     title: "Rendez-vous qualifiés B2B Suisse | Booking | devlo",
-    description: "Service de prise de rendez-vous B2B en Suisse : gestion inbox qualification booking agenda et réduction du no-show.",
+    description: "Service de prise de rendez-vous B2B en Suisse : qualification des réponses, booking agenda, relances anti no-show et passation commerciale.",
     canonical: "https://devlo.ch/services/prise-de-rendez-vous",
     ogImage: "/images/devlo_OG_Banner.webp",
     status: "✅ OPTIMISÉ",

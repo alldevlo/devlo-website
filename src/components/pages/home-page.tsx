@@ -138,15 +138,15 @@ export function HomePage({
     <>
       <section className="bg-white pb-10 pt-12 md:pt-20 lg:pt-24">
         <div className="mx-auto grid w-full max-w-[1400px] grid-cols-1 gap-10 px-6 md:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start lg:gap-12">
-          <div>
+          <div className="min-w-0">
             <FadeInOnScroll eager>
-              <p className="inline-flex items-center gap-2 rounded-full bg-devlo-100 px-4 py-1.5 text-sm font-semibold text-devlo-700">
+              <p className="block w-full max-w-[calc(100vw-3rem)] whitespace-normal break-words rounded-full bg-devlo-100 px-4 py-1.5 text-sm font-semibold leading-snug text-devlo-700 sm:inline-flex sm:w-fit sm:max-w-full sm:flex-nowrap sm:items-center sm:gap-x-2">
                 {normalizeMetricSeparator(content.hero.badge)}
               </p>
             </FadeInOnScroll>
 
             <FadeInOnScroll delay={0.1} eager>
-              <h1 className="mt-5 text-4xl font-extrabold leading-[1.1] tracking-tight text-devlo-900 md:text-5xl lg:text-[56px]">
+              <h1 className="mt-5 max-w-[calc(100vw-3rem)] break-words text-[30px] font-extrabold leading-[1.1] tracking-tight text-devlo-900 md:max-w-5xl md:text-5xl lg:text-[56px]">
                 {content.hero.h1}
               </h1>
             </FadeInOnScroll>

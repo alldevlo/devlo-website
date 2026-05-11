@@ -1191,9 +1191,9 @@ export const SERVICE_PAGE_DATA: Record<ServiceSlug, ServicePageData> = {
     navTitle: "Génération de leads",
     pageTitle: "Agence de génération de leads B2B en Suisse : listes qualifiées ICP, TAM et signaux",
     pageSubtitle: "Nous transformons votre marché cible en comptes priorisés, décideurs vérifiés et segments prêts pour vos séquences.",
-    metadataTitle: "Agence génération de leads B2B Suisse : listes ICP",
+    metadataTitle: "Agence lead generation B2B Suisse : listes ICP",
     metadataDescription:
-      "Agence de génération de leads B2B en Suisse pour transformer votre TAM en comptes ICP, décideurs vérifiés et segments prêts à prospecter.",
+      "Agence lead generation B2B en Suisse : ICP, TAM, comptes prioritaires, décideurs vérifiés, signaux d'achat et listes prêtes à prospecter.",
     metadataKeywords: [
       "lead generation B2B",
       "agence lead generation B2B suisse",
@@ -1486,7 +1486,7 @@ export const SERVICE_PAGE_DATA: Record<ServiceSlug, ServicePageData> = {
     pageSubtitle: "Réactivité, qualification et réduction des no-shows.",
     metadataTitle: "Rendez-vous qualifiés B2B Suisse : booking",
     metadataDescription:
-      "Service de prise de rendez-vous B2B en Suisse : gestion inbox, qualification, booking agenda et réduction du no-show.",
+      "Service de prise de rendez-vous B2B en Suisse : qualification des réponses, booking agenda, relances anti no-show et passation commerciale.",
     metadataKeywords: [
       "prise de rendez-vous B2B",
       "prise de rendez-vous B2B suisse",

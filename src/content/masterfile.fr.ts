@@ -64,19 +64,19 @@ export const mainNav = {
 };
 
 export const homeSeo = {
-  title: "GTM engineering agency Europe | Prospection B2B",
+  title: "Agence prospection B2B Suisse | Leads et RDV",
   description:
-    "devlo construit des systèmes GTM B2B : AI outbound, signaux d'achat, Clay, cold email, LinkedIn, calling et rendez-vous qualifiés.",
-  ogTitle: "GTM engineering agency Europe | AI outbound & prospection B2B | devlo",
+    "Agence suisse de prospection B2B : lead generation, cold email, LinkedIn, calling et rendez-vous qualifiés. +1'000 campagnes lancées.",
+  ogTitle: "Agence prospection B2B Suisse | Leads et RDV | devlo",
   ogDescription:
-    "devlo identifie les bons comptes, détecte les signaux, enrichit les données et pilote les campagnes B2B multicanales pour générer du pipeline qualifié.",
+    "devlo identifie les bons comptes, détecte les signaux, enrichit les données et pilote les campagnes B2B multicanales pour générer des rendez-vous qualifiés.",
 };
 
 export const homeContent = {
   hero: {
-    badge: "🇨🇭 GTM engineering agency · +1'000 campagnes lancées",
-    h1: "GTM engineering agency en Europe pour générer du pipeline B2B qualifié",
-    h2: "Nous construisons votre système outbound IA : ICP, signaux d'achat, enrichissement Clay, séquences multicanales, CRM et rendez-vous qualifiés.",
+    badge: "🇨🇭 Agence prospection B2B Suisse · +1'000 campagnes lancées",
+    h1: "Agence de prospection B2B en Suisse pour générer des rendez-vous qualifiés",
+    h2: "Nous construisons votre système outbound : ICP, signaux d'achat, enrichissement Clay, séquences multicanales, CRM et rendez-vous qualifiés.",
     paragraph:
       "devlo combine **lead generation**, **signaux d'achat**, **Clay**, **cold email**, **LinkedIn** et **calling** pour créer un pipeline B2B mesurable. L'objectif n'est pas plus de trafic : c'est plus de conversations avec des décideurs qui correspondent à votre ICP.",
     ctaPrimary: { label: "Auditer mon système GTM →", href: "/consultation" },
