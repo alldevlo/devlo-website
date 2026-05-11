@@ -163,6 +163,14 @@ export function GtmAgencyMarketMapPage({ locale = "fr" }: { locale?: SupportedLo
               <p className="mt-4 text-sm leading-7 text-neutral-700 md:text-base">
                 {content.directAnswer}
               </p>
+              <div className="mt-5 border-t border-neutral-200 pt-5">
+                <h3 className="text-base font-bold text-[#153a54]">
+                  {content.methodologyTitle}
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-neutral-700">
+                  {content.methodologyBody}
+                </p>
+              </div>
             </div>
             <div>
               <h2 className="text-2xl font-extrabold leading-tight text-[#153a54]">
