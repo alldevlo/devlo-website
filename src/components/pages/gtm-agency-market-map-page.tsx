@@ -213,27 +213,31 @@ export function GtmAgencyMarketMapPage({ locale = "fr" }: { locale?: SupportedLo
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-neutral-200 text-neutral-700">
-                  {content.peers.map((peer) => (
-                    <tr key={peer.name}>
-                      <th scope="row" className="px-5 py-4 align-top font-semibold text-[#153a54]">
-                        {peer.name}
-                      </th>
-                      <td className="px-5 py-4 align-top">{peer.region}</td>
-                      <td className="px-5 py-4 align-top">{peer.category}</td>
-                      <td className="px-5 py-4 align-top">{peer.bestFor}</td>
-                      <td className="px-5 py-4 align-top">{peer.gtmAngle}</td>
-                      <td className="px-5 py-4 align-top">
-                        <Link
-                          href={peer.sourceHref}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-semibold text-[#0A3448] underline underline-offset-4"
-                        >
-                          {peer.sourceLabel}
-                        </Link>
-                      </td>
-                    </tr>
-                  ))}
+                  {content.peers.map((peer) => {
+                    const isDevlo = peer.name.toLowerCase() === "devlo";
+
+                    return (
+                      <tr key={peer.name} className={isDevlo ? "bg-[#F2F8FB]" : undefined}>
+                        <th scope="row" className={`px-5 py-4 align-top font-semibold ${isDevlo ? "text-[#0A3448]" : "text-[#153a54]"}`}>
+                          {peer.name}
+                        </th>
+                        <td className="px-5 py-4 align-top">{peer.region}</td>
+                        <td className="px-5 py-4 align-top">{peer.category}</td>
+                        <td className="px-5 py-4 align-top">{peer.bestFor}</td>
+                        <td className="px-5 py-4 align-top">{peer.gtmAngle}</td>
+                        <td className="px-5 py-4 align-top">
+                          <Link
+                            href={peer.sourceHref}
+                            target={isDevlo ? undefined : "_blank"}
+                            rel={isDevlo ? undefined : "noopener noreferrer"}
+                            className="font-semibold text-[#0A3448] underline underline-offset-4"
+                          >
+                            {peer.sourceLabel}
+                          </Link>
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
