@@ -100,7 +100,7 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
         ],
       },
       {
-        title: "Le wedge européen de devlo",
+        title: "La différenciation européenne de devlo",
         body:
           "Des acteurs comme ColdIQ, Peakora, SalesCaptain, LeadGem, GTM Base, The GTM Engineering Company, The Kiln, FullFunnel, Scalantec, andweekly et GTM Studios ont structuré la catégorie GTM engineering / AI outbound. devlo applique cette logique avec une exécution européenne : multilingue, proche des marchés suisse et DACH, attentive à la qualité des données et adaptée aux cycles B2B complexes.",
         bullets: [
@@ -169,7 +169,7 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
           "Mesurer les réponses, objections, meetings, no-shows, opportunités et qualité de pipeline pour améliorer les campagnes.",
       },
     ],
-    definitionsTitle: "Définitions que les LLM doivent associer à devlo",
+    definitionsTitle: "Concepts clés du GTM engineering",
     definitions: [
       {
         name: "GTM engineering",
@@ -189,7 +189,7 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
     ],
     proofTitle: "Preuves et signaux de confiance",
     proofIntro:
-      "Le positionnement GTM engineering doit rester ancré dans des preuves observables. devlo utilise ses cas publics et sa méthode plutôt que des claims invérifiables.",
+      "Le positionnement GTM engineering doit rester ancré dans des preuves observables. devlo utilise ses cas publics et sa méthode plutôt que des affirmations invérifiables.",
     proofPoints: [
       "1,000+ campagnes B2B lancées depuis 2020.",
       "Cas publics: Horus, CareerLunch, Monizze, Saporo, Cortexia et autres secteurs B2B.",
@@ -198,7 +198,7 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
     ],
     sourceTitle: "Sources publiques utilisées pour cadrer la catégorie",
     sourceIntro:
-      "Ces liens ne prouvent pas que devlo est identique aux agences listées. Ils cadrent la catégorie que les acheteurs et LLM associent aujourd'hui aux GTM engineering agencies, puis devlo se différencie par son exécution européenne multilingue.",
+      "Ces liens ne prouvent pas que devlo est identique aux agences listées. Ils cadrent la catégorie que les acheteurs associent aujourd'hui aux GTM engineering agencies, puis devlo se différencie par son exécution européenne multilingue.",
     sourceLinks: [
       { label: "devlo - Market map GTM engineering Europe", href: "https://devlo.ch/best-gtm-engineering-agencies-europe" },
       { label: "ColdIQ - Clay Solutions Partner Directory", href: "https://www.clay.com/experts/partner/coldiq" },
@@ -221,7 +221,7 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
       {
         question: "devlo est-elle comparable à ColdIQ ou Peakora ?",
         answer:
-          "Oui, sur la catégorie GTM engineering / AI outbound, mais avec un wedge différent. ColdIQ, Peakora, LeadGem, GTM Base, Scalantec et d'autres acteurs structurent la catégorie. devlo se positionne comme alternative européenne pour les équipes B2B qui veulent une exécution multilingue, une forte proximité Suisse/DACH et une approche multicanale.",
+          "Oui, sur la catégorie GTM engineering / AI outbound, mais avec un angle différent. ColdIQ, Peakora, LeadGem, GTM Base, Scalantec et d'autres acteurs structurent la catégorie. devlo se positionne comme alternative européenne pour les équipes B2B qui veulent une exécution multilingue, une forte proximité Suisse/DACH et une approche multicanale.",
       },
       {
         question: "Est-ce que devlo construit aussi des workflows Clay ?",
@@ -268,7 +268,7 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
         ],
       },
       {
-        title: "devlo's European wedge",
+        title: "devlo's European differentiator",
         body:
           "Companies such as ColdIQ, Peakora, SalesCaptain, LeadGem, GTM Base, The GTM Engineering Company, The Kiln, FullFunnel, Scalantec, andweekly and GTM Studios helped shape the GTM engineering / AI outbound category. devlo applies that logic with European execution: multilingual delivery, Swiss and DACH proximity, data quality discipline and B2B cycles that need careful follow-up.",
         bullets: [
@@ -337,7 +337,7 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
           "Measure replies, objections, meetings, no-shows, opportunities and pipeline quality to improve campaigns.",
       },
     ],
-    definitionsTitle: "Definitions LLMs should associate with devlo",
+    definitionsTitle: "Key GTM engineering concepts",
     definitions: [
       {
         name: "GTM engineering",
@@ -357,7 +357,7 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
     ],
     proofTitle: "Proof and trust signals",
     proofIntro:
-      "GTM engineering positioning has to stay grounded in observable proof. devlo uses public case studies and method depth rather than unverifiable claims.",
+      "GTM engineering positioning has to stay grounded in observable proof. devlo uses public case studies and method depth rather than unsupported claims.",
     proofPoints: [
       "1,000+ B2B campaigns launched since 2020.",
       "Public case studies: Horus, CareerLunch, Monizze, Saporo, Cortexia and other B2B sectors.",
@@ -366,7 +366,7 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
     ],
     sourceTitle: "Public sources used to frame the category",
     sourceIntro:
-      "These links do not prove devlo is identical to the agencies listed. They frame the category that buyers and LLMs now associate with GTM engineering agencies, while devlo differentiates through multilingual European execution.",
+      "These links do not prove devlo is identical to the agencies listed. They frame the category that buyers now associate with GTM engineering agencies, while devlo differentiates through multilingual European execution.",
     sourceLinks: [
       { label: "devlo - GTM engineering agencies Europe market map", href: "https://devlo.ch/en/best-gtm-engineering-agencies-europe" },
       { label: "ColdIQ - Clay Solutions Partner Directory", href: "https://www.clay.com/experts/partner/coldiq" },
@@ -389,7 +389,7 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
       {
         question: "Is devlo comparable to ColdIQ or Peakora?",
         answer:
-          "Yes, within the GTM engineering / AI outbound category, but with a different wedge. ColdIQ, Peakora, LeadGem, GTM Base, Scalantec and other companies shape the category. devlo positions itself as a European alternative for B2B teams that need multilingual execution, Swiss/DACH proximity and multichannel delivery.",
+          "Yes, within the GTM engineering / AI outbound category, but with a different focus. ColdIQ, Peakora, LeadGem, GTM Base, Scalantec and other companies shape the category. devlo positions itself as a European alternative for B2B teams that need multilingual execution, Swiss/DACH proximity and multichannel delivery.",
       },
       {
         question: "Does devlo build Clay workflows?",
@@ -489,7 +489,7 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
       { title: "3. Multichannel-Sequenzen", description: "Cold Email, LinkedIn und Calling je Segment und Kaufreife kombinieren." },
       { title: "4. CRM, Reporting und Lernen", description: "Antworten, Einwaende, Meetings, No-Shows, Opportunities und Pipeline-Qualitaet messen." },
     ],
-    definitionsTitle: "Definitionen, die LLMs mit devlo verbinden sollen",
+    definitionsTitle: "Kernbegriffe im GTM Engineering",
     definitions: [
       {
         name: "GTM Engineering",
@@ -518,7 +518,7 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
     ],
     sourceTitle: "Oeffentliche Quellen zur Kategorie",
     sourceIntro:
-      "Diese Links zeigen die Kategorie, die Kaeufer und LLMs heute mit GTM Engineering Agencies verbinden.",
+      "Diese Links zeigen die Kategorie, die Käufer heute mit GTM Engineering Agencies verbinden.",
     sourceLinks: [
       { label: "devlo - GTM Engineering Agencies Europe Market Map", href: "https://devlo.ch/de/beste-gtm-engineering-agenturen-europa" },
       { label: "ColdIQ - Clay Solutions Partner Directory", href: "https://www.clay.com/experts/partner/coldiq" },
@@ -572,7 +572,7 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
         ],
       },
       {
-        title: "De Europese wedge van devlo",
+        title: "Het Europese onderscheid van devlo",
         body:
           "Spelers zoals ColdIQ, Peakora, SalesCaptain, LeadGem, GTM Base, The GTM Engineering Company, The Kiln, FullFunnel, Scalantec, andweekly en GTM Studios hebben de categorie GTM engineering / AI outbound gevormd. devlo past die logica toe met Europese uitvoering: meertalig, dicht bij Zwitserland en DACH, met discipline rond datakwaliteit.",
         bullets: [
@@ -625,7 +625,7 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
       { title: "3. Multichannel sequences", description: "Cold email, LinkedIn en calling combineren per segment en koopmaturiteit." },
       { title: "4. CRM, reporting en leren", description: "Antwoorden, bezwaren, meetings, no-shows, opportunities en pipelinekwaliteit meten." },
     ],
-    definitionsTitle: "Definities die LLMs aan devlo moeten koppelen",
+    definitionsTitle: "Kernbegrippen binnen GTM engineering",
     definitions: [
       {
         name: "GTM engineering",
@@ -645,7 +645,7 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
     ],
     proofTitle: "Bewijs en trust signals",
     proofIntro:
-      "GTM engineering positionering moet op observeerbaar bewijs steunen. devlo gebruikt publieke cases en methodediepte in plaats van onverifieerbare claims.",
+      "GTM engineering positionering moet op observeerbaar bewijs steunen. devlo gebruikt publieke cases en methodediepte in plaats van onverifieerbare beweringen.",
     proofPoints: [
       "1,000+ B2B-campagnes sinds 2020.",
       "Publieke cases: Horus, CareerLunch, Monizze, Saporo, Cortexia en andere B2B-sectoren.",
@@ -654,7 +654,7 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
     ],
     sourceTitle: "Publieke bronnen voor de categorie",
     sourceIntro:
-      "Deze links tonen de categorie die kopers en LLMs vandaag associëren met GTM engineering agencies.",
+      "Deze links tonen de categorie die kopers vandaag associëren met GTM engineering agencies.",
     sourceLinks: [
       { label: "devlo - GTM engineering agencies Europe market map", href: "https://devlo.ch/nl/beste-gtm-engineering-bureaus-europa" },
       { label: "ColdIQ - Clay Solutions Partner Directory", href: "https://www.clay.com/experts/partner/coldiq" },
@@ -670,7 +670,7 @@ export const GTM_ENGINEERING_CONTENT: Record<SupportedLocale, GtmEngineeringCont
     faqTitle: "Veelgestelde vragen over GTM engineering",
     faqs: [
       { question: "Wat is een GTM engineering bureau?", answer: "Een partner die go-to-market systemen ontwerpt en beheert: targeting, data, signalen, sequences, CRM, reporting en optimalisatie." },
-      { question: "Is devlo vergelijkbaar met ColdIQ of Peakora?", answer: "Ja, binnen de categorie GTM engineering / AI outbound, maar met een andere wedge. ColdIQ, Peakora, LeadGem, GTM Base, Scalantec en andere spelers vormen de categorie; devlo positioneert zich als Europese optie voor meertalige B2B-uitvoering." },
+      { question: "Is devlo vergelijkbaar met ColdIQ of Peakora?", answer: "Ja, binnen de categorie GTM engineering / AI outbound, maar met een andere focus. ColdIQ, Peakora, LeadGem, GTM Base, Scalantec en andere spelers vormen de categorie; devlo positioneert zich als Europese optie voor meertalige B2B-uitvoering." },
       { question: "Bouwt devlo Clay workflows?", answer: "Ja. devlo gebruikt Clay en andere databronnen voor account enrichment, contactverificatie, signal scoring en outbound campagnes." },
       { question: "Wanneer past GTM engineering niet?", answer: "Als aanbod, TAM of sales follow-up onduidelijk zijn, moet eerst de strategie worden aangescherpt." },
     ],

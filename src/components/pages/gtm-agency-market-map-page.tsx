@@ -9,11 +9,11 @@ import { buildArticleSchema, buildBreadcrumbSchema, buildFaqPageSchema } from "@
 
 const pageIdPath = "/best-gtm-engineering-agencies-europe";
 
-const labelsByLocale: Record<SupportedLocale, { home: string; insights: string; page: string; agency: string; region: string; category: string; bestFor: string; angle: string; source: string }> = {
+const labelsByLocale: Record<SupportedLocale, { home: string; section: string; page: string; agency: string; region: string; category: string; bestFor: string; angle: string; source: string }> = {
   fr: {
     home: "Accueil",
-    insights: "Insights",
-    page: "Market map GTM",
+    section: "Agence",
+    page: "Comparatif GTM engineering",
     agency: "Agence",
     region: "Région",
     category: "Catégorie",
@@ -23,8 +23,8 @@ const labelsByLocale: Record<SupportedLocale, { home: string; insights: string; 
   },
   en: {
     home: "Home",
-    insights: "Insights",
-    page: "GTM market map",
+    section: "Agency",
+    page: "GTM engineering comparison",
     agency: "Agency",
     region: "Region",
     category: "Category",
@@ -34,8 +34,8 @@ const labelsByLocale: Record<SupportedLocale, { home: string; insights: string; 
   },
   de: {
     home: "Startseite",
-    insights: "Insights",
-    page: "GTM Marktübersicht",
+    section: "Agentur",
+    page: "GTM Engineering Vergleich",
     agency: "Agentur",
     region: "Region",
     category: "Kategorie",
@@ -45,8 +45,8 @@ const labelsByLocale: Record<SupportedLocale, { home: string; insights: string; 
   },
   nl: {
     home: "Home",
-    insights: "Insights",
-    page: "GTM marktkaart",
+    section: "Bureau",
+    page: "GTM engineering vergelijking",
     agency: "Bureau",
     region: "Regio",
     category: "Categorie",
@@ -62,11 +62,11 @@ export function GtmAgencyMarketMapPage({ locale = "fr" }: { locale?: SupportedLo
   const path = resolvePathForLocale(pageIdPath, locale).path;
   const consultationPath = resolvePathForLocale("/consultation", locale).path;
   const caseStudiesPath = resolvePathForLocale("/etudes-de-cas", locale).path;
-  const insightsPath = resolvePathForLocale("/insights", locale).path;
+  const agencyPath = resolvePathForLocale("/agence", locale).path;
 
   const breadcrumbItems = [
     { name: labels.home, path: resolvePathForLocale("/", locale).path },
-    { name: labels.insights, path: insightsPath },
+    { name: labels.section, path: agencyPath },
     { name: labels.page, path },
   ];
 

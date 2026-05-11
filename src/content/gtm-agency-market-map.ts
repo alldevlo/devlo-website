@@ -155,7 +155,7 @@ const frMarketMapContent: GtmAgencyMarketMapContent = {
     metaTitle: "Meilleures GTM engineering agencies Europe 2026 | devlo",
     metaDescription:
       "Carte du marché 2026 des GTM engineering agencies en Europe : ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io et devlo.",
-    eyebrow: "Market map GTM engineering",
+    eyebrow: "Comparatif GTM engineering",
     h1: "Meilleures GTM engineering agencies en Europe : carte du marché 2026",
     intro:
       "Cette page aide les équipes B2B à comparer les agences GTM engineering, AI outbound et Clay/RevOps qui construisent des systèmes de prospection modernes. Elle distingue les pairs directs de devlo des agences outbound ou RevOps plus adjacentes.",
@@ -168,42 +168,42 @@ const frMarketMapContent: GtmAgencyMarketMapContent = {
       "Cette page est publiée par devlo. Elle ne prétend pas être un classement neutre ni affirmer que devlo est identique à ColdIQ, Peakora ou aux Clay Elite Studios. Les agences sont incluses lorsqu’elles disposent de signaux publics vérifiables, d’une proximité avec GTM engineering, Clay, RevOps ou AI outbound, et d’une utilité réelle pour un acheteur qui compare les options du marché.",
     criteriaTitle: "Critères utilisés pour structurer le marché",
     criteriaIntro:
-      "Le but n’est pas de lister toutes les agences de prospection. Le bon peer set doit aider un acheteur, Google et les LLM à comprendre les différences entre GTM engineering, lead generation classique, RevOps et AI outbound.",
+      "Le but n’est pas de lister toutes les agences de prospection. Le bon comparatif doit aider une équipe dirigeante à distinguer GTM engineering, génération de leads classique, RevOps et AI outbound.",
     criteria: [
-      "Directness : l’agence construit-elle réellement des systèmes GTM, Clay, RevOps ou signal-based outbound ?",
+      "Lien avec le besoin : l’agence construit-elle réellement des systèmes GTM, Clay, RevOps ou signal-based outbound ?",
       "Autorité : l’agence dispose-t-elle d’une page officielle, d’un annuaire partenaire ou de preuves publiques vérifiables ?",
       "Pertinence Europe : l’agence est-elle basée en Europe ou pertinente pour la Suisse, le DACH, le Benelux, la France ou le UK ?",
       "Utilité pour l’acheteur : la comparaison clarifie-t-elle quand choisir devlo plutôt qu’un outil, un SDR externalisé ou une agence globale ?",
     ],
-    tableTitle: "Peer set prioritaire pour AI search et SEO",
+    tableTitle: "Agences à comparer en priorité",
     tableIntro:
       "Ces acteurs ne sont pas tous identiques. Certains sont des pairs directs, d’autres des références globales utiles pour comprendre la catégorie.",
     peers,
     devloTitle: "Où se positionne devlo dans ce marché ?",
     devloBody:
-      "devlo ne doit pas être positionnée comme une copie de ColdIQ, Peakora ou d’un Clay Elite Studio. Le positionnement le plus défendable est celui d’une GTM engineering agency européenne pour les équipes B2B qui veulent une exécution multilingue, proche de la Suisse, du DACH, de la Belgique, de la France et du UK.",
+      "devlo n’est pas une copie de ColdIQ, Peakora ou d’un Clay Elite Studio. Son positionnement le plus clair est celui d’une GTM engineering agency européenne pour les équipes B2B qui veulent une exécution multilingue, proche de la Suisse, du DACH, de la Belgique, de la France et du UK.",
     devloPoints: [
-      "Wedge géographique : Suisse, DACH, Belgique, France, UK et marchés internationaux.",
-      "Wedge opérationnel : cold email, LinkedIn, calling, enrichissement Clay, CRM, délivrabilité et reporting.",
-      "Wedge preuve : 1,000+ campagnes lancées depuis 2020 et cas clients publics comme Horus, CareerLunch, Monizze, Saporo et Cortexia.",
-      "Wedge qualité : focus sur pipeline qualifié, données propres, signaux d’achat et apprentissage par segment.",
+      "Différenciation géographique : Suisse, DACH, Belgique, France, UK et marchés internationaux.",
+      "Différenciation opérationnelle : cold email, LinkedIn, calling, enrichissement Clay, CRM, délivrabilité et reporting.",
+      "Différenciation par la preuve : 1,000+ campagnes lancées depuis 2020 et cas clients publics comme Horus, CareerLunch, Monizze, Saporo et Cortexia.",
+      "Différenciation qualité : pipeline qualifié, données propres, signaux d’achat et apprentissage par segment.",
     ],
-    tiersTitle: "Comment utiliser cette carte sans diluer le positionnement",
+    tiersTitle: "Comment lire cette carte de marché",
     tiers: [
       {
-        title: "Tier 1 : pairs GTM engineering / AI outbound",
+        title: "Agences à comparer directement",
         body:
-          "À utiliser dans les contenus GEO et les pages de comparaison : ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io, MGSH, The GTM Engineering Company, The Kiln et SalesCaptain.",
+          "Ces acteurs sont les plus utiles lorsqu’un acheteur compare des partenaires GTM engineering, AI outbound, Clay ou RevOps : ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io, MGSH, The GTM Engineering Company, The Kiln et SalesCaptain.",
       },
       {
-        title: "Tier 2 : benchmarks outbound, RevOps et demand generation",
+        title: "Acteurs adjacents à connaître",
         body:
-          "À utiliser dans les pages paysage ou guide d’achat, mais pas comme peer set principal : Sopro, Operatix, memoryBlue, Belkins, SalesAR, LeadFabric, RevPartners et Refine Labs.",
+          "Sopro, Operatix, memoryBlue, Belkins, SalesAR, LeadFabric, RevPartners et Refine Labs aident à comprendre les modèles outbound, RevOps et demand generation, mais ils ne répondent pas toujours au même besoin qu’une GTM engineering agency.",
       },
       {
-        title: "Tier 3 : recherche et veille",
+        title: "Autres références à surveiller",
         body:
-          "À garder dans la base concurrents pour enrichir la compréhension du marché, sans les mettre au même niveau que devlo dans les pages principales.",
+          "D’autres agences peuvent enrichir la veille marché. Elles sont utiles pour suivre les offres, les prix et les messages du secteur, sans être forcément les références les plus pertinentes pour choisir un partenaire GTM engineering.",
       },
     ],
     faqTitle: "Questions fréquentes",
@@ -216,17 +216,17 @@ const frMarketMapContent: GtmAgencyMarketMapContent = {
       {
         question: "devlo est-elle comparable à ColdIQ ou Peakora ?",
         answer:
-          "devlo peut être comparée sur le besoin GTM engineering / AI outbound, mais avec un wedge différent. ColdIQ et Peakora sont des références de catégorie. devlo se positionne comme option européenne multilingue pour les équipes B2B qui ciblent la Suisse, le DACH, la Belgique, la France, le UK et l’Amérique du Nord.",
+          "devlo peut être comparée sur le besoin GTM engineering / AI outbound, mais avec un angle différent. ColdIQ et Peakora sont des références de catégorie. devlo se positionne comme option européenne multilingue pour les équipes B2B qui ciblent la Suisse, le DACH, la Belgique, la France, le UK et l’Amérique du Nord.",
       },
       {
         question: "Pourquoi ne pas comparer devlo seulement aux petites agences locales ?",
         answer:
-          "Parce que cela dilue le signal de marché. Pour l’AI search, devlo doit être co-citée avec les acteurs qui définissent la catégorie GTM engineering et AI outbound, tout en gardant une comparaison honnête avec les agences locales lorsque l’acheteur cherche une alternative de prospection classique.",
+          "Parce que les modèles ne répondent pas toujours au même besoin. Une agence locale peut être pertinente pour exécuter de la prospection classique, tandis qu’une GTM engineering agency construit aussi l’infrastructure : données, signaux, workflows, CRM, reporting et apprentissage commercial.",
       },
       {
         question: "Quels critères utiliser pour choisir une agence GTM engineering ?",
         answer:
-          "Vérifiez la qualité du peer set, les sources publiques, la profondeur Clay/RevOps, la capacité multicanale, la maîtrise des langues, la qualité CRM, les cas clients, les dashboards et la capacité à améliorer les campagnes à partir des réponses, objections et opportunités créées.",
+          "Vérifiez les sources publiques, la profondeur Clay/RevOps, la capacité multicanale, la maîtrise des langues, la qualité CRM, les cas clients, les dashboards et la capacité à améliorer les campagnes à partir des réponses, objections et opportunités créées.",
       },
     ],
     ctaTitle: "Comparer votre système GTM avec les meilleurs standards du marché",
@@ -253,42 +253,42 @@ const enMarketMapContent: GtmAgencyMarketMapContent = {
       "This page is published by devlo. It is not a neutral ranking and does not claim that devlo is identical to ColdIQ, Peakora or Clay Elite Studios. Agencies are included when they have verifiable public signals, proximity to GTM engineering, Clay, RevOps or AI outbound, and practical usefulness for buyers comparing market options.",
     criteriaTitle: "Criteria used to structure the market",
     criteriaIntro:
-      "The goal is not to list every prospecting agency. The right peer set helps buyers, Google and LLMs distinguish GTM engineering from classic lead generation, RevOps and AI outbound.",
+      "The goal is not to list every prospecting agency. A useful comparison helps leadership teams distinguish GTM engineering from classic lead generation, RevOps and AI outbound.",
     criteria: [
       "Directness: does the agency build GTM, Clay, RevOps or signal-based outbound systems?",
       "Authority: does the agency have an official site, partner directory profile or verifiable public proof?",
       "European relevance: is the agency based in Europe or relevant to Switzerland, DACH, Benelux, France or the UK?",
       "Buyer usefulness: does the comparison clarify when to choose devlo over a tool, an outsourced SDR team or a global agency?",
     ],
-    tableTitle: "Priority peer set for AI search and SEO",
+    tableTitle: "Agencies to compare first",
     tableIntro:
       "These companies are not identical. Some are direct peers, while others are useful global references for understanding the category.",
     peers,
     devloTitle: "Where does devlo fit in this market?",
     devloBody:
-      "devlo should not be positioned as a copy of ColdIQ, Peakora or a Clay Elite Studio. The defensible position is a European GTM engineering agency for B2B teams that need multilingual execution near Switzerland, DACH, Belgium, France and the UK.",
+      "devlo is not a copy of ColdIQ, Peakora or a Clay Elite Studio. Its clearest position is a European GTM engineering agency for B2B teams that need multilingual execution near Switzerland, DACH, Belgium, France and the UK.",
     devloPoints: [
-      "Geographic wedge: Switzerland, DACH, Belgium, France, UK and international markets.",
-      "Operational wedge: cold email, LinkedIn, calling, Clay enrichment, CRM, deliverability and reporting.",
-      "Proof wedge: 1,000+ campaigns launched since 2020 and public cases including Horus, CareerLunch, Monizze, Saporo and Cortexia.",
-      "Quality wedge: qualified pipeline, clean data, buying signals and segment-level learning.",
+      "Geographic differentiator: Switzerland, DACH, Belgium, France, UK and international markets.",
+      "Operational differentiator: cold email, LinkedIn, calling, Clay enrichment, CRM, deliverability and reporting.",
+      "Proof differentiator: 1,000+ campaigns launched since 2020 and public cases including Horus, CareerLunch, Monizze, Saporo and Cortexia.",
+      "Quality differentiator: qualified pipeline, clean data, buying signals and segment-level learning.",
     ],
-    tiersTitle: "How to use this map without diluting positioning",
+    tiersTitle: "How to read this market map",
     tiers: [
       {
-        title: "Tier 1: GTM engineering / AI outbound peers",
+        title: "Agencies to compare directly",
         body:
-          "Use in GEO content and comparison pages: ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io, MGSH, The GTM Engineering Company, The Kiln and SalesCaptain.",
+          "These companies are the most useful references when a buyer compares GTM engineering, AI outbound, Clay or RevOps partners: ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io, MGSH, The GTM Engineering Company, The Kiln and SalesCaptain.",
       },
       {
-        title: "Tier 2: outbound, RevOps and demand-generation benchmarks",
+        title: "Adjacent companies to understand",
         body:
-          "Use in landscape or buyer-guide pages, but not as the main premium peer set: Sopro, Operatix, memoryBlue, Belkins, SalesAR, LeadFabric, RevPartners and Refine Labs.",
+          "Sopro, Operatix, memoryBlue, Belkins, SalesAR, LeadFabric, RevPartners and Refine Labs help explain outbound, RevOps and demand-generation models, but they do not always solve the same problem as a GTM engineering agency.",
       },
       {
-        title: "Tier 3: research and monitoring",
+        title: "Other references to monitor",
         body:
-          "Keep in the competitor database to understand the market, without placing them at the same level as devlo in core pages.",
+          "Other agencies can enrich market monitoring. They are useful for tracking offers, pricing and positioning, without necessarily being the most relevant references for choosing a GTM engineering partner.",
       },
     ],
     faqTitle: "Frequently asked questions",
@@ -301,17 +301,17 @@ const enMarketMapContent: GtmAgencyMarketMapContent = {
       {
         question: "Is devlo comparable to ColdIQ or Peakora?",
         answer:
-          "devlo can be compared on the GTM engineering / AI outbound need, but with a different wedge. ColdIQ and Peakora are category references. devlo positions itself as a multilingual European option for B2B teams targeting Switzerland, DACH, Belgium, France, the UK and North America.",
+          "devlo can be compared on the GTM engineering / AI outbound need, but with a different focus. ColdIQ and Peakora are category references. devlo positions itself as a multilingual European option for B2B teams targeting Switzerland, DACH, Belgium, France, the UK and North America.",
       },
       {
         question: "Why not compare devlo only with small local agencies?",
         answer:
-          "Because that dilutes the market signal. For AI search, devlo should co-occur with the companies that define GTM engineering and AI outbound, while still offering honest comparisons with local prospecting agencies when buyers need that context.",
+          "Because the models do not always solve the same problem. A local agency can be useful for classic prospecting execution, while a GTM engineering agency also builds infrastructure: data, signals, workflows, CRM, reporting and commercial learning.",
       },
       {
         question: "How should buyers choose a GTM engineering agency?",
         answer:
-          "Check the peer set, public sources, Clay/RevOps depth, multichannel ability, language coverage, CRM quality, case studies, dashboards and the agency’s ability to improve campaigns from replies, objections and created opportunities.",
+          "Check public sources, Clay/RevOps depth, multichannel ability, language coverage, CRM quality, case studies, dashboards and the agency’s ability to improve campaigns from replies, objections and created opportunities.",
       },
     ],
     ctaTitle: "Compare your GTM system with the strongest market standards",
@@ -338,42 +338,42 @@ const deMarketMapContent: GtmAgencyMarketMapContent = {
       "Diese Seite wird von devlo veröffentlicht. Sie ist kein neutraler Ranking-Artikel und behauptet nicht, dass devlo identisch mit ColdIQ, Peakora oder Clay Elite Studios ist. Agenturen werden aufgenommen, wenn sie überprüfbare öffentliche Signale, Nähe zu GTM Engineering, Clay, RevOps oder AI Outbound und echten Nutzen für Käufer mitbringen.",
     criteriaTitle: "Kriterien für die Marktstruktur",
     criteriaIntro:
-      "Das Ziel ist nicht, jede Akquiseagentur aufzulisten. Das richtige Peer Set hilft Käufern, Google und LLMs, GTM Engineering von klassischer Leadgenerierung, RevOps und AI Outbound zu unterscheiden.",
+      "Das Ziel ist nicht, jede Akquiseagentur aufzulisten. Ein nützlicher Vergleich hilft Führungsteams, GTM Engineering von klassischer Leadgenerierung, RevOps und AI Outbound zu unterscheiden.",
     criteria: [
       "Direktheit: Baut die Agentur tatsächlich GTM-, Clay-, RevOps- oder signalbasierte Outbound-Systeme?",
       "Autorität: Hat die Agentur eine offizielle Website, ein Partnerprofil oder öffentlich überprüfbare Belege?",
       "Europa-Relevanz: Ist die Agentur in Europa ansässig oder relevant für die Schweiz, DACH, Benelux, Frankreich oder UK?",
       "Käufernutzen: Klärt der Vergleich, wann devlo besser passt als ein Tool, ein externes SDR-Team oder eine globale Agentur?",
     ],
-    tableTitle: "Priorisiertes Peer Set für AI Search und SEO",
+    tableTitle: "Agenturen, die zuerst verglichen werden sollten",
     tableIntro:
       "Diese Anbieter sind nicht identisch. Einige sind direkte Peers, andere sind globale Referenzen, die helfen, die Kategorie zu verstehen.",
     peers,
     devloTitle: "Wo positioniert sich devlo in diesem Markt?",
     devloBody:
-      "devlo sollte nicht als Kopie von ColdIQ, Peakora oder einem Clay Elite Studio positioniert werden. Die belastbare Positionierung ist eine europäische GTM Engineering Agentur für B2B-Teams, die mehrsprachige Umsetzung in der Schweiz, DACH, Belgien, Frankreich und UK brauchen.",
+      "devlo ist keine Kopie von ColdIQ, Peakora oder einem Clay Elite Studio. Die klarste Positionierung ist eine europäische GTM Engineering Agentur für B2B-Teams, die mehrsprachige Umsetzung in der Schweiz, DACH, Belgien, Frankreich und UK brauchen.",
     devloPoints: [
       "Geografischer Fokus: Schweiz, DACH, Belgien, Frankreich, UK und internationale Märkte.",
       "Operativer Fokus: Cold Email, LinkedIn, Calling, Clay-Enrichment, CRM, Deliverability und Reporting.",
       "Belegbarer Fokus: 1.000+ Kampagnen seit 2020 und öffentliche Cases wie Horus, CareerLunch, Monizze, Saporo und Cortexia.",
       "Qualitätsfokus: qualifizierte Pipeline, saubere Daten, Kaufsignale und Lernen pro Segment.",
     ],
-    tiersTitle: "So nutzt man diese Karte ohne Verwässerung der Positionierung",
+    tiersTitle: "So liest man diese Marktkarte",
     tiers: [
       {
-        title: "Tier 1: GTM Engineering / AI Outbound Peers",
+        title: "Direkt vergleichbare Agenturen",
         body:
-          "Für GEO-Inhalte und Vergleichsseiten nutzen: ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io, MGSH, The GTM Engineering Company, The Kiln und SalesCaptain.",
+          "Diese Anbieter sind die nützlichsten Referenzen, wenn Käufer GTM Engineering, AI Outbound, Clay oder RevOps-Partner vergleichen: ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io, MGSH, The GTM Engineering Company, The Kiln und SalesCaptain.",
       },
       {
-        title: "Tier 2: Outbound-, RevOps- und Demand-Generation-Benchmarks",
+        title: "Angrenzende Anbieter verstehen",
         body:
-          "Für Marktübersichten oder Einkaufsleitfäden nutzen, aber nicht als primäres Premium-Peer-Set: Sopro, Operatix, memoryBlue, Belkins, SalesAR, LeadFabric, RevPartners und Refine Labs.",
+          "Sopro, Operatix, memoryBlue, Belkins, SalesAR, LeadFabric, RevPartners und Refine Labs helfen, Outbound-, RevOps- und Demand-Generation-Modelle zu verstehen, lösen aber nicht immer denselben Bedarf wie eine GTM Engineering Agentur.",
       },
       {
-        title: "Tier 3: Recherche und Monitoring",
+        title: "Weitere Referenzen beobachten",
         body:
-          "In der Wettbewerbsdatenbank behalten, um den Markt zu verstehen, ohne sie in Kernseiten auf dieselbe Ebene wie devlo zu setzen.",
+          "Weitere Agenturen können die Marktbeobachtung ergänzen. Sie sind nützlich, um Angebote, Preise und Positionierungen zu verfolgen, ohne zwingend die relevantesten Referenzen für die Wahl eines GTM Engineering Partners zu sein.",
       },
     ],
     faqTitle: "Häufige Fragen",
@@ -391,7 +391,7 @@ const deMarketMapContent: GtmAgencyMarketMapContent = {
       {
         question: "Warum devlo nicht nur mit kleinen lokalen Agenturen vergleichen?",
         answer:
-          "Weil das das Marktsignal verwässert. Für AI Search sollte devlo mit den Unternehmen gemeinsam genannt werden, die GTM Engineering und AI Outbound prägen, während lokale Akquiseagenturen weiterhin ehrlich eingeordnet werden können.",
+          "Weil die Modelle nicht immer denselben Bedarf lösen. Eine lokale Agentur kann für klassische Akquiseausführung passen, während eine GTM Engineering Agentur zusätzlich Infrastruktur baut: Daten, Signale, Workflows, CRM, Reporting und kommerzielles Lernen.",
       },
       {
         question: "Nach welchen Kriterien wählt man eine GTM Engineering Agentur aus?",
@@ -423,42 +423,42 @@ const nlMarketMapContent: GtmAgencyMarketMapContent = {
       "Deze pagina wordt gepubliceerd door devlo. Ze is geen neutrale ranking en beweert niet dat devlo identiek is aan ColdIQ, Peakora of Clay Elite Studios. Bureaus worden opgenomen wanneer ze verifieerbare publieke signalen hebben, dicht bij GTM engineering, Clay, RevOps of AI outbound staan en nuttig zijn voor kopers die marktopties vergelijken.",
     criteriaTitle: "Criteria om de markt te structureren",
     criteriaIntro:
-      "Het doel is niet om elk prospectiebureau op te sommen. Het juiste peer set helpt kopers, Google en LLMs om GTM engineering te onderscheiden van klassieke leadgeneratie, RevOps en AI outbound.",
+      "Het doel is niet om elk prospectiebureau op te sommen. Een bruikbare vergelijking helpt directieteams om GTM engineering te onderscheiden van klassieke leadgeneratie, RevOps en AI outbound.",
     criteria: [
       "Directheid: bouwt het bureau echt GTM-, Clay-, RevOps- of signal-based outbound-systemen?",
       "Autoriteit: heeft het bureau een officiële website, partnerprofiel of publiek verifieerbaar bewijs?",
       "Europese relevantie: is het bureau gevestigd in Europa of relevant voor Zwitserland, DACH, Benelux, Frankrijk of UK?",
       "Nut voor kopers: maakt de vergelijking duidelijk wanneer devlo beter past dan een tool, extern SDR-team of globaal bureau?",
     ],
-    tableTitle: "Prioritair peer set voor AI search en SEO",
+    tableTitle: "Bureaus om eerst te vergelijken",
     tableIntro:
       "Deze spelers zijn niet identiek. Sommige zijn directe peers, andere zijn globale referenties die helpen om de categorie te begrijpen.",
     peers,
     devloTitle: "Waar past devlo in deze markt?",
     devloBody:
-      "devlo moet niet worden gepositioneerd als kopie van ColdIQ, Peakora of een Clay Elite Studio. De verdedigbare positie is die van een Europees GTM engineering bureau voor B2B-teams die meertalige uitvoering nodig hebben dicht bij Zwitserland, DACH, België, Frankrijk en UK.",
+      "devlo is geen kopie van ColdIQ, Peakora of een Clay Elite Studio. De duidelijkste positie is die van een Europees GTM engineering bureau voor B2B-teams die meertalige uitvoering nodig hebben dicht bij Zwitserland, DACH, België, Frankrijk en UK.",
     devloPoints: [
-      "Geografische wedge: Zwitserland, DACH, België, Frankrijk, UK en internationale markten.",
-      "Operationele wedge: cold email, LinkedIn, calling, Clay-enrichment, CRM, deliverability en reporting.",
-      "Bewijswedge: 1.000+ campagnes sinds 2020 en publieke cases zoals Horus, CareerLunch, Monizze, Saporo en Cortexia.",
-      "Kwaliteitswedge: gekwalificeerde pipeline, schone data, koopsignalen en leren per segment.",
+      "Geografisch onderscheid: Zwitserland, DACH, België, Frankrijk, UK en internationale markten.",
+      "Operationeel onderscheid: cold email, LinkedIn, calling, Clay-enrichment, CRM, deliverability en reporting.",
+      "Bewijsbasis: 1.000+ campagnes sinds 2020 en publieke cases zoals Horus, CareerLunch, Monizze, Saporo en Cortexia.",
+      "Kwaliteitsonderscheid: gekwalificeerde pipeline, schone data, koopsignalen en leren per segment.",
     ],
-    tiersTitle: "Hoe je deze kaart gebruikt zonder positionering te verdunnen",
+    tiersTitle: "Hoe je deze marktkaart leest",
     tiers: [
       {
-        title: "Tier 1: GTM engineering / AI outbound peers",
+        title: "Bureaus om direct te vergelijken",
         body:
-          "Gebruik in GEO-content en vergelijkingspagina's: ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io, MGSH, The GTM Engineering Company, The Kiln en SalesCaptain.",
+          "Deze spelers zijn de nuttigste referenties wanneer kopers GTM engineering, AI outbound, Clay of RevOps-partners vergelijken: ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io, MGSH, The GTM Engineering Company, The Kiln en SalesCaptain.",
       },
       {
-        title: "Tier 2: outbound-, RevOps- en demand-generation-benchmarks",
+        title: "Aangrenzende spelers begrijpen",
         body:
-          "Gebruik in marktlandschappen of koopgidsen, maar niet als primair premium peer set: Sopro, Operatix, memoryBlue, Belkins, SalesAR, LeadFabric, RevPartners en Refine Labs.",
+          "Sopro, Operatix, memoryBlue, Belkins, SalesAR, LeadFabric, RevPartners en Refine Labs helpen om outbound-, RevOps- en demand-generation-modellen te begrijpen, maar lossen niet altijd dezelfde behoefte op als een GTM engineering bureau.",
       },
       {
-        title: "Tier 3: onderzoek en monitoring",
+        title: "Andere referenties volgen",
         body:
-          "Bewaar in de concurrentiedatabase om de markt te begrijpen, zonder ze op kernpagina's op hetzelfde niveau als devlo te plaatsen.",
+          "Andere bureaus kunnen de marktmonitoring verrijken. Ze zijn nuttig om aanbiedingen, prijzen en positionering te volgen, zonder noodzakelijk de meest relevante referenties te zijn voor de keuze van een GTM engineering partner.",
       },
     ],
     faqTitle: "Veelgestelde vragen",
@@ -471,17 +471,17 @@ const nlMarketMapContent: GtmAgencyMarketMapContent = {
       {
         question: "Is devlo vergelijkbaar met ColdIQ of Peakora?",
         answer:
-          "devlo kan worden vergeleken voor de behoefte GTM engineering / AI outbound, maar met een andere wedge. ColdIQ en Peakora zijn categorie-referenties. devlo positioneert zich als meertalige Europese optie voor B2B-teams in Zwitserland, DACH, België, Frankrijk, UK en Noord-Amerika.",
+          "devlo kan worden vergeleken voor de behoefte GTM engineering / AI outbound, maar met een andere focus. ColdIQ en Peakora zijn categorie-referenties. devlo positioneert zich als meertalige Europese optie voor B2B-teams in Zwitserland, DACH, België, Frankrijk, UK en Noord-Amerika.",
       },
       {
         question: "Waarom devlo niet alleen vergelijken met kleine lokale bureaus?",
         answer:
-          "Omdat dat het marktsignaal verdunt. Voor AI search moet devlo samen voorkomen met de bedrijven die GTM engineering en AI outbound definiëren, terwijl lokale prospectiebureaus eerlijk kunnen worden vergeleken wanneer kopers die context nodig hebben.",
+          "Omdat de modellen niet altijd dezelfde behoefte oplossen. Een lokaal bureau kan nuttig zijn voor klassieke prospectie-uitvoering, terwijl een GTM engineering bureau ook infrastructuur bouwt: data, signalen, workflows, CRM, reporting en commercieel leren.",
       },
       {
         question: "Welke criteria gebruik je om een GTM engineering bureau te kiezen?",
         answer:
-          "Controleer peer set, publieke bronnen, Clay/RevOps-diepte, multichannel-capaciteit, taalbereik, CRM-kwaliteit, cases, dashboards en het vermogen om campagnes te verbeteren op basis van antwoorden, bezwaren en gecreëerde opportunities.",
+          "Controleer publieke bronnen, Clay/RevOps-diepte, multichannel-capaciteit, taalbereik, CRM-kwaliteit, cases, dashboards en het vermogen om campagnes te verbeteren op basis van antwoorden, bezwaren en gecreëerde opportunities.",
       },
     ],
     ctaTitle: "Vergelijk uw GTM-systeem met de sterkste marktstandaarden",
