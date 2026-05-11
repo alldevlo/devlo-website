@@ -18,7 +18,7 @@ const titleSuffixByLocale: Record<SeoMetadataLocale, string> = {
 };
 
 const descriptionSuffixByLocale: Record<SeoMetadataLocale, string> = {
-  fr: " devlo structure vos campagnes pour generer des rendez-vous qualifies.",
+  fr: " devlo structure vos campagnes pour générer des rendez-vous qualifiés.",
   en: " devlo builds outbound campaigns that generate qualified B2B meetings.",
   de: " devlo baut Outbound-Kampagnen fuer qualifizierte B2B-Termine.",
   nl: " devlo bouwt outbound campagnes voor gekwalificeerde B2B-afspraken.",

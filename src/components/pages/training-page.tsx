@@ -80,9 +80,9 @@ export function TrainingPage() {
 
       <section className="bg-[#0c587f] py-14 text-white">
         <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">
-          <h2 className="text-center text-3xl font-semibold md:text-4xl">Appliquez lacademie pour un outbound coherent.</h2>
+          <h2 className="text-center text-3xl font-semibold md:text-4xl">Appliquez l&apos;académie pour un outbound cohérent.</h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-6 text-cyan-100/90">
-            Vous passez dune prospection opportuniste a un systeme mesure, documente et reproductible.
+            Vous passez d&apos;une prospection opportuniste à un système mesuré, documenté et reproductible.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {benefits.map((item) => (
@@ -102,14 +102,14 @@ export function TrainingPage() {
           <h2 className="text-2xl font-semibold text-[#153a54]">FAQ</h2>
           <div className="mt-4 divide-y divide-stroke rounded-md border border-stroke">
             {[
-              "Combien de temps avant les premiers resultats?",
-              "Peut-on integrer la methode dans notre CRM?",
-              "Quels profils peuvent suivre cette academie?",
+              "Combien de temps avant les premiers résultats ?",
+              "Peut-on intégrer la méthode dans notre CRM ?",
+              "Quels profils peuvent suivre cette académie ?",
             ].map((item) => (
               <details key={item} className="px-4 py-3">
                 <summary className="cursor-pointer text-sm font-semibold text-[#193d56]">{item}</summary>
                 <p className="mt-2 text-sm text-[#2a4b62]/80">
-                  Reponse: nous adaptons la cadence a votre capacite commerciale et a la maturite du marche.
+                  Réponse : nous adaptons la cadence à votre capacité commerciale et à la maturité du marché.
                 </p>
               </details>
             ))}

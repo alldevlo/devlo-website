@@ -66,20 +66,20 @@ export const mainNav = {
 export const homeSeo = {
   title: "GTM engineering agency Europe | Prospection B2B",
   description:
-    "devlo construit des systemes GTM B2B: AI outbound, signaux d'achat, Clay, cold email, LinkedIn, calling et rendez-vous qualifies.",
+    "devlo construit des systèmes GTM B2B : AI outbound, signaux d'achat, Clay, cold email, LinkedIn, calling et rendez-vous qualifiés.",
   ogTitle: "GTM engineering agency Europe | AI outbound & prospection B2B | devlo",
   ogDescription:
-    "devlo identifie les bons comptes, detecte les signaux, enrichit les donnees et pilote les campagnes B2B multicanales pour generer du pipeline qualifie.",
+    "devlo identifie les bons comptes, détecte les signaux, enrichit les données et pilote les campagnes B2B multicanales pour générer du pipeline qualifié.",
 };
 
 export const homeContent = {
   hero: {
     badge: "🇨🇭 GTM engineering agency · +1'000 campagnes lancées",
-    h1: "GTM engineering agency en Europe pour generer du pipeline B2B qualifie",
-    h2: "Nous construisons votre systeme outbound IA: ICP, signaux d'achat, enrichissement Clay, sequences multicanales, CRM et rendez-vous qualifies.",
+    h1: "GTM engineering agency en Europe pour générer du pipeline B2B qualifié",
+    h2: "Nous construisons votre système outbound IA : ICP, signaux d'achat, enrichissement Clay, séquences multicanales, CRM et rendez-vous qualifiés.",
     paragraph:
-      "devlo combine **lead generation**, **signaux d'achat**, **Clay**, **cold email**, **LinkedIn** et **calling** pour creer un pipeline B2B mesurable. L'objectif n'est pas plus de trafic : c'est plus de conversations avec des decideurs qui correspondent a votre ICP.",
-    ctaPrimary: { label: "Auditer mon systeme GTM →", href: "/consultation" },
+      "devlo combine **lead generation**, **signaux d'achat**, **Clay**, **cold email**, **LinkedIn** et **calling** pour créer un pipeline B2B mesurable. L'objectif n'est pas plus de trafic : c'est plus de conversations avec des décideurs qui correspondent à votre ICP.",
+    ctaPrimary: { label: "Auditer mon système GTM →", href: "/consultation" },
     ctaSecondary: { label: "Voir nos résultats →", href: "/etudes-de-cas" },
     ctaServices: { label: "Voir l'approche GTM engineering →", href: "/gtm-engineering-agency" },
     wistiaMediaId: "cr7dgltkvu",

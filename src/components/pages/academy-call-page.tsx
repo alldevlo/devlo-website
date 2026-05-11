@@ -6,14 +6,14 @@ export function AcademyCallPage() {
           Parcourons vos besoins pour atteindre vos objectifs de croissance.
         </h1>
         <p className="mt-4 text-sm leading-6 text-[#2a4b62]/80 md:text-base">
-          Decouvrez comment notre formation permet aux commerciaux de signer de nouveaux clients B2B.
+          Découvrez comment notre formation permet aux commerciaux de signer de nouveaux clients B2B.
         </p>
       </div>
 
       <div className="mx-auto mt-8 max-w-5xl rounded-xl border border-stroke bg-white p-6 shadow-soft lg:p-8">
         <ul className="space-y-2 text-sm font-medium text-[#1e4159]">
           <li>1. Identification des prospects</li>
-          <li>2. Generation de prospects</li>
+          <li>2. Génération de prospects</li>
           <li>3. Prospection commerciale</li>
           <li>4. Qualification des prospects</li>
           <li>5. Planification des rendez-vous</li>
@@ -33,9 +33,9 @@ export function AcademyCallPage() {
           </article>
 
           <article className="rounded-lg border border-stroke p-6">
-            <h2 className="text-lg font-semibold text-[#173a54]">Lieu de reunion</h2>
-            <p className="mt-2 text-sm text-[#2a4b62]/80">Video conference</p>
-            <h3 className="mt-6 text-base font-semibold text-[#173a54]">Quelle heure vous convient le mieux?</h3>
+            <h2 className="text-lg font-semibold text-[#173a54]">Lieu de réunion</h2>
+            <p className="mt-2 text-sm text-[#2a4b62]/80">Visioconférence</p>
+            <h3 className="mt-6 text-base font-semibold text-[#173a54]">Quelle heure vous convient le mieux ?</h3>
             <div className="mt-3 grid gap-2">
               {[
                 "17:30",

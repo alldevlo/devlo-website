@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | devlo",
   },
   description:
-    "devlo construit des systemes GTM pour equipes B2B: AI outbound, signaux d'achat, enrichissement Clay, cold email, LinkedIn, calling et rendez-vous qualifies.",
+    "devlo construit des systèmes GTM pour équipes B2B : AI outbound, signaux d'achat, enrichissement Clay, cold email, LinkedIn, calling et rendez-vous qualifiés.",
   robots: {
     index: true,
     follow: true,
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "GTM engineering agency Europe | devlo",
     description:
-      "devlo construit des systemes GTM pour equipes B2B: AI outbound, signaux d'achat, enrichissement Clay, cold email, LinkedIn, calling et rendez-vous qualifies.",
+      "devlo construit des systèmes GTM pour équipes B2B : AI outbound, signaux d'achat, enrichissement Clay, cold email, LinkedIn, calling et rendez-vous qualifiés.",
     siteName: "devlo",
     locale: "fr_CH",
     type: "website",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "GTM engineering agency Europe | devlo",
     description:
-      "devlo construit des systemes GTM pour equipes B2B: AI outbound, signaux d'achat, enrichissement Clay, cold email, LinkedIn, calling et rendez-vous qualifies.",
+      "devlo construit des systèmes GTM pour équipes B2B : AI outbound, signaux d'achat, enrichissement Clay, cold email, LinkedIn, calling et rendez-vous qualifiés.",
     images: [toAbsoluteUrl(defaultOgImagePath)],
   },
   icons: {
@@ -86,9 +86,9 @@ const schemaCopyByLocale: Record<
 > = {
   fr: {
     organizationDescription:
-      "GTM engineering agency europeenne basee en Suisse, specialisee en AI outbound, prospection B2B multicanale, signaux d'achat, enrichissement Clay et rendez-vous qualifies. Plus de 1000 campagnes depuis 2020.",
+      "GTM engineering agency européenne basée en Suisse, spécialisée en AI outbound, prospection B2B multicanale, signaux d'achat, enrichissement Clay et rendez-vous qualifiés. Plus de 1000 campagnes depuis 2020.",
     serviceName: "GTM engineering et prospection B2B externalisee",
-    serviceType: "AI outbound, signal-based outbound, generation de leads B2B et rendez-vous qualifies",
+    serviceType: "AI outbound, signal-based outbound, génération de leads B2B et rendez-vous qualifiés",
     reviewBodies: [
       "devlo a complètement révolutionné notre approche commerciale. 80 rendez-vous qualifiés et 200 000 € de contrats signés.",
       "Charles est l'un des experts en vente les plus créatifs que je connaisse. Il nous a aidés à obtenir des rendez-vous commerciaux qualifiés dans la région DACH.",

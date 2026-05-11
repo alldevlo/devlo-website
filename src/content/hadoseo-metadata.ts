@@ -16,7 +16,7 @@ export const hadoseoMetadataOverrides: HadoSeoMetadataOverride[] = [
   {
     route: "/",
     title: "GTM engineering agency Europe | Prospection B2B | devlo",
-    description: "devlo construit des systemes GTM B2B: AI outbound, signaux d'achat, Clay, cold email, LinkedIn, calling et rendez-vous qualifies.",
+    description: "devlo construit des systèmes GTM B2B : AI outbound, signaux d'achat, Clay, cold email, LinkedIn, calling et rendez-vous qualifiés.",
     canonical: "https://devlo.ch/",
     ogImage: "/images/devlo_OG_Banner.webp",
     status: "✅ OPTIMISÉ",
@@ -64,7 +64,7 @@ export const hadoseoMetadataOverrides: HadoSeoMetadataOverride[] = [
   {
     route: "/gtm-engineering-agency",
     title: "GTM engineering agency Europe | AI outbound & Clay | devlo",
-    description: "devlo construit des systemes GTM B2B : AI outbound, signaux d'achat, enrichissement Clay, sequences multicanales et pipeline qualifie.",
+    description: "devlo construit des systèmes GTM B2B : AI outbound, signaux d'achat, enrichissement Clay, séquences multicanales et pipeline qualifié.",
     canonical: "https://devlo.ch/gtm-engineering-agency",
     ogImage: "/images/devlo_OG_Banner.webp",
     status: "✅ OPTIMISÉ",

@@ -83,7 +83,7 @@ const navCopyByLocale: Record<
     showMarkets: "Afficher la présence",
     academySubtitle: "Formation prospection B2B gratuite",
     gtmEngineering: "GTM Engineering",
-    gtmEngineeringSubtitle: "Systeme outbound IA: signaux, Clay, sequences, CRM",
+    gtmEngineeringSubtitle: "Système outbound IA : signaux, Clay, séquences, CRM",
     aiSalesOps: "AI Sales Ops",
     aiSalesOpsSubtitle: "Systèmes IA pour équipes commerciales B2B",
   },
