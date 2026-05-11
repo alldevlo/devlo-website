@@ -14,7 +14,9 @@ Do not call DataForSEO, Serper, Brave Search, OpenAI, Anthropic, Gemini, Perplex
 - a saved output path,
 - a clear stop condition.
 
-Current decision: **blocked pending human approval**.
+Current decision: **approved and executed for the 2026-05-11 diagnostic**.
+
+Approved cap: USD 10 equivalent for the devlo.ch SEO/GEO diagnostic run. Charles also activated the DataForSEO Backlinks API and LLM Mentions trials, both expiring on 2026-05-25. API-reported investigation spend stayed under the approved cap: about USD 1.11 before the final top-link classification run, plus USD 0.115 for the final 5-domain backlink sample.
 
 ## Authority Baseline
 
@@ -119,4 +121,3 @@ Decision rule:
 | Provider quota | Must be verified in account before first request |
 | Notifications | Report completion in PR/final summary; no Slack needed unless blocked |
 | Override | Charles approval in the same workflow, with exact cap and provider |
-
