@@ -118,14 +118,6 @@ async function translateMany(texts, targetLang) {
   return results;
 }
 
-// ── Value helpers ─────────────────────────────────────────────────────────────
-
-function collectStrings(value) {
-  if (typeof value === "string") return [value];
-  if (Array.isArray(value)) return value.flatMap(collectStrings);
-  return [];
-}
-
 async function translateValue(value, targetLang) {
   if (typeof value === "string") {
     const map = await translateMany([value], targetLang);

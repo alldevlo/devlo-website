@@ -46,7 +46,6 @@ export function LanguageSwitcher({ mobile = false }: LanguageSwitcherProps) {
     if (process.env.NODE_ENV === "production") return;
     items.forEach((item) => {
       if (!item.found && item.locale !== currentLocale) {
-        // eslint-disable-next-line no-console
         console.warn(
           `[LanguageSwitcher] slug map missing target locale path (from ${pathname} to ${item.locale}) for pageId=${item.pageId ?? "unknown"}. Falling back to locale home.`,
         );

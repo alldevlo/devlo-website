@@ -12,7 +12,8 @@ function excludeRscRequests(redirects) {
 
 function withStatusCode301(redirects) {
   return redirects.map((redirect) => {
-    const { permanent: _permanent, ...rest } = redirect;
+    const rest = { ...redirect };
+    delete rest.permanent;
     return {
       ...rest,
       statusCode: 301,
@@ -598,6 +599,11 @@ const nextConfig = {
       { source: "/resultats-cas-etudes", destination: "/etudes-de-cas", permanent: true },
       { source: "/resultats-cas-etudes/:slug*", destination: "/etudes-de-cas", permanent: true },
     ];
+
+    // Keep these broad locale redirect sets parked for migration reference.
+    // They are intentionally not returned because live localized routes exist.
+    void enRedirects;
+    void deRedirects;
 
     // ─── Probable old devlo.ch page URL variants ──────────────────────────────
     // Best guesses based on typical WP site naming conventions.

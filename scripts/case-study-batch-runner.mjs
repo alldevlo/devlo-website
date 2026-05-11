@@ -142,7 +142,6 @@ async function precheckConformity({ sourceSlug, caseStudiesData }) {
 }
 
 function buildMiniReport({ sourceSlug, sourceUrl, status, mode, reason, payload = null, precheck = null }) {
-  const route = `/etudes-de-cas/${sourceSlug}`;
   const previewSiteUrl = payload?.preview?.siteUrl || "";
   const previewPageUrl = payload?.preview?.pageUrl || "";
   const lines = [
