@@ -11,6 +11,20 @@ behavior, read:
 - `~/alldevlo/devlo-aios/context/how-we-git.md`
 - `~/alldevlo/devlo-aios/constitution/operational-rules.md`
 
+## Vercel Plugin Context
+
+Codex has the Vercel Plugin installed at user scope. For any task that touches
+the public website, Next.js behavior, Vercel deployment, domains, environment
+variables, analytics, performance, or production troubleshooting, take the
+Vercel Plugin guidance into account once the Codex session has loaded it.
+
+The plugin may expose commands for deploys, environment variables, marketplace
+integrations, project status, and other state-changing Vercel operations. Treat
+those as operational-risk actions: read `operational-rules.md`, apply the CFO
+tool gate where usage-based spend or provider configuration can change, and do
+not run deploy/promote/rollback/domain/env/marketplace actions unless the task
+explicitly requires them and the branch/PR/deploy flow is clear.
+
 For public website work, Codex must apply the human-first website gate in
 `docs/seo-geo-guide.md`: visible pages are written for B2B buyers first,
 localized public copy must be native-quality in every shipped language, page
