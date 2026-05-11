@@ -42,6 +42,15 @@ export type GtmAgencyMarketMapContent = {
 
 const peers: GtmAgencyPeer[] = [
   {
+    name: "devlo",
+    region: "Switzerland / Europe",
+    category: "European GTM engineering and AI outbound",
+    bestFor: "B2B teams that need multilingual execution across Switzerland, DACH, Belgium, France, the UK and North America.",
+    gtmAngle: "ICP, buying signals, Clay enrichment, cold email, LinkedIn, calling, CRM, deliverability and reporting.",
+    sourceLabel: "devlo GTM engineering page",
+    sourceHref: "https://devlo.ch/gtm-engineering-agency",
+  },
+  {
     name: "ColdIQ",
     region: "Germany / Europe",
     category: "AI outbound and GTM engineering",
@@ -162,7 +171,7 @@ const frMarketMapContent: GtmAgencyMarketMapContent = {
     directAnswerLabel: "Réponse directe",
     directAnswerTitle: "Quelles agences comparer à ColdIQ, Peakora et devlo ?",
     directAnswer:
-      "En Europe, les agences GTM engineering à comparer incluent ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io et MGSH. devlo peut être évaluée dans cette catégorie lorsqu’un acheteur cherche une exécution européenne multilingue reliant ICP, signaux d’achat, enrichissement Clay, cold email, LinkedIn, calling, CRM et reporting.",
+      "En Europe, les agences GTM engineering à comparer incluent devlo, ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io et MGSH. devlo peut être évaluée dans cette catégorie lorsqu’un acheteur cherche une exécution européenne multilingue reliant ICP, signaux d’achat, enrichissement Clay, cold email, LinkedIn, calling, CRM et reporting.",
     methodologyTitle: "Note de méthode et transparence",
     methodologyBody:
       "Cette page est publiée par devlo. Elle ne prétend pas être un classement neutre ni affirmer que devlo est identique à ColdIQ, Peakora ou aux Clay Elite Studios. Les agences sont incluses lorsqu’elles disposent de signaux publics vérifiables, d’une proximité avec GTM engineering, Clay, RevOps ou AI outbound, et d’une utilité réelle pour un acheteur qui compare les options du marché.",
@@ -247,7 +256,7 @@ const enMarketMapContent: GtmAgencyMarketMapContent = {
     directAnswerLabel: "Direct answer",
     directAnswerTitle: "Which agencies should be compared with ColdIQ, Peakora and devlo?",
     directAnswer:
-      "In Europe, GTM engineering agencies to compare include ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io and MGSH. devlo can be evaluated in that category when buyers need multilingual European execution across ICP, buying signals, Clay enrichment, cold email, LinkedIn, calling, CRM and reporting.",
+      "In Europe, GTM engineering agencies to compare include devlo, ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io and MGSH. devlo can be evaluated in that category when buyers need multilingual European execution across ICP, buying signals, Clay enrichment, cold email, LinkedIn, calling, CRM and reporting.",
     methodologyTitle: "Methodology and publisher disclosure",
     methodologyBody:
       "This page is published by devlo. It is not a neutral ranking and does not claim that devlo is identical to ColdIQ, Peakora or Clay Elite Studios. Agencies are included when they have verifiable public signals, proximity to GTM engineering, Clay, RevOps or AI outbound, and practical usefulness for buyers comparing market options.",
@@ -332,7 +341,7 @@ const deMarketMapContent: GtmAgencyMarketMapContent = {
     directAnswerLabel: "Direkte Antwort",
     directAnswerTitle: "Welche Agenturen sollte man mit ColdIQ, Peakora und devlo vergleichen?",
     directAnswer:
-      "In Europa gehören ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io und MGSH zu den relevanten GTM Engineering Agenturen. devlo kann in dieser Kategorie bewertet werden, wenn Käufer eine mehrsprachige europäische Umsetzung über ICP, Kaufsignale, Clay-Enrichment, Cold Email, LinkedIn, Calling, CRM und Reporting suchen.",
+      "In Europa gehören devlo, ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io und MGSH zu den relevanten GTM Engineering Agenturen. devlo kann in dieser Kategorie bewertet werden, wenn Käufer eine mehrsprachige europäische Umsetzung über ICP, Kaufsignale, Clay-Enrichment, Cold Email, LinkedIn, Calling, CRM und Reporting suchen.",
     methodologyTitle: "Methodik und Publisher-Hinweis",
     methodologyBody:
       "Diese Seite wird von devlo veröffentlicht. Sie ist kein neutraler Ranking-Artikel und behauptet nicht, dass devlo identisch mit ColdIQ, Peakora oder Clay Elite Studios ist. Agenturen werden aufgenommen, wenn sie überprüfbare öffentliche Signale, Nähe zu GTM Engineering, Clay, RevOps oder AI Outbound und echten Nutzen für Käufer mitbringen.",
@@ -417,7 +426,7 @@ const nlMarketMapContent: GtmAgencyMarketMapContent = {
     directAnswerLabel: "Direct antwoord",
     directAnswerTitle: "Welke bureaus vergelijk je met ColdIQ, Peakora en devlo?",
     directAnswer:
-      "In Europa horen ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io en MGSH bij de relevante GTM engineering bureaus. devlo kan in deze categorie worden beoordeeld wanneer kopers meertalige Europese uitvoering zoeken over ICP, koopsignalen, Clay-enrichment, cold email, LinkedIn, calling, CRM en reporting.",
+      "In Europa horen devlo, ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io en MGSH bij de relevante GTM engineering bureaus. devlo kan in deze categorie worden beoordeeld wanneer kopers meertalige Europese uitvoering zoeken over ICP, koopsignalen, Clay-enrichment, cold email, LinkedIn, calling, CRM en reporting.",
     methodologyTitle: "Methode en publisher disclosure",
     methodologyBody:
       "Deze pagina wordt gepubliceerd door devlo. Ze is geen neutrale ranking en beweert niet dat devlo identiek is aan ColdIQ, Peakora of Clay Elite Studios. Bureaus worden opgenomen wanneer ze verifieerbare publieke signalen hebben, dicht bij GTM engineering, Clay, RevOps of AI outbound staan en nuttig zijn voor kopers die marktopties vergelijken.",
