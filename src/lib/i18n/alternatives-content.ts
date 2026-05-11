@@ -6,7 +6,37 @@ type AltsTranslatableContent = {
   metaDescription: string;
   h1: string;
   intro: string[];
+  evaluationDisclosure?: string;
+  directAnswer?: {
+    label: string;
+    title: string;
+    body: string;
+    proofPoints?: string[];
+  };
+  comparisonTitle?: string;
+  marketAlternatives?: {
+    title: string;
+    intro?: string;
+    options: { name: string; bestFor: string; note: string; href?: string }[];
+  };
   comparisonTable: { feature: string; devlo: string; competitor: string }[];
+  sourceNote?: string;
+  sourceLinks?: { label: string; href: string }[];
+  decisionGuide?: {
+    title: string;
+    bestFitTitle: string;
+    bestFit: string[];
+    notBestFitTitle: string;
+    notBestFit: string[];
+  };
+  buyerChecklist?: {
+    title: string;
+    items: { question: string; why: string }[];
+  };
+  implementationPlan?: {
+    title: string;
+    steps: { period: string; action: string; outcome: string }[];
+  };
   whyDevlo: string[];
   faqs: { question: string; answer: string }[];
   // GEO fields (optional, progressive enhancement)

@@ -44,6 +44,12 @@ A qualified lead is a B2B account that matches the client's ICP, shows an action
 - [Multichannel Outbound Prospecting](https://devlo.ch/services/outbound-multicanal): Coordinates cold email, LinkedIn and calling to turn qualified accounts into commercial conversations.
 - [B2B Prospecting in Switzerland](https://devlo.ch/prospection-commerciale-suisse): Swiss-market outbound for Romandy, German-speaking Switzerland and Ticino.
 
+## Comparison and Buying Guides
+
+- [Best B2B Prospecting Agencies in Switzerland](https://devlo.ch/alternative-agences-prospection-b2b): Neutral comparison guide covering devlo, Undersales, LalaLeads, Prospecti, SeedD, Level UP and Digitalmint.
+- [Alternatives to LalaLeads](https://devlo.ch/alternative-lalaleads): Buyer guide comparing outbound, lead generation, paid acquisition and multichannel B2B prospecting options.
+- [Alternatives to Undersales](https://devlo.ch/alternative-undersales): Buyer guide comparing Swiss B2B appointment-setting, teleprospecting and multichannel outbound agencies.
+
 ## Case Studies
 
 - [Horus Software — EUR 200K in signed contracts](https://devlo.ch/etudes-de-cas/logiciel-comptable-200k-ca): Accounting software, 80 qualified meetings, 45 new clients in Belgium.
@@ -122,4 +128,4 @@ A qualified lead is a B2B account that matches the client's ICP, shows an action
 - [Deutsch](https://devlo.ch/de/)
 - [Nederlands](https://devlo.ch/nl/)
 
-Last-Updated: 2026-05-06
+Last-Updated: 2026-05-11

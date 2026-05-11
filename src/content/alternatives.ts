@@ -4,6 +4,39 @@ export type ComparisonRow = {
   competitor: string;
 };
 
+export type DirectAnswerBlock = {
+  label: string;
+  title: string;
+  body: string;
+  proofPoints?: string[];
+};
+
+export type AlternativeOption = {
+  name: string;
+  bestFor: string;
+  note: string;
+  href?: string;
+};
+
+export type DecisionGuide = {
+  title: string;
+  bestFitTitle: string;
+  bestFit: string[];
+  notBestFitTitle: string;
+  notBestFit: string[];
+};
+
+export type BuyerChecklist = {
+  title: string;
+  items: { question: string; why: string }[];
+};
+
+export type ImplementationStep = {
+  period: string;
+  action: string;
+  outcome: string;
+};
+
 export type AlternativePageData = {
   slug: string;
   competitorName: string;
@@ -11,7 +44,23 @@ export type AlternativePageData = {
   metaDescription: string;
   h1: string;
   intro: string[];
+  evaluationDisclosure?: string;
+  directAnswer?: DirectAnswerBlock;
+  comparisonTitle?: string;
+  marketAlternatives?: {
+    title: string;
+    intro?: string;
+    options: AlternativeOption[];
+  };
   comparisonTable: ComparisonRow[];
+  sourceNote?: string;
+  sourceLinks?: { label: string; href: string }[];
+  decisionGuide?: DecisionGuide;
+  buyerChecklist?: BuyerChecklist;
+  implementationPlan?: {
+    title: string;
+    steps: ImplementationStep[];
+  };
   whyDevlo: string[];
   faqs: { question: string; answer: string }[];
   caseStudySlugs: string[];
@@ -21,10 +70,10 @@ export const ALTERNATIVE_PAGES: Record<string, AlternativePageData> = {
   "alternative-undersales": {
     slug: "alternative-undersales",
     competitorName: "Undersales",
-    metaTitle: "Alternative à Undersales | Agence prospection B2B Suisse | devlo",
+    metaTitle: "Alternatives à Undersales : agences prospection B2B | devlo",
     metaDescription:
-      "Comparez devlo et Undersales pour externaliser votre prospection B2B : multicanal natif FR/DE/EN, 1000+ campagnes et résultats dès J+15.",
-    h1: "devlo : l'alternative à Undersales pour votre prospection B2B",
+      "Comparez Undersales, devlo et 5 alternatives de prospection B2B. Critères, canaux, preuves, questions à poser et méthode de test.",
+    h1: "Alternatives à Undersales : comparatif des agences de prospection B2B",
     intro: [
       "Vous évaluez des agences de prospection B2B et comparez devlo à Undersales ? Cette page vous aide à prendre la bonne décision en fonction de vos besoins spécifiques.",
       "Les deux agences opèrent sur le marché B2B francophone. Les différences se trouvent dans l'approche multicanale, la couverture linguistique, et l'expérience sur les marchés suisse et DACH.",
@@ -36,7 +85,7 @@ export const ALTERNATIVE_PAGES: Record<string, AlternativePageData> = {
       { feature: "Marché Suisse", devlo: "Spécialiste — 500+ campagnes CH", competitor: "À valider avec des références locales" },
       { feature: "Marché DACH", devlo: "Oui — équipe germanophone native", competitor: "À confirmer avec des cas germanophones" },
       { feature: "Démarrage", devlo: "Résultats dès la 3e semaine", competitor: "À vérifier contractuellement" },
-      { feature: "Expérience", devlo: "1000+ campagnes depuis 2020", competitor: "Données non publiques" },
+      { feature: "Expérience", devlo: "1000+ campagnes depuis 2020", competitor: "À confirmer dans la proposition" },
       { feature: "Reporting", devlo: "Dashboard en temps réel + weekly call", competitor: "À vérifier dans le reporting inclus" },
     ],
     whyDevlo: [
@@ -67,10 +116,10 @@ export const ALTERNATIVE_PAGES: Record<string, AlternativePageData> = {
   "alternative-lalaleads": {
     slug: "alternative-lalaleads",
     competitorName: "LalaLeads",
-    metaTitle: "Alternative à LalaLeads | Agence prospection B2B Suisse | devlo",
+    metaTitle: "Alternatives à LalaLeads : comparatif agences B2B | devlo",
     metaDescription:
-      "Comparez devlo et LalaLeads pour votre prospection B2B : multicanal, expertise Suisse/DACH et résultats mesurables dès J+15.",
-    h1: "devlo : l'alternative à LalaLeads pour votre prospection B2B",
+      "Comparez LalaLeads, devlo et 5 alternatives de génération de leads B2B. Canaux, preuves, critères, questions à poser et test 30 jours.",
+    h1: "Alternatives à LalaLeads : comparatif des agences de génération de leads B2B",
     intro: [
       "LalaLeads et devlo sont deux agences spécialisées dans la génération de leads B2B. Si vous hésitez entre les deux, voici une comparaison objective pour guider votre décision.",
       "devlo se distingue par son approche outbound multicanale intégrée — cold email, LinkedIn et calling coordonnés — et par sa présence historique sur les marchés suisse et DACH.",
@@ -82,8 +131,8 @@ export const ALTERNATIVE_PAGES: Record<string, AlternativePageData> = {
       { feature: "Marché Suisse", devlo: "Spécialiste — basé en Suisse depuis 2020", competitor: "À valider avec des références locales" },
       { feature: "Intent data", devlo: "Service dédié (signaux Bombora, G2, recrutements)", competitor: "À vérifier dans le périmètre" },
       { feature: "Enrichissement", devlo: "Clay + Apollo + Cognism intégré", competitor: "À confirmer dans le stack livré" },
-      { feature: "Cas clients publics", devlo: "14 cas clients avec métriques", competitor: "Données limitées" },
-      { feature: "Langues", devlo: "FR / DE / EN / NL", competitor: "FR / EN" },
+      { feature: "Cas clients publics", devlo: "14 cas clients avec métriques", competitor: "Logos et témoignages publics à analyser" },
+      { feature: "Langues", devlo: "FR / DE / EN / NL", competitor: "À confirmer dans la proposition" },
     ],
     whyDevlo: [
       "Prospection multicanale réelle : chez devlo, cold email, LinkedIn et calling sont coordonnés dans une même séquence pour multiplier les points de contact mesurables avec le décideur.",
@@ -115,10 +164,10 @@ export const ALTERNATIVE_PAGES: Record<string, AlternativePageData> = {
   "alternative-agences-prospection-b2b": {
     slug: "alternative-agences-prospection-b2b",
     competitorName: "les autres agences",
-    metaTitle: "Meilleure agence prospection B2B Suisse | Comparatif 2026 | devlo",
+    metaTitle: "Meilleures agences prospection B2B Suisse : comparatif | devlo",
     metaDescription:
-      "Comparez les agences de prospection B2B en Suisse et en France : critères, résultats, méthode et signaux pour choisir le bon partenaire.",
-    h1: "Choisir son agence de prospection B2B : comparatif 2026",
+      "Comparez 7 agences de prospection B2B en Suisse. Critères, questions à poser, prix, preuves et méthode pour choisir le bon partenaire.",
+    h1: "Meilleures agences de prospection B2B en Suisse : comparatif et guide de choix 2026",
     intro: [
       "Le marché des agences de prospection B2B s'est considérablement développé depuis 2020. Entre les agences spécialisées outbound, les plateformes de mise en relation et les freelances, il est difficile de s'y retrouver.",
       "Cette page vous aide à comparer les options et à identifier les critères qui comptent vraiment : approche multicanale, couverture linguistique, transparence sur les résultats, et expérience sur votre marché cible.",
@@ -126,12 +175,12 @@ export const ALTERNATIVE_PAGES: Record<string, AlternativePageData> = {
     ],
     comparisonTable: [
       { feature: "Approche", devlo: "Multicanale (cold email + LinkedIn + calling)", competitor: "Variable selon l'agence" },
-      { feature: "Marché Suisse", devlo: "Spécialiste — basé en Suisse", competitor: "Souvent secondaire" },
-      { feature: "Langues", devlo: "FR / DE / EN / NL natif", competitor: "FR principalement" },
+      { feature: "Marché Suisse", devlo: "Spécialiste — basé en Suisse", competitor: "À confirmer selon références locales" },
+      { feature: "Langues", devlo: "FR / DE / EN / NL natif", competitor: "À valider selon l'équipe assignée" },
       { feature: "Transparence résultats", devlo: "14 cas clients publics chiffrés", competitor: "Variable" },
-      { feature: "Intent data", devlo: "Inclus dans les forfaits", competitor: "Rarement proposé" },
-      { feature: "Cold calling", devlo: "Oui — équipe native multilingue", competitor: "Souvent absent" },
-      { feature: "Démarrage", devlo: "Premiers RDV dès la 3e semaine", competitor: "4-8 semaines en général" },
+      { feature: "Intent data", devlo: "Inclus dans les forfaits", competitor: "Variable selon l'agence" },
+      { feature: "Cold calling", devlo: "Oui — équipe native multilingue", competitor: "Variable selon l'agence" },
+      { feature: "Démarrage", devlo: "Premiers RDV dès la 3e semaine", competitor: "Variable selon l'agence et le setup" },
     ],
     whyDevlo: [
       "Les 5 critères pour choisir une agence de prospection : (1) expertise multicanale, (2) références vérifiables dans votre secteur, (3) couverture linguistique sur votre marché, (4) transparence sur la méthodologie, (5) reporting en temps réel.",
@@ -152,7 +201,7 @@ export const ALTERNATIVE_PAGES: Record<string, AlternativePageData> = {
       {
         question: "Quels sont les tarifs des agences de prospection B2B en Suisse ?",
         answer:
-          "Les tarifs varient de CHF 1'500 à CHF 10'000+/mois selon le volume, les canaux et l'expertise. devlo démarre à CHF 2'500/mois avec une approche multicanale complète. Les agences moins chères fonctionnent souvent sur un seul canal avec des résultats plus aléatoires.",
+          "Les tarifs varient selon le volume, les canaux, les outils, la seniorité et le niveau de qualification. Comparez le coût total par rendez-vous qualifié et par opportunité commerciale plutôt qu'un simple forfait mensuel.",
       },
       {
         question: "Combien de temps pour voir des résultats avec une agence B2B ?",
