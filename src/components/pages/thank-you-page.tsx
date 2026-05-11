@@ -25,16 +25,16 @@ export function ThankYouPage({ title, message }: ThankYouPageProps) {
 
       <CaseStudiesGrid
         compact
-        title="Decouvrez leurs resultats et nos etudes de cas"
-        subtitle="Nous partageons une selection de missions representant differents secteurs B2B."
+        title="Découvrez leurs résultats et nos études de cas"
+        subtitle="Nous partageons une sélection de missions représentant différents secteurs B2B."
       />
 
       <section className="mx-auto w-full max-w-screen-xl px-6 pb-14 lg:px-10">
         <div className="rounded-xl border border-stroke bg-[#eef3f7] p-8 shadow-soft">
           <h2 className="text-3xl font-semibold text-[#173a54]">Contactez-nous pour booster vos ventes</h2>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-[#2a4b62]/80">
-            Une strategie claire, un suivi operationnel et une execution continue pour convertir vos
-            cibles en rendez-vous qualifies.
+            Une stratégie claire, un suivi opérationnel et une exécution continue pour convertir vos
+            cibles en rendez-vous qualifiés.
           </p>
         </div>
       </section>

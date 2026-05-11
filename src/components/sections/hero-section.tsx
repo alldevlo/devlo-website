@@ -14,7 +14,7 @@ export function HeroSection() {
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-ink/75 md:text-lg">
             Cette structure sert de fondation pour migrer page par page vos captures desktop vers
-            des composants reutilisables, avec un rendu responsive coherent.
+            des composants réutilisables, avec un rendu responsive cohérent.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -28,7 +28,7 @@ export function HeroSection() {
               href="/modele"
               className="inline-flex h-11 items-center rounded-soft border border-stroke bg-paper px-6 text-sm font-semibold text-ink transition hover:border-ink/30"
             >
-              Voir la page modele
+              Voir la page modèle
             </Link>
           </div>
         </div>

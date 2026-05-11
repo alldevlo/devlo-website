@@ -9,13 +9,13 @@ const coldEmailGuideTables: Record<
   }
 > = {
   fr: {
-    caption: "Elements essentiels d'une campagne cold email B2B performante",
-    headers: ["Element", "Recommandation", "Pourquoi c'est important"],
+    caption: "Éléments essentiels d'une campagne cold email B2B performante",
+    headers: ["Élément", "Recommandation", "Pourquoi c'est important"],
     rows: [
-      ["ICP", "Segmenter par marche, taille, role et signal d'achat.", "La pertinence du ciblage influence plus le taux de reponse que le volume."],
-      ["Infrastructure", "Utiliser des domaines dedies, SPF, DKIM, DMARC et warm-up.", "La delivrabilite protege la reputation et la capacite d'envoi."],
-      ["Message", "Personnaliser l'accroche et tester plusieurs angles.", "Les decideurs repondent mieux a un probleme concret qu'a une presentation generique."],
-      ["Suivi", "Mesurer ouverture, reponse, rendez-vous et qualite pipeline.", "Les optimisations doivent viser les opportunites qualifiees, pas seulement les clics."],
+      ["ICP", "Segmenter par marché, taille, rôle et signal d'achat.", "La pertinence du ciblage influence plus le taux de réponse que le volume."],
+      ["Infrastructure", "Utiliser des domaines dédiés, SPF, DKIM, DMARC et warm-up.", "La délivrabilité protège la réputation et la capacité d'envoi."],
+      ["Message", "Personnaliser l'accroche et tester plusieurs angles.", "Les décideurs répondent mieux à un problème concret qu'à une présentation générique."],
+      ["Suivi", "Mesurer ouverture, réponse, rendez-vous et qualité pipeline.", "Les optimisations doivent viser les opportunités qualifiées, pas seulement les clics."],
     ],
   },
   en: {

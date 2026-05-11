@@ -310,7 +310,7 @@ async function resolveLocalizedSeo(
     return {
       title: "Insights — Ressources et guides pour la prospection B2B",
       description:
-        "Guides pratiques, listes de reference et ressources pour ameliorer votre prospection B2B. Signaux d'achat, automatisation IA, et strategies outbound.",
+        "Guides pratiques, listes de référence et ressources pour améliorer votre prospection B2B. Signaux d'achat, automatisation IA et stratégies outbound.",
     };
   }
 
@@ -336,7 +336,7 @@ async function resolveLocalizedSeo(
     return {
       title: "94 signaux d'achat B2B pour identifier vos prospects",
       description:
-        "Decouvrez 94 signaux d'achat B2B : recrutements, changements, tech stack, usage produit, communaute et evenements pour prioriser vos prospects.",
+        "Découvrez 94 signaux d'achat B2B : recrutements, changements, tech stack, usage produit, communauté et événements pour prioriser vos prospects.",
       type: "article" as const,
     };
   }

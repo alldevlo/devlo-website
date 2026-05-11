@@ -51,10 +51,10 @@ const serviceSelectionTables: Record<
     caption: "Choisir le bon service de prospection B2B devlo",
     headers: ["Objectif", "Service prioritaire", "Quand l'utiliser"],
     rows: [
-      ["Construire un systeme GTM", "GTM engineering", "Quand il faut relier ICP, signaux, donnees, sequences, CRM et reporting."],
-      ["Creer une liste ICP", "Generation de leads", "Quand le TAM existe mais que les comptes ne sont pas qualifies."],
-      ["Obtenir des rendez-vous", "Prise de rendez-vous", "Quand l'equipe commerciale doit parler a plus de decideurs."],
-      ["Fiabiliser les donnees", "Enrichissement Clay", "Quand les emails, roles ou domaines sont incomplets."],
+      ["Construire un système GTM", "GTM engineering", "Quand il faut relier ICP, signaux, données, séquences, CRM et reporting."],
+      ["Créer une liste ICP", "Génération de leads", "Quand le TAM existe mais que les comptes ne sont pas qualifiés."],
+      ["Obtenir des rendez-vous", "Prise de rendez-vous", "Quand l'équipe commerciale doit parler à plus de décideurs."],
+      ["Fiabiliser les données", "Enrichissement Clay", "Quand les emails, rôles ou domaines sont incomplets."],
       ["Prioriser les comptes", "Intent data", "Quand il faut contacter les entreprises au bon moment."],
     ],
   },
@@ -95,9 +95,9 @@ const serviceSelectionTables: Record<
 
 const gtmBridgeByLocale: Record<SupportedLocale, { title: string; body: string; cta: string }> = {
   fr: {
-    title: "Besoin d'un systeme complet plutot qu'un service isole ?",
+    title: "Besoin d'un système complet plutôt qu'un service isolé ?",
     body:
-      "Le GTM engineering relie ciblage ICP, signaux d'achat, enrichissement Clay, sequences multicanales, CRM et reporting pour produire un actif go-to-market reutilisable.",
+      "Le GTM engineering relie ciblage ICP, signaux d'achat, enrichissement Clay, séquences multicanales, CRM et reporting pour produire un actif go-to-market réutilisable.",
     cta: "Voir l'approche GTM engineering",
   },
   en: {

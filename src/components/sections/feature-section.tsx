@@ -1,15 +1,15 @@
 const features = [
   {
-    title: "Composants reutilisables",
-    text: "Header, Footer, Hero, sections de contenu, CTA et formulaires separables par page.",
+    title: "Composants réutilisables",
+    text: "Header, Footer, Hero, sections de contenu, CTA et formulaires séparables par page.",
   },
   {
-    title: "SEO et accessibilite",
-    text: "Metadata par page, structure semantique, alt images et labels pour les champs de formulaire.",
+    title: "SEO et accessibilité",
+    text: "Metadata par page, structure sémantique, alt images et labels pour les champs de formulaire.",
   },
   {
-    title: "Design tokens centralises",
-    text: "Couleurs, rayons, ombres et espacements harmonises pour garder une coherence de rendu.",
+    title: "Design tokens centralisés",
+    text: "Couleurs, rayons, ombres et espacements harmonisés pour garder une cohérence de rendu.",
   },
 ];
 

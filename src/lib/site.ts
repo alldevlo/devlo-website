@@ -7,7 +7,7 @@ function resolveSiteUrl(): string {
 export const siteConfig = {
   name: "devlo",
   description:
-    "GTM engineering agency europeenne pour AI outbound, prospection B2B multicanale, signaux d'achat, enrichissement Clay et rendez-vous qualifies.",
+    "GTM engineering agency européenne pour AI outbound, prospection B2B multicanale, signaux d'achat, enrichissement Clay et rendez-vous qualifiés.",
   url: resolveSiteUrl(),
   locale: "fr-CH",
   nav: [

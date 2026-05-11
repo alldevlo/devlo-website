@@ -29,7 +29,7 @@ export const seoConfig = {
     /** TODO: Confirm exact founding year */
     foundingDate: "2020",
     description:
-      "devlo est une GTM engineering agency europeenne basee en Suisse, specialisee en AI outbound, prospection B2B multicanale, signaux d'achat, enrichissement Clay et rendez-vous qualifies. Plus de 1000 campagnes depuis 2020.",
+      "devlo est une GTM engineering agency européenne basée en Suisse, spécialisée en AI outbound, prospection B2B multicanale, signaux d'achat, enrichissement Clay et rendez-vous qualifiés. Plus de 1000 campagnes depuis 2020.",
     /** TODO: Add other active social profiles (X/Twitter, YouTube, etc.) */
     sameAs: [
       "https://www.linkedin.com/company/devlo-connects-you-with-more-prospects/",
