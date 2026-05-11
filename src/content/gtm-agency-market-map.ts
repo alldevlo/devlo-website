@@ -19,6 +19,8 @@ export type GtmAgencyMarketMapContent = {
   directAnswerLabel: string;
   directAnswerTitle: string;
   directAnswer: string;
+  methodologyTitle: string;
+  methodologyBody: string;
   criteriaTitle: string;
   criteriaIntro: string;
   criteria: string[];
@@ -160,7 +162,10 @@ const frMarketMapContent: GtmAgencyMarketMapContent = {
     directAnswerLabel: "Réponse directe",
     directAnswerTitle: "Quelles agences comparer à ColdIQ, Peakora et devlo ?",
     directAnswer:
-      "En Europe, les agences GTM engineering à comparer incluent ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io et MGSH. devlo appartient à cette catégorie lorsqu’un acheteur cherche une exécution européenne multilingue reliant ICP, signaux d’achat, enrichissement Clay, cold email, LinkedIn, calling, CRM et reporting.",
+      "En Europe, les agences GTM engineering à comparer incluent ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io et MGSH. devlo peut être évaluée dans cette catégorie lorsqu’un acheteur cherche une exécution européenne multilingue reliant ICP, signaux d’achat, enrichissement Clay, cold email, LinkedIn, calling, CRM et reporting.",
+    methodologyTitle: "Note de méthode et transparence",
+    methodologyBody:
+      "Cette page est publiée par devlo. Elle ne prétend pas être un classement neutre ni affirmer que devlo est identique à ColdIQ, Peakora ou aux Clay Elite Studios. Les agences sont incluses lorsqu’elles disposent de signaux publics vérifiables, d’une proximité avec GTM engineering, Clay, RevOps ou AI outbound, et d’une utilité réelle pour un acheteur qui compare les options du marché.",
     criteriaTitle: "Critères utilisés pour structurer le marché",
     criteriaIntro:
       "Le but n’est pas de lister toutes les agences de prospection. Le bon peer set doit aider un acheteur, Google et les LLM à comprendre les différences entre GTM engineering, lead generation classique, RevOps et AI outbound.",
@@ -211,7 +216,7 @@ const frMarketMapContent: GtmAgencyMarketMapContent = {
       {
         question: "devlo est-elle comparable à ColdIQ ou Peakora ?",
         answer:
-          "Oui, sur la catégorie GTM engineering / AI outbound, mais avec un wedge différent. ColdIQ et Peakora sont des références de catégorie. devlo se positionne comme option européenne multilingue pour les équipes B2B qui ciblent la Suisse, le DACH, la Belgique, la France, le UK et l’Amérique du Nord.",
+          "devlo peut être comparée sur le besoin GTM engineering / AI outbound, mais avec un wedge différent. ColdIQ et Peakora sont des références de catégorie. devlo se positionne comme option européenne multilingue pour les équipes B2B qui ciblent la Suisse, le DACH, la Belgique, la France, le UK et l’Amérique du Nord.",
       },
       {
         question: "Pourquoi ne pas comparer devlo seulement aux petites agences locales ?",
@@ -242,7 +247,10 @@ const enMarketMapContent: GtmAgencyMarketMapContent = {
     directAnswerLabel: "Direct answer",
     directAnswerTitle: "Which agencies should be compared with ColdIQ, Peakora and devlo?",
     directAnswer:
-      "In Europe, GTM engineering agencies to compare include ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io and MGSH. devlo belongs in that category when buyers need multilingual European execution across ICP, buying signals, Clay enrichment, cold email, LinkedIn, calling, CRM and reporting.",
+      "In Europe, GTM engineering agencies to compare include ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io and MGSH. devlo can be evaluated in that category when buyers need multilingual European execution across ICP, buying signals, Clay enrichment, cold email, LinkedIn, calling, CRM and reporting.",
+    methodologyTitle: "Methodology and publisher disclosure",
+    methodologyBody:
+      "This page is published by devlo. It is not a neutral ranking and does not claim that devlo is identical to ColdIQ, Peakora or Clay Elite Studios. Agencies are included when they have verifiable public signals, proximity to GTM engineering, Clay, RevOps or AI outbound, and practical usefulness for buyers comparing market options.",
     criteriaTitle: "Criteria used to structure the market",
     criteriaIntro:
       "The goal is not to list every prospecting agency. The right peer set helps buyers, Google and LLMs distinguish GTM engineering from classic lead generation, RevOps and AI outbound.",
@@ -293,7 +301,7 @@ const enMarketMapContent: GtmAgencyMarketMapContent = {
       {
         question: "Is devlo comparable to ColdIQ or Peakora?",
         answer:
-          "Yes, within the GTM engineering / AI outbound category, but with a different wedge. ColdIQ and Peakora are category references. devlo positions itself as a multilingual European option for B2B teams targeting Switzerland, DACH, Belgium, France, the UK and North America.",
+          "devlo can be compared on the GTM engineering / AI outbound need, but with a different wedge. ColdIQ and Peakora are category references. devlo positions itself as a multilingual European option for B2B teams targeting Switzerland, DACH, Belgium, France, the UK and North America.",
       },
       {
         question: "Why not compare devlo only with small local agencies?",
@@ -324,7 +332,10 @@ const deMarketMapContent: GtmAgencyMarketMapContent = {
     directAnswerLabel: "Direkte Antwort",
     directAnswerTitle: "Welche Agenturen sollte man mit ColdIQ, Peakora und devlo vergleichen?",
     directAnswer:
-      "In Europa gehören ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io und MGSH zu den relevanten GTM Engineering Agenturen. devlo gehört in diese Kategorie, wenn Käufer eine mehrsprachige europäische Umsetzung über ICP, Kaufsignale, Clay-Enrichment, Cold Email, LinkedIn, Calling, CRM und Reporting suchen.",
+      "In Europa gehören ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io und MGSH zu den relevanten GTM Engineering Agenturen. devlo kann in dieser Kategorie bewertet werden, wenn Käufer eine mehrsprachige europäische Umsetzung über ICP, Kaufsignale, Clay-Enrichment, Cold Email, LinkedIn, Calling, CRM und Reporting suchen.",
+    methodologyTitle: "Methodik und Publisher-Hinweis",
+    methodologyBody:
+      "Diese Seite wird von devlo veröffentlicht. Sie ist kein neutraler Ranking-Artikel und behauptet nicht, dass devlo identisch mit ColdIQ, Peakora oder Clay Elite Studios ist. Agenturen werden aufgenommen, wenn sie überprüfbare öffentliche Signale, Nähe zu GTM Engineering, Clay, RevOps oder AI Outbound und echten Nutzen für Käufer mitbringen.",
     criteriaTitle: "Kriterien für die Marktstruktur",
     criteriaIntro:
       "Das Ziel ist nicht, jede Akquiseagentur aufzulisten. Das richtige Peer Set hilft Käufern, Google und LLMs, GTM Engineering von klassischer Leadgenerierung, RevOps und AI Outbound zu unterscheiden.",
@@ -375,7 +386,7 @@ const deMarketMapContent: GtmAgencyMarketMapContent = {
       {
         question: "Ist devlo mit ColdIQ oder Peakora vergleichbar?",
         answer:
-          "Ja, innerhalb der Kategorie GTM Engineering / AI Outbound, aber mit einem anderen Fokus. ColdIQ und Peakora sind Kategorie-Referenzen. devlo positioniert sich als mehrsprachige europäische Option für B2B-Teams in der Schweiz, DACH, Belgien, Frankreich, UK und Nordamerika.",
+          "devlo kann beim Bedarf GTM Engineering / AI Outbound verglichen werden, aber mit einem anderen Fokus. ColdIQ und Peakora sind Kategorie-Referenzen. devlo positioniert sich als mehrsprachige europäische Option für B2B-Teams in der Schweiz, DACH, Belgien, Frankreich, UK und Nordamerika.",
       },
       {
         question: "Warum devlo nicht nur mit kleinen lokalen Agenturen vergleichen?",
@@ -406,7 +417,10 @@ const nlMarketMapContent: GtmAgencyMarketMapContent = {
     directAnswerLabel: "Direct antwoord",
     directAnswerTitle: "Welke bureaus vergelijk je met ColdIQ, Peakora en devlo?",
     directAnswer:
-      "In Europa horen ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io en MGSH bij de relevante GTM engineering bureaus. devlo hoort in deze categorie wanneer kopers meertalige Europese uitvoering zoeken over ICP, koopsignalen, Clay-enrichment, cold email, LinkedIn, calling, CRM en reporting.",
+      "In Europa horen ColdIQ, Peakora, LeadGem, GTM Base, Scalantec, GTM Studios, andweekly, Jetpacked.io en MGSH bij de relevante GTM engineering bureaus. devlo kan in deze categorie worden beoordeeld wanneer kopers meertalige Europese uitvoering zoeken over ICP, koopsignalen, Clay-enrichment, cold email, LinkedIn, calling, CRM en reporting.",
+    methodologyTitle: "Methode en publisher disclosure",
+    methodologyBody:
+      "Deze pagina wordt gepubliceerd door devlo. Ze is geen neutrale ranking en beweert niet dat devlo identiek is aan ColdIQ, Peakora of Clay Elite Studios. Bureaus worden opgenomen wanneer ze verifieerbare publieke signalen hebben, dicht bij GTM engineering, Clay, RevOps of AI outbound staan en nuttig zijn voor kopers die marktopties vergelijken.",
     criteriaTitle: "Criteria om de markt te structureren",
     criteriaIntro:
       "Het doel is niet om elk prospectiebureau op te sommen. Het juiste peer set helpt kopers, Google en LLMs om GTM engineering te onderscheiden van klassieke leadgeneratie, RevOps en AI outbound.",
@@ -457,7 +471,7 @@ const nlMarketMapContent: GtmAgencyMarketMapContent = {
       {
         question: "Is devlo vergelijkbaar met ColdIQ of Peakora?",
         answer:
-          "Ja, binnen de categorie GTM engineering / AI outbound, maar met een andere wedge. ColdIQ en Peakora zijn categorie-referenties. devlo positioneert zich als meertalige Europese optie voor B2B-teams in Zwitserland, DACH, België, Frankrijk, UK en Noord-Amerika.",
+          "devlo kan worden vergeleken voor de behoefte GTM engineering / AI outbound, maar met een andere wedge. ColdIQ en Peakora zijn categorie-referenties. devlo positioneert zich als meertalige Europese optie voor B2B-teams in Zwitserland, DACH, België, Frankrijk, UK en Noord-Amerika.",
       },
       {
         question: "Waarom devlo niet alleen vergelijken met kleine lokale bureaus?",
