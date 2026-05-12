@@ -200,8 +200,8 @@ export function GtmAgencyMarketMapPage({ locale = "fr" }: { locale?: SupportedLo
                 {content.tableIntro}
               </p>
             </div>
-            <div className="mt-8 overflow-x-auto rounded-lg border border-neutral-200 bg-white">
-              <table className="min-w-[1120px] w-full border-collapse text-left text-sm">
+            <div className="mt-8 w-full max-w-full min-w-0 overflow-x-auto rounded-lg border border-neutral-200 bg-white">
+              <table className="w-full min-w-[1120px] border-collapse text-left text-sm">
                 <thead className="bg-[#0A3448] text-xs font-semibold uppercase tracking-[0.08em] text-white">
                   <tr>
                     <th scope="col" className="px-5 py-4">{labels.agency}</th>

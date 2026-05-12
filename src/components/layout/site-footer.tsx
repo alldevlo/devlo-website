@@ -180,7 +180,7 @@ function FooterList({
         ].join(" ")}
       >
         {links.map((link) => (
-          <li key={`${title}-${link.href}`}>
+          <li key={`${title}-${link.label}-${link.href}`}>
             <Link
               href={link.href}
               className={[

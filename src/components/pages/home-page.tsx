@@ -214,18 +214,18 @@ export function HomePage({
 
       {qualifiedLeadSection ? (
         <SectionWrapper background="light" className="py-[64px] md:py-[88px]">
-          <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
-            <FadeInOnScroll>
+          <div className="mx-auto grid max-w-6xl min-w-0 gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+            <FadeInOnScroll className="min-w-0">
               <p className="text-sm font-semibold uppercase tracking-[0.1em] text-devlo-700">
                 {qualifiedLeadSection.eyebrow}
               </p>
-              <h2 className="mt-3 text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">
+              <h2 className="mt-3 max-w-full break-words text-[28px] font-bold leading-[1.2] text-devlo-900 md:text-4xl">
                 {qualifiedLeadSection.title}
               </h2>
-              <p className="mt-4 rounded-xl border border-devlo-100 bg-white p-4 text-base font-semibold leading-7 text-devlo-800 shadow-soft">
+              <p className="mt-4 max-w-full break-words rounded-xl border border-devlo-100 bg-white p-4 text-base font-semibold leading-7 text-devlo-800 shadow-soft">
                 {qualifiedLeadSection.answer}
               </p>
-              <p className="mt-4 text-base leading-7 text-neutral-600">
+              <p className="mt-4 max-w-full break-words text-base leading-7 text-neutral-600">
                 {qualifiedLeadSection.description}
               </p>
               <Link
@@ -236,9 +236,32 @@ export function HomePage({
               </Link>
             </FadeInOnScroll>
 
-            <FadeInOnScroll delay={0.15}>
-              <div className="overflow-x-auto rounded-2xl border border-neutral-200 bg-white shadow-soft">
-                <table className="min-w-[720px] w-full border-collapse text-left text-sm">
+            <FadeInOnScroll delay={0.15} className="min-w-0">
+              <div className="grid gap-3 md:hidden">
+                <p className="sr-only">{qualifiedLeadSection.tableCaption}</p>
+                {qualifiedLeadSection.rows.map((row) => (
+                  <article key={`mobile-${row.criterion}`} className="rounded-2xl border border-neutral-200 bg-white p-4 shadow-soft">
+                    <h3 className="text-base font-semibold text-devlo-900">{row.criterion}</h3>
+                    <dl className="mt-3 space-y-3">
+                      <div>
+                        <dt className="text-xs font-semibold uppercase tracking-[0.08em] text-devlo-700">
+                          {qualifiedLeadSection.headers[1]}
+                        </dt>
+                        <dd className="mt-1 text-sm leading-6 text-neutral-600">{row.signal}</dd>
+                      </div>
+                      <div>
+                        <dt className="text-xs font-semibold uppercase tracking-[0.08em] text-devlo-700">
+                          {qualifiedLeadSection.headers[2]}
+                        </dt>
+                        <dd className="mt-1 text-sm leading-6 text-neutral-600">{row.qualification}</dd>
+                      </div>
+                    </dl>
+                  </article>
+                ))}
+              </div>
+
+              <div className="hidden w-full max-w-full min-w-0 overflow-x-auto rounded-2xl border border-neutral-200 bg-white shadow-soft md:block">
+                <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                   <caption className="sr-only">{qualifiedLeadSection.tableCaption}</caption>
                   <thead className="bg-devlo-900 text-white">
                     <tr>
@@ -272,7 +295,7 @@ export function HomePage({
           <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.rendezVousTitle}</h2>
         </FadeInOnScroll>
         <FadeInOnScroll delay={0.1}>
-          <div className="relative mt-10 -mx-6 space-y-4 overflow-hidden md:-mx-12 lg:-mx-16">
+          <div className="relative mt-10 space-y-4 overflow-hidden">
             <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[8vw] bg-gradient-to-r from-white to-transparent" />
             <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-[8vw] bg-gradient-to-l from-white to-transparent" />
             {rendezVousRows.map((logos, index) => (
@@ -335,7 +358,7 @@ export function HomePage({
           <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.clientsTitle}</h2>
         </FadeInOnScroll>
 
-        <div className="relative mt-10 -mx-6 space-y-4 overflow-hidden md:-mx-12 lg:-mx-16">
+        <div className="relative mt-10 space-y-4 overflow-hidden">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[8vw] bg-gradient-to-r from-white to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-[8vw] bg-gradient-to-l from-white to-transparent" />
           <ClientsRailRow names={content.clientsLogos.slice(0, 8)} />

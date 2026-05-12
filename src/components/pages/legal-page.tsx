@@ -32,7 +32,7 @@ export function LegalPage({ content }: LegalPageProps) {
   return (
     <main>
       <SectionWrapper background="white" className="pt-[80px] pb-10 md:pt-[120px]">
-        <div className="max-w-4xl">
+        <div className="max-w-4xl min-w-0 break-words [overflow-wrap:anywhere]">
           <p className="text-sm font-semibold uppercase tracking-[0.08em] text-devlo-700">
             {content.lastUpdated}
           </p>
@@ -46,12 +46,12 @@ export function LegalPage({ content }: LegalPageProps) {
       </SectionWrapper>
 
       <SectionWrapper background="white" className="pt-0 pb-16 md:pb-20">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
-          <div className="space-y-8">
+        <div className="grid min-w-0 gap-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
+          <div className="min-w-0 space-y-8">
             {content.sections.map((section) => (
-              <article key={section.heading} className="border-t border-neutral-200 pt-8">
-                <h2 className="text-2xl font-bold text-devlo-900">{section.heading}</h2>
-                <div className="mt-4 space-y-4 text-base leading-8 text-neutral-700">
+              <article key={section.heading} className="min-w-0 border-t border-neutral-200 pt-8">
+                <h2 className="break-words text-2xl font-bold text-devlo-900 [overflow-wrap:anywhere]">{section.heading}</h2>
+                <div className="mt-4 min-w-0 space-y-4 break-words text-base leading-8 text-neutral-700 [overflow-wrap:anywhere]">
                   {section.paragraphs?.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
                   ))}
@@ -67,7 +67,7 @@ export function LegalPage({ content }: LegalPageProps) {
             ))}
           </div>
 
-          <aside className="space-y-6 border-t border-neutral-200 pt-8 lg:sticky lg:top-28">
+          <aside className="min-w-0 space-y-6 break-words border-t border-neutral-200 pt-8 [overflow-wrap:anywhere] lg:sticky lg:top-28">
             <div>
               <h2 className="text-lg font-bold text-devlo-900">{content.contact.title}</h2>
               <p className="mt-3 text-sm leading-7 text-neutral-700">

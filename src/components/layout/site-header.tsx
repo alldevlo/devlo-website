@@ -333,7 +333,7 @@ export function SiteHeader() {
   const transparentMode = safePathname === "/" && !isScrolled;
   const desktopDirectLinkClass = (active: boolean) =>
     [
-      "inline-flex min-h-[44px] items-center whitespace-nowrap rounded-full border px-4 py-0.5 text-[14px] font-semibold uppercase tracking-[0.08em] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-devlo-700 focus-visible:ring-offset-2",
+      "inline-flex min-h-[44px] items-center whitespace-nowrap rounded-full border px-3 py-0.5 text-[12px] font-semibold uppercase tracking-[0.04em] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-devlo-700 focus-visible:ring-offset-2 2xl:px-4 2xl:text-[14px] 2xl:tracking-[0.08em]",
       active
         ? "border-devlo-800 bg-devlo-800 text-white shadow-soft"
         : "border-transparent text-devlo-900 hover:border-devlo-100 hover:bg-devlo-50 hover:text-devlo-700",
@@ -354,7 +354,7 @@ export function SiteHeader() {
     ].join(" ");
   const desktopDropdownLinkClass = (active: boolean, open: boolean) =>
     [
-      "inline-flex min-h-[44px] items-center rounded-full px-2 text-[14px] font-semibold uppercase tracking-[0.08em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-devlo-700 focus-visible:ring-offset-2",
+      "inline-flex min-h-[44px] items-center rounded-full px-2 text-[12px] font-semibold uppercase tracking-[0.04em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-devlo-700 focus-visible:ring-offset-2 2xl:text-[14px] 2xl:tracking-[0.08em]",
       active || open ? "text-white" : "text-devlo-900 hover:text-white group-hover:text-white",
     ].join(" ");
   const desktopDropdownButtonClass = (open: boolean) =>
@@ -382,7 +382,7 @@ export function SiteHeader() {
             <Image src={mainNav.logo} alt="devlo logo" width={240} height={80} className="h-14 w-auto shrink-0 md:h-16" />
           </Link>
 
-          <nav className="hidden items-center gap-3 lg:gap-4 xl:gap-5 md:flex" aria-label={navCopy.navigationAria}>
+          <nav className="hidden min-w-0 items-center gap-1.5 xl:flex 2xl:gap-3" aria-label={navCopy.navigationAria}>
             {navItems.map((item) => {
               if (item.key === "caseStudies") {
                 return (
@@ -520,7 +520,7 @@ export function SiteHeader() {
                               className="mb-2 flex items-start justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-3 py-3 transition hover:border-white/35 hover:bg-white/10"
                             >
                               <div>
-                                <p className="whitespace-nowrap text-sm font-semibold text-white">{navCopy.gtmEngineering}</p>
+                                <p className="text-sm font-semibold text-white">{navCopy.gtmEngineering}</p>
                                 <p className="mt-1 text-xs leading-5 text-white/75">{navCopy.gtmEngineeringSubtitle}</p>
                               </div>
                               <span className="text-sm font-semibold text-white">→</span>
@@ -531,7 +531,7 @@ export function SiteHeader() {
                             >
                               <div>
                                 <div className="flex items-center gap-2">
-                                  <p className="whitespace-nowrap text-sm font-semibold text-white">{navCopy.aiSalesOps}</p>
+                                  <p className="text-sm font-semibold text-white">{navCopy.aiSalesOps}</p>
                                 </div>
                                 <p className="mt-1 text-xs leading-5 text-white/75">{navCopy.aiSalesOpsSubtitle}</p>
                               </div>
@@ -666,7 +666,7 @@ export function SiteHeader() {
             })}
 
             <div className="flex items-center gap-3">
-              <Link href={consultationHref} className={buttonClassName("outline", "whitespace-nowrap px-4 py-2.5 text-sm lg:px-5")}>
+              <Link href={consultationHref} className={buttonClassName("outline", "whitespace-nowrap px-3 py-2.5 text-[13px] 2xl:px-5 2xl:text-sm")}>
                 {navCopy.cta}
               </Link>
               <LanguageSwitcher />
@@ -677,7 +677,7 @@ export function SiteHeader() {
             type="button"
             onClick={() => setIsMenuOpen((prev) => !prev)}
             aria-label={isMenuOpen ? navCopy.closeMenu : navCopy.openMenu}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-neutral-200 bg-white text-devlo-900 md:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-neutral-200 bg-white text-devlo-900 xl:hidden"
           >
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -795,7 +795,7 @@ export function SiteHeader() {
                           >
                             <div className="flex items-center justify-between gap-3">
                               <div>
-                                <p className="whitespace-nowrap text-sm font-semibold text-devlo-900">{navCopy.gtmEngineering}</p>
+                                <p className="text-sm font-semibold text-devlo-900">{navCopy.gtmEngineering}</p>
                                 <p className="mt-1 text-xs text-neutral-600">{navCopy.gtmEngineeringSubtitle}</p>
                               </div>
                               <span className="text-sm font-semibold text-devlo-700">→</span>
@@ -808,7 +808,7 @@ export function SiteHeader() {
                             <div className="flex items-center justify-between gap-3">
                               <div>
                                 <div className="flex items-center gap-2">
-                                  <p className="whitespace-nowrap text-sm font-semibold text-devlo-900">{navCopy.aiSalesOps}</p>
+                                  <p className="text-sm font-semibold text-devlo-900">{navCopy.aiSalesOps}</p>
                                 </div>
                                 <p className="mt-1 text-xs text-neutral-600">{navCopy.aiSalesOpsSubtitle}</p>
                               </div>
@@ -855,7 +855,7 @@ export function SiteHeader() {
                     <Link key={`mobile-${item.href}`} href={item.href} className={mobileDirectLinkClass(aiSalesOpsActive)}>
                       <div>
                         <div className="flex items-center gap-2">
-                          <p className="whitespace-nowrap text-base font-semibold">{item.label}</p>
+                          <p className="text-base font-semibold">{item.label}</p>
                         </div>
                         <p className={["mt-1 text-xs", aiSalesOpsActive ? "text-white/75" : "text-neutral-600"].join(" ")}>
                           {navCopy.aiSalesOpsSubtitle}
@@ -942,7 +942,7 @@ export function SiteHeader() {
       ) : null}
 
       {showMobileStickyCta ? (
-        <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-neutral-200 bg-white px-4 pt-4 pb-[max(1rem,env(safe-area-inset-bottom))] md:hidden motion-safe:animate-fade-in-up">
+        <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-neutral-200 bg-white px-4 pt-4 pb-[max(1rem,env(safe-area-inset-bottom))] xl:hidden motion-safe:animate-fade-in-up">
             <Link href={consultationHref} className={buttonClassName("primary", "w-full py-4 text-base")}>
               {navCopy.cta}
             </Link>

@@ -16,6 +16,7 @@
 | Date | Change |
 |------|--------|
 | 2026-05-11 | Extended the human-first gate to every shipped locale after the German GTM-page review: feedback found in French must be applied across FR/EN/DE/NL variants, visible German copy must use proper umlauts/orthography, and `npm run check:public-copy-quality` now guards high-risk public copy. |
+| 2026-05-12 | Added responsive device QA as a pre-merge gate for every public page change: iPhone 15 width, iPad portrait width, desktop width, no horizontal body scroll, no clipped navigation, no unreadable tables/cards/buttons, and screenshots for touched pages plus core navigation when shared layout changes. |
 | 2026-05-11 | Added the human-first GEO/content gate after the GTM market-map review: public pages must read naturally for B2B buyers, use correct page placement, preserve French accents, and keep LLM-facing instructions out of visible copy. |
 | 2026-05-06 | Updated current stack from Next.js 14.2.35 to Next.js 16.2.4 after the SEO/GEO P1 refresh. Added `npm run check:seo-quality` as the local/live quality audit command for metadata, H1, canonical, hreflang, schema, CTA, freshness and extractability checks. |
 | 2026-03-20 | Major enrichment: added URL/routing rules, title tag formulas, meta description CTR data, canonical URL rules, sitemap best practices, AI platform citation patterns (Google AI Overviews, ChatGPT, Perplexity), tiered AI crawler management, entity/knowledge graph optimization, CWV optimization strategies per metric, internal linking cluster sizing, image srcset/AVIF guidance, structured data entity graph patterns. Restructured TOC to 11 sections. |
@@ -107,6 +108,7 @@ Run through every item before deploying a new page to production. This is the qu
 - [ ] Feedback found in one locale is applied to every locale for the same page/component. Do not fix only the language where the issue was reported.
 - [ ] Localized public copy is proofread with native spelling and typography. French keeps accents ("générer", "système", "méthode", "qualifié", "données", "européenne", "délivrabilité"), German uses proper umlauts/orthography ("hängt", "gewünschte", "Qualität", "Öffentliche", "Kapazität"), and Dutch avoids rough English placeholders when a natural Dutch phrase exists.
 - [ ] Localized comparison tables translate their buyer-facing fields. Do not reuse English table copy on FR/DE/NL pages unless the term is an accepted market term.
+- [ ] Responsive device QA passed on iPhone 15 width, iPad portrait width, and desktop width. Verify no horizontal body scroll, no clipped/off-screen nav/action buttons, no overlapping hero/body text, and no table/card/button overflow that makes content unreadable. When shared layout, header, footer, cards, tables, or templates change, run a sitemap/template sweep and keep screenshots of touched pages plus core navigation.
 - [ ] Before final approval, read the rendered page as a skeptical buyer and ask: "Would this feel coherent with devlo's site if I had no GEO context?" If not, rewrite before deploy.
 
 ### Final validation

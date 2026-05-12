@@ -85,7 +85,7 @@ export function ColdEmailSequenceMasterPage({
         <section className="bg-gradient-to-b from-[#074f74] to-[#0a3a54] pt-2 text-white">
           <Breadcrumb items={breadcrumbItems} variant="dark" />
 
-          <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 pb-14 pt-10 text-center">
+          <div className="mx-auto flex max-w-6xl min-w-0 flex-col items-center gap-6 px-6 pb-14 pt-10 text-center">
             {/* Tags */}
             <div className="flex flex-wrap justify-center gap-2">
               {content.tags.map((tag) => (
@@ -127,7 +127,7 @@ export function ColdEmailSequenceMasterPage({
                 alt={shared.authorAlt}
                 width={40}
                 height={40}
-                className="rounded-full"
+                className="h-10 w-10 rounded-full object-cover"
               />
               <div className="text-left">
                 <p className="text-sm font-semibold text-white">
@@ -177,7 +177,7 @@ export function ColdEmailSequenceMasterPage({
 
         {/* Sequence Details */}
         <section className="py-16">
-          <div className="mx-auto max-w-3xl px-6">
+          <div className="mx-auto max-w-3xl min-w-0 px-6">
             <h2
               className="mb-4 text-center font-black text-[#0D0D0D]"
               style={{
@@ -218,7 +218,7 @@ export function ColdEmailSequenceMasterPage({
                       {touch.number}
                     </div>
 
-                    <div className="rounded-xl border border-[#e0e4e6] bg-white p-5 shadow-sm">
+                    <div className="min-w-0 rounded-xl border border-[#e0e4e6] bg-white p-5 shadow-sm">
                       <div className="mb-3 flex flex-wrap items-center gap-2">
                         <span
                           className="rounded-full px-2.5 py-0.5 text-xs font-bold text-white"
@@ -254,7 +254,7 @@ export function ColdEmailSequenceMasterPage({
                       )}
 
                       <div
-                        className="whitespace-pre-line text-sm leading-relaxed"
+                        className="whitespace-pre-line break-words text-sm leading-relaxed [overflow-wrap:anywhere]"
                         style={{ color: "#333" }}
                       >
                         {touch.content}

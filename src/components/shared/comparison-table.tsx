@@ -14,7 +14,7 @@ export function ComparisonTable({ caption, headers, rows }: ComparisonTableProps
   if (rows.length === 0) return null;
 
   return (
-    <div className="overflow-x-auto rounded-2xl border border-neutral-200 bg-white shadow-soft">
+    <div className="w-full max-w-full min-w-0 overflow-x-auto rounded-2xl border border-neutral-200 bg-white shadow-soft">
       <table itemScope itemType="https://schema.org/Table" className="min-w-full border-separate border-spacing-0 text-left">
         <caption className="sr-only">{caption}</caption>
         <thead>
