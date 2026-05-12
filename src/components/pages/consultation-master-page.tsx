@@ -93,8 +93,8 @@ export function ConsultationMasterPage({ content = consultationContent, locale =
           </FadeInOnScroll>
 
           <FadeInOnScroll delay={0.12}>
-            <div className="mt-6 max-w-[640px] overflow-x-auto rounded-xl border border-neutral-200 bg-white">
-              <table className="min-w-[640px] w-full border-collapse text-left text-sm">
+            <div className="mt-6 w-full max-w-[640px] min-w-0 overflow-x-auto rounded-xl border border-neutral-200 bg-white">
+              <table className="w-full min-w-[640px] border-collapse text-left text-sm">
                 <caption className="sr-only">{auditTable.caption}</caption>
                 <thead className="bg-neutral-50 text-xs font-semibold uppercase tracking-[0.08em] text-devlo-700">
                   <tr>

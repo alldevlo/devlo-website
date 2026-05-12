@@ -175,8 +175,8 @@ export function BuyingSignalsMasterPage({ locale }: { locale: SupportedLocale })
         <WaveDivider variant="layered-bottom" fromBg="#0a3a54" toBg="#FFFFFF" />
 
         <section className="mx-auto w-full max-w-5xl px-6 py-12">
-          <div className="overflow-x-auto rounded-xl border border-[#e0e4e6] bg-white">
-            <table className="min-w-[720px] w-full border-collapse text-left text-sm">
+          <div className="w-full max-w-full min-w-0 overflow-x-auto rounded-xl border border-[#e0e4e6] bg-white">
+            <table className="w-full min-w-[720px] border-collapse text-left text-sm">
               <caption className="sr-only">{signalDecisionTable.caption}</caption>
               <thead className="bg-[#F7F8FC] text-xs font-semibold uppercase tracking-[0.08em] text-[#074f74]">
                 <tr>

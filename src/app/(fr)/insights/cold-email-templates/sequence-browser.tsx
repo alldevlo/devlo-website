@@ -256,7 +256,7 @@ function getTimelineDotColor(type: string): string {
 function FormattedContent({ text }: { text: string }) {
   const paragraphs = text.split(/\n\n+/);
   return (
-    <div className="space-y-3 text-sm leading-relaxed" style={{ color: "#333" }}>
+    <div className="space-y-3 break-words text-sm leading-relaxed [overflow-wrap:anywhere]" style={{ color: "#333" }}>
       {paragraphs.map((para, i) => {
         const lines = para.split("\n");
         return (
@@ -678,7 +678,7 @@ export function SequenceBrowser({
                         </div>
 
                         {/* Touch content */}
-                        <div className="flex-1 rounded-xl border border-[#f0f0f0] bg-[#fafbfc] p-5">
+                        <div className="min-w-0 flex-1 rounded-xl border border-[#f0f0f0] bg-[#fafbfc] p-5">
                           <div className="mb-3 flex flex-wrap items-center gap-3">
                             <span
                               className="inline-flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold text-white"

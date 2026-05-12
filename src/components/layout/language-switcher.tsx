@@ -85,7 +85,7 @@ export function LanguageSwitcher({ mobile = false }: LanguageSwitcherProps) {
         aria-expanded={isOpen}
         onClick={() => setIsOpen((prev) => !prev)}
         className={[
-          "inline-flex min-h-[40px] items-center justify-between gap-2 rounded-full border border-neutral-200 bg-white px-3 text-sm font-semibold text-devlo-900 transition hover:border-devlo-700/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-devlo-700 focus-visible:ring-offset-2",
+          "inline-flex min-h-[40px] items-center justify-between gap-1.5 rounded-full border border-neutral-200 bg-white px-2.5 text-[13px] font-semibold text-devlo-900 transition hover:border-devlo-700/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-devlo-700 focus-visible:ring-offset-2 2xl:gap-2 2xl:px-3 2xl:text-sm",
           mobile ? "w-full" : "",
         ].join(" ")}
       >

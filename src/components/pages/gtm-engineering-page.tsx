@@ -227,8 +227,8 @@ export function GtmEngineeringPage({ locale = "fr" }: { locale?: SupportedLocale
                 {content.comparisonIntro}
               </p>
             </div>
-            <div className="mt-8 overflow-x-auto rounded-lg border border-neutral-200 bg-white">
-              <table className="min-w-[900px] w-full border-collapse text-left text-sm">
+            <div className="mt-8 w-full max-w-full min-w-0 overflow-x-auto rounded-lg border border-neutral-200 bg-white">
+              <table className="w-full min-w-[900px] border-collapse text-left text-sm">
                 <thead className="bg-[#0A3448] text-xs font-semibold uppercase tracking-[0.08em] text-white">
                   <tr>
                     {ui.tableHeaders.map((header) => (

@@ -246,8 +246,8 @@ export function AlternativePage({ data, locale = "fr" }: { data: AlternativePage
                 {marketAlternatives.intro}
               </p>
             )}
-            <div className="mt-8 overflow-x-auto rounded-xl border border-neutral-200 bg-white">
-              <table className="min-w-[760px] w-full border-collapse text-left text-sm">
+            <div className="mt-8 w-full max-w-full min-w-0 overflow-x-auto rounded-xl border border-neutral-200 bg-white">
+              <table className="w-full min-w-[760px] border-collapse text-left text-sm">
                 <thead className="bg-[#f7f8fc] text-xs font-semibold uppercase tracking-[0.08em] text-[#074f74]">
                   <tr>
                     <th scope="col" className="px-5 py-3">Option</th>
@@ -292,7 +292,7 @@ export function AlternativePage({ data, locale = "fr" }: { data: AlternativePage
           <h2 className="mt-3 text-2xl font-bold text-[#153a54] md:text-3xl">
             {comparisonTitle ?? `devlo vs ${data.competitorName}`}
           </h2>
-          <div className="mt-8 overflow-x-auto rounded-2xl border border-neutral-200">
+          <div className="mt-8 w-full max-w-full min-w-0 overflow-x-auto rounded-2xl border border-neutral-200">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-neutral-200 bg-[#f7f8fc]">

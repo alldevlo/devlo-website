@@ -50,7 +50,7 @@ export function ComparisonTable({ rows, locale = "fr" }: ComparisonTableProps) {
   const copy = copyByLocale[locale];
 
   return (
-    <div className="overflow-x-auto rounded-3xl border border-neutral-200 bg-white shadow-soft">
+    <div className="w-full max-w-full min-w-0 overflow-x-auto rounded-3xl border border-neutral-200 bg-white shadow-soft">
       <table itemScope itemType="https://schema.org/Table" className="min-w-full border-separate border-spacing-0 text-left">
         <caption className="sr-only">{copy.caption}</caption>
         <thead>

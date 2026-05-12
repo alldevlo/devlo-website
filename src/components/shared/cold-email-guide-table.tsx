@@ -54,8 +54,8 @@ export function ColdEmailGuideTable({ locale = "fr" }: { locale?: SupportedLocal
   const table = coldEmailGuideTables[locale];
 
   return (
-    <div className="mt-8 overflow-x-auto rounded-xl border border-neutral-200 bg-white">
-      <table className="min-w-[720px] w-full border-collapse text-left text-sm">
+    <div className="mt-8 w-full max-w-full min-w-0 overflow-x-auto rounded-xl border border-neutral-200 bg-white">
+      <table className="w-full min-w-[720px] border-collapse text-left text-sm">
         <caption className="sr-only">{table.caption}</caption>
         <thead className="bg-neutral-50 text-xs font-semibold uppercase tracking-[0.08em] text-[#074f74]">
           <tr>

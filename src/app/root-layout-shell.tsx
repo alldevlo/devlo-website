@@ -17,6 +17,10 @@ const plusJakartaSans = localFont({
 });
 
 const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-9CKZL9V2VN";
+const lemlistVisitorTrackingKey =
+  process.env.NEXT_PUBLIC_LEMLIST_VISITOR_TRACKING_KEY || "5YVj23Jabxi9uAn37278kTtXNsp7ENp3k5zUlMFSAlI=";
+const lemlistTeamId = process.env.NEXT_PUBLIC_LEMLIST_TEAM_ID || "tea_Ps9QPwhyb4Cv8GrML";
+const enableLemlistVisitorTracking = process.env.NEXT_PUBLIC_ENABLE_LEMLIST_VISITOR_TRACKING !== "false";
 
 type LayoutLocale = "fr" | "en" | "de" | "nl";
 
@@ -328,6 +332,13 @@ export function RootLayoutShell({
             gtag('config', '${gaMeasurementId}');
           `}
         </Script>
+        {enableLemlistVisitorTracking ? (
+          <Script
+            id="lemlist-website-visitors"
+            src={`https://app.lemlist.com/api/visitors/tracking?k=${encodeURIComponent(lemlistVisitorTrackingKey)}&t=${encodeURIComponent(lemlistTeamId)}`}
+            strategy="afterInteractive"
+          />
+        ) : null}
         <PaidAttributionTracker />
         <JsonLd schema={buildLayoutSchemas(locale)} />
         <a

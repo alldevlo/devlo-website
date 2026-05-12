@@ -373,8 +373,8 @@ export function GeoLandingPage({ data, locale = "fr" }: { data: GeoPageData; loc
       {data.country === "ch" && (
         <section className="bg-white py-12">
           <div className="mx-auto w-full max-w-screen-xl space-y-8 px-6 lg:px-10">
-            <div className="overflow-x-auto rounded-xl border border-neutral-200 bg-white">
-              <table className="min-w-[720px] w-full border-collapse text-left text-sm">
+            <div className="w-full max-w-full min-w-0 overflow-x-auto rounded-xl border border-neutral-200 bg-white">
+              <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                 <caption className="sr-only">{marketTable.caption}</caption>
                 <thead className="bg-neutral-50 text-xs font-semibold uppercase tracking-[0.08em] text-[#074f74]">
                   <tr>
