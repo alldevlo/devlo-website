@@ -29,6 +29,8 @@ const viewports = [
 ];
 const waitAfterLoadMs = Number.parseInt(process.env.RESPONSIVE_SMOKE_WAIT_MS || "700", 10);
 const captureScreenshots = process.env.RESPONSIVE_SMOKE_SCREENSHOTS !== "0";
+const allowMeteredTrackers = process.env.RESPONSIVE_SMOKE_ALLOW_METERED_TRACKERS === "1";
+const blockedMeteredHosts = ["app.lemlist.com"];
 
 const outDir = path.dirname(outputPath);
 fs.mkdirSync(outDir, { recursive: true });
@@ -56,6 +58,18 @@ for (const viewport of viewports) {
     hasTouch: viewport.isMobile,
     deviceScaleFactor: viewport.isMobile ? 3 : 1,
   });
+
+  if (!allowMeteredTrackers) {
+    await context.route("**/*", async (routeRequest) => {
+      const requestUrl = routeRequest.request().url();
+      const hostname = new URL(requestUrl).hostname;
+      if (blockedMeteredHosts.some((blockedHost) => hostname === blockedHost || hostname.endsWith(`.${blockedHost}`))) {
+        await routeRequest.abort();
+        return;
+      }
+      await routeRequest.continue();
+    });
+  }
 
   for (const route of pages) {
     const url = new URL(route, baseUrl).toString();
@@ -180,4 +194,18 @@ const summary = results.reduce(
   { total: 0 },
 );
 
-fs.writeFileSync(outputPath, JSON.stringify({ baseUrl, generatedAt: new Date().toISOString(), summary, results }, null, 2));
+fs.writeFileSync(
+  outputPath,
+  JSON.stringify(
+    {
+      baseUrl,
+      generatedAt: new Date().toISOString(),
+      meteredTrackersBlocked: !allowMeteredTrackers,
+      blockedMeteredHosts: allowMeteredTrackers ? [] : blockedMeteredHosts,
+      summary,
+      results,
+    },
+    null,
+    2,
+  ),
+);

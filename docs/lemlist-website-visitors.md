@@ -41,3 +41,7 @@ Read-only checks performed on 2026-05-12:
 - Lemlist API `/api/team` authenticates for team `devlo (main)`.
 - Live `devlo.ch` did not expose the tracker script before this change.
 - Local rendered page now includes `https://app.lemlist.com/api/visitors/tracking`.
+- Responsive smoke checks block `app.lemlist.com` by default to avoid creating
+  QA-generated website-visitor signals. Use
+  `RESPONSIVE_SMOKE_ALLOW_METERED_TRACKERS=1` only when Charles explicitly wants
+  to validate Lemlist firing from a browser session.
