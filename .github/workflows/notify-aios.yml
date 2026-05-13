@@ -31,10 +31,21 @@ jobs:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID || vars.SLACK_CHANNEL_ID }}
         run: |
+          MESSAGE="devlo-website | devlo | notify-aios FAILED | run ${{ github.run_id }} | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           if [ ! -x .devlo-aios/skills/slack-notifier/scripts/slack_alert.sh ]; then
-            echo "slack-notifier unavailable; cannot post failure alert"
+            echo "slack-notifier unavailable; using SLACK_FALLBACK_DIRECT_POST"
+            PAYLOAD=$(jq -n --arg ch "$SLACK_CHANNEL_ID" --arg text ":rotating_light: $MESSAGE" '{channel:$ch, text:$text}')
+            RESP=$(curl -sS -X POST https://slack.com/api/chat.postMessage \
+              -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
+              -H "Content-Type: application/json; charset=utf-8" \
+              -d "$PAYLOAD")
+            OK=$(printf '%s' "$RESP" | jq -r '.ok // false')
+            if [ "$OK" != "true" ]; then
+              printf '%s' "$RESP" | jq -c '{ok,error}'
+              exit 4
+            fi
             exit 0
           fi
           .devlo-aios/skills/slack-notifier/scripts/slack_alert.sh \
             --level critical \
-            --message "devlo-website | devlo | notify-aios FAILED | run ${{ github.run_id }} | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            --message "$MESSAGE"
