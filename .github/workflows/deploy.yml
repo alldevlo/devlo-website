@@ -11,6 +11,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Checkout slack-notifier skill
+        uses: actions/checkout@v4
+        continue-on-error: true
+        with:
+          repository: devlollc/devlo-aios
+          sparse-checkout: skills/slack-notifier
+          sparse-checkout-cone-mode: false
+          path: .devlo-aios
+          token: ${{ secrets.CROSS_REPO_READ_TOKEN }}
+
       - name: Deploy to Vercel
         run: npx vercel@50.34.3 --prod --token=${{ secrets.VERCEL_TOKEN }} --yes
         env:
@@ -53,3 +63,17 @@ jobs:
             echo "$RESULT"
             exit 1
           fi
+
+      - name: Slack alert on failure
+        if: failure()
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID || vars.SLACK_CHANNEL_ID }}
+        run: |
+          if [ ! -x .devlo-aios/skills/slack-notifier/scripts/slack_alert.sh ]; then
+            echo "slack-notifier unavailable; cannot post failure alert"
+            exit 0
+          fi
+          .devlo-aios/skills/slack-notifier/scripts/slack_alert.sh \
+            --level critical \
+            --message "devlo-website | devlo | deploy FAILED | run ${{ github.run_id }} | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
