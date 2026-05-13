@@ -10,7 +10,31 @@ jobs:
   disabled:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout slack-notifier skill
+        uses: actions/checkout@v6
+        continue-on-error: true
+        with:
+          repository: devlollc/devlo-aios
+          sparse-checkout: skills/slack-notifier
+          sparse-checkout-cone-mode: false
+          path: .devlo-aios
+          token: ${{ secrets.CROSS_REPO_READ_TOKEN }}
+
       - name: Explain disabled sync
         run: |
           echo "Website-to-AIOS repository_dispatch is disabled."
           echo "Re-enable only after devlo-aios owns a documented sync listener."
+
+      - name: Slack alert on failure
+        if: failure()
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID || vars.SLACK_CHANNEL_ID }}
+        run: |
+          if [ ! -x .devlo-aios/skills/slack-notifier/scripts/slack_alert.sh ]; then
+            echo "slack-notifier unavailable; cannot post failure alert"
+            exit 0
+          fi
+          .devlo-aios/skills/slack-notifier/scripts/slack_alert.sh \
+            --level critical \
+            --message "devlo-website | devlo | notify-aios FAILED | run ${{ github.run_id }} | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
